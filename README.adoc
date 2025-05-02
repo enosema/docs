@@ -4,7 +4,8 @@ image:https://github.com/enosema/docs/workflows/generate/badge.svg["Build Status
 
 This document is available in its rendered forms here:
 
-* https://www.enosema.org/docs/[Enosema Foundation]
+* https://www.enosema.org/docs/[On Enosema Foundation]
+* https://enosema.github.io/docs/[On GitHub]
 
 == Introduction
 
