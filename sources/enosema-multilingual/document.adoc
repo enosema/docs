@@ -4,8 +4,8 @@
 :copyright-year: 2025
 :revdate: 2025-05-01
 :language: en
-:title-intro-en: Multilingual terminology management
-:title-main-en: Principles and methods
+:title-intro-en: Terminology management
+:title-main-en: Multilingual terminology
 :doctype: international-standard
 :technical-committee: Terminology
 :mn-document-class: iso
