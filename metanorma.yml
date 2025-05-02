@@ -3,6 +3,7 @@ metanorma:
   source:
     files:
       - sources/enosema-terminology/document.adoc
+      - sources/enosema-multilingual/document.adoc
 
   collection:
     organization: "Enosema Foundation"

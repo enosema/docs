@@ -16,6 +16,7 @@ such as management.
 The specifications include:
 
 2501:: *Terminology management principles and methods* -- Specification for effective management of terminology resources including creation, collection, maintenance, and presentation
+2504:: *Multilingual terminology management* -- Principles and methods for managing terminology across multiple languages and cultures
 
 These specifications are written in Metanorma to generate standardized
 documentation in multiple formats.
@@ -26,6 +27,12 @@ documentation in multiple formats.
 
 `sources/enosema-terminology/`:::
 Terminology management principles and methods specification
+
+`sources/enosema-multilingual/`:::
+Multilingual terminology management specification
+
+`sources/express-pretty/`:::
+EXPRESS language pretty print format specification
 
 
 == Building documentation
@@ -66,4 +73,4 @@ The build process generates documentation in multiple formats:
 
 == License
 
-Copyright Enosema Foundation.
+Copyright © 2025 Enosema Foundation. All rights reserved.
