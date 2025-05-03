@@ -18,6 +18,7 @@ The specifications include:
 
 2501:: *Terminology management principles and methods* -- Specification for effective management of terminology resources including creation, collection, maintenance, and presentation
 2504:: *Multilingual terminology management* -- Principles and methods for managing terminology across multiple languages and cultures
+2507:: *Concept relationships* -- Abstract model and implementation guidance for defining and managing relationships between concepts
 
 These specifications are written in Metanorma to generate standardized
 documentation in multiple formats.
@@ -32,8 +33,8 @@ Terminology management principles and methods specification
 `sources/enosema-multilingual/`:::
 Multilingual terminology management specification
 
-`sources/express-pretty/`:::
-EXPRESS language pretty print format specification
+`sources/enosema-relationships/`:::
+Concept relationships specification
 
 
 == Building documentation
