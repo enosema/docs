@@ -19,7 +19,13 @@
 :surname_2: Tse
 :givenname_2: Ronald
 :affiliation_2: Ribose
-:publisher: ES
+:publisher: EFS
+:docidentifier: EFS 2504:2025
+:boilerplate-authority: ../_common/boilerplate.adoc
+:presentation-metadata-organization-fullname: Enosema Foundation
+:presentation-metadata-doctype-customized: Standard
+:presentation-metadata-color-secondary: #007724
+:presentation-metadata-backcover-text: enosema.org
 :data-uri-image:
 :local-cache-only:
 
