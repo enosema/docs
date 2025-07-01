@@ -6,9 +6,8 @@
 :language: en
 :title-intro-en: Terminology management
 :title-main-en: Concept relationships
-:doctype: international-standard
+:doctype: standard
 :technical-committee: Terminology
-:mn-document-class: iso
 :mn-output-extensions: xml,html,doc,pdf,rxl
 :imagesdir: images
 :fullname: Reese W. Plews
@@ -19,13 +18,8 @@
 :surname_2: Tse
 :givenname_2: Ronald
 :affiliation_2: Ribose
-:publisher: EFS
 :docidentifier: EFS 2507:2025
-:boilerplate-authority: ../_common/boilerplate.adoc
-:presentation-metadata-organization-fullname: Enosema Foundation
-:presentation-metadata-doctype-customized: Standard
-:presentation-metadata-color-secondary: #007724
-:presentation-metadata-backcover-text: enosema.org
+:mn-document-class: enosema
 :data-uri-image:
 :local-cache-only:
 
