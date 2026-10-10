@@ -1,0 +1,4 @@
+# metanorma.release.yml — enosema/docs
+documents:
+  - pattern: "enosema-*"
+    channels: [public/standards]
