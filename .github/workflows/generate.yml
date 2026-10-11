@@ -31,6 +31,26 @@ jobs:
         with:
           extra-flavors: ribose
 
+      - name: Registry redirect 404 page
+        run: |
+          mkdir -p _site
+          cat > _site/404.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="en"><head><meta charset="utf-8"><title>Redirecting…</title></head>
+          <body><p>This document has moved to the <a href="https://www.enosema.org/standards/">standards registry</a>.</p>
+          <script>
+            // This Pages site serves www.enosema.org/docs/ (the collection view).
+            // Per-document URLs live in the registry at /standards/docs/ —
+            // redirect any missing /docs/** path there.
+            (function () {
+              if (location.pathname === '/docs/' || location.pathname === '/docs') return;
+              if (location.pathname.indexOf('/docs/') === 0)
+                location.replace('https://www.enosema.org/standards' + location.pathname + location.search + location.hash);
+            })();
+          </script>
+          </body></html>
+          HTML
+
       - name: Metanorma generate site
         uses: actions-mn/build-and-publish@v2
         with:
