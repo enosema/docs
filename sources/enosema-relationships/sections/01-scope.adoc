@@ -1,3 +1,8 @@
+[abstract]
+== Abstract
+
+This document specifies an abstract model for defining, documenting, and managing concept relationships in terminology resources and knowledge organization systems. It provides a generic mechanism for concept relationships that can be implemented across different standards, frameworks, and applications.
+
 == Scope
 
 This document specifies an abstract model for defining, documenting, and
