@@ -1,0 +1,17 @@
+[[information-transparency]]
+== Patent information transparency policy
+
+ES does not provide authoritative or comprehensive information
+about evidence, validity or scope of patents or similar rights.
+
+However, the fullest available information shall be disclosed in any ES-published standard.
+
+Therefore, any party participating in the work of ES shall,
+from the outset, draw the attention of the President and TCB
+of ES, to any known patent or to any known pending patent
+application, either their own or of other organizations, although
+ES is unable to verify the validity of any such information.
+
+In a joint deliverable developed with other standardization bodies,
+IPR requirements of all such standardization bodies who will be
+publishing the deliverable shall be satisfied.

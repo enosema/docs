@@ -1,0 +1,65 @@
+[[patent-disclosure]]
+== Patent disclosure
+
+
+=== General
+
+This clause describes the principles of disclosure of patents
+that may affect ES standardization deliverables produced
+by ES.
+
+This clause applies to any patent disclosed or drawn
+to the attention of ES during the development
+of and subsequent to the approval of deliverables.
+
+=== Requirements
+
+==== Participation obligation
+
+All parties participating in the standardization activities of ES
+are obligated to inform ES of
+any known patent or to any known pending patent application,
+either its own or that of other entities,
+as mandated by <<EFD103,clause=4>>,
+where such parties include recipients of a draft ES standardization deliverable at any stage.
+
+==== Early disclosure
+
+Patent information should be disclosed as early as possible during the development of the deliverable.
+
+Such patent information should be provided in good faith and on a best effort basis. There is no requirement for patent searches.
+At times, this might not be possible when the first draft text appears, for example, because the text might be still too vague.
+
+==== External-originating disclosure
+
+Parties not participating in the standardization activities of ES may also inform ES to any known patent, either their own and/or of any third-party, that may cover an ES deliverable.
+
+
+=== Method of disclosure
+
+==== Declaration form
+
+When disclosing their own patents, patent holders shall fill in the "`Patent Statement and Licensing Declaration Form`" (referred to as the "`declaration form`") as stated in <<patent-form>>.
+
+==== Third-party patent disclosure
+
+Any communication drawing the attention to any third-party patent
+should be addressed to ES in writing.
+
+The President of ES will then request the potential
+patent holder to submit a declaration form, if applicable.
+
+
+=== Resolution to unwillingness to license
+
+Whether the identification of the patent took place before or after
+the approval of a deliverable,
+if a patent holder is unwilling to license under <<EFD103,clause=5.2>> or <<EFD103,clause=5.3>>, ES will promptly advise the project owner(s) responsible for the affected deliverable so that appropriate action can be taken.
+
+Such action shall include, but may not be limited to:
+
+* a review of the ES standardization deliverable or its draft in order to remove the potential conflict; or
+
+* to further examine and clarify the technical considerations causing the conflict.
+
+These guidelines also apply to any Patent disclosed or drawn to the attention of ES subsequent to the approval of a deliverable.

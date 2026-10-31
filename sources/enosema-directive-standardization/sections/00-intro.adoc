@@ -1,0 +1,19 @@
+== Introduction
+
+ES is committed to expanding the realm of open standards for terminology,
+concepts, and their management across the globe and across communities
+of practice.
+
+To facilitate its mission, the Enosema Board of Directors has decided
+to align standardization and publication processes with international
+best practices, such as the ISO standardization process, and the
+<<WTOTBTP>>.
+This document aims to achieve the said intention.
+
+The document describes the ES standardization process, from
+conception, IPR policy, technical committee establishment, collaboration
+policies (liaisons), to the publishing of work items.
+
+Processes described in this document contain parts that relate
+to all Enosema technical committees and the TCB, which
+carries responsibility of implementing these processes.

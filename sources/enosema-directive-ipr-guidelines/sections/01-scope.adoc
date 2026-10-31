@@ -1,0 +1,12 @@
+== Scope
+
+This document provides guidelines on the application of
+the ES patent policy (<<EFD103>>) towards the following
+areas of ES:
+
+* standardization and publication process (described in <<EFD101>>);
+* document requirements (described in <<EFD102>>).
+
+This document does not cover the implementation of requirements
+in ES standards which involve intellectual property rights
+(such as patents).

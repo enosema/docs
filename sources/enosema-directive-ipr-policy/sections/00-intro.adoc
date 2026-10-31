@@ -1,0 +1,43 @@
+== Introduction
+
+=== General
+
+ES is committed to expanding the realm of standards for terminology,
+concepts, and their management, with a focus on terminology resources
+and interoperability across the globe and communities
+of practice.
+
+In the ES standardization process described in <<EFD101>>,
+contributions are received from various forms and parties.
+As a proponent of open standards, ES is required to
+address any intellectual property rights in such contributions
+to be able to publish standardization deliverables.
+
+This document details the IPR policy of ES covering
+all ES standardization activities, covering
+generally the following categories:
+
+* Copyright
+* Trademarks
+* Patents
+
+
+
+
+=== Purpose
+
+This document describes the intellectual property rights policy of
+ES that aims to be simple and straightforward.
+
+ES deliverables are drawn up by technical, not IPR, experts,
+who may not be fully aware of all nuances in the complex
+international legal situation of intellectual property rights.
+
+ES deliverables are non-binding -- their objective is to ensure
+compatibility of technologies and systems on a worldwide basis.
+
+To ensure the applicability and accessibility of ES
+deliverables, the implementation and continued usage of content within
+the deliverables must be possible to the worldwide audience without
+discrimination, including any intellectual property rights embodiment
+in such deliverables.

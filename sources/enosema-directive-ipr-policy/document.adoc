@@ -1,0 +1,29 @@
+= Enosema Directive: Intellectual property rights policy
+:title-main-en: Enosema Directive: Intellectual property rights policy
+:docnumber: 105
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-10-31
+:language: en
+:doctype: directive
+:technical-committee: Board of Directors
+:imagesdir: images
+:mn-document-class: enosema
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:docidentifier: EFD 105:2026
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+include::sections/02-normrefs.adoc[]
+include::sections/03-terms.adoc[]
+include::sections/04-activities.adoc[]
+include::sections/05-contributions.adoc[]
+include::sections/06-trademarks.adoc[]
+include::sections/07-software.adoc[]
+
+include::sections/99-bibliography.adoc[]
