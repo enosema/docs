@@ -1,4 +1,4 @@
-= Enosema Foundation Specifications
+= Enosema Foundation Specifications and Directives
 
 image:https://github.com/enosema/docs/workflows/generate/badge.svg["Build Status", link="https://github.com/enosema/docs/actions?query=workflow%3Agenerate"]
 
@@ -9,8 +9,8 @@ This document is available in its rendered forms here:
 
 == Introduction
 
-This repository contains official specifications maintained by the Enosema
-Foundation (ES). The Enosema Foundation is the premier non-profit standardization
+This repository contains official specifications and directives maintained by
+the Enosema Foundation (ES). The Enosema Foundation is the premier non-profit standardization
 organization for terminology standardization and terminology related processes
 such as management.
 
@@ -20,7 +20,15 @@ The specifications include:
 2504:: *Multilingual terminology management* -- Principles and methods for managing terminology across multiple languages and cultures
 2507:: *Concept relationships* -- Abstract model and implementation guidance for defining and managing relationships between concepts
 
-These specifications are written in Metanorma to generate standardized
+The directives include:
+
+101:: *Standardization and publication* -- Directive on the ES standardization and publication processes
+102:: *Standard document requirements* -- Directive on requirements for ES standard documents
+103:: *Patent policy* -- Directive on the ES patent policy
+104:: *Guidelines for the implementation of the patent policy* -- Directive providing guidelines for the implementation of the ES patent policy
+105:: *Intellectual property rights policy* -- Directive on the ES intellectual property rights policy
+
+The specifications and directives are written in Metanorma to generate standardized
 documentation in multiple formats.
 
 == Structure
@@ -35,6 +43,21 @@ Multilingual terminology management specification
 
 `sources/enosema-relationships/`:::
 Concept relationships specification
+
+`sources/enosema-directive-standardization/`:::
+ES Directive 101: Standardization and publication
+
+`sources/enosema-directive-document-requirements/`:::
+ES Directive 102: Standard document requirements
+
+`sources/enosema-directive-patent-policy/`:::
+ES Directive 103: Patent policy
+
+`sources/enosema-directive-ipr-guidelines/`:::
+ES Directive 104: Guidelines for the implementation of the patent policy
+
+`sources/enosema-directive-ipr-policy/`:::
+ES Directive 105: Intellectual property rights policy
 
 
 == Building documentation
@@ -75,4 +98,8 @@ The build process generates documentation in multiple formats:
 
 == License
 
-Copyright © 2025 Enosema Foundation. All rights reserved.
+Copyright © 2026 Enosema Foundation.
+
+ES documents are made available under the Creative Commons Attribution
+4.0 International (CC BY 4.0) license. The full license text is available
+in the LICENSE file.

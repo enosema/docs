@@ -1,0 +1,111 @@
+[[numbering]]
+== Project/document identifier
+
+=== General
+
+ES implements a numbering system for projects/documents.
+
+=== Project index
+
+A project/document index shall be maintained on the Enosema
+website with documents listed by number, name, and type.
+
+[[project-code]]
+=== Project code
+
+. The project code shall be of the form `[n]`, where `[n]` is any
+selected positive integer of five (5) or less digits.
+
+. The numbering system applies across all project types.
+Different project types shall not share an identical project code.
+
+. The project code shall be assigned on proposal acceptance
+of the project.
+
+. Co-published documents shall attempt to use an identical project
+code in both ES and at the collaborative publisher to prevent
+potential ambiguity, if possible.
+
+
+=== Document identifier
+
+==== Representation
+
+The document identifier takes the form of `[type][stage] [code][:][y]`, where:
+
+* `[type]` is the document identifier prefix;
+* `[stage]` is the document stage;
+* `[code]` is the project code of the project that created the document; and
+* `[y]` is the 4-digit edition year.
+
+
+==== Edition year
+
+The edition year is the calendar year in which the document is published.
+On updates, a document will retain the same project code but may be
+assigned a different edition year in which the update is published.
+
+
+==== Co-publishing
+
+Co-published documents shall incorporate codes from all collaborative
+publishing parties in the document identifier, joined together via a
+"`solidus`" sign ("```/```").
+
+[example]
+ES deliverables co-published with ISO are referenced as "`ES/ISO`",
+with IETF as "`ES/IETF`".
+
+
+[[document-type]]
+==== Document types
+
+Document types shall be represented in the "`type`" as follows:
+
+. Standard, "`EFS`"
+
+. Directive, "`EFD`"
+
+. Guide, "`EFG`"
+
+. Specification, "`EFS/S`"
+
+. Report, "`EFR`"
+
+. Amendment, "`EFS/Amd`"
+
+. Technical corrigendum, "`EFS/Cor`"
+
+. Administrative, "`EFA`"
+
+[example]
+"`EFG/DS 22001:2026`" is an ES Guide at DS stage with
+project number 22001, published in 2026.
+
+
+[[document-stage]]
+==== Document stages
+
+Document stages shall be represented in the "`stage`" as follows:
+
+. Published, "``` ```" (blank)
+
+. Final draft standard, "```/FDS```"
+
+. Draft standard, "```/DS```"
+
+. Technical committee draft, "```/CD```"
+
+. Project group draft / Working draft, "```/WD```"
+
+
+[example]
+"`EFS/FDS 2501:2026`" is an ES standard document at FDS stage
+with project number 2501, published in 2026.
+
+[example]
+"`EFD 101:2026`" is a published ES Directive with
+project number 101, published in 2026.
+
+
+NOTE: Existing documents can be retrofitted to the scheme as practical.

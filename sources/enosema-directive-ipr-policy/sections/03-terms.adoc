@@ -1,0 +1,23 @@
+[source="EFD101"]
+
+[[terms]]
+== Terms, definitions and abbreviations
+
+[[term-contribution]]
+=== contribution
+
+material provided as input to an ES standardization activity
+
+NOTE: a contribution can be provided by a member of ES or an external party
+
+
+=== contributor
+
+party that provides a _contribution_ (<<term-contribution>>)
+
+
+=== Abbreviations
+
+IPR:: Intellectual Property Rights
+
+TCB:: Technical Coordination Board

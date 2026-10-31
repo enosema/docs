@@ -1,0 +1,6 @@
+[bibliography]
+== Normative References
+
+* [[[EFD101,EFD 101:2026]]], _Enosema Directive: Standardization and publication_
+
+* [[[EFD103,EFD 103:2026]]], _Enosema Directive: Patent policy_

@@ -1,0 +1,6 @@
+== Scope
+
+This document provides the ES intellectual property rights
+policy, which governs all standardization activities at ES.
+
+The ES patent policy is described in <<EFD103>>.

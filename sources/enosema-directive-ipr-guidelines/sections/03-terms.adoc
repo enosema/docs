@@ -1,0 +1,72 @@
+[source="EFD101,EFD102,EFD103"]
+
+[[terms]]
+== Terms, definitions and abbreviations
+
+
+=== declaration form
+
+"`Patent Statement and Licensing Declaration Form`" as stated in <<patent-form>>
+
+
+[[term-contribution]]
+=== contribution
+
+content submitted to ES for consideration as part of an ES
+standardization deliverable
+
+
+[[term-free-of-charge]]
+=== free of charge
+
+_patent holder_ (<<term-patent-holder>>) will not seek any monetary compensation as part of the licensing arrangement (whether such compensation is called a royalty, a one-time licensing fee, etc.); patent holder is still entitled to require that the implementer of the relevant ES standardization deliverable sign a license agreement that contains other reasonable terms and conditions (such as those relating to governing law, field of use, warranties, etc.); does not indicate that the patent holder is waiving all of its rights with respect to a patent, but only on the issue of monetary compensation
+
+
+[[term-patent]]
+=== patent
+
+claims contained in and identified by patents, utility models and other similar statutory rights based on inventions (including applications for any of these) solely to the extent that any such claims are essential to the implementation of an ES standardization deliverable
+
+[[term-essential-patent]]
+=== essential patent
+
+_patent_ (<<term-patent>>) is essential to implement a specific ES standardization deliverable
+
+[[term-patent-holder]]
+=== patent holder
+
+person or entity that owns, controls and/or has the ability to license _patents_ (<<term-patent>>)
+
+
+[[term-reciprocity]]
+=== reciprocity
+
+_patent holder_ (<<term-patent-holder>>) shall only be required to license any prospective licensee if such prospective licensee will commit to license its patent(s) for implementation of the same relevant ES standardization deliverable _free of charge_ (<<term-free-of-charge>>) or under reasonable terms and conditions
+
+[[term-declaration]]
+=== patent declaration
+
+notice or acknowledgement that a patent may cover the use of an ES standardization deliverable
+
+NOTE: The patent statement and licensing declaration form provided in <<patent-form>> shall be used for all patent declarations for an ES standardization deliverable (see <<patent-statement>>).
+
+
+[[term-patent-information-database]]
+=== patent information database
+
+database containing patent information relating to
+ES standardization deliverables
+based on information provided to ES in the patent statement and licensing declaration
+
+[[term-technical-body]]
+=== technical body
+
+technical committees and any other groups that manage
+development of ES standardization deliverables
+
+
+=== Abbreviations
+
+IPR:: Intellectual Property Rights
+
+TCB:: Technical Coordination Board

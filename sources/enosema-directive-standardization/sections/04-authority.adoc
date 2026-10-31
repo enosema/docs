@@ -1,0 +1,46 @@
+[[authority]]
+== Authority
+
+=== General
+
+The TCB is responsible for developing the corresponding processes
+and tools, and for their employment.
+
+[[authority-board]]
+=== Board of Directors
+
+The Board of Directors establishes the TCB, approves the ES
+Directives, and decides on appeals raised against procedural
+decisions taken within the ES standardization process.
+
+[[authority-tcb]]
+=== Technical Coordination Board
+
+The TCB is responsible for:
+
+* policy development: providing recommendations to the Board of
+  Directors on the ES standardization and publication processes;
+
+* policy establishment: developing and supporting process
+  documents, including:
+
+** this document; and
+** ES publication requirements; and
+
+* maintenance: periodic review and perform amendments necessary
+  to support the processes and requirements established in this
+  document;
+
+* execution: faithful execution and maintenance of the ES
+  standardization process;
+
+* enforcement: enforcing ES publication requirements on the publication
+  of ES deliverables;
+
+* mediation: raising issues and problems encountered concerning the processes
+  and procedures described in this document to the Board of Directors for
+  further consideration; and
+
+* coordination: supporting liaisons between Enosema technical committees and
+  project teams with corresponding parties of external standardization
+  bodies.

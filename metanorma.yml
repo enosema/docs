@@ -5,7 +5,12 @@ metanorma:
       - sources/enosema-terminology/document.adoc
       - sources/enosema-multilingual/document.adoc
       - sources/enosema-relationships/document.adoc
+      - sources/enosema-directive-standardization/document.adoc
+      - sources/enosema-directive-document-requirements/document.adoc
+      - sources/enosema-directive-patent-policy/document.adoc
+      - sources/enosema-directive-ipr-guidelines/document.adoc
+      - sources/enosema-directive-ipr-policy/document.adoc
 
   collection:
     organization: "Enosema Foundation"
-    name: "ES specifications"
+    name: "ES specifications and directives"

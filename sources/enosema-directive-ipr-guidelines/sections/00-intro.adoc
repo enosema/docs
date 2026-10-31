@@ -1,0 +1,27 @@
+== Introduction
+
+=== General
+
+ES is committed to expanding the realm of standards for terminology,
+concepts, and their management, with a focus on terminology resources
+and interoperability across the globe and communities
+of practice.
+
+As a proponent of open standards, ES has adopted a patent policy
+in <<EFD103>> to align IPR practice with major international
+standardization bodies including ISO, IEC and ITU.
+
+=== Purpose
+
+This document describes guidelines for the implementation of the
+ES patent policy specified in <<EFD103>>
+in the standardization and publication processes described
+in <<EFD101>>.
+
+The intent of this document is to:
+
+* encourage the early disclosure and identification of patents during the
+standardization and publication processes;
+
+* resolve potential patent concerns and rights problems relevant to
+the standardization and publication processes.
