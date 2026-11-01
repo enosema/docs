@@ -2,3 +2,5 @@
 documents:
   - pattern: "efs-*"
     channels: [public/standards]
+  - pattern: "efd-*"
+    channels: [public/standards]
