@@ -1,0 +1,34 @@
+== Scope
+
+This document specifies requirements for a concept management system: the
+governance, processes, and records by which an organization manages the
+concepts it is responsible for.
+
+It is applicable to:
+
+* any organization that creates, maintains, publishes, or registers
+concepts, regardless of sector, size, or domain;
+
+* concept registers operated under ISO 19135 procedures and the FERIN
+framework;
+
+* terminology collections maintained as concept systems in the sense of
+ISO 704 and EFS 2501.
+
+This document is adoptable by any organization. Conformity can be claimed
+for the requirements classes of Annex <<req-classes>> as well as for the
+document as a whole.
+
+This document does not specify:
+
+* the principles and methods of terminology work itself, which are
+specified in ISO 704 and EFS 2501;
+
+* the structure of concept systems and concept relations, which are
+specified in EFS 2510;
+
+* the management of multilingual terminology content, which is specified
+in EFS 2504, beyond the localization governance requirements of
+<<localization-mgmt>>;
+
+* the design of any particular software tool.

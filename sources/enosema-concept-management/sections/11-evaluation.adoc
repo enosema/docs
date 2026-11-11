@@ -1,0 +1,52 @@
+[[evaluation]]
+== Evaluation
+
+=== Monitoring
+
+The organization shall monitor the health of its concept management
+system, including:
+
+. the volume and throughput of proposals and their decision times;
+
+. the number and severity of validation errors in published records; and
+
+. consumer-reported issues with concepts, references, and localizations.
+
+=== Periodic review of concept systems
+
+The organization shall review each concept system at planned intervals.
+The review shall verify:
+
+. the constraints of EFS 2510 against the live system, with errors
+logged and dispositioned;
+
+. that every subdivision still carries its criterion of subdivision;
+
+. that lifecycle events are recorded on both the register and the concept
+records where both exist;
+
+. the continued validity of equivalence degrees for localizations affected
+by source changes (<<localization-mgmt>>); and
+
+. that retired records remain resolvable and carry successor information.
+
+=== Internal audit
+
+The organization shall audit its concept management system at planned
+intervals to verify conformity with this document. The audit shall cover
+the governance decisions, the records of the selected period, and the
+operation of the registration and change procedures.
+
+Audit criteria, scope, and findings shall be recorded. Nonconformities
+shall be dispositioned through <<improvement>>.
+
+=== Conformity claims
+
+An organization claiming conformity to this document shall state:
+
+. the requirements class claimed (whole document or a class of
+Annex <<req-classes>>);
+
+. the concept systems and registers in scope of the claim; and
+
+. the date and basis of the assessment on which the claim rests.

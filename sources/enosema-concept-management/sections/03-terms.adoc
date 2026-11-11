@@ -1,0 +1,64 @@
+[[terms]]
+== Terms, definitions and abbreviations
+
+=== Terms and definitions
+
+For the purposes of this document, the following terms and definitions apply.
+
+[[term-concept-management-system]]
+==== concept management system
+alt:[CMS]
+
+set of governance arrangements, processes, and records by which an
+organization manages the concepts for which it is responsible
+
+[[term-concept-owner]]
+==== concept owner
+
+party accountable for the intension, extension, and lifecycle of a concept
+or a defined set of concepts
+
+[[term-register-manager]]
+==== register manager
+
+party responsible for the operation of a concept register, including the
+integrity of its records and the execution of its registration procedures
+
+[[term-control-body]]
+==== control body
+
+body that decides on the acceptance, revision, and retirement of
+registered items under the registration procedures
+
+[SOURCE: ISO 19135-1, modified]
+
+[[term-submitting-organization]]
+==== submitting organization
+
+party that proposes an item for registration
+
+[SOURCE: ISO 19135-1]
+
+[[term-concept-record]]
+==== concept record
+
+structured description of one concept, comprising its designations,
+definitions, relations, sources, and management metadata
+
+[[term-concept-system-scope]]
+==== concept system scope
+
+statement of the domain, purpose, and boundaries of the concepts managed
+by an organization
+
+=== Abbreviations
+
+CMS:: concept management system
+
+ES:: Enosema Foundation
+
+FERIN:: Framework for Extensible Registration of INformation
+
+RA:: registration authority
+
+TC:: technical committee

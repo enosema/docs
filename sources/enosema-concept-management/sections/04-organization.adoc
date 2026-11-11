@@ -1,0 +1,42 @@
+[[organization]]
+== Organization and its context
+
+=== Understanding the organization and its context
+
+The organization shall determine the external and internal issues that
+bear on its purpose and on the concepts it manages, including:
+
+. the domains whose concepts it manages, and the domains that depend on it;
+
+. the regulatory, contractual, or interoperability obligations attached to
+those concepts;
+
+. the users and consumers of its concepts, human and machine; and
+
+. the lifecycle of the systems that consume its concepts.
+
+=== Scope of the concept management system
+
+The organization shall define a concept system scope
+(<<term-concept-system-scope>>) stating:
+
+. the domains and subject fields covered;
+
+. the purposes the concepts serve (standardization, regulation,
+interoperability, reference data, publication); and
+
+. the boundaries: concepts explicitly excluded, and the registers with
+which the system interworks.
+
+The concept system scope shall be maintained as a controlled record and
+shall be reviewed when the organization's context changes.
+
+=== Consumers and their requirements
+
+The organization shall identify the consumers of its concepts — including
+downstream systems, translations, and other registers — and shall
+determine their requirements for stability, citability, traceability, and
+format of concept records.
+
+The organization shall ensure that changes to its concepts are assessed
+against these requirements before being applied (<<change-mgmt>>).

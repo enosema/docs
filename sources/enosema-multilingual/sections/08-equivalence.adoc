@@ -15,6 +15,29 @@ differences.
 
 === Types of equivalence
 
+In terminological records, the equivalence between a localized concept and
+its source concept shall be stated as an *equivalence degree*, with the
+following values, aligned with ISO 704:2022, 7.7.3:
+
+full:: equivalent intension: the localized concept and its source concept
+have the same characteristics and boundaries;
+
+partial:: overlapping but not identical intension: the localization covers
+part of the source concept, or extends it (corresponding to the partial
+equivalence of <<partial-equivalence>>);
+
+none:: no corresponding concept exists in the target language (corresponding
+to the zero equivalence of <<zero-equivalence>>);
+
+directional:: monodirectional equivalence: the correspondence holds from
+the source language into the target language but not in reverse, so the
+localized term cannot be used as a source for back-translation.
+
+Wherever the degree is `partial`, `none`, or `directional`, the record
+shall carry an equivalence note explaining the difference; a degree
+without its note is a defect of the record. The documentation requirements
+of <<documentation-of-assessment>> apply to the note.
+
 ==== Full equivalence
 
 Full equivalence exists when terms in different languages represent identical
@@ -51,6 +74,7 @@ ja: 酸素
 definition: 原子番号8の化学元素
 ====
 
+[[partial-equivalence]]
 ==== Partial equivalence
 
 Partial equivalence exists when terms in different languages represent similar
@@ -81,6 +105,7 @@ The French concept focuses more specifically on activities and has stronger
 connotations of intimacy than the broader English concept.
 ====
 
+[[zero-equivalence]]
 ==== Zero equivalence
 
 Zero equivalence occurs when a concept exists in one language but has no
@@ -126,6 +151,7 @@ Criteria for assessing equivalence include:
 . Acceptance by subject matter experts
 . Established usage in authoritative sources
 
+[[documentation-of-assessment]]
 ==== Documentation of assessment
 
 The equivalence assessment shall be documented:

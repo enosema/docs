@@ -1,0 +1,51 @@
+== Introduction
+
+Concepts do not exist in isolation. A concept is understood through its
+relations to other concepts: the broader concept it is a kind of, the parts
+that fit together to constitute it, the instances that realize it, and the
+multitude of associative links that relate it to its causes, materials,
+actors, and products. The systematic arrangement of concepts according to
+their relations forms a *concept system*, and the quality of a concept
+system largely determines the quality of the terminology that is derived
+from it.
+
+International standards establish the foundations of this work. ISO 704
+establishes the principles and methods of terminology work, including the
+theory of concept systems and the characteristics of concepts. ISO 1087-1
+provides the vocabulary of terminology work. ISO 25964, developed for
+thesauri and interoperability with other vocabularies, enumerates the
+semantic relationships that connect concepts. ISO 12620 provides a data
+category registry whose relation categories are widely implemented.
+ISO 10241-1 governs the drafting of terminological entries in standards.
+ISO 19135 establishes procedures for the registration of items, the
+foundation of the FERIN framework for the registration of information.
+
+In practice, however, organizations that manage concepts face recurring
+questions that these standards answer only in fragments:
+
+* which relation types should a concept system distinguish, and what is
+the semantics of each;
+* when is a pairwise (binary) relation the right assertion, and when is a
+joint, multi-member assertion (a "`rake`") required;
+* how are completeness, per-member multiplicity, and the criterion of
+subdivision recorded so that concept diagrams and their meaning survive
+into machine-readable form;
+* how are relations managed over time as concepts are extended, split,
+instantiated, or retired within a register.
+
+This document answers these questions. It specifies the relation
+vocabulary of ES concept systems, the rules for choosing between binary
+relations and n-ary relations, the metadata that accompanies multi-member
+relations, and the quality constraints that keep a concept system
+coherent as it evolves. It is written to be directly implementable: each
+relation type is defined with its direction, its inverse, and its
+semantic conditions, so that terminology management systems can
+enumerate, validate, and interchange concept relations without
+ambiguity.
+
+This document is part of a suite of ES specifications for terminology
+management. EFS 2501 addresses principles and methods of terminology
+management, EFS 2504 addresses multilingual terminology management, and
+EFS 2507 addresses the abstract model of concept relationships. This
+document builds on those foundations and specifies the relation
+vocabulary and system-level practices in full.

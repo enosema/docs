@@ -1,0 +1,20 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO10241-2,ISO 10241-2]]], _Terminological entries in standards — Part 2: Adoption of terminological entries in various kinds of documents_
+
+* [[[ISO24229,ISO 24229]]], _Information and documentation — Register for writing system conversion systems_
+
+* [[[ISO639-3,ISO 639-3]]], _Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages_
+
+* [[[ISO15924,ISO 15924]]], _Information and documentation — Codes for the representation of names of scripts_
+
+* [[[FERIN,FERIN]]], _Framework for Extensible Registration of INformation_, https://www.ferin.org/
+
+* [[[EFS2501,EFS 2501:2025]]], _Terminology management — Principles and methods_
+
+* [[[EFS2504,EFS 2504:2025]]], _Terminology management — Multilingual terminology_
+
+* [[[EFS2507,EFS 2507:2025]]], _Terminology management — Concept relationships_
+
+* [[[EFS2513,EFS 2513:2026]]], _Terminology management — Concept management systems — Requirements_

@@ -1,0 +1,56 @@
+[[localization-mgmt]]
+== Localization management
+
+=== General
+
+Where the organization publishes concepts in more than one language, the
+localization of concepts is a governed process, not an incidental
+translation. The requirements of this clause supplement EFS 2504.
+
+=== Localization records
+
+For each localization, the organization shall record:
+
+. the language of the localization as an ISO 639-3 three-letter code;
+
+. the script as an ISO 15924 code, wherever the language is rendered in
+more than one script or the localization is a romanization or
+transliteration; and
+
+. the writing system conversion system as an ISO 24229 register item,
+wherever the localization is produced by conversion between writing
+systems, citing the ISO 24229 identifier of the conversion system
+(for example, `urn:iso:24229:system-code:...`).
+
+A localization produced by conversion shall carry both the source and the
+target script, and the ISO 24229 conversion system used. The organization
+shall not record a conversion system identifier that is not registered in
+the ISO 24229 register.
+
+=== Equivalence governance
+
+The organization shall govern cross-language equivalence per ISO 704 and
+EFS 2504:
+
+. each localization shall carry an equivalence degree: `full`, `partial`,
+`none`, or `directional`;
+
+. a localization with degree `partial` or `directional` shall carry a
+note explaining the difference; and
+
+. acceptance of a localization with degree other than `full` shall be a
+control body decision, with the reasons recorded.
+
+=== Localization workflow
+
+The organization shall define and apply a localization workflow that
+determines:
+
+. which localizations are required for which concepts (by policy or by
+consumer need);
+
+. who performs, reviews, and accepts localizations; and
+
+. how localized concepts are updated when the source concept changes: a
+change to a source concept shall trigger review of every localization of
+that concept whose equivalence degree depends on the changed intension.

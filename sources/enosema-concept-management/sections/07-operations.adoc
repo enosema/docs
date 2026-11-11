@@ -1,0 +1,139 @@
+[[operations]]
+== Operation of concept management
+
+=== Concept creation
+
+==== Proposal
+
+A concept shall be created through a proposal to the control body stating
+the proposed designations, the definition, the placement in the concept
+system (superordinate concept and criterion of subdivision), the initial
+relations, and the sources.
+
+==== Definition drafting
+
+Definitions of concepts shall be drafted in accordance with ISO 704 and
+ISO 10241-1:
+
+* a definition shall describe the intension of the concept, stating the
+delimiting characteristics that distinguish it from its coordinate
+concepts;
+
+* a definition shall not begin with an article, shall not be a restatement
+of the term, and shall not include requirements or advice;
+
+* where a concept is an extensional subdivision (for example, an
+exhaustive partitive decomposition), the organization shall verify that
+the members exhaust the extension before publishing the definition
+(ISO 704; EFS 2510).
+
+==== Review and acceptance
+
+No concept shall be published without review and acceptance by the
+control body. The review shall verify at least:
+
+. the correctness of the placement in the concept system and the stated
+criterion of subdivision;
+
+. the uniqueness of the concept within the system: the proposal does not
+duplicate an existing concept;
+
+. the relation set: initial relations use the controlled vocabulary
+(<<relations-mgmt>>) and their directions and inverses are consistent;
+
+. the terminological entries: designations and definitions conform to
+ISO 10241-1; and
+
+. the sources: claims are supported by cited sources.
+
+=== Concept record content
+
+The organization shall maintain, for each published concept, a concept
+record (<<term-concept-record>>) that carries at least:
+
+. a stable identifier per the identifier scheme (<<planning>>);
+
+. one or more designations, with term type and normative status
+(ISO 12620 data categories);
+
+. the definition, with its sources;
+
+. the relations of the concept, recorded per EFS 2510;
+
+. the lifecycle status of the concept; and
+
+. the history of the record: what changed, when, and by whose decision.
+
+Concept records shall be available in machine-readable form
+(<<support>>).
+
+[[change-mgmt]]
+=== Change management
+
+==== Changes to published concepts
+
+A change to a published concept — definition, placement, relations, or
+designation status — shall go through proposal, review, and acceptance,
+except for corrections that do not alter the intension or extension of
+the concept, which the register manager may apply and record directly.
+
+==== Extending, splitting, merging and instantiating
+
+For each of the following operations, the control body shall decide and
+the record shall capture the decision:
+
+* *extending*: adding subordinate concepts under an existing concept; the
+criterion of the new subdivision shall be recorded
+(<<planning>>);
+
+* *splitting*: replacing one concept with two or more concepts; each
+successor shall be linked to the predecessor with the lifecycle relation
+`supersedes`/`superseded_by` (EFS 2510), and the predecessor record shall
+be retained, not deleted;
+
+* *merging*: replacing two or more concepts with one; the successor shall
+link to each predecessor with `supersedes`/`superseded_by`, and the
+predecessors shall be retained;
+
+* *instantiating*: promoting an individual concept from a general concept,
+or recording an instance of a general concept; the
+`instance_of`/`has_instance` relation shall be recorded.
+
+In every operation, identifiers of retired records shall remain resolvable.
+Consumer references shall not break.
+
+==== Retirement
+
+A concept shall not be deleted from a published system. Retirement shall:
+
+. set the lifecycle status of the concept to retired or deprecated;
+
+. record, where a successor exists, the relation to the successor; and
+
+. retain the record, its identifiers, and its history.
+
+==== Continuity of references
+
+The organization shall ensure that, across every operation of this
+clause, references to its concepts remain resolvable: an identifier
+issued at publication resolves for the operational life of the
+organization's published records, either to the current record or to the
+retired record with its successor information.
+
+[[registration]]
+=== Registration
+
+Where the organization operates or participates in a register under
+ISO 19135 procedures and the FERIN framework, it shall:
+
+. operate the submission, review, acceptance, publication, and
+maintenance procedures of the register;
+
+. align its lifecycle statuses with the ISO 19135 registration statuses
+(proposed, accepted, notAccepted, withdrawn, superseded, retired);
+
+. record register events (acceptance, replacement, retirement) both on
+the register item and, as lifecycle relations, on the concept record; and
+
+. publish the register so that human and machine consumers can obtain
+records and statuses.

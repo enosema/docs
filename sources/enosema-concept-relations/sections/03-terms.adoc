@@ -1,0 +1,144 @@
+[[terms]]
+== Terms, definitions and abbreviations
+
+=== Terms and definitions
+
+For the purposes of this document, the following terms and definitions apply.
+
+ISO and ES maintain terminological databases for use in standardization at the
+addresses given in the bibliography.
+
+[[term-concept]]
+==== concept
+
+unit of knowledge created by a unique combination of characteristics
+
+[SOURCE: ISO 1087-1]
+
+NOTE: A concept is not necessarily bound to a particular language. It is,
+however, influenced by the social or cultural background which often leads to
+different categorizations.
+
+[[term-concept-system]]
+==== concept system
+
+set of concepts and the set of relations that hold among them
+
+[SOURCE: ISO 1087-1]
+
+[[term-concept-relation]]
+==== concept relation
+
+semantic relation between two or more concepts within a concept system
+
+[NOTE: In this document, a relation between exactly two concepts is a
+*binary relation* (<<term-binary-relation>>); a relation between a
+comprehensive concept and two or more coordinate concepts is an
+*n-ary relation* (<<term-nary-relation>>).]
+
+[[term-binary-relation]]
+==== binary relation
+
+_concept relation_ (<<term-concept-relation>>) that holds between exactly two
+concepts
+
+[[term-nary-relation]]
+==== n-ary relation
+alt:[hyperedge]
+_concept relation_ (<<term-concept-relation>>) that holds between a
+comprehensive concept and two or more coordinate concepts that are jointly
+significant with respect to the comprehensive concept
+
+[[term-coordinate-concept]]
+==== coordinate concept
+
+concept to which a given _concept_ (<<term-concept>>) is related by a shared
+superordinate concept and a shared criterion of subdivision
+
+[SOURCE: ISO 1087-1, modified — the shared criterion of subdivision is made
+explicit]
+
+[[term-comprehensive-concept]]
+==== comprehensive concept
+
+superordinate concept that subsumes two or more subordinate concepts which,
+taken together, characterize it
+
+[NOTE: In a partitive relation, the comprehensive concept is the whole that
+the parts fitted together constitute; in a generic relation, it is the class
+that the kinds jointly constitute; in a sequential relation, it is the process
+or development that the ordered stages jointly constitute.]
+
+[[term-criterion-of-subdivision]]
+==== criterion of subdivision
+alt:[dimension]
+
+basis for the division of a concept system into subordinate concepts
+
+[SOURCE: ISO 704]
+
+[[term-multidimensionality]]
+==== multidimensionality
+
+characteristic of a _concept system_ (<<term-concept-system>>) in which the
+concepts of one subdivision level are subdivided according to more than one
+_criterion of subdivision_ (<<term-criterion-of-subdivision>>)
+
+[SOURCE: ISO 704]
+
+[[term-completeness]]
+==== completeness
+
+indication of whether the members of an _n-ary relation_
+(<<term-nary-relation>>) exhaust the intension of the comprehensive concept
+
+[[term-presence]]
+==== presence
+
+indication of whether a member of an _n-ary relation_
+(<<term-nary-relation>>) exists in every instance of the comprehensive
+concept or only in some instances
+
+[[term-delimiting-characteristic]]
+==== delimiting characteristic
+
+_characteristic_ of a concept that distinguishes it from coordinate concepts
+within the same subdivision
+
+[NOTE: In concept diagrams, the part of a partitive relation that delimits a
+subordinate concept is shown with a bold line of three-fold width.]
+
+[[term-sequential-relation]]
+==== sequential relation
+
+_n-ary relation_ (<<term-nary-relation>>) connecting a comprehensive concept
+to two or more subordinate concepts ordered by a criterion of sequencing
+
+[[term-register]]
+==== register
+
+set of information items with an assigned status maintained by a
+registration authority
+
+[SOURCE: ISO 19135-1]
+
+[[term-registration-authority]]
+==== registration authority
+alt:[RA]
+
+organization that performs the administrative functions required to operate a
+_register_ (<<term-register>>)
+
+[SOURCE: ISO 19135-1]
+
+=== Abbreviations
+
+ES:: Enosema Foundation
+
+RA:: registration authority
+
+SKOS:: Simple Knowledge Organization System
+
+TC:: technical committee
+
+URN:: uniform resource name

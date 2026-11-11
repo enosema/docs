@@ -1,0 +1,70 @@
+[[binary-relations]]
+== Binary relations
+
+=== When to use a binary relation
+
+A binary relation is the correct assertion when the relation holds between
+exactly two concepts and neither the joint significance of a group of
+relations, nor the completeness of a decomposition, nor per-member
+presence or count is being asserted.
+
+Binary relations express:
+
+* hierarchical membership of one concept under another
+(<<rel-hierarchical>>);
+
+* pairwise associative links of a stated kind (<<rel-associative>>);
+
+* equivalence and mapping between two concepts (<<rel-equivalence>>); and
+
+* lifecycle and register assertions between two concepts
+(<<rel-other>>).
+
+=== Recording direction and inverse
+
+A binary relation assertion shall record:
+
+. the relation type identifier;
+
+. the direction, by the ordered pair (current concept, related concept)
+per the semantics of the type; and
+
+. optionally, an explanatory content string clarifying the specific
+assertion.
+
+Where a system materializes inverses, the inverse relation type shall be
+the one specified in <<rel-vocabulary>>. Systems shall not invent inverse
+identifiers.
+
+=== Assertions between designations
+
+Some relation types apply between specific *designations* of concepts
+rather than between concepts — for example, that one designation is an
+abbreviated form for another. These designation-level relations use the
+same vocabulary, restricted to the types whose semantics apply to
+designations:
+
+* `abbreviated_form_for`: the current designation is an abbreviated form
+of the related designation of the same concept;
+
+* `short_form_for`: the current designation is a short form of the related
+designation of the same concept;
+
+* `full_form_for`: the current designation is the full form of the related
+abbreviation.
+
+Concept management systems shall record designation-level relations on the
+designation record and shall not encode them as concept-level relations.
+
+=== Informative versus normative relations
+
+Relations in a concept system differ in normative force:
+
+* structural relations (hierarchical, partitive, instantial) are
+*normative*: they define the intension and extension of concepts and shall
+be validated for coherence (<<quality>>);
+
+* associative relations are *informative* by default: they explain and
+connect, but do not delimit. A domain can declare an associative kind
+normative for its purposes (for example, `causes` in a safety domain);
+such declarations belong to the domain profile, not to this document.

@@ -1,0 +1,48 @@
+[[req-classes]]
+[appendix]
+== Requirements classes
+
+This document is adoptable in whole or through the requirements classes
+below. A requirements class is a named set of clauses; an organization
+claiming a class conforms to every requirement of the clauses it
+contains.
+
+.Requirements classes
+[cols="1,1,2",options="header"]
+|===
+|Class
+|Clauses
+|Intended adopter
+
+|`basic`
+|<<organization>>, <<operations>>, <<support>>
+|A team beginning structured concept management: records, change
+control, and machine-readable publication, without register operation.
+
+|`governed`
+|`basic` + <<governance>>, <<planning>>, <<evaluation>>
+|An organization operating concept work with defined governance: a
+control body, roles, planned systems, and periodic review.
+
+|`multilingual`
+|`governed` + <<localization-mgmt>>
+|An organization publishing concepts in multiple languages with
+governed equivalence and conversion-system recording.
+
+|`registered`
+|`governed` + <<registration>> (in <<operations>>), <<relations-mgmt>>
+|An organization operating or participating in registers under ISO 19135
+procedures and the FERIN framework, with full relation management.
+
+|`full`
+|All clauses
+|The complete concept management system.
+|===
+
+The classes form a ladder: each class includes the clauses of the
+classes it builds on. Conformity to a class implies conformity to the
+clauses it contains and to no others; an organization shall not claim a
+class whose clauses it does not meet.
+
+NOTE: The `multilingual` and `registered` classes are independent of each
+other; an organization may claim both, either, or `full`.

@@ -10,6 +10,8 @@ metanorma:
       - sources/enosema-directive-patent-policy/document.adoc
       - sources/enosema-directive-ipr-guidelines/document.adoc
       - sources/enosema-directive-ipr-policy/document.adoc
+      - sources/enosema-concept-relations/document.adoc
+      - sources/enosema-concept-management/document.adoc
 
   collection:
     organization: "Enosema Foundation"
