@@ -19,6 +19,7 @@
 :givenname_2: Ronald
 :affiliation_2: Ribose
 :docidentifier: EFS 2510:2026
+:mn-document-class: enosema
 :data-uri-image:
 :local-cache-only:
 
