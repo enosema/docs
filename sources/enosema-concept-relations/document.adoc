@@ -1,0 +1,47 @@
+= Concept systems and concept relations
+:title-intro-en: Terminology management
+:title-main-en: Concept systems and concept relations
+:docnumber: 2510
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-11-11
+:language: en
+:doctype: standard
+:technical-committee: Terminology
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:imagesdir: images
+:fullname: Reese W. Plews
+:surname: Plews
+:givenname: Reese W.
+:affiliation: Plews Consulting
+:fullname_2: Ronald Tse
+:surname_2: Tse
+:givenname_2: Ronald
+:affiliation_2: Ribose
+:docidentifier: EFS 2510:2026
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-normrefs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-concept-systems.adoc[]
+
+include::sections/05-relations.adoc[]
+
+include::sections/06-binary-relations.adoc[]
+
+include::sections/07-nary-relations.adoc[]
+
+include::sections/08-representation.adoc[]
+
+include::sections/09-quality.adoc[]
+
+include::sections/az-bibliography.adoc[]

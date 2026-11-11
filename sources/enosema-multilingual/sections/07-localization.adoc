@@ -1,0 +1,98 @@
+[[localization-fields]]
+== Localization records
+
+=== General
+
+A localized concept is managed as a record that states where the
+localization belongs: its language, its script, and — where the
+localization is produced by conversion between writing systems — the
+writing system conversion system that produced or governs it.
+
+The three fields are cumulative. A localized form of Mandarin Chinese
+romanized into Latin script is identified by its language, the Latin
+script, and the conversion system (for example, Hanyu Pinyin); a localized
+form of Japanese rendered in Hepburn romanization is identified by its
+language, the Latin script, and the Hepburn conversion system. The
+conversion system field prevents the most common failure of
+multilingual interchange: two romanizations of the same term that cannot
+be reconciled because the system that generated them is unrecorded.
+
+=== Language field
+
+The language of a localization shall be recorded as an ISO 639-3
+three-letter code.
+
+ISO 639-3 is required rather than the two-letter codes of ISO 639-1
+because terminology work regularly distinguishes language varieties that
+ISO 639-1 collapses: the codes for Mandarin (`cmn`), Cantonese (`yue`),
+and Min Nan Chinese (`nan`) exist only in ISO 639-3, and terminology for
+the same script or domain frequently differs among these varieties.
+
+[NOTE]
+====
+Where a consumer requires ISO 639-1 codes, the mapping shall be recorded
+alongside the ISO 639-3 code; the ISO 639-3 code remains the record of
+authority.
+====
+
+[[localization-fields-script]]
+=== Script field
+
+The script of a localization shall be recorded as an ISO 15924 code
+wherever either of the following holds:
+
+. the language is rendered in more than one script in the scope of the
+localization; or
+
+. the localized form is a romanization, transliteration, or transcription
+of a form in another script.
+
+Otherwise the script field is optional.
+
+=== Writing system conversion system field
+
+Where a localized form is produced by conversion between writing systems,
+the localization record shall cite the writing system conversion system
+that produced or governs the conversion, by the identifier of its entry in
+the ISO 24229 register.
+
+The cited conversion system shall be registered in the ISO 24229 register
+at the time of citation. A conversion system that has been withdrawn from
+the register may be cited only as part of a historical record, with its
+status recorded.
+
+[example]
+The localized form *北京* (Mandarin Chinese, Han script, `cmn-Hans`) has a
+romanized form *Beijing*. The localization record for *Beijing* carries
+the language `cmn`, the script `Latn` (ISO 15924), and the ISO 24229
+identifier of the Hanyu Pinyin conversion system.
+
+[example]
+A Japanese localization set comprising 東京 (Jpan), 東京 in Hepburn
+romanization *Tōkyō* (Latn), and a kunrei-shiki variant *Tôkyô* (Latn)
+records two distinct localized forms with the same language and script,
+distinguished solely by their ISO 24229 conversion systems.
+=== Record summary
+
+The localization record of a localized concept carries, at minimum:
+
+[cols="1,3",options="header"]
+|===
+|Field
+|Requirement
+
+|language
+|ISO 639-3 code; mandatory.
+
+|script
+|ISO 15924 code; mandatory where <<localization-fields-script>> applies,
+optional otherwise.
+
+|conversion system
+|ISO 24229 register identifier; mandatory for localized forms produced
+by conversion between writing systems, forbidden otherwise.
+|===
+
+The record summary does not replace the terminological content of the
+localization — designations, definitions, sources — which is specified in
+EFS 2501 and ISO 10241-1.

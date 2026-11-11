@@ -1,0 +1,100 @@
+[[representation]]
+== Machine-readable representation
+
+=== General
+
+Concept relations shall be represented in machine-readable form so that
+concept systems can be validated, interchanged, and published. This
+clause specifies the representation requirements; it does not mandate a
+serialization format, but specifies the semantic content that any
+conforming serialization shall carry and the vocabulary mappings that
+interchange formats shall use.
+
+=== Semantic content of a relation record
+
+A conforming relation record carries, for a binary relation:
+
+. the relation type identifier (<<rel-vocabulary>>);
+
+. the identifier of the current (subject) concept;
+
+. the identifier of the related (object) concept;
+
+. optionally, an explanatory content string;
+
+. optionally, references to concept sources (bibliographic support); and
+
+. optionally, the registration status of the relation assertion itself.
+
+For an n-ary relation, a conforming record additionally carries the kind
+of the relation, the comprehensive concept identifier, the ordered member
+list with per-member presence, count and delimiting metadata, the
+completeness, and the criterion (<<nary-relations>>).
+
+[[repr-skos]]
+=== Mapping to SKOS
+
+Where a concept system is published as a SKOS concept scheme, the
+following mappings shall be used:
+
+[cols="1,1",options="header"]
+|===
+|ES relation type
+|SKOS property
+
+|`broader` / `broader_generic` / `broader_partitive` /
+`broader_instantial`
+|`skos:broader`
+
+|`narrower` / `narrower_generic` / `narrower_partitive` /
+`narrower_instantial`
+|`skos:narrower`
+
+|`related_concept` and associative types
+|`skos:related`
+
+|`exact_match`
+|`skos:exactMatch`
+
+|`close_match`
+|`skos:closeMatch`
+
+|`broad_match`
+|`skos:broadMatch`
+
+|`narrow_match`
+|`skos:narrowMatch`
+
+|`related_match`
+|`skos:relatedMatch`
+|===
+
+The projection discards ES-specific information: coordination method,
+inverse pairing, per-member presence and count, delimiting status,
+completeness, and criterion are not carried by SKOS. Publishers shall
+retain the full ES record and treat the SKOS projection as lossy.
+Systems shall not round-trip ES data through SKOS alone.
+
+[[repr-jsonld]]
+=== JSON-LD and typed representation
+
+Where concept systems are published as JSON-LD or as typed records:
+
+* relation types shall be identified by the identifiers of
+<<rel-vocabulary>>, resolvable through the ES relation register
+(<<rel-register>>);
+
+* inverses may be materialized but shall remain consistent with the
+recorded direction;
+
+* n-ary relations shall be represented as first-class resources, not as
+reified pairs, with members referenced by identifier and per-member
+metadata attached to the membership, not to the concept.
+
+=== Relation identifiers in interchange
+
+Relation type identifiers used in interchange shall be exactly the
+identifiers of <<rel-vocabulary>> or of a domain profile registered per
+<<rel-register>>. Systems shall reject interchange containing unknown
+relation type identifiers rather than silently dropping the relations,
+and shall report them to the sender.

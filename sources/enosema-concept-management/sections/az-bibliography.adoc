@@ -1,0 +1,18 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO25964-1,ISO 25964-1]]], _Information and documentation — Thesauri and interoperability with other vocabularies — Part 1: Thesauri for information retrieval_
+
+* [[[ISO10241-2,ISO 10241-2]]], _Terminological entries in standards — Part 2: Adoption of terminological entries in various kinds of documents_
+
+* [[[ISO9001,ISO 9001]]], _Quality management systems — Requirements_
+
+* [[[FERIN,FERIN]]], _Framework for Extensible Registration of INformation_, https://www.ferin.org/
+
+* [[[EFS2501,EFS 2501:2025]]], _Terminology management — Principles and methods_
+
+* [[[EFS2504,EFS 2504:2025]]], _Terminology management — Multilingual terminology_
+
+* [[[EFS2507,EFS 2507:2025]]], _Terminology management — Concept relationships_
+
+* [[[EFS2510,EFS 2510:2026]]], _Terminology management — Concept systems and concept relations_

@@ -1,0 +1,32 @@
+[[improvement]]
+== Improvement
+
+=== Nonconformity and corrective action
+
+When a nonconformity is identified — through validation, review, audit,
+or consumer report — the organization shall:
+
+. correct the nonconforming records;
+
+. determine whether the cause lies in the records, the process, or the
+governance, and act on the cause; and
+
+. review whether similar nonconformities exist elsewhere in the system.
+
+=== Continual improvement
+
+The organization shall improve the suitability of its concept management
+system through:
+
+. the outcomes of monitoring and review (<<evaluation>>);
+
+. changes in consumer requirements (<<organization>>);
+
+. evolution of the vocabularies and registers this document relies on,
+including new versions of EFS 2510 and of the ISO 24229 register entries
+used in localization; and
+
+. decisions of the control body recorded as improvements to the system.
+
+The organization shall record the improvement decisions and verify their
+effect at the next review.

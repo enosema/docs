@@ -1,0 +1,63 @@
+[[planning]]
+== Planning of the concept system
+
+=== Breadth and depth
+
+For each concept system it maintains, the organization shall plan:
+
+* *breadth*: the subject fields and domains the system covers, and the
+boundary between systems;
+
+* *depth*: the levels of subdivision the system carries, justified by the
+needs of the consumers identified in <<organization>>, and not by
+accidental authoring history.
+
+The organization should record, for each subdivision level, the criterion
+of subdivision that generates it (ISO 704; EFS 2510). A subdivision
+without a recorded criterion is a nonconformity at review
+(<<evaluation>>).
+
+=== Extending the concept system
+
+When the organization extends a concept system — adding domains, levels,
+or criteria — it shall:
+
+. determine the criterion of subdivision for the extension and record it
+before subordinate concepts are created;
+
+. assess the impact on existing concepts: parallel subdivisions for
+multidimensionality (ISO 704; EFS 2510), not reclassification of
+existing concepts unless the control body decides it; and
+
+. record the decision of the control body on the extension.
+
+=== Planning lifecycle and versioning
+
+For its concepts the organization shall plan:
+
+* the lifecycle states concepts pass through (for example, proposed,
+accepted, published, deprecated, retired), aligned with ISO 19135
+registration statuses where a register is operated;
+
+* the versioning policy for concept records: what constitutes a new
+version of a concept, what constitutes a new concept, and how references
+remain valid across versions;
+
+* the review interval for each concept system (<<evaluation>>).
+
+=== Planning identifiers
+
+The organization shall plan its identifier scheme for concepts, concept
+records, and relation records before publication, so that:
+
+. identifiers are stable, unique, and independent of terms and labels;
+
+. identifiers do not encode lifecycle state, version, or location; and
+
+. consumers can cite an identifier and resolve it to the current record
+and, where supported, to the record as of a past date.
+
+NOTE: The FERIN framework's separation of the concept plane and the
+content plane is a suitable basis for this planning: identifiers on the
+concept plane outlive revisions; content plane items carry their own
+status and validity.

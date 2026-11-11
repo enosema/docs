@@ -1,0 +1,36 @@
+== Scope
+
+This document specifies the concept systems and concept relations used in
+terminology management, for the purposes of the Enosema Foundation and of
+any organization that adopts this document.
+
+It specifies:
+
+* the structure of concept systems, including concept coordination
+(generic, partitive and instantial), criteria of subdivision, and
+multidimensionality;
+
+* a controlled vocabulary of concept relations, enumerating each relation
+type with its semantics, direction, and inverse;
+
+* the rules for choosing between binary relations and n-ary relations
+(hyperedges), and the metadata that n-ary relations carry, including
+completeness, per-member presence and count, delimiting status, and the
+criterion of sequencing;
+
+* requirements for the machine-readable representation of concept
+relations and for their management within registers.
+
+This document does not specify:
+
+* the structure of terminological entries in standards, which is
+specified in ISO 10241-1 and applied in EFS 2501;
+
+* the management of multilingual equivalence beyond its impact on
+relations, which is specified in EFS 2504;
+
+* the abstract data model of concept relationships, which is specified
+in EFS 2507;
+
+* the organizational requirements for operating a concept management
+system, which are specified in EFS 2513.

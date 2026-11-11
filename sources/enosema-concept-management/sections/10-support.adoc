@@ -1,0 +1,59 @@
+[[support]]
+== Support
+
+=== Resources
+
+The organization shall determine and provide the resources needed for the
+concept management system, including:
+
+. the staffing of the roles of <<governance>>;
+
+. the tooling for authoring, reviewing, validating, and publishing
+concept records; and
+
+. the infrastructure for publication and for machine access.
+
+=== Competence and awareness
+
+The organization shall ensure that persons performing concept work are
+competent in the terminology methods this document relies on, including
+ISO 704 concept analysis, definition drafting per ISO 10241-1, and the
+relation vocabulary in use.
+
+The organization shall ensure that all participants are aware of:
+
+. the concept management policy (<<governance>>);
+
+. their roles and the role boundaries; and
+
+. the consequences of nonconforming changes to published concepts.
+
+=== Documented information
+
+The organization shall maintain as controlled records:
+
+. the concept management policy and governance decisions;
+
+. the concept system scopes, criteria of subdivision, and identifier
+scheme;
+
+. the concept records, relation records, and localization records; and
+
+. the history of every record: what changed, when, and by whose decision.
+
+=== Machine-readable records
+
+The organization shall publish concept records in a machine-readable form
+that preserves, at minimum:
+
+. identifiers, designations, definitions, and sources;
+
+. relation type identifiers, directions, and n-ary metadata per EFS 2510;
+
+. localization fields per <<localization-mgmt>>; and
+
+. lifecycle statuses.
+
+Where records are published as linked data, the organization should use
+SKOS for interoperable projection while retaining the full record per
+EFS 2510.

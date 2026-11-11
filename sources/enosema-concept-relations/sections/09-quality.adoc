@@ -1,0 +1,92 @@
+[[quality]]
+== Quality constraints on concept systems
+
+=== General
+
+A concept system degrades through use: concepts are added without their
+relations, decompositions are edited without their criteria, and
+lifecycle events are recorded without their counterparts. This clause
+specifies the constraints that concept management systems shall enforce
+to keep a concept system coherent. The constraints are stated so that
+they are mechanically checkable.
+
+=== Structural constraints
+
+The following constraints shall hold for every concept system.
+
+ac1:: Every relation type identifier in the system belongs to the
+vocabulary of <<rel-vocabulary>> or to a registered domain profile
+(<<rel-register>>).
+
+ac2:: Every binary relation references concepts that exist in the
+system; dangling references are not permitted.
+
+ac3:: Every hierarchical relation is acyclic: a concept shall not be its
+own ancestor or descendant through any chain of hierarchical relations.
+
+ac4:: Every subdivision in the system states its criterion of
+subdivision; every n-ary relation states its criterion of subdivision or
+sequencing.
+
+ac5:: Every subordinate concept within one subdivision is delimited from
+its coordinate concepts by at least one delimiting characteristic
+(<<concept-systems>>).
+
+ac6:: Where two parallel subdivisions of the same concept exist, they
+differ in criterion and are recorded as parallel subdivisions
+(<<criteria-multidim-systems>>).
+
+=== Constraint checking on lifecycle relations
+
+The lifecycle relation types of <<rel-other>> are directional in time. The
+following constraints apply.
+
+lc1:: A concept cannot both `supersede` and `superseded_by` the same
+target; the inverse, if materialized, shall be consistent with the
+direction of the assertion.
+
+lc2:: A retired concept shall not be the subject of new structural
+relations, except relations that record the retirement itself.
+
+lc3:: Where a concept is replaced in a register, the `replaces`/`replaced_by`
+pair shall link the register items, and any `supersedes`/`superseded_by`
+pair shall link the concepts themselves; systems shall not conflate the
+two pairs.
+
+=== Constraint checking on n-ary relations
+
+na1:: Every n-ary relation has at least two members.
+
+na2:: Every member of an n-ary relation is coordinate with the other
+members: they share the comprehensive concept and the criterion.
+
+na3:: The presence/count combination of each member is consistent
+(<<nary-partitive>>): `optional` members shall not carry `exactly_one`.
+
+na4:: A `complete` n-ary relation whose members are all `optional` is
+inconsistent: a decomposition of optional members cannot exhaust the
+intension of the comprehensive concept; systems shall reject the record
+or require the criterion to be revised.
+
+na5:: At most one member of an n-ary relation is marked delimiting.
+
+=== Consistency of inverses
+
+For every materialized inverse pair, the system shall verify that the
+inverse assertion exists and uses the inverse type of <<rel-vocabulary>>.
+Where a system does not materialize inverses, it shall derive them on
+request from the recorded direction, and the derivation shall use the
+inverse table of <<rel-vocabulary>>.
+
+=== Review of concept systems
+
+Concept systems shall be reviewed on a periodic basis (EFS 2513 specifies
+the organizational review requirements). The review shall, at minimum:
+
+* check the constraints of this clause against the live system;
+
+* report subdivisions whose criterion has been lost or left implicit;
+
+* report lifecycle events recorded without their register counterpart; and
+
+* report SKOS projections that have diverged from the full ES record.

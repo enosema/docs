@@ -1,0 +1,48 @@
+== Introduction
+
+Organizations of every kind manage concepts: standards bodies manage the
+concepts their documents define; regulators manage the concepts their rules
+use; enterprises manage the concepts their systems and data models share;
+registries manage reference data and code lists; terminology teams manage
+the vocabulary of entire domains.
+
+The failure modes are as universal as the activity. References break when
+concepts change. Nobody can say who may change a concept, or on what
+basis. History is lost, so consumers cannot trust a citation. Two systems
+disagree about what a shared concept means, and no procedure exists for
+resolving the disagreement.
+
+Management system standards answer this class of problem by specifying
+requirements for the *system* — the policy, governance, processes, and
+evaluation — rather than for the product. ISO 9001 does this for quality
+management: any organization, of any size and any sector, can adopt it,
+conform to it, and be audited against it. The requirements are generic;
+the implementation is the organization's own.
+
+This document applies that model to concept management. It specifies
+requirements for a *concept management system* (CMS): the set of
+governance arrangements, processes, and records by which an organization
+manages the concepts it is responsible for — their creation, definition,
+registration, localization, relation, revision, and retirement — over
+time and across systems.
+
+The requirements are written so that:
+
+* any organization can adopt this document and claim conformity, in whole
+or through the requirements classes of Annex <<req-classes>>;
+
+* conformity can be assessed, internally or by a third party, using the
+evaluation requirements of <<evaluation>>;
+
+* the concept records produced under a conforming system are fit for
+registration in registers operated under the FERIN framework
+(ISO 19135 procedures), and can interoperate with terminology management
+systems implementing EFS 2501, EFS 2504, EFS 2507, EFS 2510, and this
+document.
+
+This document states requirements. It does not prescribe tools, formats,
+or organizational structures beyond what governance requires. Where this
+document says *shall*, the requirement is mandatory for conformity; where
+it says *should*, the requirement is recommended and its absence is a
+nonconformity only when the organization cannot demonstrate that its
+alternative achieves the same outcome.

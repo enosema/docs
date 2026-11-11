@@ -39,10 +39,12 @@ include::sections/05-cultural.adoc[]
 
 include::sections/06-authority.adoc[]
 
-include::sections/07-equivalence.adoc[]
+include::sections/07-localization.adoc[]
 
-include::sections/08-workflow.adoc[]
+include::sections/08-equivalence.adoc[]
 
-include::sections/09-implementation.adoc[]
+include::sections/09-workflow.adoc[]
+
+include::sections/10-implementation.adoc[]
 
 include::sections/az-bibliography.adoc[]

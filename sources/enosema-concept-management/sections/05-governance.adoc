@@ -1,0 +1,79 @@
+[[governance]]
+== Governance, roles and responsibilities
+
+=== Management commitment
+
+Top management shall demonstrate commitment to the concept management
+system by:
+
+. ensuring that the concept management policy and objectives are
+established and compatible with the strategic direction of the
+organization;
+
+. ensuring the availability of resources (<<support>>); and
+
+. appointing the control body (<<term-control-body>>) and the register
+manager (<<term-register-manager>>) where a register is operated.
+
+=== Concept management policy
+
+The organization shall establish a concept management policy that:
+
+. states the principles governing concept creation, definition, review,
+and change in the organization;
+
+. commits to the stability and citability of published concepts;
+
+. commits to machine-readable records and to the vocabularies this suite
+of ES specifications and the cited ISO standards define; and
+
+. is communicated to all parties performing work under the system.
+
+=== Governance body
+
+The organization shall establish a control body with the authority to:
+
+. accept, reject, or return proposals to create, revise, split, merge, or
+retire concepts;
+
+. resolve conflicts between concept owners and between consumers; and
+
+. decide appeals against its own decisions through a defined appeals
+process.
+
+The decisions of the control body shall be recorded. The appeals process
+shall be documented and shall specify who hears an appeal and within what
+time.
+
+=== Roles
+
+The organization shall assign the following roles, whether as persons or
+as bodies:
+
+* *concept owner* (<<term-concept-owner>>) for each concept or coherent
+set of concepts: accountable for the intension, extension, and lifecycle
+of the concepts;
+
+* *register manager* where a register is operated: accountable for record
+integrity, registration procedure execution, and publication;
+
+* *submitters*: parties entitled to propose items, drawn from the
+membership or participation rules the organization defines;
+
+* *reviewers*: parties tasked with the technical review of proposals.
+
+The assignment of roles shall be recorded. A person may hold several
+roles, except that the register manager shall not be the sole reviewer of
+their own proposals.
+
+=== Participation
+
+The organization shall document who may participate in concept work, and
+on what terms, including:
+
+. the membership classes that confer proposal and voting rights;
+
+. the conditions under which external parties may participate; and
+
+. the handling of contributions from parties bound by confidentiality,
+which shall not be accepted for concepts whose records are public.

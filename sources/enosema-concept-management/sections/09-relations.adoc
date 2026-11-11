@@ -1,0 +1,55 @@
+[[relations-mgmt]]
+== Relation management
+
+=== Controlled vocabulary
+
+The organization shall manage concept relations against a controlled
+relation vocabulary. The organization shall:
+
+. adopt the relation vocabulary of EFS 2510, or a registered domain
+profile derived from it;
+
+. record, for each relation, the relation type identifier, direction, and
+relevant metadata per EFS 2510; and
+
+. treat relation type identifiers not present in the adopted vocabulary as
+errors at validation, not as data to be preserved silently.
+
+=== System-level relation rules
+
+The organization shall apply, at minimum, the structural rules of
+EFS 2510 to every concept system it manages:
+
+* hierarchical relations are acyclic;
+
+* every subdivision states its criterion of subdivision;
+
+* coordinate concepts within one subdivision are delimited from one
+another;
+
+* n-ary relations are recorded as first-class items with members,
+completeness, and criterion; and
+
+* lifecycle relations link records so that retirement and replacement
+remain traceable.
+
+=== Relations across organizations
+
+Where concepts relate to concepts managed by another organization, the
+organization shall record the relation using the mapping relation types
+(`exact_match`, `close_match`, `broad_match`, `narrow_match`,
+`related_match`) and shall identify the other vocabulary in the relation
+record. The organization shall not assert `equivalent` across
+vocabularies it does not control; equivalence within its own system
+remains available.
+
+=== Review of relations
+
+Relation records shall be included in the periodic review of concept
+systems (<<evaluation>>), with attention to:
+
+. dangling or cyclic references;
+
+. missing inverses where inverses are materialized; and
+
+. lifecycle relations recorded without their register counterparts.

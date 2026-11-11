@@ -1,0 +1,175 @@
+[[nary-relations]]
+== N-ary relations
+
+=== General
+
+An n-ary relation asserts that a group of concepts is jointly significant
+with respect to a comprehensive concept. ISO 704 expresses such groups as
+*rakes* or *brackets* in concept diagrams: a single line drawn from the
+comprehensive concept to two or more coordinate concepts means that the
+coordination is joint, not an aggregation of independent pairwise links.
+
+An n-ary relation shall record:
+
+. the *kind* of the relation: partitive, generic, or sequential;
+
+. the *comprehensive concept* (<<term-comprehensive-concept>>);
+
+. the *members*: two or more coordinate concepts, each referencing the
+comprehensive concept, in order where order is significant;
+
+. the *completeness* (<<term-completeness>>): `complete` or `partial`;
+
+. the *criterion of subdivision* (<<nary-criterion>>) or *criterion of
+sequencing* (<<rel-nary-sequential>>); and
+
+. optional per-member metadata: presence, count, and delimiting status
+(<<nary-partitive>>).
+
+=== The binary-versus-n-ary decision rule
+
+A decomposition shall be recorded as an n-ary relation, not as a set of
+binary relations, when at least one of the following holds:
+
+. the membership of the group is *jointly significant*: the subordinate
+concepts fitted together constitute the comprehensive concept;
+
+. the *completeness* of the group is asserted (the members exhaust the
+intension of the comprehensive concept, or explicitly do not);
+
+. *per-member presence or count* is asserted (some members exist in every
+instance; some in only some instances; some singly; some multiply); or
+
+. the *delimiting* part is identified among the members.
+
+Otherwise — where the assertion is merely that one concept relates to
+another — a binary relation shall be used.
+
+[example]
+A *road vehicle* having an *engine* and a *chassis* is a jointly significant
+partitive decomposition: a n-ary partitive relation with comprehensive
+concept `road vehicle` and members `engine` (required, exactly_one) and
+`chassis` (required, exactly_one) is recorded.
+
+[example]
+A *publication* having an *author* is a loose partitive association without
+joint significance: a binary `has_part`-style relation is recorded, since
+publications can have any number of authors and the author does not
+delimit the publication.
+
+[[nary-partitive]]
+=== Partitive n-ary relations
+
+A partitive n-ary relation (a *partitive rake*) records the decomposition
+of a comprehensive concept into the parts that fitted together constitute
+it.
+
+Per-member metadata follows the ISO 704 diagram conventions:
+
+* *presence* (<<term-presence>>): `required` — the part exists in every
+instance of the comprehensive concept (solid line); `optional` — the part
+exists in some instances only (dashed line);
+
+* *count*: `exactly_one` — one instance (single line); `at_least_one` —
+one or more instances; `multiple` — two or more instances (double line);
+
+* *delimiting status*: where one member carries the delimiting
+characteristic that distinguishes the comprehensive concept within its own
+subdivision, it is marked *delimiting* (bold line of three-fold width in
+ISO 704 diagrams).
+
+[example]
+A *railway switch* consists of a *switch blade* (required, exactly_one,
+delimiting), a *switch motor* (optional, exactly_one) and a *locking
+device* (required, at_least_one).
+
+The combination of presence and count shall be consistent: an `optional`
+member shall not be recorded with `exactly_one` count, since presence is
+already conditional.
+
+[[nary-generic]]
+=== Generic n-ary relations
+
+A generic n-ary relation records the kinds that jointly constitute a
+comprehensive concept under a stated criterion of subdivision. It is used
+where the set of kinds is itself significant — for example, to assert that
+a classification is exhaustive under one criterion:
+
+* the comprehensive concept is the superordinate concept;
+
+* the members are the kinds, which shall be coordinate
+(<<term-coordinate-concept>>): they share the comprehensive concept and
+the criterion;
+
+* `completeness: complete` asserts that the kinds exhaust the extension
+under the criterion; `completeness: partial` asserts that additional
+kinds exist or are anticipated.
+
+Generic n-ary relations carry no per-member presence or count metadata;
+each kind either exists in the system or it does not.
+
+[[rel-nary-sequential]]
+=== Sequential n-ary relations
+
+A sequential n-ary relation records two or more subordinate concepts
+*ordered* by a criterion of sequencing, jointly constituting a
+comprehensive concept such as a process, a development, or a lifecycle.
+
+The relation shall record:
+
+. the *criterion of sequencing*: `temporal`, `spatial`, `developmental`,
+`causal`, `process_step`, or a domain-defined criterion;
+
+. the members in their order; and
+
+. the completeness of the sequence.
+
+[example]
+The development of *amphibian* from *larva* to *adult* is a developmental
+sequence; the stages of a *release lifecycle* (proposed, drafted, reviewed,
+published) are process steps.
+
+The sequential n-ary relation is preferred over chains of binary
+`causes`/`develops_into` edges wherever the order and the joint
+significance of the stages matter; binary sequential edges remain correct
+for isolated pairwise assertions.
+
+[[nary-criterion]]
+=== Criterion records
+
+The criterion of subdivision or sequencing shall be recorded with the
+n-ary relation, not inferred. A criterion record carries:
+
+. a human-readable statement of the criterion; and
+
+. an identifier where the criterion is itself a managed item (for example,
+a registered subdivision criterion in the domain register).
+
+The same comprehensive concept may carry several n-ary relations of the
+same kind distinguished only by criterion; systems shall present these as
+parallel decompositions (<<criteria-multidim>>) and shall not merge them.
+
+[[criteria-multidim]]
+NOTE: Multidimensionality at the level of concept systems is specified in
+<<criteria-multidim-systems>>; the n-ary criterion record applies the same
+principle to individual decompositions.
+
+[[nary-storage]]
+=== Registration of n-ary relations
+
+Within a register, an n-ary relation is an item in its own right,
+identified independently of the concepts it connects:
+
+. its identifier is stable across member edits;
+
+. its lifecycle (proposed, accepted, retired) follows the register
+procedures of ISO 19135 as adopted by the FERIN framework;
+
+. member edits are recorded as version changes of the relation item, so
+that citing systems can reference the decomposition as it was at a given
+time.
+
+Concept management systems shall store n-ary relations as first-class
+items and shall not reconstruct them by traversing binary edges, since
+the joint significance, completeness, and per-member metadata are not
+recoverable from pairwise assertions alone.

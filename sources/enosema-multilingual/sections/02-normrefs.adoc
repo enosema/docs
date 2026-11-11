@@ -25,5 +25,11 @@ _Codes for the representation of names of languages — Part 1: Alpha-2 code_
 * [[[ISO639-2,ISO 639-2:1998]]],
 _Codes for the representation of names of languages — Part 2: Alpha-3 code_
 
+* [[[ISO639-3,ISO 639-3]]],
+_Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages_
+
+* [[[ISO24229,ISO 24229]]],
+_Information and documentation — Register for writing system conversion systems_
+
 * [[[ISO15924,ISO 15924:2004]]],
 _Information and documentation — Codes for the representation of names of scripts_

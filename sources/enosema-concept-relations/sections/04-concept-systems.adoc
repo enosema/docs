@@ -1,0 +1,142 @@
+[[concept-systems]]
+== Concept systems
+
+=== General
+
+Concepts are managed as systems, not in isolation. A concept system arranges
+concepts according to their relations so that each concept is positioned by
+its intension (its characteristics) and its extension (its instances), and
+each term assigned to a concept is motivated by that position.
+
+Concept systems serve three purposes:
+
+* they expose gaps: a missing subordinate concept within a subdivision
+signals incomplete terminology;
+
+* they expose overlaps: two concepts sharing the same position in a
+subdivision signal redundancy;
+
+* they support derivation: definitions, term formation, and entries in
+terminological collections are drafted from the position and relations of
+each concept.
+
+=== Concepts and characteristics
+
+A concept is constituted by a unique combination of characteristics.
+
+*Characteristics* are of two kinds:
+
+* *inherent characteristics*, which apply to every instance of the concept
+and make the concept what it is; and
+
+* *delimiting characteristics* (<<term-delimiting-characteristic>>), which
+distinguish the concept from its coordinate concepts within one subdivision.
+
+In a subdivision, each coordinate concept shall be delimited from the
+others by at least one delimiting characteristic. Where a coordinate
+concept has no delimiting characteristic, the subdivision is not MECE
+(mutually exclusive and collectively exhaustive) and shall be reworked
+either by refining the criterion of subdivision or by merging the
+coordinate concepts.
+
+=== Concept coordination
+
+Concepts are coordinated — brought into a system — by three canonical
+coordination methods. Every relation in a concept system is grounded in one
+of these methods or is associative (<<rel-associative>>).
+
+[[coord-generic]]
+==== Generic coordination
+
+Generic coordination subdivides a concept into subordinate concepts that are
+*kinds* of it: each subordinate concept inherits the intension of the
+superordinate concept and adds at least one delimiting characteristic.
+
+[example]
+In generic coordination, the concept *signal* (information transfer) is
+subdivided into *analog signal* and *digital signal*, by the delimiting
+characteristic of value continuity.
+
+Generic coordination forms the *genus-differentia* structure of definitions:
+the superordinate concept provides the genus and the delimiting
+characteristics provide the differentiae.
+
+[[coord-partitive]]
+==== Partitive coordination
+
+Partitive coordination subdivides a concept into subordinate concepts that
+are *parts* of it, where the parts fitted together constitute the whole.
+
+Partitive coordination is legitimate only when both conditions hold:
+
+. the parts, fitted together, constitute the whole; and
+
+. the parts are coordinate: they share the comprehensive concept
+(<<term-comprehensive-concept>>) and share a criterion of subdivision.
+
+A partitive subdivision with only a single part is not a partitive
+coordination; a single part-of assertion is expressed as a binary
+partitive relation (<<rel-partitive-binary>>).
+
+[[coord-instantial]]
+==== Instantial coordination
+
+Instantial coordination relates individual concepts to the general concept
+they realize. An *individual concept* is a concept that corresponds to a
+unique instance and is not further subdivided by the criteria of
+terminology work.
+
+[example]
+The concept * metre* (the SI unit) is an instance of the general concept
+*unit of length*; the concept * Protocol for web resource identification*
+is general, while the concept *the URN namespace `isbn`* is individual.
+
+[[criteria-multidim-systems]]
+=== Criteria of subdivision and multidimensionality
+
+Every subdivision shall be performed with an explicit criterion of
+subdivision (<<term-criterion-of-subdivision>>). The criterion shall be
+stated in the concept system record and shall remain associated with the
+subdivision it generated.
+
+Where more than one criterion is applied to the same set of concepts, the
+concept system is *multidimensional* (<<term-multidimensionality>>).
+Multidimensionality shall be represented as parallel subdivisions, one per
+criterion, and shall not be represented as a single subdivision whose
+coordinate concepts are delimited by characteristics drawn from different
+criteria.
+
+[example]
+The concept *road vehicle* may be subdivided by motive (motorized, human-powered)
+and by environment (on-road, off-road). These are two parallel subdivisions.
+A single subdivision containing *motorized on-road*, *motorized off-road*,
+*human-powered on-road*, and *human-powered off-road* collapses two criteria
+into one level and is not a conforming representation.
+
+[NOTE]
+====
+Multidimensionality also applies to n-ary relations: the same comprehensive
+concept may have several rakes of the same kind, distinguished by their
+criterion (<<nary-criterion>>). Concept management systems shall preserve
+the distinction between such rakes.
+====
+
+=== Concept systems as graphs
+
+A concept system is a directed labelled graph: concepts are nodes, concept
+relations are labelled edges (binary relations) or labelled hyperedges
+(n-ary relations). The graph representation makes the following operations
+well-defined and machine-checkable:
+
+* traversal from any concept to its superordinate, subordinate, and
+associated concepts;
+
+* validation of the constraints specified in <<quality>>;
+
+* projection into vocabularies such as SKOS, where generic coordination
+projects into broader/narrower hierarchies and associative relations
+project into skos:related.
+
+Concept systems shall be maintained as directed labelled graphs with
+explicit labels; concept management systems shall not infer relation types
+from layout, position, or diagram style alone.
