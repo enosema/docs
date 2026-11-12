@@ -4,3 +4,5 @@ documents:
     channels: [public/standards]
   - pattern: "efd-*"
     channels: [public/standards]
+  - pattern: "efg-*"
+    channels: [public/standards]
