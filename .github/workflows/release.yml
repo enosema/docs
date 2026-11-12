@@ -30,9 +30,8 @@ jobs:
     steps:
       - name: Dispatch enosema.github.io build_deploy
         env:
-          DEPLOY_TOKEN: ${{ secrets.ENOSEMA_CI_PAT_TOKEN }}
-        if: ${{ env.DEPLOY_TOKEN != '' }}
+          GH_TOKEN: ${{ secrets.ENOSEMA_CI_PAT_TOKEN }}
+        if: ${{ env.GH_TOKEN != '' }}
         run: |
           gh api repos/enosema/enosema.github.io/dispatches \
-            -H "Authorization: Bearer $DEPLOY_TOKEN" \
             -f event_type=docs-releases-published
