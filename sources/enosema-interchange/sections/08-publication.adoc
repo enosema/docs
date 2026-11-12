@@ -1,0 +1,54 @@
+[[publication]]
+== Publication profile
+
+=== General
+
+A browsable publication of a dataset — a register site — is a consumer
+of the formats of this document. This clause specifies the requirements
+a publication shall meet so that the published site faithfully presents
+the dataset.
+
+=== Faithfulness requirements
+
+The publication shall preserve and present, at minimum:
+
+. designations with their type and normative status, distinguishing
+preferred from admitted and deprecated forms;
+
+. definitions, notes, and examples, including embedded figures where the
+dataset references them: an image reference present in a definition,
+note, or example shall render as an image, not as literal text;
+
+. the language set of each concept, with language display order per the
+dataset's `language_order`;
+
+. relations: typed and directed per EFS 2510, including inverse
+presentation where helpful for reading; and
+
+. sources, with links where the record carries them.
+
+=== Identification
+
+Each concept page shall expose the concept's stable identifier and URN,
+and shall resolve at a stable URL derived from them. The site shall
+offer the bulk exports of <<bulk-exports>> at stable URLs, so that
+machine consumers can fetch datasets without scraping pages.
+
+=== Search
+
+A publication shall provide search across designations and definitions
+of the dataset. Where the site publishes more than one dataset edition,
+search shall distinguish editions, and superseded editions shall be
+presentable but marked as such per the register metadata status.
+
+=== Build-time preservation
+
+Fields present in the source dataset shall reach the published site:
+build tooling shall not drop model fields before rendering. A
+publication pipeline that discards fields (for example, dropping
+annotations or sources during an intermediate conversion) is
+nonconforming even if the final pages look correct, because downstream
+consumers of the pipeline's output lose the data.
+
+NOTE: The concept-browser toolchain is the reference implementation of
+this publication profile.

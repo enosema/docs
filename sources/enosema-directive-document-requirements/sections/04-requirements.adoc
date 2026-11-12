@@ -79,8 +79,10 @@ Document types shall be represented in the "`type`" as follows:
 . Administrative, "`EFA`"
 
 [example]
-"`EFG/DS 22001:2026`" is an ES Guide at DS stage with
-project number 22001, published in 2026.
+"`EFS 2501:2025`" is a published ES standard with project number 2501.
+
+[example]
+"`EFD 101:2026`" is a published ES Directive with project number 101.
 
 
 [[document-stage]]
@@ -100,12 +102,14 @@ Document stages shall be represented in the "`stage`" as follows:
 
 
 [example]
-"`EFS/FDS 2501:2026`" is an ES standard document at FDS stage
-with project number 2501, published in 2026.
+"`EFS/WD 2516:2026`" is an ES standard document at WD stage
+with project number 2516.
 
 [example]
 "`EFD 101:2026`" is a published ES Directive with
 project number 101, published in 2026.
 
-
-NOTE: Existing documents can be retrofitted to the scheme as practical.
+NOTE: The project codes currently in effect are listed in the project
+index. In the directives series (1xx), EFD 101 to EFD 105 are issued; in
+the specification series (25xx), EFS 2501, EFS 2504, EFS 2507, EFS 2510,
+EFS 2513 and EFS 2516 are issued.

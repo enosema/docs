@@ -1,0 +1,16 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO30042,ISO 30042]]], _Management of terminology resources — TermBase eXchange (TBX)_
+
+* [[[ISO25964-2,ISO 25964-2]]], _Information and documentation — Thesauri and interoperability with other vocabularies — Part 2: Interoperability with other vocabularies_
+
+* [[[JSONLD,JSON-LD 1.1]]], _JSON-LD 1.1, A JSON-based Serialization for Linked Data_, W3C Recommendation, https://www.w3.org/TR/json-ld11/
+
+* [[[FERIN,FERIN]]], _Framework for Extensible Registration of INformation_, https://www.ferin.org/
+
+* [[[GLOSSARIST,Glossarist concept model]]], _Glossarist concept model, dataset schema v3_, https://github.com/glossarist/concept-model
+
+* [[[EFS2501,EFS 2501:2025]]], _Terminology management — Principles and methods_
+
+* [[[EFS2507,EFS 2507:2025]]], _Terminology management — Concept relationships_

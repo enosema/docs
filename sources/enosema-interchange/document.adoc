@@ -1,0 +1,48 @@
+= Machine-readable terminology interchange
+:title-intro-en: Terminology management
+:title-main-en: Machine-readable terminology interchange
+:docnumber: 2516
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-11-12
+:language: en
+:doctype: standard
+:technical-committee: Terminology
+:mn-document-class: enosema
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:imagesdir: images
+:fullname: Reese W. Plews
+:surname: Plews
+:givenname: Reese W.
+:affiliation: Plews Consulting
+:fullname_2: Ronald Tse
+:surname_2: Tse
+:givenname_2: Ronald
+:affiliation_2: Ribose
+:docidentifier: EFS 2516:2026
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-normrefs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-concept-records.adoc[]
+
+include::sections/05-datasets.adoc[]
+
+include::sections/06-skos-projection.adoc[]
+
+include::sections/07-bulk-exports.adoc[]
+
+include::sections/08-publication.adoc[]
+
+include::sections/09-conformance.adoc[]
+
+include::sections/az-bibliography.adoc[]

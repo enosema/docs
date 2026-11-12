@@ -173,3 +173,36 @@ Concept management systems shall store n-ary relations as first-class
 items and shall not reconstruct them by traversing binary edges, since
 the joint significance, completeness, and per-member metadata are not
 recoverable from pairwise assertions alone.
+
+[[nary-serialization]]
+=== Serialization of n-ary relations
+
+The reference serialization stores each n-ary relation as one file,
+following the relations-as-files design:
+
+. the file lives at `relations/<comprehensive-id>/<criterion-slug>.yaml`
+within the concept dataset, where the comprehensive identifier and the
+criterion slug match the directory and file names respectively;
+
+. the relation record carries a stable identifier of the form
+`<comprehensive-id>/<criterion-slug>`, a *type discriminator* —
+`partitive_relation`, `generic_relation`, or `sequential_relation` —
+the comprehensive concept reference, the member list with per-member
+presence, count and delimiting metadata, the completeness, and the
+criterion;
+
+. member array order is insignificant for partitive and generic
+relations and significant for sequential relations;
+
+. one comprehensive concept may carry multiple relation files of the
+same type distinguished by criterion slug, representing parallel
+decompositions (<<nary-criterion>>).
+
+Wire vocabularies shall use the `members` field name uniformly across
+all n-ary relation types; decompositions shall not serialize members
+under type-specific field names (such as `partitives`).
+
+NOTE: The glossarist concept model implements this serialization with
+the three type discriminators; its schema is the reference for the file
+and identifier forms specified here.
+

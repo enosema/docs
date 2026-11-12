@@ -1,0 +1,35 @@
+== Introduction
+
+Concept records are only as useful as they are interchangeable. A concept
+created under the requirements of EFS 2513, expressed in the vocabulary of
+EFS 2510, and localized per EFS 2504 must survive the trip between
+systems: authoring tools, registers, publication frontends, and
+downstream consumers — human and machine.
+
+Today that trip happens ad hoc. Every tool invents its own field names,
+its own status vocabulary, its own packaging. Records are exported and
+re-imported with silent field loss; SKOS projections become the only
+surviving representation; identifiers change between systems.
+
+This document specifies the interchange of terminology and concept data
+for ES purposes. It defines:
+
+* the concept record format for interchange, based on the glossarist v3
+dataset model (managed concept and localized concept as separate,
+cross-referenced records);
+
+* dataset identity and packaging, including the register metadata file
+and the GCR package container;
+
+* the SKOS projection profile: exactly how ES concept systems project
+into SKOS, and which information such a projection is permitted to lose;
+
+* bulk export requirements and the publication profile for browsable
+publication of registers.
+
+The reference implementations of this document are the ES concept
+register (the relation vocabulary of EFS 2510, published at the Enosema
+concept register) and the concept-browser publication toolchain. Where
+this document specifies a format, those implementations demonstrate it;
+where a requirement is stated with *shall*, conformance is checkable
+against them.
