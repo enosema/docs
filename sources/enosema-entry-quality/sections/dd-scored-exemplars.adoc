@@ -1,0 +1,331 @@
+[[scored-exemplars]]
+[appendix]
+== Scored exemplars
+
+Three real-shaped entries scored with the rubric: exemplary (A), acceptable (B), deficient (D with flags). Names and records are drawn from register practice and abridged.
+
+=== Exemplar 1 — exemplary (grade A)
+
+[source,yaml]
+----
+id: ship-water-draught
+data:
+  identifier: ship-water-draught
+  uri: urn:example:ship:water-draught
+terms:
+- type: expression
+  designation: water draught
+  normative_status: preferred
+  grammar_info: [{noun: true}]
+- type: abbreviation
+  designation: WD
+  normative_status: admitted
+definition:
+- content: vertical distance between the waterline and the lowest
+  continuous point of the hull of a ship
+sources:
+- origin:
+    ref: {source: ISO, id: ISO 19642, clause: 3.2.1}
+domains: [shipping]
+examples:
+- content: "a vessel drawing 12 m cannot enter the inner harbour"
+status: valid
+----
+
+Score sheet:
+
+[cols="1,1,1",options="header"]
+|===
+|Criterion
+|Score
+|Anchor hit
+
+|dc1 aptness
+|3
+|Form denotes exactly the measured extent
+
+|dc2 grammar
+|3
+|Noun, singular, clean
+
+|dc3 annotation
+|3
+|Type, status, grammar, abbreviation admitted
+
+|dc4 form
+|3
+|Clean
+
+|nc1 intension
+|3
+|Genus (distance) + delimiting (waterline → lowest point); MECE vs
+air draught
+
+|nc2 substitution
+|3
+|"`The pilot requested the <def>`" — clean
+
+|nc3 form
+|3
+|No article, no circularity, one sentence
+
+|nc4 economy
+|2
+|Minimal; harbour example could live in examples (it does)
+
+|cc1 elements
+|3
+|All present
+
+|cc2 sources
+|3
+|Document + clause
+
+|cc3 illustration
+|2
+|One example; none needed more
+
+|cc4 localizations
+|3
+|eng + fra, full degree recorded
+
+|kc1–kc4
+|3, 3, 2, 3
+|Reference link not yet resolvable (kc3 2)
+
+|sc1–sc5
+|3, 3, 3, n/a, 3
+|Coordinate set parallel with air draught
+|===
+
+Entry score: D 96, N 93, C 93, K 92, S 97 → **95, grade A**. No flags.
+
+=== Exemplar 2 — acceptable (grade B)
+
+[source,yaml]
+----
+id: concept-entry
+data:
+  identifier: concept-entry
+terms:
+- type: expression
+  designation: terminological entry
+  normative_status: preferred
+definition:
+- content: entry in a terminology collection that contains the
+  terminological data of a concept
+notes:
+- content: The term "concept entry" is preferred in ES registers.
+sources:
+- origin: {ref: {source: ISO, id: ISO 10241-1}}
+status: valid
+----
+
+Score sheet:
+
+[cols="1,1,1",options="header"]
+|===
+|Criterion
+|Score
+|Finding
+
+|dc1
+|2
+|Apt but "terminological entry" vs ES usage "concept entry" — both
+recorded
+
+|dc3
+|2
+|Grammar info absent
+
+|nc1
+|2
+|Genus present; "terminological data" is not self-contained (register
+defines it)
+
+|nc3
+|2
+|"`terminological … terminological`" — near-circularity, judged
+mention not circular; flagged for eyes
+
+|cc2
+|2
+|Document only; no clause
+
+|cc3
+|1
+|Note exists; example warranted (frequent misunderstanding with
+"`entry status`")
+
+|kc1
+|2
+|Readable; "terminological data" chase required
+
+|kc3
+|2
+|No abbreviations used; nothing to expand
+
+|sc1
+|2
+|Coordinate "concept record" definition shares genus formulation —
+checked
+|===
+
+Entry score: D 84, N 76, C 76, K 79, S 82 → **79, grade B**. No flags.
+Disposition: accept-with-findings (cc3, dc3).
+
+=== Exemplar 3 — deficient (grade D, flagged)
+
+[source,yaml]
+----
+id: automatic-system
+data:
+  identifier: automatic-system
+terms:
+- type: expression
+  designation: automatic system
+  normative_status: preferred
+definition:
+- content: A system that shall operate automatically without human
+  intervention in accordance with the applicable standards
+status: valid
+----
+
+Score sheet:
+
+[cols="1,1,1",options="header"]
+|===
+|Criterion
+|Score
+|Finding
+
+|nc3
+|0 ⛔
+|Article head (`A system`); requirements language (`shall`); both
+N-5/N-6 violated — flag raised
+
+|nc1
+|1
+|Genus present; "`operate automatically`" is circular-adjacent and
+non-delimiting
+
+|cc1
+|2
+|Sources absent → mandatory element missing → flag
+
+|cc2
+|0
+|No sources (C-2)
+
+|kc2
+|2
+|Single reading retained
+|===
+
+Entry score: D 78, N 26, C 40, K 71, S 60 → **52**, with two
+mandatory-fix flags → **grade D (capped)**. Disposition: return to
+author with nc3 (article + requirements language) and cc1/cc2
+(sources) as the fix list.
+
+=== Exemplar 4 — localization-focused (grade B)
+
+A concept whose interest is the localization set rather than the
+definition:
+
+[source,yaml]
+----
+id: privacy
+data:
+  identifier: privacy
+  uri: urn:example:privacy
+  localized_concepts:
+    eng: privacy-eng
+    fra: privacy-fra
+    de: privacy-de
+status: valid
+----
+id: privacy-eng
+termid: privacy
+data:
+  language_code: eng
+  terms:
+  - type: expression
+    designation: privacy
+    normative_status: preferred
+  definition:
+  - content: condition of having control over the collection, retention
+    and disclosure of information about an individual
+status: valid
+----
+id: privacy-fra
+termid: privacy
+data:
+  language_code: fra
+  terms:
+  - type: expression
+    designation: vie privée
+    normative_status: preferred
+  definition:
+  - content: aspect de la vie d'une personne soustrait à l'attention
+    publique et à l'ingérence d'autrui
+status: valid
+equivalence_degree: partial
+equivalence_note: >-
+  French "vie privée" covers the legal-institutional aspects more
+  strongly than the English concept; prefer the narrower legal term in
+  regulatory contexts.
+----
+id: privacy-de
+termid: privacy
+data:
+  language_code: de
+  terms:
+  - type: expression
+    designation: informationelle Selbstbestimmung
+    normative_status: admitted
+  definition:
+  - content: Befugnis des Einzelnen, über die Erhebung, Speicherung und
+    Verwendung seiner personenbezogenen Daten selbst zu bestimmen
+status: valid
+equivalence_degree: full
+----
+
+Score sheet:
+
+[cols="1,1,1",options="header"]
+|===
+|Criterion
+|Score
+|Finding
+
+|dc1–dc4
+|2, 3, 3, 2
+|German designation `admitted` with reason implicit — note recommended
+
+|nc1–nc4
+|2, 2, 3, 2
+|Intensions align with recorded degrees
+
+|cc1, cc2
+|3, 2
+|Sources on the English record; localizations cite the source
+standard per EFS 2504 practice
+
+|cc4
+|3
+|Three localizations, degrees recorded, partial note present, script
+fields present where applicable
+
+|kc1–kc4
+|2, 2, 2, 2
+|Equivalence note is actionable; German admission reason would raise
+kc4
+
+|sc4
+|2
+|No cross-register mappings recorded although the concept maps to
+legal-register concepts — C-6/S-4 finding
+|===
+
+Entry score: D 82, N 78, C 84, K 75, S 74 → **79, grade B**. No flags.
+Disposition: accept-with-findings (mapping gap; German admission note).

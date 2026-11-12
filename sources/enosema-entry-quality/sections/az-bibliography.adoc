@@ -1,0 +1,24 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO10241-3,ISO 10241-3]]], _Terminological entries in standards — Part 3: Presentation of terminological entries and preparation of glossaries for translation_
+
+* [[[ISO1087,ISO 1087]]], _Terminology work and terminology support in signs and languages — Vocabulary_
+
+* [[[ISO25964-1,ISO 25964-1]]], _Information and documentation — Thesauri and interoperability with other vocabularies — Part 1: Thesauri for information retrieval_
+
+* [[[ISO24229,ISO 24229]]], _Information and documentation — Register for writing system conversion systems_
+
+* [[[ISO639-3,ISO 639-3]]], _Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages_
+
+* [[[ISO15924,ISO 15924]]], _Information and documentation — Codes for the representation of names of scripts_
+
+* [[[FERIN,FERIN]]], _Framework for Extensible Registration of INformation_, https://www.ferin.org/
+
+* [[[EFD101,EFD 101:2026]]], _Enosema Directive: Standardization and publication_
+
+* [[[EFD102,EFD 102:2026]]], _Enosema Directive: Standard document requirements_
+
+* [[[EFD104,EFD 104:2026]]], _Enosema Directive: Guidelines for the implementation of the patent policy_
+
+* [[[EFD105,EFD 105:2026]]], _Enosema Directive: Intellectual property rights policy_

@@ -1,0 +1,127 @@
+[[clarity]]
+== Clarity and language (Group K)
+
+=== General
+
+Clarity is the reader-facing dimension: whether a competent outsider —
+a translator, an engineer from another field, a new committee member —
+can understand and correctly apply the entry without access to its
+drafting history. Clarity failures are rarely rule-violations; they are
+communication failures, which is why this group's requirements are
+stated as obligations on the *reader's experience*.
+
+=== Rules
+
+K-R1:: *Plain domain language.* The definition and notes use the
+ordinary technical language of the domain; constructions that only a
+drafting insider can parse (nested noun stacks, undefined shorthand)
+are defects.
+
+K-R2:: *One reading.* Each sentence of the definition and notes has
+exactly one reasonable reading. Pronouns without clear antecedents,
+ambiguous attachment ("`system for ships and ports that operate`"),
+and equivocal quantifiers are defects.
+
+K-R3:: *Units are stated.* Where the concept involves measurable
+extent, the applicable unit system or reference frame is stated or
+unambiguous from the domain (per the applicable ISO 80000 part).
+
+K-R4:: *Abbreviations are expanded at first use.* Any abbreviation
+used inside the definition, notes or examples is expanded at its first
+use within the entry, unless it is more standard in the domain than
+its expansion.
+
+K-R5:: *Reference discipline.* Concepts referenced from the definition
+or notes are cited by their identifiers or by document + clause; vague
+pointers ("`see above`", "`the relevant standard`") are defects.
+
+K-R6:: *Language correctness.* The entry language is used correctly:
+spelling per the register's language convention, agreement, and
+terminological register consistent with the register's stated audience
+(register of the designations per ISO 12620 data categories).
+
+K-R7:: *Notes carry context, not argument.* Notes explain scope,
+boundaries, regional differences, and points of caution; they do not
+argue the case for the definition or narrate its drafting history.
+
+K-R8:: *Examples are concrete and correct.* An example is a real or
+realistic instance of the concept, checkable against the definition;
+an example that contradicts the definition or extends it into a
+different concept is a defect.
+
+=== Requirement group K
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|K-1
+|The entry shall be comprehensible to a competent domain outsider:
+plain domain language, one reading per sentence.
+|K-R1, K-R2
+
+|K-2
+|Measurable concepts shall state or make unambiguous the applicable
+units or reference frame.
+|K-R3
+
+|K-3
+|Abbreviations used in the entry shall be expanded at first use,
+unless domain-standard.
+|K-R4
+
+|K-4
+|References from the entry shall be precise (identifier, or document
+plus clause).
+|K-R5
+
+|K-5
+|The entry shall observe the language correctness and register
+conventions of the entry language.
+|K-R6
+
+|K-6
+|Notes shall carry contextual content and not argument or history.
+|K-R7
+
+|K-7
+|Examples shall be concrete, correct, and consistent with the
+definition.
+|K-R8
+|===
+
+=== Scoring criteria
+
+The clarity criteria scored in <<scoring>>:
+
+kc1:: Outsiderness (K-1): can a competent outsider apply the entry
+without the drafting history?
+
+kc2:: Ambiguity absence (K-1, K-2): one reading, units resolved.
+
+kc3:: Reference discipline (K-3, K-4).
+
+kc4:: Note and example quality (K-6, K-7).
+
+[example]
+Clarity revision — the same content before and after:
+
+[cols="1,2",options="header"]
+|===
+|Unclear
+|Clear
+
+|system for the remote monitoring and control of ships and port
+installations based on a standardized protocol framework and relevant
+standards
+|system for the remote monitoring and control of ships and of port
+installations, operating over the protocol framework defined in
+ISO 20141
+|===
+
+The unclear form stacks nouns, attaches "`based on`" ambiguously, and
+points at "`relevant standards`". The clear form names each controlled
+object, cites the protocol framework precisely (K-4), and reads one
+way (K-1).

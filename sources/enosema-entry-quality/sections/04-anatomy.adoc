@@ -1,0 +1,191 @@
+[[anatomy]]
+== Anatomy of a concept entry
+
+=== General
+
+An entry is judged as a whole: a perfect definition in an incomplete
+entry is not a good entry. This clause fixes the element inventory of a
+concept entry, the obligations attached to each element, and the
+mapping to the machine-readable record, so that every later clause and
+criterion refers to a shared structure.
+
+=== Element inventory
+
+A concept entry comprises the following elements. The obligation column
+gives the baseline obligation of this document; registers may promote
+optional elements to mandatory in their domain profile.
+
+[cols="1,2,1,2",options="header"]
+|===
+|Element
+|Content
+|Obligation
+|Primary quality dimension
+
+|Identifier
+|Stable identifier and URN (EFS 2513 identifier scheme)
+|Mandatory
+|Completeness (C)
+
+|Designation(s)
+|One preferred designation; admitted/deprecated forms as applicable,
+each with term type and normative status
+|Mandatory (preferred)
+|Designation (D)
+
+|Grammar information
+|Part of speech and applicable grammar features per designation
+|Conditional (mandatory where the language model requires it)
+|Designation (D)
+
+|Definition
+|One definition stating the intension
+|Mandatory
+|Definition (N)
+
+|Notes
+|Supplementary information that does not belong in the definition
+|Optional
+|Clarity (K)
+
+|Examples
+|Instances illustrating the concept
+|Optional
+|Clarity (K), Completeness (C)
+
+|Sources
+|Origin of the concept and of the definition content
+|Mandatory
+|Completeness (C)
+
+|Domain(s)
+|Subject field or fields of the concept
+|Mandatory (at least one)
+|Consistency (S)
+
+|Relations
+|Typed relations to other concepts per EFS 2510
+|Mandatory where they exist and are known
+|Consistency (S)
+
+|Lifecycle metadata
+|Registration status, acceptance dates, history
+|Mandatory
+|Completeness (C)
+
+|Localizations
+|Localized concepts per language, with equivalence degrees
+|Per register policy (EFS 2504)
+|All dimensions
+|===
+
+=== Mapping to record format and to ISO practice
+
+The entry model maps one-to-one onto the machine-readable record of
+EFS 2516 (managed concept plus localized concepts), and onto the
+terminological entry of ISO 10241-1 and the term entry of DIR2, clause
+16.2:
+
+[cols="1,1,1",options="header"]
+|===
+|This document
+|EFS 2516 record
+|DIR2 / ISO 10241-1
+
+|identifier + lifecycle metadata
+|managed concept `data`
+|entry number, entry status
+
+|designation(s) + grammar
+|localized concept `terms`
+|term entries (16.4)
+
+|definition
+|localized concept `definition`
+|definition (16.5.1)
+
+|notes / examples
+|localized concept `notes` / `examples`
+|notes (16.5.5) / examples (16.5.6)
+
+|sources
+|`sources`
+|source citation (16.7)
+
+|domain(s)
+|dataset assignment / tags
+|subject field
+
+|relations
+|`related` + n-ary relation files
+|`(not in DIR2; EFS 2510)`
+|===
+
+A reviewer reads one structure whichever representation is in front of
+them; the scoring criteria of clause <<scoring>> cite the elements of
+this clause by name.
+
+=== The unit of judgement
+
+The unit of judgement is the *entry*, not the element in isolation:
+criteria in the dimension groups address elements, but the entry score
+and grade (<<scoring>>) belong to the entry. This is deliberate — the
+corpus shows that defects cluster (an entry with an empty definition is
+also likely to lack notes and examples), and a per-element model would
+hide the compound failure that review needs to catch.
+
+=== Record mapping — verbatim example
+
+The anatomy in record form, for a minimal conforming entry (EFS 2516
+format; managed concept document followed by its localized concept
+document):
+
+[source,yaml]
+----
+---
+id: ship-water-draught
+data:
+  identifier: ship-water-draught
+  uri: urn:example:ship:water-draught
+  localized_concepts:
+    eng: water-draught-eng
+status: valid
+date_accepted: '2026-01-15T00:00:00+00:00'
+---
+id: water-draught-eng
+termid: ship-water-draught
+data:
+  language_code: eng
+  terms:
+  - type: expression
+    designation: water draught
+    normative_status: preferred
+    grammar_info: [{noun: true}]
+  definition:
+  - content: vertical distance between the waterline and the lowest
+    continuous point of the hull of a ship
+  examples:
+  - content: a vessel drawing 12 m cannot enter the inner harbour
+  sources:
+  - origin:
+      ref: {source: ISO, id: ISO 19642, clause: 3.2.1}
+      type: authoritative
+status: valid
+----
+
+Every anatomical element has a home in the record: identifier and
+lifecycle metadata in the managed document; designation, grammar,
+definition, examples and sources in the localized document; relations
+on the managed document; domains as dataset assignment. A reviewer
+armed with this mapping can score any conforming record without a
+mapping table.
+
+=== Element obligations and profiles
+
+Registers declare a *profile* that adjusts obligations: a pedagogical
+register promotes examples to mandatory (C-3); a legal register
+promotes regional-variation notes; a machine-consumed vocabulary
+register demotes examples entirely. Profiles shall not demote
+mandatory elements of <<anatomy>> — the floor is the floor — but they
+may promote, and the promotion is itself a recorded profile decision
+(EFS 2513, 10.3).

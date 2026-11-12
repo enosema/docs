@@ -1,0 +1,255 @@
+[[reviewer-checklist]]
+[appendix]
+== Term entry reviewer checklist
+
+The checklist walks the reviewer through one entry in order. Each line
+names the criterion it feeds and the requirements it examines. Lines
+marked ⛔ correspond to mandatory-fix flags (<<mandatory-fix-flags>>).
+
+=== 0. Gate
+
+[cols="1,2,1",options="header"]
+|===
+|✓|Question
+|Feeds
+
+|⛔
+|Is the definition present and non-empty?
+|cc1, flag
+
+|⛔
+|Are identifier, preferred designation, domain(s), sources, and
+lifecycle metadata present?
+|cc1, flag
+|===
+
+=== 1. Designation
+
+[cols="1,2,1",options="header"]
+|===
+|✓|Question
+|Feeds
+
+|
+|Exactly one preferred designation?
+|dc1 (D-1)
+
+|
+|Would a domain expert read the preferred designation as this concept
+(and not a neighbour)?
+|dc1 (D-2)
+
+|
+|Grammatically correct; singular for countable nouns; spelling per
+convention?
+|dc2 (D-3)
+
+|
+|Term type recorded (ISO 12620)?
+|dc3 (D-4)
+
+|
+|Normative status recorded?
+|dc3 (D-4)
+
+|
+|Grammar information recorded?
+|dc3 (D-4)
+
+|
+|Abbreviations: full form admitted alongside; symbol types declared?
+|dc4 (D-5)
+
+|
+|No requirements language, quantifiers or document references in the
+designation?
+|dc4 (D-7)
+
+|
+|Deprecated forms retained with pointers?
+|dc4 (D-6)
+|===
+
+=== 2. Definition
+
+[cols="1,2,1",options="header"]
+|===
+|✓|Question
+|Feeds
+
+|
+|Exactly one definition (per language)?
+|nc1 (N-1)
+
+|
+|Genus first?
+|nc1 (N-2)
+
+|
+|Delimiting characteristics present — distinguishes the concept from
+its coordinate concepts?
+|nc1 (N-2, N-7)
+
+|
+|Substitution test passes (apply it in a defining context)?
+|nc2 (N-3) ⛔ on outright failure
+
+|
+|No circularity (designation or derivative used as defining element)?
+|nc3 (N-4)
+
+|
+|No shall/should/must/need?
+|nc3 (N-5) ⛔
+
+|
+|No article at the head?
+|nc3 (N-6)
+
+|
+|Single declarative sentence?
+|nc3 (N-6)
+
+|
+|Self-contained within the register?
+|nc1 (N-7)
+
+|
+|Word count in the working band (corpus median 16, p90 32) — beyond
+it, is content displaced to notes?
+|nc4 (N-8)
+
+|
+|Notes carry only non-delimiting content?
+|nc4 (N-8, N-R10)
+
+|
+|Localizations faithful, degrees and notes recorded?
+|nc5 (N-9)
+|===
+
+=== 3. Completeness
+
+[cols="1,2,1",options="header"]
+|===
+|✓|Question
+|Feeds
+
+|
+|Sources present?
+|cc2 (C-2)
+
+|
+|Sources precise (document, clause, resolvable link)?
+|cc2 (C-2)
+
+|
+|Examples present where profile/warranted?
+|cc3 (C-3)
+
+|
+|Notes present where misunderstanding is foreseeable?
+|cc3 (C-4)
+
+|
+|Domains present, from the domain vocabulary?
+|cc1 (C-6), sc3 (S-3)
+
+|
+|Declared localizations present with degrees and notes?
+|cc4 (C-5)
+
+|
+|Known relations and mappings recorded?
+|cc5 (C-6), sc2 (S-2)
+|===
+
+=== 4. Clarity
+
+[cols="1,2,1",options="header"]
+|===
+|✓|Question
+|Feeds
+
+|
+|Can a competent outsider apply the entry without drafting history?
+|kc1 (K-1)
+
+|
+|One reading per sentence?
+|kc2 (K-1)
+
+|
+|Units/reference frame stated or unambiguous?
+|kc2 (K-2)
+
+|
+|Abbreviations expanded at first use?
+|kc3 (K-3)
+
+|
+|References precise (identifier / document + clause)?
+|kc3 (K-4)
+
+|
+|Language correctness and register per convention?
+|kc4 (K-5)
+
+|
+|Notes carry context, not argument?
+|kc4 (K-6)
+
+|
+|Examples concrete, correct, consistent?
+|kc4 (K-7)
+|===
+
+=== 5. Consistency
+
+[cols="1,2,1",options="header"]
+|===
+|✓|Question
+|Feeds
+
+|
+|Coordinate concepts in parallel form?
+|sc1 (S-1)
+
+|
+|Genus named by the same term across the coordinate set?
+|sc1 (S-2)
+
+|
+|Relations exist in vocabulary, direction correct?
+|sc2 (S-2)
+
+|
+|Hierarchy acyclic from this entry?
+|sc2 (S-2, ac3)
+
+|
+|Coordinates delimited (MECE)?
+|sc2 (ac5)
+
+|
+|Domain tags valid?
+|sc3 (S-3)
+
+|
+|Mappings honest and named?
+|sc4 (S-4)
+
+|
+|Word-building consistent with the terminological family?
+|sc5 (S-5)
+
+|
+|Status coherent with coordinate set?
+|sc5 (S-6)
+|===
+
+=== 6. Record
+
+Score the criteria, check flags, compute the entry score and grade
+(<<scoring>>), write findings per failed criterion quoting the entry's
+own words, and record the score sheet (clause <<review-process>>).

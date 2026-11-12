@@ -1,0 +1,177 @@
+[[corpus-statistics]]
+[appendix]
+== Corpus statistics
+
+This annex records the full statistics of the corpus analysis of
+clause <<corpus>>. Population: 406 898 concept files from the ISO OBP
+terminology extraction; sample: 3 000 files (fixed seed), yielding
+4 662 localized entries with designations.
+
+=== Definition length distribution
+
+[cols="1,1,1",options="header"]
+|===
+|Statistic
+|Words
+|Share of entries
+
+|Minimum
+|1
+|—
+
+|10th percentile
+|8
+|—
+
+|25th percentile
+|12
+|—
+
+|Median
+|16
+|—
+
+|75th percentile
+|22
+|—
+
+|90th percentile
+|32
+|—
+
+|95th percentile
+|41
+|—
+
+|Maximum
+|159
+|—
+
+|Mean
+|18,3
+|—
+|===
+
+Working interpretation: definitions of 8–32 words cover the corpus's
+80 % center. The rubric's economy criterion (nc4) anchors "good" at
+the working band and treats the extreme tails as review triggers.
+
+=== Presence statistics
+
+[cols="1,3,1",options="header"]
+|===
+|Element
+|Present
+|Share
+
+|Definition (non-empty)
+|4 606
+|98,8 %
+
+|Sources
+|4 662 of entries carry source blocks; 0 sampled without
+|100 % (extraction floor)
+
+|Grammar information
+|4 613
+|98,9 %
+
+|Notes
+|1 589
+|34,1 %
+
+|Examples
+|134
+|2,9 %
+|===
+
+=== Defect statistics
+
+[cols="1,3,1,1",options="header"]
+|===
+|Defect (detection rule)
+|Count
+|Share
+|Anti-pattern
+
+|Empty definition
+|56
+|1,2 %
+|AP-01
+
+|Requirements language in definition
+|21
+|0,5 %
+|AP-05
+
+|Article at definition head
+|146
+|3,1 %
+|AP-07
+
+|Circularity heuristic hit
+|163
+|3,5 %
+|AP-03
+|===
+
+=== Designation and status statistics
+
+[cols="1,3",options="header"]
+|===
+|Measure
+|Value
+
+|Normative status (sampled entries)
+|preferred 100 % (extraction retains preferred only)
+
+|Designation type (sampled entries)
+|expression 100 %
+
+|Grammar information present
+|98,9 %
+|===
+
+NOTE: The extraction pipeline's preferred-only retention means the
+corpus understates the admitted/deprecated practice of the source
+standards; the requirements of this document (D-1, D-6) intentionally
+exceed the corpus floor on these axes.
+
+=== Source document concentration
+
+The sampled entries spanned hundreds of source documents. The
+documents with the highest absolute defect counts (empty definitions)
+were legacy vocabularies of the 1983–2012 period — for example the
+ISO 9250 series (2012) and the ISO 5843 series (1985–1997) — while
+documents extracted from current publications showed near-zero
+structural defects. Document-era correlation is the strongest single
+predictor of structural defects in the corpus; conversion-era
+validation (EFG 2519, clause 11) targets exactly this population.
+
+=== Reproducing the analysis
+
+The statistics of this annex are produced by a deterministic analysis
+(fixed random seed) over the corpus in EFS 2516 record format. The
+script ships with the register repository that runs the analysis; re-
+running it against an ES register produces directly comparable
+statistics, and comparing a register's profile with this annex is the
+quantitative form of the clause <<corpus>> evidence review.
+
+=== Sample size and methodology notes
+
+The sample of 3 000 files was drawn with a fixed pseudorandom seed, so
+every re-run reproduces the same entries. With 4 662 localized entries
+scored analytically, the standard error of the median definition length
+is below half a word, and presence-rate estimates carry a 95 %
+confidence interval of approximately ±1,3 percentage points — tight
+enough that every requirement-floor decision in this document rests on
+differences much larger than the measurement noise.
+
+Per-dimension rates for subpopulations (single source documents,
+domains) are estimated on smaller sub-samples and carry wider
+intervals; the annex reports them as profiles, not floor decisions.
+
+The analysis operates on the EFS 2516 record format only: any termbase
+that exports the interchange records of EFS 2516 can be measured with
+the identical script, making the ISO corpus figures of this annex a
+benchmark that ES registers can be compared against directly.

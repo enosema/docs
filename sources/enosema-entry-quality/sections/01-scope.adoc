@@ -1,0 +1,31 @@
+== Scope
+
+This document specifies quality for terminology concept entries: what a
+good designation is, what a good definition is, what a complete entry
+contains, what clarity requires, and what consistency across a termbase
+demands. It specifies grouped requirements with stable identifiers, a
+scoring model that measures entry quality against those requirements,
+and checklists for term convenors and reviewers.
+
+It applies to:
+
+* concept entries in ES terminology registers and termbases, in the
+record format of EFS 2516;
+
+* entries drafted for standards and other publications under the ES
+Directives; and
+
+* any termbase whose operator adopts this document.
+
+This document does not specify:
+
+* the management system around the entries (EFS 2513);
+
+* the semantics or enumeration of concept relations (EFS 2510);
+
+* the wire format of interchange (EFS 2516);
+
+* how to operate a register (EFG 2519); or
+
+* domain-specific terminology conventions, which domain registers
+declare as profiles on top of this document.

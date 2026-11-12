@@ -1,0 +1,126 @@
+[[consistency]]
+== Consistency (Group S)
+
+=== General
+
+Consistency is the termbase-level dimension: an entry can be internally
+excellent and still clash with its neighbours. Group S requirements are
+evaluated against the termbase, not the entry alone, and they are the
+dimension that term convenors own most directly.
+
+=== Rules
+
+S-R1:: *Coordinate parallelism.* Coordinate concepts (same parent,
+same criterion of subdivision) are expressed in parallel grammatical
+form and use parallel designation patterns; a coordinate set that
+mixes patterns signals either a wrong placement or a missing
+criterion (ISO 704 concept-system discipline; EFS 2510, clause 4).
+
+S-R2:: *Definition harmony.* Definitions of coordinate concepts share
+the genus formulation: the same superordinate concept is named by the
+same term, and delimiting characteristics are stated in comparable
+terms. Divergent genus naming within one coordinate set is a defect.
+
+S-R3:: *Relation correctness.* The entry's relations use the
+vocabulary of EFS 2510 with correct direction, consistent with the
+entry's placement; hierarchical relations are acyclic (EFS 2510
+constraint ac3) and coordinate sets satisfy the delimiting
+characteristic rule (EFS 2510 ac5).
+
+S-R4:: *Domain tagging discipline.* The domain(s) of the entry use the
+register's domain vocabulary; a concept tagged outside its domain or
+tagged with a non-existent domain breaks dataset organization and
+search.
+
+S-R5:: *Cross-register mapping honesty.* Mappings to other
+vocabularies use the mapping relation types and name the external
+vocabulary (EFS 2510); an `exact_match` asserted where only
+`close_match` holds corrupts downstream alignment.
+
+S-R6:: *Terminological family harmony.* Related entries of a family
+(derivations, partitives, processes and their products) use consistent
+word-building and parallel definitions, so that the family reads as a
+system (ISO 704).
+
+S-R7:: *Status coherence.* Where one concept in a coordinate set is
+superseded or deprecated, the reviewer checks whether the whole set's
+status is coherent with the system's evolution; a mixed-status
+coordinate set with unchanged criterion is a warning.
+
+=== Requirement group S
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|S-1
+|Coordinate sets shall be expressed in parallel form and share the
+genus formulation of their definitions.
+|S-R1, S-R2
+
+|S-2
+|Relations shall use the adopted vocabulary with correct direction
+and shall satisfy the structural constraints of EFS 2510.
+|S-R3
+
+|S-3
+|Domains shall be drawn from the register's domain vocabulary.
+|S-R4
+
+|S-4
+|Cross-register mappings shall be honest to the assessed degree and
+name the external vocabulary.
+|S-R5
+
+|S-5
+|Terminological families shall be internally consistent in word
+formation and definition structure.
+|S-R6
+
+|S-6
+|Lifecycle status shall be coherent across coordinate sets.
+|S-R7
+|===
+
+=== Scoring criteria
+
+The consistency criteria scored in <<scoring>>:
+
+sc1:: Coordinate parallelism and genus harmony (S-1).
+
+sc2:: Relation correctness (S-2).
+
+sc3:: Domain discipline (S-3).
+
+sc4:: Mapping honesty (S-4).
+
+sc5:: Family harmony and status coherence (S-5, S-6).
+
+[example]
+Coordinate parallelism — a conforming set and a defective set:
+
+[cols="1,2",options="header"]
+|===
+|Conforming (parallel)
+|Defective (divergent)
+
+|*water draught*: vertical distance between the waterline and the
+lowest point of a ship
+
+*air draught*: vertical distance between the waterline and the highest
+point of a ship
+
+*length overall*: distance between the foremost and aftermost points
+of a ship
+|*water draught*: vertical distance between the waterline and the
+lowest point of a ship
+
+*air draught*: the height of the ship above the waterline
+|===
+
+The defective set breaks genus harmony — "`distance between …`"
+versus "`the height of …`" — and states the air draught by
+delimitation against the wrong reference; a reviewer flags S-1 and
+proposes the parallel form.

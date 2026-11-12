@@ -1,0 +1,289 @@
+[[scoring]]
+== Scoring model
+
+=== General
+
+The scoring model turns the requirement groups into a number and a
+grade. It is designed for reproducibility: two reviewers scoring the
+same entry should arrive at grades within one band, and the score
+sheet records enough anchors that any difference is explainable.
+
+=== Criterion inventory
+
+Each dimension group contributes criteria scored 0–3. The criteria
+cite their requirement IDs; the anchors are defined in Annex <<rubric-cards>>.
+
+[cols="1,2,1,1",options="header"]
+|===
+|Criterion
+|What is scored
+|Requirements
+|Weight within dimension
+
+|dc1
+|Preferred designation aptness
+|D-1, D-2
+|35 %
+
+|dc2
+|Grammatical correctness
+|D-3
+|25 %
+
+|dc3
+|Annotation completeness (type, status, grammar)
+|D-4
+|25 %
+
+|dc4
+|Form discipline (abbreviation, singular, no requirements language)
+|D-5, D-7
+|15 %
+
+|nc1
+|Intension sufficiency (genus, delimiting characteristics,
+self-containedness)
+|N-2, N-7
+|35 %
+
+|nc2
+|Substitution test
+|N-3
+|25 %
+
+|nc3
+|Formal discipline (circularity, requirements language, article,
+one sentence)
+|N-4, N-5, N-6
+|25 %
+
+|nc4
+|Economy (definition vs notes/examples separation)
+|N-8
+|15 %
+
+|cc1
+|Mandatory element presence
+|C-1
+|40 %
+
+|cc2
+|Source quality
+|C-2
+|25 %
+
+|cc3
+|Illustrative content (examples, notes where warranted)
+|C-3, C-4
+|20 %
+
+|cc4
+|Localization completeness
+|C-5
+|15 %
+
+|kc1
+|Outsiderness
+|K-1
+|40 %
+
+|kc2
+|Ambiguity absence (incl. units)
+|K-1, K-2
+|30 %
+
+|kc3
+|Reference discipline
+|K-3, K-4
+|15 %
+
+|kc4
+|Note and example quality
+|K-6, K-7
+|15 %
+
+|sc1
+|Coordinate parallelism and genus harmony
+|S-1
+|30 %
+
+|sc2
+|Relation correctness
+|S-2
+|30 %
+
+|sc3
+|Domain discipline
+|S-3
+|15 %
+
+|sc4
+|Mapping honesty
+|S-4
+|15 %
+
+|sc5
+|Family harmony and status coherence
+|S-5, S-6
+|10 %
+
+|cc5, kc5|*
+|*
+|(folded into cc4, kc4 in the default profile)
+|—
+|===
+
+NOTE: Where a register profile promotes localization completeness
+(cc5) or language-register correctness (kc5) to standalone criteria,
+the profile states the re-weighting; the default profile folds them
+into cc4 and kc4 respectively.
+
+=== Dimension weights
+
+[cols="1,1,1",options="header"]
+|===
+|Dimension
+|Weight
+|Rationale
+
+|Definition (N)
+|35 %
+|The definition is the entry; its defects mislead every consumer
+
+|Designation (D)
+|20 %
+|The consumer-facing form; wrong at the cost of communication
+
+|Completeness (C)
+|20 %
+|Missing elements silently break use and citation
+
+|Clarity (K)
+|15 %
+|The outsider's experience; defects are usually repairable
+
+|Consistency (S)
+|10 %
+|Termbase-level; evaluated against the register and often
+re-verified at review rather than at first scoring
+|===
+
+=== Scoring scale
+
+Each criterion is scored on an anchored 0–3 scale:
+
+[cols="1,1,4",options="header"]
+|===
+|Score
+|Label
+|Anchor meaning
+
+|3
+|Exemplary
+|The criterion is fully met; the element could serve as an example
+in this document's annexes
+
+|2
+|Good
+|Fully met in substance; at most trivial cosmetic deviations
+
+|1
+|Minor defect
+|Substantively met but with a defect a reviewer must name; fix is
+cheap and obvious
+
+|0
+|Fail
+|The criterion is not met, or cannot be assessed because a mandatory
+element is absent
+|===
+
+A criterion that does not apply to an entry (for example mapping
+honesty on a concept with no cross-register mappings) is marked *n/a*
+and excluded from that dimension's mean.
+
+=== Score computation
+
+For each dimension group:
+
+* dimension score = Σ (criterion score × criterion weight) over the
+non-n/a criteria, normalized to 0–100.
+
+The entry score:
+
+* entry score = Σ (dimension score × dimension weight);
+
+* entry score is rounded to the nearest integer.
+
+[[mandatory-fix-flags]]
+=== Mandatory-fix flags
+
+Certain failures are not absorbable by good scores elsewhere. A flag
+is raised — and the grade capped at D regardless of the entry score —
+when any of the following holds:
+
+* the definition is absent or empty (C-1, N group gate);
+
+* the definition contains requirements language (N-5);
+
+* the definition fails the substitution test outright (N-3, judged
+against the anchors, not by taste);
+
+* a mandatory element is missing (C-1), including sources on a
+published entry (C-2);
+
+* the designation is preferred while its ordinary domain reading
+contradicts the definition (D-2);
+
+* a relation used does not exist in the adopted vocabulary (S-2,
+EFS 2510 ac1).
+
+The score sheet records the flag and the criterion that raised it.
+
+[[grade-bands]]
+=== Grade bands
+
+[cols="1,1,2",options="header"]
+|===
+|Grade
+|Score
+|Meaning
+
+|A
+|85–100
+|Exemplary: usable as a reference entry; register may feature it
+
+|B
+|70–84
+|Good: publishable; minor findings recorded for the next review
+
+|C
+|55–69
+|Acceptable: publishable with named findings; a re-score after fixes
+is recommended
+
+|D
+|0–54, or any mandatory-fix flag
+|Not publishable: returns to the author with the failed criteria
+marked
+|===
+
+Registers set their own publication gate; this document's recommended
+default is grade B for new entries in a public register, grade C
+minimum for entries in an internal or legacy register under
+remediation (EFG 2519, clause 12).
+
+=== Worked example of computation
+
+An entry scores: D = (dc1 3×0,35 + dc2 2×0,25 + dc3 3×0,25 + dc4
+2×0,15) = 2,65 → 88; N = (nc1 2×0,35 + nc2 3×0,25 + nc3 2×0,25 + nc4
+1×0,15) = 2,15 → 72; C = (cc1 3×0,40 + cc2 2×0,25 + cc3 1×0,20 + cc4
+2×0,15) = 2,30 → 77; K = (kc1 2×0,40 + kc2 2×0,30 + kc3 3×0,15 + kc4
+2×0,15) = 2,20 → 73; S = sc2 n/a → (sc1 2×0,30 + sc3 3×0,15 + sc4
+3×0,15 + sc5 2×0,10) = 2,25 → 75 over re-normalized weights.
+
+Entry score = 88×0,20 + 72×0,35 + 77×0,20 + 73×0,15 + 75×0,10 =
+17,6 + 25,2 + 15,4 + 10,95 + 7,5 = 76,65 → **77 → grade B**.
+
+No flags raised: the entry is publishable with findings (nc4 economy,
+cc3 examples).
