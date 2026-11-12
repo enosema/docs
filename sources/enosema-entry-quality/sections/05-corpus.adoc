@@ -230,3 +230,84 @@ character:
 These profiles are also a recommendation of reading order for reviewers
 calibrating on real material: ISO 5127 for example practice,
 ISO 24765 for note practice, the ISO 5843 series for what to avoid.
+
+=== The IEV corpus
+
+A second corpus — the International Electrotechnical Vocabulary (IEV,
+IEC 60050, maintained by IEC TC 1) — provides the multilingual
+counterpoint: 22 229 concepts in the Glossarist record format, of which
+a 2 000-concept sample was analysed. The IEV is the deepest
+multilingual terminology register in operation, and its profile differs
+from the ISO corpus in two decisive ways.
+
+*Multilingual breadth.* IEV concepts carry a median of eleven
+languages each (mode 11; range 2–19), against the ISO corpus's two
+(English, French). Language coverage per concept is the IEV's own
+quality dimension: an entry's value scales with the number of
+communities it serves.
+
+*The term-only localization model.* IEV's definitions live in the
+authoritative languages — English and French definitions are present on
+100 % of sampled entries — while every other language localizes the
+*designations only*: German, Spanish, Chinese, Arabic, Italian and
+Polish localizations carry terms (with normative status, and grammar
+where the language model requires it — German 97 %, French 98 %,
+Polish 30 %) but no definitions. Russian shows the only partial
+pattern (7 % carry definitions).
+
+[cols="1,4,1,1,1",options="header"]
+|===
+|Language
+|Role in the IEV
+|Definitions
+|Notes (eng/fra)
+
+|eng
+|authoritative, definitions
+|100 %
+|32 %
+
+|fra
+|authoritative, definitions
+|100 %
+|32 %
+
+|deu
+|terms + grammar
+|0 %
+|—
+
+|spa / zho / ara / ita / pol / rus
+|terms
+|0–7 %
+|—
+|===
+
+Definition length in the IEV runs slightly longer than the ISO corpus
+(English median 18 words, p90 36), and notes density matches the ISO
+corpus (32 %); examples are rarer still (under 1 %).
+
+=== The two localization models
+
+The ISO corpus and the IEV corpus together demonstrate that two
+legitimate localization models coexist in international practice:
+
+* *definition-bearing model* — each localization carries its own
+definition, with equivalence degrees recorded per EFS 2504 (the model
+assumed by Group C of this document); and
+
+* *term-only model* — the authoritative-language definition serves all
+localizations, which carry designations (with grammar and status) but
+no definitions.
+
+Neither model is defective. A register shall declare which model it
+operates, and completeness is judged against the declared model:
+under the term-only model, the absence of a localized definition is not
+a completeness defect, and the quality burden concentrates on the
+authoritative-language definition and on the fidelity of the localized
+designations (grammar, status, and the ISO 24229 conversion-system
+fields of EFS 2504 for any converted forms).
+
+This distinction refines criterion C-5 and requirement C-R8: their
+obligations apply to *definition-bearing* localizations; term-only
+localizations conform by designation completeness.

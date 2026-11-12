@@ -79,8 +79,10 @@ warrants them.
 |C-R5
 
 |C-5
-|Declared localizations shall be present and carry equivalence
-degrees and notes per EFS 2504.
+|Declared localizations shall be present and complete per the
+declared localization model (definition-bearing: equivalence degrees
+and notes per EFS 2504; term-only: designations with grammar and
+status, authoritative definition serving all).
 |C-R8
 
 |C-6
