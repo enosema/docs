@@ -1,0 +1,232 @@
+[[corpus]]
+== Corpus evidence
+
+=== Methodology
+
+The evidence base of this document is a sample of the ISO Online
+Browsing Platform terminology extraction — 406 898 machine-generated
+concept files in the record format of EFS 2516, covering ISO and
+ISO/IEC/IEC documents from 1983 to 2026, bilingual (English, French),
+with one file per concept carrying its managed record and localized
+concepts.
+
+From this population a random sample of 3 000 files was analysed,
+yielding 4 662 localized concept entries with designations. The sample
+statistics below are the empirical reference for the requirement
+groups: where the corpus performs well, this document sets its
+requirements at or above the corpus level; where the corpus
+systematically fails, the corresponding requirement is mandatory and
+the failure is catalogued as an anti-pattern (Annex <<anti-patterns>>).
+
+The analysis script is deterministic (fixed sample seed) and is
+re-runnable against any termbase in the same record format, so the
+same statistics can be produced for an ES register and compared
+directly with the ISO baseline.
+
+=== Definition statistics
+
+[cols="1,2,2",options="header"]
+|===
+|Measure
+|Corpus value
+|Reading
+
+|Median definition length
+|16 words
+|The working norm: intension stated in one to two sentences
+
+|Mean definition length
+|18,3 words
+|Right tail pulls the mean above the median
+
+|10th percentile
+|8 words
+|Very short definitions exist and are often legitimate (narrow
+concepts)
+
+|90th percentile
+|32 words
+|Beyond ~35 words, definitions usually hide a list that belongs in
+notes or a missing intermediate concept
+
+|Range
+|1 to 159 words
+|Both extremes are defects (see <<anti-patterns>>)
+
+|Empty definitions
+|1,2 %
+|Concentrated in documents of 1983–2012; a conversion and extraction
+legacy
+|===
+
+=== Structural discipline
+
+[cols="1,2,2",options="header"]
+|===
+|Measure
+|Corpus value
+|Reading
+
+|Genus-first form (definition begins lowercase, no article)
+|80,3 %
+|The dominant and correct discipline — definitions begin with the
+genus, unpunctuated
+
+|Definition begins with an article
+|3,1 %
+|Anti-pattern AP-07 (Annex <<anti-patterns>>)
+
+|Definitional circularity (designation repeated in definition)
+|3,5 %
+|Anti-pattern AP-03; includes legitimate term-mention cases, so the
+true defect rate is somewhat lower
+
+|Requirements language in definitions (shall/should/must)
+|0,5 %
+|Anti-pattern AP-05 — rare but serious when present
+|===
+
+=== Entry completeness
+
+[cols="1,2,2",options="header"]
+|===
+|Measure
+|Corpus value
+|Reading
+
+|Source citation present
+|98,8 %
+|The corpus's strongest dimension: extraction carries document
+provenance on every entry
+
+|Grammar information present
+|98,9 %
+|Machine annotation of part of speech is near-universal
+
+|Notes present
+|34,1 %
+|Notes are the exception, not the norm
+
+|Examples present
+|2,9 %
+|Examples are rare: registers that value examples (pedagogical or
+safety-critical domains) must require them explicitly
+|===
+
+=== Designations and status
+
+[cols="1,2,2",options="header"]
+|===
+|Measure
+|Corpus value
+|Reading
+
+|Normative status mix (sampled entries)
+|100 % preferred
+|The extraction pipeline retains preferred designations; a
+conforming termbase should also carry admitted and deprecated forms
+when they exist, because consumers need them
+
+|Designation type
+|100 % expression
+|Abbreviations, symbols and short forms exist in the source standards
+but are under-represented in machine extraction; EFS 2516 records
+carry them as separate term entries
+|===
+
+=== What the corpus teaches
+
+Five lessons set the shape of the requirement groups:
+
+. *The machine floor is high and should be locked in.* Source coverage
+(98,8 %) and grammar annotation (98,9 %) show that machine-enforced
+fields reach near-universality. The corresponding requirements
+(C-1, C-2, D-4) are mandatory with no derogation.
+
+. *Silent absence is the dominant failure.* Empty definitions (1,2 %)
+and missing examples (97,1 % absence) never produce complaints; they
+produce silent misunderstanding. Completeness requirements therefore
+prefer explicit presence over implicit quality.
+
+. *Legacy decay is real.* The empty-definition defects concentrate in
+documents from 1983–2012. A register that imports legacy corpora must
+re-validate rather than trust conversion (EFG 2519, clause 11).
+
+. *The median definition is short.* Sixteen words is the international
+working norm; the rubric anchors definition length accordingly
+(<<scoring>>), and verbosity is scored down, not up.
+
+. *Discipline beats heroics.* The corpus's 80,3 % genus-first rate was
+not achieved by talent but by convention. The requirement groups below
+are written to be checkable in seconds, because rules that take
+minutes get skipped.
+
+=== Document-era profile
+
+Structural defects concentrate by document era. The sampled entries
+group into three eras with sharply different profiles:
+
+[cols="1,2,1,1,1",options="header"]
+|===
+|Era
+|Example source documents
+|Empty-definition rate
+|Article-head rate
+
+|Legacy (1983–1997)
+|ISO 5843 series, ISO 5702
+|2,7 %
+|4,8 %
+
+|Transitional (1998–2014)
+|ISO 6707-1 (2004), ISO 921 (1997)
+|1,6 %
+|3,4 %
+
+|Modern (2015–2026)
+|ISO 10286 (2021), ISO 24765, IEC/IEEE 81000 series
+|0,4 %
+|1,9 %
+|===
+
+The pattern is monotonic: structural discipline improves with every
+era, consistent with the growing adoption of ISO 10241-1 drafting
+rules and machine-first extraction. The implication for registers is
+direct — imports of legacy content carry a predictable defect load and
+require era-aware validation effort.
+
+=== Top-concentration documents
+
+Documents contributing the most sampled entries, with their defect
+character:
+
+[cols="1,2,2",options="header"]
+|===
+|Document
+|Sampled entries
+|Character
+
+|ISO 10303-2:2024
+|46
+|Modern; clean structure; low example density
+
+|ISO/IEC/IEEE 24765:2017
+|31
+|Modern systems/software vocabulary; notes-rich (58 %)
+
+|ISO/IEC 2382:2015
+|24
+|Modern IT vocabulary; bilingual discipline strong
+
+|ISO 5127:2017
+|17
+|Documentation vocabulary; example usage highest in corpus
+
+|ISO 6707-1 (editions 2004/2017/2020)
+|39 across editions
+|Shows era progression within one vocabulary family
+|===
+
+These profiles are also a recommendation of reading order for reviewers
+calibrating on real material: ISO 5127 for example practice,
+ISO 24765 for note practice, the ISO 5843 series for what to avoid.

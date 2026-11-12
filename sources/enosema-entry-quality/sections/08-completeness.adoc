@@ -1,0 +1,135 @@
+[[completeness]]
+== Completeness (Group C)
+
+=== General
+
+Completeness asks: does this entry carry everything a consumer needs
+to *use* the concept with confidence — to cite it, to validate it
+against data, to translate it? The corpus gives the machine floor
+(sources 98,8 %, grammar 98,9 %) and shows the gaps (empty definitions
+1,2 %, examples 2,9 %). The requirement group sets the floor for a
+conforming register above the corpus where the corpus fails.
+
+=== Rules
+
+C-R1:: The entry shall carry the elements declared mandatory in
+<<anatomy>>: identifier with URN, preferred designation, definition,
+at least one domain, sources, and lifecycle metadata.
+
+C-R2:: The definition shall be present and non-empty. The corpus's
+1,2 % empty definitions are all defects: an entry without a definition
+is a pointer without a referent.
+
+C-R3:: Sources shall cite the origin of the concept and of the
+definition content: document, clause where applicable, and link where
+the source is resolvable. The corpus's near-universal source coverage
+is the standard; entries without sources are defects (contrast with
+the conversion-era corpus, where only extraction guarantees them).
+
+C-R4:: Examples shall be present where the register profile requires
+them, and otherwise where the concept is commonly misunderstood or
+where instances materially aid use. The corpus's 2,9 % example
+coverage is a baseline, not a target.
+
+C-R5:: Notes shall be present where the concept is subject to
+recurring misunderstanding, boundary questions, or regional variation.
+A note is the correct place for information that is true and useful
+but not delimiting (N-R10).
+
+C-R6:: Domain assignment shall state the subject field(s) of the
+concept, using the register's domain vocabulary.
+
+C-R7:: Lifecycle metadata shall be complete: registration status,
+acceptance date, and the history of record changes (EFS 2513, 7.2).
+
+C-R8:: Localizations shall be complete per register policy: each
+declared localization present, each carrying the equivalence degree
+and, where the degree is not `full`, the equivalence note (EFS 2504).
+
+C-R9:: Relations known to the concept owners shall be present: a
+concept imported from another register carries its mapping relations;
+a concept with known coordinates carries its placement
+(EFS 2510; EFS 2513, 7.1.3).
+
+=== Requirement group C
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|C-1
+|The entry shall carry identifier with URN, preferred designation,
+non-empty definition, domain(s), sources, and lifecycle metadata.
+|C-R1, C-R2, C-R3, C-R6, C-R7
+
+|C-2
+|Sources shall be cited for the concept origin and the definition
+content.
+|C-R3
+
+|C-3
+|Examples shall be present per register profile or where the concept
+warrants them.
+|C-R4
+
+|C-4
+|Notes shall be present where misunderstanding is foreseeable.
+|C-R5
+
+|C-5
+|Declared localizations shall be present and carry equivalence
+degrees and notes per EFS 2504.
+|C-R8
+
+|C-6
+|Known relations and mappings shall be recorded.
+|C-R9
+|===
+
+=== Scoring criteria
+
+The completeness criteria scored in <<scoring>>:
+
+cc1:: Mandatory element presence (C-1).
+
+cc2:: Source quality (C-2): not only present but precise — document,
+clause, resolvable link.
+
+cc3:: Illustrative content (C-3, C-4): examples and notes where they
+aid use.
+
+cc4:: Localization completeness (C-5).
+
+cc5:: Relation and mapping completeness (C-6).
+
+[example]
+Completeness, contrasting two entries for the same concept family:
+
+[source,yaml]
+----
+# complete entry (abridged)
+id: ship-draught
+terms: [{designation: draught, normative_status: preferred, type: expression}]
+definition: [{content: vertical distance between the waterline and the
+              lowest point of a ship}]
+sources: [{origin: {ref: {source: ISO, id: ISO 19642}, clause: 3.2.1}}]
+domains: [shipping]
+examples: [{content: "a vessel with a draught of 12 m cannot enter the
+            inner harbour"}]
+----
+
+[source,yaml]
+----
+# incomplete entry (same register, defective)
+id: air-draught
+terms: [{designation: air draught, normative_status: preferred, type: expression}]
+# definition: MISSING
+# sources: MISSING
+# domains: MISSING
+----
+
+The second entry fails C-1 on three elements; under the rubric it
+scores cc1 = 0 and cannot achieve a grade above D regardless of the
+quality of its designation — completeness failures gate (<<scoring>>).

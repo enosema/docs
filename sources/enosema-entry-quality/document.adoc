@@ -1,0 +1,64 @@
+= Concept entry quality: Guidelines, requirements and scoring
+:title-intro-en: Terminology management
+:title-main-en: Concept entry quality: Guidelines, requirements and scoring
+:docnumber: 2522
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-11-12
+:language: en
+:doctype: standard
+:technical-committee: Terminology
+:mn-document-class: enosema
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:imagesdir: images
+:fullname: Reese W. Plews
+:surname: Plews
+:givenname: Reese W.
+:affiliation: Plews Consulting
+:fullname_2: Ronald Tse
+:surname_2: Tse
+:givenname_2: Ronald
+:affiliation_2: Ribose
+:docidentifier: EFS 2522:2026
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-normrefs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-anatomy.adoc[]
+
+include::sections/05-corpus.adoc[]
+
+include::sections/06-designation.adoc[]
+
+include::sections/07-definition.adoc[]
+
+include::sections/08-completeness.adoc[]
+
+include::sections/09-clarity.adoc[]
+
+include::sections/10-consistency.adoc[]
+
+include::sections/11-scoring.adoc[]
+
+include::sections/12-review.adoc[]
+
+include::sections/aa-checklist.adoc[]
+
+include::sections/bb-rubric-cards.adoc[]
+
+include::sections/cc-corpus-statistics.adoc[]
+
+include::sections/dd-scored-exemplars.adoc[]
+
+include::sections/ee-anti-patterns.adoc[]
+
+include::sections/az-bibliography.adoc[]

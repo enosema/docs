@@ -1,0 +1,70 @@
+== Introduction
+
+=== The question this document answers
+
+"`What is a good term definition style?`" is asked by every terminologist,
+standards editor, and term reviewer at some point — usually while staring
+at a proposed entry that feels wrong but cannot be marked wrong by any
+rule anyone can cite. The established standards answer parts of the
+question: ISO 704 gives the theory of concepts and definitions, ISO 10241-1
+gives the entry structure for standards, and the ISO/IEC Directives,
+Part 2, give the drafting rules that ISO and IEC documents apply. But
+none of them hands a reviewer a scorecard.
+
+This document does. It defines what quality means for a concept entry —
+its designation, its definition, its completeness, its clarity, and its
+consistency with the rest of the termbase — as grouped requirements with
+stable identifiers, and it attaches to them a scoring model that a term
+convenor or reviewer can apply consistently.
+
+=== Where the rules come from
+
+The requirements and scoring criteria in this document are synthesized
+from three sources, and each rule is traceable to at least one:
+
+* *International practice*. ISO 704 (principles and methods), ISO 1087-1
+(vocabulary), ISO 10241-1 (terminological entries in standards), and the
+ISO/IEC Directives, Part 2 (drafting rules, clauses 15 and 16 in
+particular).
+
+* *The corpus*. A sample of 4 662 localized concept entries drawn from
+406 898 machine-extracted entries of the ISO Online Browsing Platform
+terminology, covering hundreds of source documents from 1983 to 2026
+(clause <<corpus>>). The corpus shows what the international system
+actually produces: where it excels (source coverage, grammar annotation,
+genus-first discipline), and where it systematically fails (empty
+definitions in legacy documents, missing examples, definitional
+circularity). Requirements in this document are set so that a termbase
+built under them measures well against the corpus — and measurably
+better on the corpus's weak points.
+
+* *Registration practice*. The ES concept management system requirements
+(EFS 2513), the relation vocabulary (EFS 2510), the interchange format
+(EFS 2516), and the register operation guide (EFG 2519), which place
+entry quality inside a governed, machine-readable, published system.
+
+=== How to use the scoring
+
+The scoring model of clause <<scoring>> turns review judgement into a
+reproducible number. It is deliberately simple: five dimension groups
+(designation, definition, completeness, clarity, consistency), about
+thirty anchored criteria, each scored 0 to 3 against written descriptors,
+with fixed weights and grade bands. A term convenor reviewing a
+proposed entry uses the checklist (Annex A) to find what to look at and
+the rubric (Annex B) to decide the score; the entry's grade follows
+arithmetic, not taste.
+
+Scoring serves three purposes:
+
+* *Review*: a proposed entry below grade C returns to its author with
+the criteria that failed marked — review feedback becomes specific.
+
+* *Monitoring*: a termbase's grade distribution over time shows whether
+quality is improving (EFS 2513, clause 11).
+
+* *Publication gating*: a register may set a minimum grade for
+publication; the score sheet is the record that the gate was applied.
+
+Scoring does not replace expert judgement. The anchors encode judgement
+that experts already agree on; where a criterion genuinely cannot be
+decided mechanically, the rubric says so and the reviewer decides.

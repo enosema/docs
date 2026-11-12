@@ -14,6 +14,7 @@ metanorma:
       - sources/enosema-concept-management/document.adoc
       - sources/enosema-interchange/document.adoc
       - sources/enosema-register-operation-guide/document.adoc
+      - sources/enosema-entry-quality/document.adoc
 
   collection:
     organization: "Enosema Foundation"

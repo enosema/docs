@@ -1,0 +1,113 @@
+[[review-process]]
+== Review process
+
+=== Roles
+
+The scoring model is applied by two kinds of reviewer:
+
+* *term convenor*: owns a register or a document's terminology;
+decides grade outcomes, arbitrates criterion disagreements, and owns
+the disposition of findings; and
+
+* *reviewer*: performs criterion scoring on proposed or sampled
+entries and drafts the findings.
+
+=== When scoring happens
+
+. *At proposal review*: every proposed entry is scored before the
+control-body decision (EFS 2513, 7.1.3; EFG 2519, clause 7). The
+proposal's score sheet attaches to the proposal thread.
+
+. *At periodic review*: a sample of published entries is re-scored
+(EFS 2513, 11.2), sized to detect drift (the sample of the corpus
+analysis of clause <<corpus>> is the model: hundreds of entries give
+stable medians).
+
+. *On import*: entries imported from legacy or third-party corpora are
+scored before acceptance; the corpus evidence of clause <<corpus>>
+predicts where imports fail (empty definitions, missing examples).
+
+=== The review workflow
+
+. *Pre-check*: completeness gate first (cc1): an entry missing
+mandatory elements is returned immediately with the missing elements
+named, without criterion scoring (the flags of <<mandatory-fix-flags>>
+make this arithmetic, not judgement).
+
+. *Criterion scoring*: the reviewer walks Annex A's checklist in
+order (designation → definition → completeness → clarity →
+consistency), scoring each criterion against the anchors of
+Annex <<rubric-cards>>. Findings are written per failed criterion,
+quoting the entry's own words.
+
+. *Flags check*: the mandatory-fix flags are checked; any flag caps
+the grade.
+
+. *Score computation*: per <<scoring>>; the score sheet is produced
+(template in Annex <<rubric-cards>>).
+
+. *Disposition*: the term convenor decides:
+accept (grade B or A, findings recorded), accept-with-findings
+(grade C, findings become improvement items per EFG 2519 clause 12),
+or return (grade D, with the failed criteria as the fix list).
+
+. *Re-score*: a returned entry is re-scored on resubmission; the score
+sheets of both rounds are retained (EFS 2513, 10.3).
+
+=== Disagreement and calibration
+
+Where two reviewers differ by more than one band, the term convenor
+arbitrates against the anchors, and the outcome is recorded in the
+register's calibration notes. Registers that score continuously
+should run an annual calibration exercise: the same ten entries scored
+by all reviewers, differences discussed, anchors amended only by
+decision record (EFG 2519, Annex B).
+
+=== Score sheets as records
+
+Score sheets are controlled records (EFS 2513, 10.3): they carry the
+entry identifier, the criteria scores, flags, the computed grade, the
+reviewer(s), the date, and the disposition. The register's grade
+distribution — the set of score sheets over time — is the primary
+input to the monitoring metrics of EFG 2519, clause 11.
+
+=== Calibration worked example
+
+Two reviewers, one entry, the disagreement pattern that calibration
+exists for:
+
+[cols="1,1,1,1",options="header"]
+|===
+|Criterion
+|Reviewer 1
+|Reviewer 2
+|Arbitration
+
+|nc1 intension
+|2
+|3
+|3 — the delimiting characteristic the second reviewer wanted is in
+the notes; the definition correctly stays minimal (N-R10). Anchor
+clarification recorded: notes-delimited content does not reduce nc1.
+
+|kc4 notes quality
+|1
+|2
+|1 — the note argues the definition's case ("`this term is preferred
+because…`"); K-6 violation. Anchor clarification recorded: advocacy
+notes score 1 regardless of usefulness.
+
+|sc4 mapping honesty
+|2
+|2
+|2 — agreed.
+|===
+
+Dimension impact: N differs by 1×0,25×(1/1) → normalized 25 points →
+grades B vs A. The arbitrated entry scores A; the two anchor
+clarifications are written into the register's calibration notes and
+apply from the next scoring onward.
+
+Calibration is done when reviewers' grades converge to within one band
+without arbitration on two consecutive exercises — typically two to
+three exercises for a new team, one per year thereafter.

@@ -1,0 +1,134 @@
+[[designation-quality]]
+== Designation quality (Group D)
+
+=== General
+
+A concept can carry several designations, but one is *preferred*: the
+form that consumers should use and that definitions, publications and
+indexes lead with. Designation quality is about choosing that form
+well, annotating it fully, and being honest about admitted and
+deprecated alternatives.
+
+=== Rules
+
+D-R1:: The preferred designation shall denote exactly the concept the
+entry defines: reviewing the designation alone, a domain expert should
+not expect a different intension (ISO 704).
+
+D-R2:: The preferred designation shall follow the morphological and
+orthographic conventions of the entry language, including singular
+form for countable nouns (DIR2, 16.4.4), established order of
+modifiers, and current spelling.
+
+D-R3:: Term type shall be recorded per ISO 12620 (expression,
+abbreviation, short form, initialism, symbol, formula, graphical) and
+normative status shall be recorded (preferred, admitted, deprecated)
+per DIR2, 16.4.1.
+
+D-R4:: Grammar information shall be recorded for the designation:
+part of speech, and gender/number/plural forms where the language
+model of the register requires them. In the corpus, 98,9 % of entries
+carry grammar information; a conforming termbase matches this (EFS
+2516 record, `grammar_info`).
+
+D-R5:: An abbreviation may be preferred only where it is at least as
+understood in the domain as the full form, and the full form shall be
+recorded as an admitted designation of the same concept.
+
+D-R6:: A deprecated designation shall remain in the entry with its
+status, never deleted, and where a replacement exists the entry or
+relation set shall state it (EFS 2510 lifecycle relations).
+
+D-R7:: Designations shall not contain requirements language,
+quantifiers, or document references; they designate, they do not
+prescribe.
+
+D-R8:: Designations within one termbase shall be consistent in form
+for coordinate concepts: a register that expresses one criterion of
+subdivision as "`… by mass`" should not express its coordinate as
+"`… according to power`" (see Group S).
+
+=== Requirement group D
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|D-1
+|The entry shall carry exactly one preferred designation; further
+designations shall carry status `admitted` or `deprecated`.
+|D-R3, DIR2 16.4.1
+
+|D-2
+|The preferred designation shall denote the concept defined by the
+entry's definition; a designation whose ordinary domain reading
+conflicts with the definition shall not be preferred.
+|D-R1, ISO 704
+
+|D-3
+|Designations shall be grammatically correct for the entry language,
+in singular form for countable nouns, with recorded grammar
+information.
+|D-R2, D-R4, DIR2 16.4.4
+
+|D-4
+|Term type and normative status shall be recorded for every
+designation, using ISO 12620 term types.
+|D-R3, ISO 12620
+
+|D-5
+|Where an abbreviation is preferred, the full form shall be present
+as an admitted designation.
+|D-R5
+
+|D-6
+|Deprecated designations shall be retained with their status and
+replacement information, not deleted.
+|D-R6, EFS 2513 7.5.3
+
+|D-7
+|Designations shall be free of requirements language, quantifiers and
+document references.
+|D-R7, DIR2
+|===
+
+=== Scoring criteria
+
+The designation criteria scored in <<scoring>>:
+
+dc1:: Preferred designation aptness (D-1, D-2) — does the form denote
+the concept, at the right conceptual level?
+
+dc2:: Grammatical correctness (D-3).
+
+dc3:: Annotation completeness (D-4): term type, status, grammar
+present for all designations.
+
+dc4:: Form discipline (D-5, D-7): abbreviation handling, no
+requirements language, singular discipline.
+
+[example]
+Working example — a good designation set for a concept in a shipping
+register:
+
+[source,yaml]
+----
+terms:
+- type: expression
+  designation: air draught
+  normative_status: preferred
+  grammar_info: [{noun: true}]
+- type: abbreviation
+  designation: air draught  # marked as full form of the abbreviation below
+  normative_status: admitted
+- type: abbreviation
+  designation: AD
+  normative_status: admitted
+----
+
+The full form is admitted while the abbreviation carries usage; both
+are recorded; the deprecated case (for example a pre-standardization
+"`air height`") would appear with `normative_status: deprecated` and a
+pointer to the preferred form, never silently removed.

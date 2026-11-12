@@ -1,0 +1,214 @@
+[[rubric-cards]]
+[appendix]
+== Scoring rubric cards
+
+One card per dimension. Each card lists its criteria with the anchored
+0–3 descriptors; the reviewer picks the anchor that fits. The score
+sheet template follows.
+
+=== Card D — Designation (weight 20 %)
+
+[cols="1,1,1,1,1",options="header"]
+|===
+|Criterion
+|0 Fail
+|1 Minor
+|2 Good
+|3 Exemplary
+
+|dc1 aptness
+|Preferred designation denotes a different concept or level
+|Readable but shifted (too broad/narrow) against the definition
+|Denotes the concept; no better form obvious
+|Denotes precisely; the form itself aids system building
+
+|dc2 grammar
+|Broken grammar/wrong number, breaks substitution
+|One grammar slip (e.g. plural countable)
+|Correct
+|Correct incl. register and collocation
+
+|dc3 annotation
+|Type or status missing
+|Status present, type or grammar missing
+|Type, status and grammar present
+|All present, incl. admitted/deprecated handling
+
+|dc4 form discipline
+|Requirements language or document refs in designation
+|Abbreviation preferred without full form; mixed forms
+|Singular discipline, clean form
+|Exemplary form across the designation set
+|===
+
+=== Card N — Definition (weight 35 %)
+
+[cols="1,1,1,1,1",options="header"]
+|===
+|Criterion
+|0 Fail
+|1 Minor
+|2 Good
+|3 Exemplary
+
+|nc1 intension
+|Empty, or fails to distinguish coordinates
+|Distinguishes but with a gap an expert must fill
+|Genus + delimiting characteristics, self-contained
+|Textbook genus-differentia; coordinates all delimited
+
+|nc2 substitution
+|Substitution breaks meaning/grammar
+|Substitution works only with rephrasing
+|Substitutes cleanly in defining contexts
+|Substitutes cleanly in any context
+
+|nc3 form
+|Circular, or requirements language, or article head
+|One formal slip (e.g. two sentences for cause)
+|Formal discipline clean
+|Clean and modeled — could teach the form
+
+|nc4 economy
+|Definition displaced into notes, or notes carry delimiting content
+|Some overflow in either direction
+|Content correctly separated
+|Separation exemplary: definition minimal, notes rich
+|===
+
+=== Card C — Completeness (weight 20 %)
+
+[cols="1,1,1,1,1",options="header"]
+|===
+|Criterion
+|0 Fail
+|1 Minor
+|2 Good
+|3 Exemplary
+
+|cc1 elements
+|A mandatory element absent
+|All present but one thin (e.g. domain without vocabulary)
+|All mandatory elements present
+|All present plus warranted extras
+
+|cc2 sources
+|No sources
+|Vague source (document only)
+|Document + clause
+|Document + clause + resolvable link
+
+|cc3 illustration
+|No examples/notes where clearly warranted
+|One of them thin
+|Notes or examples present and useful
+|Both, well chosen
+
+|cc4 localizations
+|Declared localization absent
+|Present but degree/note missing
+|Degrees recorded, notes where due
+|Complete with conversion-system fields per EFS 2504
+|===
+
+=== Card K — Clarity (weight 15 %)
+
+[cols="1,1,1,1,1",options="header"]
+|===
+|Criterion
+|0 Fail
+|1 Minor
+|2 Good
+|3 Exemplary
+
+|kc1 outsiderness
+|Insider-only parsing required
+|Mostly clear, one nested stack
+|Plain domain language throughout
+|Transparent to an adjacent-domain reader
+
+|kc2 ambiguity
+|Genuinely two readings or units unresolved
+|One ambiguous attachment
+|Single reading; units clear
+|Single reading under adversarial reading
+
+|kc3 references
+|Vague pointers ("see above")
+|Half-precise references
+|Identifier or document+clause throughout
+|All resolvable on click
+
+|kc4 notes/examples
+|Notes argue/Examples contradict
+|One thin or misplaced
+|Contextual notes; correct examples
+|Exemplary context-setting notes; concrete examples
+|===
+
+=== Card S — Consistency (weight 10 %)
+
+[cols="1,1,1,1,1",options="header"]
+|===
+|Criterion
+|0 Fail
+|1 Minor
+|2 Good
+|3 Exemplary
+
+|sc1 parallelism
+|Coordinate set diverges in pattern/genus
+|One coordinate breaks parallelism
+|Parallel throughout
+|Parallel and mutually delimiting
+
+|sc2 relations
+|Unknown type or wrong direction or cycle
+|One direction/annotation slip
+|Vocabulary-clean, correct directions
+|Clean incl. rake correctness
+
+|sc3 domains
+|Tagged outside domain vocabulary
+|One invalid tag
+|Valid tags
+|Precise multi-domain tags
+
+|sc4 mappings
+|`exact_match` asserted dishonestly / vocabulary unnamed
+|Named but degree questionable
+|Honest, named
+|Honest, named, with note
+
+|sc5 family/status
+|Family word-building diverges; mixed coordinate status
+|One family slip
+|Family harmonious
+|Family reads as a system
+|===
+
+=== Score sheet template
+
+[source,yaml]
+----
+entry: <identifier>
+reviewer: <name>
+date: <YYYY-MM-DD>
+scores:
+  D: {dc1: 3, dc2: 2, dc3: 2, dc4: 3}
+  N: {nc1: 2, nc2: 3, nc3: 2, nc4: 1}
+  C: {cc1: 3, cc2: 2, cc3: 1, cc4: 2}
+  K: {kc1: 2, kc2: 2, kc3: 3, kc4: 2}
+  S: {sc1: 2, sc2: 3, sc3: 3, sc4: 2, sc5: 2}
+flags: []                          # list flag ids when raised
+entry_score: 77
+grade: B
+findings:
+- criterion: nc4
+  finding: "definitional overflow: the operating boundary sentence
+  belongs in a note"
+- criterion: cc3
+  finding: "example missing although the concept is frequently
+  misunderstood"
+disposition: accept-with-findings
+----

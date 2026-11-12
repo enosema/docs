@@ -1,0 +1,129 @@
+[[anti-patterns]]
+[appendix]
+== Anti-pattern catalogue
+
+Each anti-pattern: the recurring defect observed in the corpus of
+clause <<corpus>>, its detection rule (how a reviewer or validator
+finds it), the requirement it violates, and the fix.
+
+=== AP-01 — The silent entry
+
+*Defect*: an entry with an empty or missing definition (corpus: 1,2 %
+of entries; concentrated in 1983–2012 legacy documents).
+*Detection*: absence of a non-empty `definition` block — fully
+mechanical.
+*Violates*: C-1 (flag).
+*Fix*: draft the definition from the concept's system placement; if
+the concept cannot be defined, it should not be an entry.
+
+=== AP-02 — The buried rake
+
+*Defect*: a definition that enumerates a part list ("`a system
+consisting of a sensor, a processor, a display and a power unit`").
+*Detection*: definitions containing enumerations (", and a", ",
+consisting of").
+*Violates*: N-8, N-R10.
+*Fix*: express the joint decomposition as an n-ary relation per
+EFS 2510, clause 7; keep the definition on the intension.
+
+=== AP-03 — The mirror definition
+
+*Defect*: definitional circularity — the designation or its derivative
+used as the defining element (corpus heuristic: 3,5 %, part of which
+is legitimate term-mention).
+*Detection*: designation string (or stem) appears in the definition —
+mechanical flag, human judgement on each hit.
+*Violates*: N-4.
+*Fix*: ground the genus outside the term; if the concept truly has no
+superordinate, define by enumeration of essential characteristics
+(ISO 704 extensional definition).
+
+=== AP-04 — The synonym swap
+
+*Defect*: the definition defines a *different* concept that shares the
+designation in another domain or register.
+*Detection*: cross-register mapping review; substitution test failure
+in the domain context.
+*Violates*: D-2, S-4.
+*Fix*: separate concepts with mapping relations (`related_match` until
+a degree is assessed), or harmonize the concept with its counterpart
+per EFS 2513 change procedures.
+
+=== AP-05 — The smuggled requirement
+
+*Defect*: requirements language inside the definition (corpus: 0,5 %).
+*Detection*: shall/should/must/need in the definition content —
+mechanical.
+*Violates*: N-5 (flag).
+*Fix*: move the prescription into the normative document text where it
+belongs; the definition describes the concept as it is.
+
+=== AP-06 — The orphan abbreviation
+
+*Defect*: an abbreviation designated as preferred with no full form in
+the entry.
+*Detection*: preferred designation of type abbreviation without an
+admitted full-form designation.
+*Violates*: D-5.
+*Fix*: record the full form as admitted (or the abbreviation as
+admitted and the full form as preferred, per domain usage).
+
+=== AP-07 — The article opener
+
+*Defect*: definitions beginning with "`A`", "`An`" or "`The`" (corpus:
+3,1 %).
+*Detection*: first token of the definition in {A, An, The} —
+mechanical.
+*Violates*: N-6.
+*Fix*: delete the article; the definition begins with the genus.
+
+=== AP-08 — The unbounded definition
+
+*Defect*: definitions far beyond the working band (corpus p90: 32
+words; defects observed to 159 words), usually enumerations, process
+descriptions, or requirements displaced into the definition.
+*Detection*: definition word count beyond the register's stated band.
+*Violates*: N-8, N-R8.
+*Fix*: split per AP-02, or displace mechanism detail into notes; find
+the missing intermediate concept.
+
+=== AP-09 — The vague pointer
+
+*Defect*: references from definitions or notes to "`the relevant
+standard`", "`see above`", "`applicable regulations`".
+*Detection*: pointer phrases in definition/notes — near-mechanical.
+*Violates*: K-4.
+*Fix*: cite by identifier or document + clause.
+
+=== AP-10 — The example that teaches the wrong concept
+
+*Defect*: an example whose content matches a neighbouring concept
+better than the entry's concept.
+*Detection*: examples checked against the definition at review (K-7);
+examples that contradict the definition or are identical to a
+coordinate concept's example.
+*Violates*: K-7.
+*Fix*: correct the instance, or accept that the entry boundary is
+wrong and address the concept system (AP-02's cousin).
+
+=== AP-11 — The status-blind import
+
+*Defect*: entries imported from legacy corpora carrying their
+conversion-era defects silently (empty definitions, missing examples,
+unvalidated designations).
+*Detection*: import scoring per clause <<review-process>>; document-era
+correlation (clause <<corpus>>).
+*Violates*: C-1, C-2, EFG 2519 import review.
+*Fix*: re-validate on import; score before acceptance; remediate per
+EFG 2519 clause 12.
+
+=== AP-12 — The family stranger
+
+*Defect*: a member of a terminological family (derivations, partitives)
+whose word-building or definition structure diverges from the family
+pattern.
+*Detection*: family-level review (Group S); word-formation comparison
+across the family.
+*Violates*: S-5.
+*Fix*: align word-building and definition structure with the family,
+or determine that the divergent member is a different family's concept.

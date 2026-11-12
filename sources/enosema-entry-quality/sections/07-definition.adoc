@@ -1,0 +1,267 @@
+[[definition-quality]]
+== Definition quality (Group N)
+
+=== General
+
+The definition is the entry. Everything else — designations, sources,
+relations — attaches to the claim the definition makes. This clause
+states the rules of definition writing as practiced by ISO 704 and
+enforced by DIR2, 16.5.1, and groups them into requirements.
+
+=== Rules
+
+N-R1:: *One concept, one definition.* An entry carries a single
+definition in each language. Multiple senses are multiple concepts
+with separate entries linked by relations, never a forked definition
+(DIR2, 16.5.1 note; ISO 10241-1).
+
+N-R2:: *Genus first.* The definition states the superordinate concept
+(genus) first, then the delimiting characteristics that distinguish
+the concept from its coordinate concepts (ISO 704; the corpus shows
+this as the dominant discipline at 80,3 %).
+
+N-R3:: *The substitution test.* The definition shall be substitutable
+for the term in a defining context without loss of meaning or
+grammaticality. Where substitution fails, the definition is defective
+even if it sounds right.
+
+N-R4:: *No circularity.* The definition shall not use the designation
+itself, a grammatical variant of it, or a derivative of it, as a
+defining element. The corpus circularity heuristic flags 3,5 % of
+entries; review must judge each flag, since legitimate term-mentions
+(e.g. naming the thing the concept is about) are not circularity.
+
+N-R5:: *No requirements language.* Definitions describe; they do not
+prescribe. `shall`, `should`, `must`, and negated ability forms do not
+belong in a definition (DIR2). The corpus shows 0,5 % violations —
+each one serious.
+
+N-R6:: *No articles at the head.* A definition does not begin with
+"`A`", "`An`" or "`The`" (DIR2, 16.5.1; corpus: 3,1 % violations).
+
+N-R7:: *Self-containedness.* The definition shall be understandable
+within the register: concepts used in the definition shall either be
+defined in the register or be ordinary language of the domain.
+Definitions that resolve only by chasing references are defective
+(references may support, not substitute).
+
+N-R8:: *One sentence discipline.* A definition is one declarative
+sentence. Beyond two sentences, the content belongs in notes; beyond
+roughly 35 words, the reviewer should check for a hidden list or a
+missing intermediate concept (corpus p90: 32 words).
+
+N-R9:: *No negation-defining.* A definition states what the concept
+is, not (primarily) what it is not; negation may delimit against one
+nearby coordinate concept where that delimitation is essential.
+
+N-R10:: *Notes and examples are not definition.* Content that is true
+of the concept but not delimiting belongs in notes; instances belong
+in examples (DIR2, 16.5.5, 16.5.6). The corpus puts notes in 34,1 %
+of entries and examples in 2,9 % — the absence of examples is the
+corpus's own judgment call, and registers may profile examples as
+mandatory where pedagogy or safety warrants.
+
+N-R11:: *Bilingual fidelity.* Where a localization exists, its
+definition states the intension of the concept in that language, with
+the equivalence degree and note per EFS 2504. A translation that
+subtly shifts the intension without an equivalence note is a defect
+in both the localization and the entry.
+
+=== Requirement group N
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|N-1
+|An entry shall carry exactly one definition per language; multiple
+senses are separate entries.
+|N-R1, DIR2 16.5.1
+
+|N-2
+|The definition shall state the genus first and then the delimiting
+characteristics.
+|N-R2, ISO 704
+
+|N-3
+|The definition shall pass the substitution test.
+|N-R3
+
+|N-4
+|The definition shall not be circular in the designation of the
+concept or its grammatical derivatives.
+|N-R4
+
+|N-5
+|The definition shall not contain requirements language.
+|N-R5, DIR2
+
+|N-6
+|The definition shall not begin with an article and shall be a single
+declarative sentence.
+|N-R6, N-R8
+
+|N-7
+|The definition shall be self-contained within the register's scope.
+|N-R7
+
+|N-8
+|Delimiting content shall not be displaced into notes; notes shall
+carry only non-delimiting supplementary content.
+|N-R10, DIR2 16.5.5
+
+|N-9
+|Localizations shall state the intension in the localization language
+with the recorded equivalence degree and note where applicable.
+|N-R11, EFS 2504
+|===
+
+=== Scoring criteria
+
+The definition criteria scored in <<scoring>>:
+
+nc1:: Intension sufficiency (N-2, N-7): the definition states enough
+delimiting characteristics to distinguish the concept from its
+coordinates.
+
+nc2:: Substitution test (N-3).
+
+nc3:: Formal discipline (N-4, N-5, N-6): circularity, requirements
+language, article discipline, single sentence.
+
+nc4:: Economy (N-8): the definition says what is delimiting and
+nothing else; notes and examples carry the rest.
+
+nc5:: Localization fidelity (N-9).
+
+=== Worked checks
+
+Substitution test, applied:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`air draught`
+|maximum vertical distance between the waterline and the highest point
+of a ship
+|===
+
+Substitution: "`The radar measures the *maximum vertical distance
+between the waterline and the highest point of a ship* of the
+vessel.`" — grammatical, meaning preserved: passes.
+
+Circularity, applied to a defective case:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`terminological entry`
+|entry in a terminology collection that contains the terminological
+data of one concept
+|===
+
+The definition defines "`entry`" by "`entry`" — circular: fails N-4.
+A conforming definition grounds the genus outside the term
+("`structured record of one concept …`").
+
+=== Anti-pattern fixes, worked
+
+Each anti-pattern of Annex <<anti-patterns>> with its definition-level
+fix applied, as reviewer-facing before/after pairs.
+
+Circular (AP-03) — before:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`register manager`
+|manager of the register who manages the register's records
+|===
+
+After:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`register manager`
+|party responsible for the operation of a register, including the
+integrity of its records and the execution of its registration
+procedures
+|===
+
+The genus moves outside the term ("`party`"), and the delimiting
+characteristics name the responsibilities instead of re-using the
+designation.
+
+Requirements language (AP-05) — before:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`safety valve`
+|valve that shall open automatically when the set pressure is
+exceeded
+|===
+
+After:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`safety valve`
+|valve designed to open automatically when the set pressure is
+exceeded
+|===
+
+"`Designed to`" states the characteristic without prescribing conduct;
+the prescription belongs in the normative text of the product standard.
+
+Overflow (AP-08) — before:
+
+[cols="1,2",options="header"]
+|===
+|Term
+|Definition
+
+|`release lifecycle`
+|the sequence of stages through which a release passes from first
+proposal through drafting, internal review, public review, ballot,
+correction handling, publication, maintenance, and eventual retirement,
+where each stage has entry and exit criteria recorded by the control
+body
+|===
+
+After: the definition keeps the intension; the enumeration becomes a
+sequential n-ary relation (EFS 2510, 7.4) and the criteria note
+becomes a note:
+
+[source,yaml]
+----
+definition:
+- content: sequence of stages through which a release passes from
+  first proposal to retirement
+notes:
+- content: Stage entry and exit criteria are recorded by the control
+  body per the register charter.
+----
+
+And the stages themselves — proposed, drafted, reviewed, published,
+retired — live in a `sequential_relation` file ordered by the criterion
+"`process step order`", exactly as EFS 2510, 7.4 prescribes. The
+definition is back inside the working band, the enumeration is
+machine-checkable, and the entry now participates in the graph instead
+of narrating it.

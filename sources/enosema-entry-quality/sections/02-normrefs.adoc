@@ -1,0 +1,28 @@
+[bibliography]
+== Normative References
+
+* [[[ISO704,ISO 704]]], _Terminology work and terminology support in signs and languages — Principles and methods_
+
+* [[[ISO1087-1,ISO 1087-1]]], _Terminology work and terminology support in signs and languages — Vocabulary — Part 1: Theory and application_
+
+* [[[ISO10241-1,ISO 10241-1]]], _Terminological entries in standards — Part 1: General requirements and examples of presentation_
+
+* [[[ISO10241-2,ISO 10241-2]]], _Terminological entries in standards — Part 2: Adoption of terminological entries in various kinds of documents_
+
+* [[[ISO12620,ISO 12620]]], _Terminology and other language and content resources — Specification of data categories and management of a Data Category Registry_
+
+* [[[ISODIR2,ISO/IEC Directives, Part 2]]], _ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents_, https://www.iso.org/sites/directives/current/part2/index.xhtml
+
+* [[[EFS2504,EFS 2504:2025]]], _Terminology management — Multilingual terminology_
+
+* [[[EFS2510,EFS 2510:2026]]], _Terminology management — Concept systems and concept relations_
+
+* [[[EFS2513,EFS 2513:2026]]], _Terminology management — Concept management systems — Requirements_
+
+* [[[EFS2516,EFS 2516:2026]]], _Terminology management — Machine-readable terminology interchange_
+
+* [[[EFG2519,EFG 2519:2026]]], _Terminology management — Concept registers — Operation guide_
+
+* [[[SKOS,W3C SKOS]]], _SKOS Simple Knowledge Organization System Reference_, W3C Recommendation, https://www.w3.org/TR/skos-reference/
+
+* [[[ISODIR1,ISO/IEC Directives, Part 1]]], _ISO/IEC Directives, Part 1, Procedures for the technical work_

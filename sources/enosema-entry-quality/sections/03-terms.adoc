@@ -1,0 +1,100 @@
+[[terms]]
+== Terms, definitions and abbreviations
+
+=== Terms and definitions
+
+For the purposes of this document, the following terms and definitions
+apply.
+
+[[term-entry]]
+==== concept entry
+alt:[term entry]
+
+structured record of one concept, comprising its designations,
+definition, notes, examples, sources, relations, and management
+metadata
+
+[SOURCE: ISO 10241-1, modified — extended to machine-readable records]
+
+[[term-designation]]
+==== designation
+
+representation of a concept by a sign which denotes it
+
+[NOTE: In this document, designations are classified per ISO 12620:
+expression, abbreviation, short form, initialism, symbol, formula,
+graphical, and their variants.]
+
+[[term-definition]]
+==== definition
+
+representation of a concept by a descriptive statement which serves to
+differentiate it from related concepts
+
+[SOURCE: ISO 1087-1]
+
+[[term-substitution-test]]
+==== substitution test
+
+check that a definition can replace the term in defining context
+without loss of meaning or grammaticality
+
+[[term-genus]]
+==== genus
+
+superordinate concept whose intension is presupposed by a definition
+and whose delimiting characteristics the definition supplies
+
+[[term-essential-characteristic]]
+==== essential characteristic
+
+characteristic of a concept that is required by the concept's
+intension
+
+[[term-delimiting-characteristic]]
+==== delimiting characteristic
+
+essential characteristic that distinguishes a concept from its
+coordinate concepts
+
+[[term-entry-score]]
+==== entry score
+
+weighted aggregate of the criterion scores of a _concept entry_
+(<<term-entry>>), expressed on a scale of 0 to 100
+
+[[term-grade]]
+==== grade
+
+band to which an _entry score_ (<<term-entry-score>>) belongs,
+denoted A, B, C or D
+
+[[term-requirement-group]]
+==== requirement group
+
+named set of requirements of this document bearing a common stable
+identifier prefix: D (designation), N (defiNition), C (completeness),
+K (clarity), S (consistency)
+
+[[term-convenor]]
+==== term convenor
+
+reviewer responsible for the terminology quality of a register or
+document, applying the checklists and scoring model of this document
+
+[[term-anti-pattern]]
+==== anti-pattern
+
+recurring defect pattern observed in the corpus of clause <<corpus>>,
+catalogued with its detection rule and fix in Annex <<anti-patterns>>
+
+=== Abbreviations
+
+DIR2:: ISO/IEC Directives, Part 2
+
+D/N/C/K/S:: requirement groups of this document (see
+<<term-requirement-group>>)
+
+OBP:: ISO Online Browsing Platform
+
+TC:: technical committee
