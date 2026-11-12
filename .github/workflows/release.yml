@@ -21,3 +21,18 @@ jobs:
       force-replace: ${{ github.event.inputs.force-replace || '' }}
       default-visibility: public
     secrets: inherit
+
+  notify-deploy:
+    name: Trigger main site deploy
+    needs: release
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch enosema.github.io build_deploy
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        if: ${{ env.DEPLOY_TOKEN != '' }}
+        run: |
+          gh api repos/enosema/enosema.github.io/dispatches \
+            -H "Authorization: Bearer $DEPLOY_TOKEN" \
+            -f event_type=docs-releases-published
