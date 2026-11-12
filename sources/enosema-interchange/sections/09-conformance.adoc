@@ -1,0 +1,35 @@
+[[conformance]]
+== Conformance
+
+=== Requirements classes
+
+[[req-producer]]
+==== Concept record producer
+
+A system claiming the producer class shall emit concept records
+conforming to <<concept-records>> and dataset metadata conforming to
+<<register-metadata>>, and shall not drop fields it does not understand
+when re-emitting records produced by others.
+
+[[req-publisher]]
+==== Dataset publisher
+
+A system claiming the publisher class shall satisfy the producer class
+and shall additionally provide the bulk exports of <<bulk-exports>>, a
+SKOS projection conforming to <<skos-projection>> where SKOS
+publication is offered, and GCR packages per <<gcr-package>> where
+packaged distribution is offered.
+
+[[req-site]]
+==== Publication site
+
+A system claiming the publication-site class shall satisfy the
+publication profile of <<publication>>, consuming conforming datasets
+without modifying their records.
+
+=== Conformance claims
+
+A conformance claim shall state the class(es) claimed, the tool or
+system assessed, and its version. Claims shall be checkable from the
+formats alone: conformance to this document does not depend on
+undocumented behavior of any implementation.

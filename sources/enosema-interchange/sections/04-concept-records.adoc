@@ -1,0 +1,98 @@
+[[concept-records]]
+== Concept record interchange
+
+=== Record layout
+
+A concept is interchanged as one YAML file containing two documents:
+
+. the *managed concept* record: the concept's identifier, URN, lifecycle
+status, acceptance dates, sources, relations, and the localized-concept
+map; and
+
+. one *localized concept* record per language: the language code, terms
+with type and normative status, definitions, notes, examples, and
+sources.
+
+The managed record and each localized record are cross-referenced by
+identifier: the managed record's localized-concept map keys language
+codes to localized record identifiers.
+
+[source,yaml]
+----
+---
+id: my-concept-01
+data:
+  identifier: my-concept-01
+  uri: urn:example:concept:my-concept-01
+  localized_concepts:
+    eng: eng-my-concept-01
+status: valid
+date_accepted: '2026-01-01T00:00:00+00:00'
+sources:
+- type: authoritative
+  origin:
+    ref:
+      source: Example Register
+---
+id: eng-my-concept-01
+termid: my-concept-01
+data:
+  language_code: eng
+  terms:
+  - type: expression
+    designation: example concept
+    normative_status: preferred
+  definition:
+  - content: "A concept used as an interchange example."
+status: valid
+----
+
+=== Field requirements
+
+A conforming managed concept record shall carry:
+
+. `id` and `data.identifier`, equal and stable per the identifier
+scheme of EFS 2513;
+
+. `data.uri`, a URN that resolves per the register's URI policy;
+
+. `data.localized_concepts`, mapping ISO 639-3 language codes to
+localized record identifiers;
+
+. `status`, carrying the registration status per ISO 19135-1;
+
+. `sources`, citing the origin of the concept.
+
+A conforming localized concept record shall carry:
+
+. `termid`, the identifier of its managed concept;
+
+. `data.language_code`, an ISO 639-3 code; where a localization is
+romanized or transliterated, the record shall also carry the script
+(ISO 15924) and writing system conversion system (ISO 24229) fields per
+EFS 2504;
+
+. at least one `terms` entry with `designation`, `type` and
+`normative_status`; and
+
+. `definition` entries whose `content` states the intension of the
+concept.
+
+=== Relations
+
+Concept relations shall be carried on the managed concept record as
+typed references per EFS 2510: each relation records the relation type
+identifier, the related concept reference, and optional explanatory
+content. N-ary relations are interchanged as relation records per
+EFS 2510, as files separate from the concept records, and shall not be
+encoded as binary relations for the convenience of any tool.
+
+=== Scalar quoting
+
+Interchange files are YAML. Scalars that contain colons, quotes, or
+other YAML-delimiting characters shall be quoted; unquoted scalars that
+a YAML parser reads as a different type or structure than the record
+intends are a conformance error of the producing system.
+
+NOTE: Definitions citing standards, for example ISO 704:2022, contain
+colon characters and are a recurring source of such errors.

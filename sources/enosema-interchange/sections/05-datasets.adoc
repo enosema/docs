@@ -1,0 +1,57 @@
+[[datasets]]
+== Datasets, register metadata and packaging
+
+=== Dataset directory
+
+A dataset is a directory containing:
+
+. `register.yaml`, the register metadata file (<<register-metadata>>);
+
+. the concept record files (<<concept-records>>); and
+
+. optionally, per-language about pages, a bibliography file, and image
+assets referenced by definitions.
+
+Dataset directories shall be consumable from a local path or a packaged
+archive (<<gcr-package>>) interchangeably: consumers shall not depend on
+files or layout beyond the ones this document specifies.
+
+[[register-metadata]]
+=== Register metadata
+
+The `register.yaml` file shall carry:
+
+. `schema_type` equal to `glossarist` and `schema_version` equal to `3`;
+
+. `id`, the dataset identifier, unique within its publication;
+
+. `ref`, the human-readable reference of the dataset;
+
+. `year`, the edition year;
+
+. `urn`, the URN identifying the dataset as a whole;
+
+. `status`, the lifecycle status of the dataset edition (for example,
+`current`, `superseded`);
+
+. `owner`, the organization responsible for the dataset;
+
+. `source_repo`, the canonical repository of the source data; and
+
+. `languages` and `language_order`, the ISO 639-3 codes of the dataset's
+localizations in their display priority.
+
+Additional fields (tags, sections, ordering) may be carried; consumers
+shall preserve unknown fields rather than discard them.
+
+[[gcr-package]]
+=== GCR package
+
+A GCR package is the packaged form of a dataset: an archive containing
+the dataset directory's contents, published at a stable URL for
+download by consumers. A package shall be versioned by its release, and
+a package shall not change after publication: corrections produce a new
+package release.
+
+Datasets published as GCR packages shall remain byte-identical in
+content to their source dataset directories.

@@ -1,0 +1,27 @@
+[[bulk-exports]]
+== Bulk exports
+
+=== Required formats
+
+A published dataset shall offer bulk exports in at least:
+
+. **CSV**, one row per concept per language, with columns covering the
+term identifier, URN, status, language, preferred term, alternative
+terms, definition, notes, examples, and source references;
+
+. **TTL** (Turtle), the SKOS projection per <<skos-projection>>; and
+
+. **JSON-LD**, the concept records as linked data.
+
+=== Optional formats
+
+A publisher may additionally offer: TBX (per ISO 30042), JSON Lines, and
+YAML exports. Where offered, optional exports shall carry the same
+concept set as the required exports: no format shall silently drop
+concepts, localizations, or relations that another format carries.
+
+=== Consistency
+
+All bulk exports of a dataset edition shall be generated from the same
+snapshot of the dataset: a consumer combining exports from one edition
+can assume cross-format consistency of identifiers and content.

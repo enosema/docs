@@ -1,0 +1,31 @@
+== Scope
+
+This document specifies the machine-readable interchange of concepts,
+concept systems, and concept relations for ES purposes:
+
+* the concept record format (managed concepts and localized concepts)
+for interchange between terminology management systems and registers;
+
+* dataset identity, register metadata, and dataset packaging;
+
+* the SKOS projection profile and its permitted losses;
+
+* bulk export requirements; and
+
+* the publication profile for browsable register sites.
+
+This document applies to any system that produces, exchanges, or
+publishes ES concept data, and to any organization adopting the ES
+concept management system requirements of EFS 2513.
+
+This document does not specify:
+
+* the semantics of concept relations, which are specified in EFS 2510;
+
+* terminology authoring methods, which are specified in ISO 704 and
+EFS 2501;
+
+* the internal storage of any tool, only the formats at interchange
+boundaries;
+
+* software behavior beyond the publication profile of <<publication>>.

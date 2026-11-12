@@ -1,0 +1,46 @@
+[[terms]]
+== Terms, definitions and abbreviations
+
+=== Terms and definitions
+
+For the purposes of this document, the following terms and definitions apply.
+
+[[term-managed-concept]]
+==== managed concept
+
+concept record carrying the concept's identity, lifecycle metadata,
+relations, and the map from languages to localized concepts
+
+[[term-localized-concept]]
+==== localized concept
+
+record carrying the language-specific content of a _managed concept_
+(<<term-managed-concept>>): designations, definitions, notes, examples,
+and sources
+
+[[term-dataset]]
+==== dataset
+
+collection of concept records governed by one register metadata file
+
+[[term-gcr-package]]
+==== GCR package
+alt:[.gcr]
+
+packaged, downloadable form of a _dataset_ (<<term-dataset>>) used for
+interchange and archival
+
+[[term-projection]]
+==== projection
+
+lossy transformation of a dataset into a target vocabulary, such as SKOS
+
+=== Abbreviations
+
+ES:: Enosema Foundation
+
+GCR:: glossarist concept register
+
+TTL:: Turtle (RDF serialization)
+
+URN:: uniform resource name

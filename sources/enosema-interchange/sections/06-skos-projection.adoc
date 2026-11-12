@@ -1,0 +1,44 @@
+[[skos-projection]]
+== SKOS projection profile
+
+=== Projection mappings
+
+Where a dataset is projected into SKOS, the relation mappings of
+EFS 2510 apply: hierarchical relation types project to
+`skos:broader`/`skos:narrower`, associative types to `skos:related`,
+and mapping types to their corresponding `skos:exactMatch`,
+`skos:closeMatch`, `skos:broadMatch`, `skos:narrowMatch`,
+`skos:relatedMatch` properties.
+
+Concepts shall project to `skos:Concept` resources with:
+
+. `skos:prefLabel` from the preferred designation of each language;
+
+. `skos:definition` from the definition content; and
+
+. `skos:inScheme` referencing the dataset's concept scheme, identified
+by the dataset URN.
+
+=== What a projection may lose
+
+A SKOS projection is lossy by construction. A conforming projection may
+omit: coordination method (generic, partitive, instantial distinction),
+inverse pairing, n-ary relations and their metadata (completeness,
+presence, count, delimiting status, criterion), registration metadata,
+per-record source citations, and lifecycle relations.
+
+A projection shall not alter semantics: it shall not merge concepts, not
+redirect hierarchical projections into associative projections, and not
+present `skos:prefLabel` from non-preferred designations.
+
+=== Round-trip prohibition
+
+ES data shall not be round-tripped through SKOS alone: the full record
+format of <<concept-records>> is the only interchange-complete form.
+Publishers shall retain the full dataset alongside any SKOS projection
+and shall not treat the projection as the record of authority.
+
+Where a SKOS property exists that corresponds to an ES relation type,
+the projection may carry it as an annotation on the projected concept
+(for example, `skos:exactMatch` for the `exact_match` type); the ES
+type identifier remains the record of authority in the full dataset.
