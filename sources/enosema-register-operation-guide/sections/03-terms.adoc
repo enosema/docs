@@ -1,0 +1,57 @@
+[[terms]]
+== Terms, definitions and abbreviations
+
+=== Terms and definitions
+
+For the purposes of this document, the terms and definitions given in
+EFS 2510, EFS 2513 and EFS 2516 apply.
+
+This guide additionally uses the following working terms.
+
+[[term-intake]]
+==== intake
+
+first handling of a proposal: completeness check, triage, and
+assignment to a reviewer, before any technical judgement is made
+
+[[term-decision-record]]
+==== decision record
+
+controlled record of one decision of the control body: what was
+proposed, what was decided, why, and on whose vote
+
+[[term-publication-run]]
+==== publication run
+
+one execution of the register publication procedure: validation,
+build, checks, and release of the register's published artifacts
+
+[[term-register-edition]]
+==== register edition
+
+a published, immutable state of the register, identified by year or
+version, whose records do not change after publication
+
+[[term-submission-channel]]
+==== submission channel
+
+the mechanism by which proposals reach the register, typically the
+issue tracker of the register's source repository
+
+=== Abbreviations
+
+CI:: continuous integration
+
+CMS:: concept management system
+
+ES:: Enosema Foundation
+
+GCR:: glossarist concept register
+
+RA:: registration authority
+
+SKOS:: Simple Knowledge Organization System
+
+TC:: technical committee
+
+URN:: uniform resource name

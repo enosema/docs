@@ -1,0 +1,156 @@
+[[evaluation-practice]]
+== Evaluation in practice
+
+Guidance for EFS 2513, clause 11.
+
+=== Monitoring
+
+Measure a small number of things that drive action:
+
+[cols="1,1,1",options="header"]
+|===
+|Metric
+|How to collect
+|Action trigger
+
+|Intake time (proposal opened → review started)
+|Issue tracker timestamps
+|Median exceeds the charter's stated window
+
+|Decision time (review complete → control-body decision)
+|Decision record dates
+|Median grows across two quarters
+
+|Validation error rate at publication runs
+|CI logs
+|Any non-zero trend
+
+|Consumer-reported issues
+|Issue tracker label
+|Any issue touching identifiers or references
+|===
+
+Do not build dashboards before decisions exist for the numbers; a
+metric without an action trigger is decoration.
+
+=== The periodic review
+
+Run the review per concept system at a planned interval (annually is a
+workable default; EFS 2513, 11.2). The review is a working session with
+a written output, not a ceremony:
+
+. *Run the full validation suite* against the live dataset; log
+findings with severity.
+
+. *Sample records for depth checks*: for each criterion of
+subdivision, confirm it is still stated on the records it generated
+(EFS 2513, 11.2); sample `full`-degree localizations and re-verify the
+degree (clause 8).
+
+. *Check lifecycle duality*: retired items resolve; their successor
+information is present; register-item and concept-level lifecycle
+relations agree.
+
+. *Check the SKOS projection* against the full dataset: no concepts
+lost, no semantics altered (EFS 2516, 6.2).
+
+. *Review the context records* of clause 4: purpose sentence, audience
+worksheet, boundaries — still true?
+
+The output is a review record: findings, disposition of each, and the
+improvement actions raised into clause 12's process.
+
+=== Internal audit
+
+The audit examines the *system*, not the concepts: are decision
+records being written? Were any changes published without decision?
+Do role assignments match practice? Is the appeals channel used and
+functioning?
+
+A light, effective pattern: once per year, trace five published changes
+end-to-end — proposal → review → decision record → publication run →
+live record. Every step must be documented and dated. Any gap is a
+nonconformity to disposition (clause 12).
+
+=== Self-assessment against EFS 2513
+
+Annex C contains a clause-by-clause checklist: every line names an
+EFS 2513 requirement and asks the question an assessor would ask.
+Run it:
+
+* before first claiming a requirements class (Annex E of this guide);
+* at each internal audit; and
+* before each renewal of a public conformance claim (EFS 2513, 11.4).
+
+Record the completed checklist with its date and the assessor; the
+claim of conformity then cites it.
+
+=== Sample review record
+
+The periodic review's written output, in the shape this guide expects
+(clause 11, EFS 2513, 11.2):
+
+[source,yaml]
+----
+review:
+  register: <dataset-id>
+  date: <YYYY-MM-DD>
+  interval: annual
+  validation:
+    suite: full
+    findings: 0 errors, 2 warnings (both pre-existing, dispositioned)
+  depth_checks:
+    criteria_register:
+      sampled: 6 criteria
+      result: all stated on records they generated
+    localizations:
+      sampled: 5 full-degree
+      reverified: 4 full, 1 reduced to partial (note added, DR-2026-021)
+  lifecycle_duality:
+    retired_items_checked: 7
+    all_resolve_with_successor_info: true
+  skos_projection:
+    concepts_in_full_dataset: 109
+    concepts_in_projection: 109
+    semantics_altered: none
+  context_records:
+    reviewed: true
+    changes_needed: none
+  findings:
+    - finding: "'partial' localization reduced on re-verification"
+      disposition: corrected (note added); no sweep needed
+  improvements_raised: []
+  next_review: <date + interval>
+----
+
+=== Audit trace walkthrough
+
+The once-a-year trace of five published changes, spelled out for one
+change so the pattern is unambiguous. The auditor picks a published
+record and follows it backwards:
+
+. *Live record*: the record on the published site says definition
+version B, accepted 2026-11-11.
+
+. *Publication run*: the publication log has an entry on that date;
+its trigger cites `merge of PR #12 (decision DR-2026-014)`.
+
+. *Pull request*: PR #12 touches exactly the record and the files the
+proposal described; no other records changed.
+
+. *Proposal*: issue #87 carries a complete proposal form (Annex A).
+
+. *Review*: the review comment applies the clause 7 checklists with
+one required change and a recommendation.
+
+. *Decision*: DR-2026-014 records the question, the vote (3 yes),
+and the rationale, within the charter's window.
+
+. *Localization trigger*: the record has localizations; the change
+touched the intension; review tasks were opened per clause 8 (or the
+audit records the gap).
+
+Every arrow resolved with a dated record: the change passes. Any arrow
+that dead-ends — an undocumented merge, a missing decision record, a
+localization that should have been re-reviewed and was not — is a
+nonconformity with a clause number attached.

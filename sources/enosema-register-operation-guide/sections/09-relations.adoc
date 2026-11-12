@@ -1,0 +1,235 @@
+[[relations-practice]]
+== Relation management practice
+
+Guidance for EFS 2513, clause 9, with EFS 2510.
+
+=== Choosing a relation type
+
+A decision procedure that settles most cases in four questions:
+
+. *Is this a structural fact* (kind-of, part-of, instance-of)?
+→ hierarchical family; state the coordination method (generic,
+partitive, instantial) — the unqualified `broader`/`narrower` pair is
+for interchange with SKOS only.
+
+. *Is this a jointly-significant group* (a rake)?→ n-ary relation per
+EFS 2510, clause 7; use the binary-versus-n-ary decision rule.
+
+. *Is this a lifecycle or register fact* (superseded, replaced,
+retired, version)?→ lifecycle/versioning family; link register items,
+and keep concept-level and register-level relations distinct.
+
+. *Otherwise*: associative family; find the ISO 704 kind
+(contiguity, sequential, activity, instrumental, interactional,
+opposition) and use its directed pair. `related_concept` (untyped) is
+the last resort, not the default.
+
+For cross-organizational links, use the mapping family
+(`exact_match` … `related_match`) and name the other vocabulary in the
+relation record; never use `equivalent` across vocabularies you do not
+control.
+
+=== Implementing the constraints
+
+EFS 2510, clause 9 specifies mechanical constraints (ac1–ac6,
+lc1–lc3, na1–na5). In practice they become the register's validation
+suite, run on every publication run (clause 7) and ideally on every
+pull request. Implementation notes per family:
+
+* *Acyclic hierarchical check (ac3)*: build the hierarchy graph from
+all hierarchical relation types and run a cycle detection from each
+node; report the full chain, not just "`cycle found`", so the author
+can see the loop.
+
+* *Inverse consistency*: either materialize inverses on write and
+check them, or derive them at read; check that any materialized
+inverse uses exactly the inverse type from the vocabulary — a wrong
+inverse type (for example `related_concept` standing in for
+`deprecates`/`deprecated_by`) is a semantic bug, not a style issue.
+
+* *Criterion presence (ac4, na)*: every n-ary relation file carries
+its criterion; a missing criterion fails validation rather than being
+inferred from prose.
+
+* *Completeness sanity (na4)*: a `complete` rake whose members are all
+`optional` is rejected, with a pointer to the rule.
+
+* *Register duality (lc3)*: where a register item and its concept
+record both exist, `replaces`/`replaced_by` links items and
+`supersedes`/`superseded_by` links concepts; the validator checks both
+legs exist.
+
+=== Review practice for relations
+
+Two habits catch most defects early:
+
+* *Read the relation aloud* as a sentence: "`the current concept
+<type> the related concept`". If the sentence is false or awkward, the
+direction or the type is wrong.
+
+* *Check the rake before the edge*: when a proposal touches a concept
+that participates in an n-ary relation, re-validate the rake (members,
+completeness, criterion) — the most common breakage is an edit that
+made a `complete` rake incomplete without saying so.
+
+=== Cross-vocabulary relations
+
+Keep a small table of the vocabularies the register maps to, with their
+identifiers and the mapping types used. Every mapping relation record
+names the external vocabulary; a mapping without the vocabulary name
+is unverifiable and fails review.
+
+=== Relation families in records — worked patterns
+
+How each family looks when it is actually recorded. These are the
+patterns reviewers should see; anything that does not match a pattern
+below earns a question in review.
+
+==== Hierarchical (generic)
+
+[source,yaml]
+----
+related:
+- type: broader_generic
+  content: { eng: "kind of signal" }
+  ref: { source: ES, id: signal }
+----
+
+The coordination method is stated in the type. The unqualified
+`broader`/`narrower` appears only in SKOS projections, never in source
+records (EFS 2510, 6.2 NOTE).
+
+==== Hierarchical (partitive, binary)
+
+[source,yaml]
+----
+related:
+- type: has_part
+  content: { eng: "has a locking device" }
+  ref: { source: ES, id: locking_device }
+----
+
+Binary here because the assertion is a single part-of fact with no
+completeness claim.
+
+==== Partitive as an n-ary relation file
+
+When the parts jointly constitute the whole, the parts leave the
+concept record entirely and become a relation file:
+
+[source,yaml]
+----
+# relations/railway-switch/construction.yaml
+$id: "railway-switch/construction"
+type: partitive_relation
+comprehensive:
+  ref: { source: ES, id: railway_switch }
+members:
+- ref: { source: ES, id: switch_blade }
+  presence: required
+  count: exactly_one
+  delimiting: true
+- ref: { source: ES, id: switch_motor }
+  presence: optional
+  count: exactly_one
+- ref: { source: ES, id: locking_device }
+  presence: required
+  count: at_least_one
+completeness: complete
+criterion: "construction elements of the switch"
+----
+
+Reviewing this file: two or more members; all coordinate under the
+stated criterion; the `required`+`exactly_one`+`optional` combination
+is valid; exactly one delimiting member; the `complete` claim is
+consistent with an `optional` member being present (the rake is about
+the construction set, and the member presence describes instances, not
+the rake).
+
+==== Sequential as an n-ary relation file
+
+[source,yaml]
+----
+# relations/release-lifecycle/stages.yaml
+$id: "release-lifecycle/stages"
+type: sequential_relation
+comprehensive:
+  ref: { source: ES, id: release_lifecycle }
+members:
+- ref: { source: ES, id: proposed }
+- ref: { source: ES, id: drafted }
+- ref: { source: ES, id: reviewed }
+- ref: { source: ES, id: published }
+completeness: complete
+criterion: "process step order"
+----
+
+Member order is significant here; validators check the count (two or
+more) and reviewers check that the order stated is the order that
+holds.
+
+==== Lifecycle pair
+
+[source,yaml]
+----
+related:
+- type: supersedes
+  content: { eng: "effective from edition 2" }
+  ref: { source: ES, id: old_concept }
+----
+
+And on `old_concept`, the materialized inverse:
+
+[source,yaml]
+----
+related:
+- type: superseded_by
+  ref: { source: ES, id: new_concept }
+----
+
+Both legs recorded; `replaces`/`replaced_by` is reserved for the
+register items and does not appear on the concept records here.
+
+==== Mapping across vocabularies
+
+[source,yaml]
+----
+related:
+- type: exact_match
+  content: { eng: "same item in the ISO 24229 register" }
+  ref: { source: ISO, id: "urn:iso:24229:system-code:WebKit" }
+----
+
+The external vocabulary is named in the reference source field — a
+mapping without it cannot be audited (EFS 2513, 9.3).
+
+=== Mapping vocabulary table
+
+The cross-vocabulary table of <<relations-practice>>, worked for a
+register that maps to two external bodies:
+
+[cols="1,2,2",options="header"]
+|===
+|External vocabulary
+|Identifier form
+|Types used
+
+|ISO 24229 register
+|`urn:iso:24229:<itemClass>:<localId>`
+|`exact_match` (same item), `close_match` (functional equivalent)
+
+|A thesaurus partner
+|their local identifiers, prefixed in the record's ref source field
+|`broad_match` / `narrow_match` (their hierarchy differs),
+`related_match` (thematic overlap)
+|===
+
+Rules the table enforces:
+
+* one row per external vocabulary — a mapping record's ref source must
+appear here, or the mapping fails review; and
+
+* the types column records what was *agreed* with the partner, not
+what is technically expressible: an `exact_match` claimed where the
+partner only agreed to a `close_match` is an inter-organizational
+incident, not a modelling choice.

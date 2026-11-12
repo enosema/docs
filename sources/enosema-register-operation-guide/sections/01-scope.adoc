@@ -1,0 +1,40 @@
+== Scope
+
+This guide describes practice for establishing, operating, evaluating,
+and improving a concept register — the register-facing part of a concept
+management system as specified in EFS 2513.
+
+It gives guidance, templates, checklists, and worked examples for:
+
+* scoping a register and analysing its audiences (clause 4);
+
+* establishing and operating governance: control bodies, decision
+records, appeals (clause 5);
+
+* planning identifiers, editions, and concept system structure
+(clause 6);
+
+* day-to-day concept operations: intake, review, acceptance, change,
+retirement, and publication (clause 7);
+
+* localization practice (clause 8);
+
+* relation management practice (clause 9);
+
+* tooling, automation, and repository practice (clause 10);
+
+* evaluation and improvement practice (clauses 11 and 12); and
+
+* working artifacts: proposal form, decision record, self-assessment
+checklist, a complete worked example, and an adoption worksheet
+(annexes A to E).
+
+This guide is informative. It places no requirements; EFS 2513 places
+the requirements, and this guide suggests ways to meet them. An
+organization is free to follow different practice and still conform to
+EFS 2513, provided the requirements themselves are met.
+
+This guide does not supersede EFD 101 (standardization and publication
+processes) or EFD 102 (standard document requirements); ES's own
+documents follow those directives, and this guide's examples are drawn
+from practice conducted under them.

@@ -1,0 +1,80 @@
+[[adoption-worksheet]]
+[appendix]
+== Requirements class adoption worksheet
+
+EFS 2513, Annex A defines requirements classes: `basic`, `governed`,
+`multilingual`, `registered`, `full`. This worksheet turns the choice
+into a recorded decision, which the self-assessment (Annex C) then
+examines.
+
+=== Step 1 — Answer the scoping questions
+
+[cols="1,4",options="header"]
+|===
+|Question
+|Why it matters
+
+|Does the organization make decisions by a control body, with recorded decisions?
+|If no: start at `basic`; governance adds `governed`.
+
+|Does it publish concepts in more than one language?
+|If yes: `multilingual` (includes `governed`).
+
+|Does it operate or participate in a register under ISO 19135 / FERIN?
+|If yes: `registered` (includes `governed`).
+
+|Is the register public and machine-consumed?
+|Bulk exports and the publication profile (EFS 2516) are expected of
+`registered` and `full` adopters in practice.
+|===
+
+=== Step 2 — Record the claim
+
+[source,yaml]
+----
+organization: <name>
+date: <YYYY-MM-DD>
+class_claimed: governed            # basic | governed | multilingual | registered | full
+scope:
+  registers:
+    - <register or dataset identifiers covered>
+  concept_systems:
+    - <concept system scopes covered>
+exclusions:
+  - <what is explicitly out of the claim>
+assessment:
+  basis: self-assessment            # or internal audit / third party
+  checklist_record: <link to the completed Annex C checklist>
+  next_review: <date>
+----
+
+=== Step 3 — Gap plan
+
+For every Partial (P) or Nonconforming (N) line of the self-assessment
+within the claimed class:
+
+[cols="1,1,1,1",options="header"]
+|===
+|Checklist line
+|Finding
+|Action and owner
+|Target date
+|===
+
+Rules of thumb, learned the hard way:
+
+* A class claim with open N lines is not a claim; narrow the claim or
+fix the lines first.
+
+* `basic` is honest and useful: most organizations fail `governed`
+first at the decision-records line (5.3-2), because "we decide things
+in chat" is not a decision record.
+
+* Upgrading the class later is easy — the ladder has no cost except the
+lines themselves; downgrading in public is the expensive direction.
+
+=== Step 4 — Re-assess
+
+Set `next_review` to the periodic review of clause 11, and re-run
+Annex C against the claimed class each time. The claim renewal cites
+the new checklist record (EFS 2513, 11.4).

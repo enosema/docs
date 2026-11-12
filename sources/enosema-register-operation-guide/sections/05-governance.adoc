@@ -1,0 +1,200 @@
+[[governance]]
+== Governance in practice
+
+Guidance for EFS 2513, clause 5.
+
+=== Establishing the control body
+
+The control body needs a written charter. Half a page is enough; the
+essential contents are:
+
+. *Composition*: how many members, appointed by whom, term length.
+
+. *Quorum and voting*: what counts as a decision; whether the chair
+votes; handling of abstentions (EFD 101, balloting practice is a good
+default: Yes / No / Abstain, two-thirds Yes for acceptance, "`No`"
+votes carry constructive comments).
+
+. *Decision channels*: synchronous (meetings) and asynchronous
+(written ballot on the issue tracker); asynchronous ballots should have
+explicit opening and closing dates.
+
+. *Records*: where decision records (Annex B) are kept; who writes
+them (the register manager is a good default).
+
+. *Appeals*: to whom an appeal is addressed, in what time it is
+acknowledged, and who hears it other than the original decision-makers
+(EFS 2513, 5.3).
+
+[example]
+A minimal charter (working text, adapt freely):
+
+[quote]
+____
+The X Register Control Body consists of three to five members appointed
+by the Board of Y. The chair is appointed by the Board and does not
+vote except to break ties. Decisions are taken by written ballot on the
+register issue tracker, opened for at least 10 working days, and pass
+by two-thirds of votes cast excluding abstentions. Every decision is
+recorded by the register manager as a decision record within five
+working days. Appeals are addressed to the Board of Y, which hears
+them without participation of the members of the original decision.
+____
+
+=== Roles in daily operation
+
+Map the roles of EFS 2513 (5.5) onto named practices:
+
+* *register manager*: runs the publication runs (clause 7), writes
+decision records, maintains register.yaml, and is the contact point
+named on the register site;
+
+* *concept owners*: one per concept domain or subdivision; they draft
+proposals and respond to review comments on their concepts;
+
+* *reviewers*: check proposals against the review checklists
+(clause 7); at least one reviewer should not be an author of the
+proposal under review;
+
+* *submitters*: everyone entitled to open proposals through the
+submission channel.
+
+A single small team may hold several roles; the separations that matter
+are: the register manager should not be the sole reviewer of their own
+proposals (EFS 2513, 5.5), and appeals should not be decided by the
+authors of the contested decision.
+
+=== Meeting and ballot practice
+
+Most registers run on asynchronous ballots; meetings are for deadlock
+and design discussions. Practice that works:
+
+* every ballot issue carries the proposal link, the review summary, and
+the exact question to be voted on;
+
+* ballots state their window (`opens X`, `closes Y`, time zone
+included);
+
+* results are posted in the same issue as the ballot, with the decision
+record linked;
+
+* meetings, when held, produce minutes whose actions reference ballot
+issues — never the reverse.
+
+=== Decision records
+
+Write one decision record per decision (Annex B). The record's value is
+in the *why*: a register's decision log is the reason new volunteers
+can understand the register without archaeology.
+
+Minimum fields: identifier, date, proposal link, decision
+(accepted / returned / rejected / withdrawn), rationale, votes, effects
+(records created, identifiers issued, editions affected).
+
+Keep decision records numbered and immutable once closed; corrections
+are new records that supersede, never edits.
+
+=== Appeals practice
+
+An appeal is processed in four steps, with dates at each:
+
+. *Acknowledgement* (within the charter's stated time): appeal
+received, forwarded to the appeal body.
+
+. *Standing check*: is the appellant affected, is the appeal within
+time, does it state grounds?
+
+. *Hearing*: the appeal body reviews the decision record, the proposal,
+and the grounds; it may consult the control body but its members who
+decided the original matter do not vote.
+
+. *Outcome*: appeal accepted (decision reversed or redone) or
+rejected; the outcome is recorded as a decision record referencing the
+contested one.
+
+Publish the appeal outcomes summary in the register's periodic review
+(clause 11); a register with repeated appeals on the same ground has a
+process defect, not a participant problem.
+
+=== Role assignment in practice (RACI)
+
+Map operations to roles once, so proposals do not stall on "`who does
+this?`". R = responsible, A = accountable, C = consulted, I = informed.
+
+[cols="1,1,1,1,1",options="header"]
+|===
+|Operation
+|Register manager
+|Reviewer
+|Control body
+|Submitter
+
+|Proposal intake
+|R
+|I
+|I
+|A (submits complete form)
+
+|Technical review
+|C
+|R/A
+|I
+|C
+
+|Control-body decision
+|R (records)
+|C
+|A
+|I
+
+|Publication run
+|R/A
+|I
+|I
+|I
+
+|Appeal handling
+|C
+|I
+|C
+|A (raises appeal)
+
+|Periodic review
+|R (runs)
+|C
+|A (approves findings)
+|I
+|===
+
+=== Meeting minutes template
+
+Meetings produce minutes whose actions always reference ballot or
+proposal issues:
+
+[source,text]
+----
+Register Control Body — meeting 2026-11-05
+Present: <names>
+Agenda:
+1. Review outcome, proposal #87 — consensus unclear -> ballot #87 opened
+   (closes 2026-11-09). Action: manager (DR after close).
+2. Criteria register: proposal to add criterion "publication-channel"
+   -> owner to draft wording against ISO 704 subdivision principles.
+   Action: owner, by 2026-11-19.
+3. Intake times trending high -> intake checklist to move to CI template.
+   Action: manager, next sprint.
+----
+
+=== Asynchronous-first governance
+
+Registers whose participants span time zones run almost entirely on
+written ballots; meetings are the exception for deadlock and design
+discussions. Two consequences worth planning for:
+
+* the charter's decision channel default should be the written ballot,
+with meetings convened only when a ballot fails or a question is
+design-level; and
+
+* every ballot thread should be self-contained — proposal link, review
+summary, exact question, voting mechanics — because for many members
+the thread *is* the meeting.

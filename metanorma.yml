@@ -13,6 +13,7 @@ metanorma:
       - sources/enosema-concept-relations/document.adoc
       - sources/enosema-concept-management/document.adoc
       - sources/enosema-interchange/document.adoc
+      - sources/enosema-register-operation-guide/document.adoc
 
   collection:
     organization: "Enosema Foundation"

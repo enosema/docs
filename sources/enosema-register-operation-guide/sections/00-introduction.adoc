@@ -1,0 +1,55 @@
+== Introduction
+
+=== Why an operation guide
+
+EFS 2513 specifies what a conforming concept management system does. It
+says that a register shall have a control body, that changes shall go
+through proposal and review, that records shall be machine-readable,
+that localizations shall carry equivalence degrees. It does not say how
+an organization actually sets any of that up on a Monday morning.
+
+This guide fills that gap. It is to EFS 2513 what ISO 9004 is to
+ISO 9001: guidance for organizations that want to implement, operate,
+and steadily improve a concept register, written from practice rather
+than from principle. Every clause of this guide corresponds to a clause
+of EFS 2513, and its annexes contain the working artifacts an
+organization needs — proposal forms, decision records, checklists, and
+a complete worked example from a register that ES itself operates.
+
+=== How to use this guide
+
+Reading paths by situation:
+
+* *Starting a register*: read clauses 4 to 7 in order, then Annex D
+(the worked example), then use Annex A (proposal form) and Annex B
+(decision record) as your first working documents.
+
+* *Achieving conformity with EFS 2513*: use Annex C (the
+self-assessment checklist) against your current practice; each line
+cites the EFS 2513 requirement it examines. Clause 11 explains how to
+run the assessment and what to record.
+
+* *Improving an existing register*: run the assessment first, then
+apply clause 12 (improvement practice) to the findings.
+
+* *Extending an existing system to localization*: clause 8.
+
+* *Extending an existing system to a public, machine-readable
+publication*: clauses 7 (publication runbook), 9 (relation practice),
+and 10 (tooling), with EFS 2516 alongside.
+
+=== Conventions
+
+* The word *should* marks recommended practice; an organization may
+deviate, and records the deviation and its reason.
+
+* Templates in annexes are starting points: adapt names, fields, and
+wording to the organization, and keep the structure.
+
+* Examples marked as coming from the ES Relation Vocabulary are real:
+the dataset is published by ES at the Enosema concept register, and its
+files are cited verbatim.
+
+* Guidance that corresponds to a specific EFS 2513 requirement is
+cross-referenced inline in the form (EFS 2513, «clause»), so the two
+documents can be read side by side.

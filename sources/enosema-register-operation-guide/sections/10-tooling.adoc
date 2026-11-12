@@ -1,0 +1,180 @@
+[[tooling]]
+== Tooling, automation and repository practice
+
+Guidance for EFS 2513, clause 10.
+
+=== The reference toolchain
+
+The toolchain this guide assumes, and the one ES registers actually
+run:
+
+* *Source of truth*: a git repository holding the dataset (concept
+records per EFS 2516, clause 4; register.yaml; relation files per
+EFS 2510, 7.8);
+
+* *Model and validation*: the glossarist concept model — its schemas
+are the reference for the record format, and its validators cover the
+structural constraints;
+
+* *Publication*: the concept-browser toolchain — builds the browsable
+site and the bulk exports (CSV, TTL, JSON-LD) from the dataset;
+
+* *Process*: the repository's issue tracker for proposals and ballots;
+pull requests for record changes; CI for validation.
+
+Nothing in EFS 2513 requires these specific tools; EFS 2516 conformance
+is what matters. But a new register saves weeks by starting from this
+stack, and the worked example (Annex D) is expressed in it.
+
+=== Repository layout
+
+A layout that has proven workable:
+
+----
+register-repo/
+├── datasets/
+│   └── <dataset-id>/
+│       ├── register.yaml
+│       ├── about-eng.md
+│       ├── concepts/*.yaml          # concept records (EFS 2516, 4)
+│       └── relations/               # n-ary relation files (EFS 2510, 7.8)
+│           └── <comprehensive-id>/<criterion-slug>.yaml
+├── site-config.yml                  # publication configuration
+├── public/data/<dataset-id>/.gitkeep
+├── scripts/generate.py              # generators, kept in-repo
+└── .github/workflows/build.yml      # validation + build on push/PR
+----
+
+Keep generators in the repository: a dataset that can only be produced
+by an unrecorded process is not reproducible.
+
+=== Validation automation
+
+Run validation at three levels:
+
+* *On every pull request*: record format validation, identifier scheme
+check, relation constraint suite (clause 9), YAML quoting lint
+(EFS 2516, 4.4). A red CI marks the proposal as not reviewable.
+
+* *On merge*: a full publication run (validate → build → check →
+package) into a staging output, so a regression is caught before the
+next scheduled release.
+
+* *On release*: the publication run of record, producing the published
+site and the exports for the edition.
+
+The CI workflow for a register repository is small; the worked example
+(Annex D) shows one end to end.
+
+=== Branching and review practice
+
+* Proposals are pull requests: one proposal, one pull request,
+containing exactly the records the proposal touches.
+
+* Reviewers review the pull request diff; the checklists of clause 7
+are applied to the diff, not to the whole register.
+
+* The register manager merges on control-body decision; merge commits
+reference the decision record identifier, which closes the loop from
+proposal to decision to published record.
+
+* Direct pushes to the default branch are disabled for everyone,
+including the register manager (EFS 2513, 7.4.5: even editorial
+corrections are recorded).
+
+=== Support records
+
+Keep these alongside the dataset (EFS 2513, 10.4):
+
+* the governance charter and charter history (clause 5);
+
+* the criteria register and identifier scheme rule (clause 6);
+
+* the publication log (one line per publication run: date, run
+result, edition);
+
+* the decision records (Annex B); and
+
+* the self-assessment records (clause 11).
+
+=== CI workflow — a complete example
+
+The register repository's build workflow, end to end. It validates and
+builds on every push and pull request; the main site pipeline performs
+the publication run of record.
+
+[source,yaml]
+----
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build concept-browser site
+        run: npx -y @glossarist/concept-browser@0.7.139 build
+----
+
+Notes on the shape:
+
+* the workflow is *build-only*: publication of the site happens in the
+organization's main site pipeline (which mounts the register build),
+so the register repo cannot publish independently of a reviewed
+change;
+
+* the toolchain version is pinned, because an unrequested toolchain
+upgrade is itself a change to published output and deserves a decision
+record (clause 12); and
+
+* when validation rules grow (clause 9), they slot in as a step before
+the build — failing validation fails the pull request, which is the
+intake gate of clause 7.
+
+=== Validator invocation patterns
+
+The constraint suite of EFS 2510, clause 9 is invoked with dataset
+paths; representative invocations for the three families:
+
+[source,sh]
+----
+# structural: acyclic hierarchical relations, dangling references
+validate-register --dataset datasets/<id> --rules ac1,ac2,ac3,ac4
+
+# n-ary: member counts, presence/count consistency, completeness sanity
+validate-register --dataset datasets/<id> --rules na1,na2,na3,na4,na5 \
+                  --relations datasets/<id>/relations/
+
+# lifecycle: duality between register items and concept records
+validate-register --dataset datasets/<id> --rules lc1,lc2,lc3
+----
+
+The invocation set is recorded in the repository's CI configuration
+and in the publication log entry of each run; a constraint suite that
+is not executed at a known point is not a suite.
+
+=== Choosing what to automate first
+
+Registers moving to automation report the same ordering of value:
+
+. identifier scheme check and YAML lint (catches the most failures
+per effort);
+
+. relation constraint suite (ac3, na rules); then
+
+. localization field completeness (script + ISO 15924/24229 where
+applicable); and
+
+. export cross-checks (row counts per format).

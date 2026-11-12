@@ -1,0 +1,168 @@
+[[context]]
+== Operating context and register scope
+
+Guidance for EFS 2513, clause 4.
+
+=== Choosing what the register is for
+
+Before any record is created, write down the register's purpose in one
+sentence that names the audience and the decision the register
+supports. Registers that skip this sentence accumulate concepts nobody
+uses and cannot answer the question "`why does this item exist?`" at
+review time.
+
+Useful forms of the sentence:
+
+* "`The X register provides the authoritative set of Y used by Z when
+they do W.`"
+
+* "`This register is the single point of reference for concepts
+defined in the documents of organization Q.`"
+
+From the purpose sentence, derive the register type. The common
+patterns:
+
+[cols="1,1,1",options="header"]
+|===
+|Pattern
+|What it holds
+|Main consumers
+
+|Vocabulary register
+|Controlled vocabulary: relation types, statuses, categories
+|Systems that validate or exchange data
+
+|Terminology register
+|Domain concepts with designations and definitions
+|Authors, translators, content systems
+
+|Reference-data register
+|Code lists and item sets with lifecycle
+|Interoperating systems, data pipelines
+
+|Standards-derivative register
+|Concepts extracted from published documents
+|Readers of the documents, tool vendors
+|===
+
+A register may be several of these at once; record the mix, because it
+changes the review emphasis (terminology registers review definitions
+hardest; reference-data registers review lifecycle hardest).
+
+=== Audience analysis worksheet
+
+For each audience, record the answers to five questions. The answers
+drive the register's scope, publication formats, and stability
+commitments.
+
+. *Who* consumes the concepts — roles, not individuals.
+
+. *What decisions do they make* with the concepts?
+
+. *What breaks for them* if a concept changes: translations, schemas,
+published citations, training material?
+
+. *What format do they need* — browsable pages, CSV, TTL, JSON-LD,
+TBX, a GCR package?
+
+. *How do they cite* a concept — by identifier, by term, by document
+clause?
+
+[example]
+The ES Relation Vocabulary register, from the purpose sentence
+outward:
+
+* Purpose: "`provides the authoritative set of concept relation types
+used in ES concept systems and exchanged between terminology
+management systems.`"
+
+* Audiences: terminology management systems (validate relation type
+identifiers), standards authors (cite relation types when drafting),
+SKOS consumers (project vocabularies).
+
+* Breakage: a renamed relation type identifier breaks validating
+systems — hence the stability commitment (clause 6) and the
+never-rename rule (clause 7).
+
+* Formats: browsable site, TTL, JSON-LD, CSV (EFS 2516 bulk exports).
+
+* Citation: by URN `urn:enosema:relation-type:<identifier>` and by the
+identifier itself in EFS 2510, clause 6.
+
+=== Boundary decisions
+
+Two boundaries are worth deciding explicitly and writing down, because
+they are the most common sources of scope disputes later:
+
+* *What is not in the register.* Name the nearest topics that are
+excluded. A boundary by exclusion is checkable; a boundary by
+impression is not.
+
+* *Where concepts come from.* A register that only standardizes its own
+concepts reviews differently from one that adopts concepts from other
+bodies. For adopted concepts, record the source and the mapping relation
+type (`exact_match`, `close_match`, …) at intake, not later.
+
+=== Context records
+
+Keep the following as controlled records (a directory in the register
+repository is enough):
+
+* the purpose sentence and register type;
+
+* the audience worksheet;
+
+* the two boundary decisions; and
+
+* the date of the last review of these records.
+
+EFS 2513 (4.3) requires the scope to be reviewed when the context
+changes. Practical trigger list: a new consumer class appears; a
+consuming system is retired; the organization's charter or product
+scope changes; a review interval elapses (clause 11).
+
+=== Stakeholder interview question bank
+
+When preparing the audience worksheet (<<context>>), interview real
+consumers rather than assuming. The questions that produce usable
+answers:
+
+. "`Show me the last time you used one of our concepts. What did you
+look at, and what were you looking for?`" — surfaces real entry points
+(pages, exports, citations) instead of imagined ones.
+
+. "`What would you do if this concept's definition changed tomorrow?`"
+— surfaces breakage: translations, schemas, training material.
+
+. "`How do you currently check that you are using the right term?`"
+— surfaces validation needs (machine-checkable identifiers) versus
+lookup needs (search, browse).
+
+. "`Which concepts do you use most? Least?`" — surfaces the depth
+planning inputs of clause 6.
+
+. "`What do we publish that you cannot use?`" — surfaces format gaps
+and the publication profile requirements.
+
+. "`Who else in your organization consumes these?`" — surfaces the
+second-order audience that scope planning usually misses.
+
+Record the interviews with dates; the worksheet cites them. A scope
+statement grounded in six interviews survives review far better than
+one grounded in plausibility.
+
+=== Register scope — worked boundary statement
+
+The two boundary decisions of <<context>>, stated for a concrete
+register:
+
+* *Excluded by name*: designation-level relations (those are recorded
+in the datasets that use this vocabulary, not in the vocabulary
+itself); per-deployment deployment metadata; and any relation type not
+yet accepted by the control body (proposals live in the issue tracker
+until decided).
+
+* *Origin*: all items originate in the register's own decisions; items
+adopted from other bodies enter through a proposal that cites the
+source and states the mapping relation (`exact_match`,
+`close_match`, …) at intake.

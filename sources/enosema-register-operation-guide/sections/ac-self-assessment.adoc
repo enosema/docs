@@ -1,0 +1,313 @@
+[[self-assessment]]
+[appendix]
+== Self-assessment checklist against EFS 2513
+
+Run this checklist per register. For each line: mark Conforming (C),
+Partial (P), or Nonconforming (N); for P and N, record the finding and
+the action. The completed checklist, dated and signed, is the record
+that supports a conformance claim (EFS 2513, 11.4).
+
+=== Clause 4 — Organization and context
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref (EFS 2513)
+
+|4.1-1
+|Are the external and internal issues that affect the register's concepts documented, and current?
+|4.1
+
+|4.2-1
+|Does a concept system scope statement exist (domains, purposes, boundaries)?
+|4.2
+
+|4.2-2
+|Is it reviewed on context change, with review dates recorded?
+|4.2
+
+|4.3-1
+|Are consumer classes identified with their stability, citability and format requirements?
+|4.3
+
+|4.3-2
+|Are changes assessed against consumer requirements before being applied?
+|4.3
+|===
+
+=== Clause 5 — Governance
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|5.1-1
+|Is management commitment documented (policy established, resources available, bodies appointed)?
+|5.1
+
+|5.2-1
+|Does a concept management policy exist, and is it communicated to participants?
+|5.2
+
+|5.3-1
+|Does the control body have a written charter with composition, quorum, voting, records, and appeals?
+|5.3
+
+|5.3-2
+|Are all control-body decisions recorded as decision records?
+|5.3
+
+|5.3-3
+|Is there an appeals process, and does it exclude original decision-makers from hearing appeals?
+|5.3
+
+|5.5-1
+|Are roles assigned and recorded (register manager, concept owners, submitters, reviewers)?
+|5.5
+
+|5.5-2
+|Does the register manager avoid being sole reviewer of their own proposals?
+|5.5
+
+|5.6-1
+|Are participation rules (membership classes, external parties, confidentiality) documented?
+|5.6
+|===
+
+=== Clause 6 — Planning
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|6.1-1
+|Are breadth and depth of each concept system planned and recorded?
+|6.1
+
+|6.1-2
+|Does every subdivision record its criterion of subdivision?
+|6.1
+
+|6.2-1
+|Is there a written procedure for extending the concept system (criterion recorded before subordinate concepts)?
+|6.2
+
+|6.3-1
+|Is the lifecycle model defined (states, transitions), aligned with ISO 19135 statuses where a register is operated?
+|6.3
+
+|6.3-2
+|Is there a versioning policy: new version vs new concept, reference stability across versions?
+|6.3
+
+|6.3-3
+|Is a review interval planned per concept system?
+|6.3
+
+|6.4-1
+|Is the identifier scheme planned, stable, and independent of terms, states and locations?
+|6.4
+|===
+
+=== Clause 7 — Operations
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|7.1-1
+|Do proposals state designations, definition, placement (superordinate + criterion), relations, and sources?
+|7.1.1
+
+|7.1.2-1
+|Are definitions drafted per ISO 704 / ISO 10241-1 (intension, no requirements, no circularity)?
+|7.1.2
+
+|7.1.2-2
+|For extensional subdivisions, is member exhaustiveness verified before publication?
+|7.1.2
+
+|7.1.3-1
+|Does every published concept pass review (placement, uniqueness, relations, entries, sources)?
+|7.1.3
+
+|7.2-1
+|Does each published concept record carry identifier, designations, definition with sources, relations, status, and history?
+|7.2
+
+|7.2-2
+|Are records machine-readable per EFS 2516?
+|7.2
+
+|7.5.1-1
+|Do changes to published concepts go through proposal and review, with editorial corrections recorded by the register manager?
+|7.5.1
+
+|7.5.2-1
+|Are extending, splitting, merging, and instantiating operations decided by the control body and recorded per the record patterns?
+|7.5.2
+
+|7.5.3-1
+|Is retirement a status change with successor linkage, never a deletion?
+|7.5.3
+
+|7.5.4-1
+|Do identifiers remain resolvable across every operation?
+|7.5.4
+
+|7.6-1
+|Where a register is operated: are ISO 19135 procedures and statuses in use, and are register events mirrored as concept-record relations?
+|7.6
+|===
+
+=== Clause 8 — Localization
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|8.2-1
+|Does every localization record carry ISO 639-3 language, script where applicable, and ISO 24229 conversion system for converted forms?
+|8.2
+
+|8.3-1
+|Is an equivalence degree recorded per localization, with a note for anything other than `full`?
+|8.3
+
+|8.3-2
+|Are non-`full` acceptances recorded decisions with reasons?
+|8.3
+
+|8.4-1
+|Does a workflow exist that triggers localization review on source-concept changes?
+|8.4
+|===
+
+=== Clause 9 — Relations
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|9.1-1
+|Is an adopted relation vocabulary in force, and are unknown identifiers treated as errors?
+|9.1
+
+|9.2-1
+|Are the EFS 2510 structural rules validated (acyclicity, criteria, coordination, n-ary first-class, lifecycle duality)?
+|9.2
+
+|9.3-1
+|Are cross-vocabulary links recorded with mapping types and the external vocabulary named?
+|9.3
+
+|9.4-1
+|Are relations included in the periodic review?
+|9.4
+|===
+
+=== Clause 10 — Support
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|10.1-1
+|Are resources (roles, tooling, publication infrastructure) provided?
+|10.1
+
+|10.2-1
+|Are participants competent (ISO 704 analysis, drafting, vocabulary) and aware of policy and roles?
+|10.2
+
+|10.3-1
+|Are governance records, criteria records, identifier scheme, records, and histories controlled?
+|10.3
+
+|10.4-1
+|Are machine-readable publications faithful (identifiers, relations, n-ary metadata, localizations, statuses)?
+|10.4
+|===
+
+=== Clause 11 — Evaluation
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|11.1-1
+|Is monitoring in place (intake, decision times, error rates, consumer reports)?
+|11.1
+
+|11.2-1
+|Is the periodic review performed at planned intervals, with the EFS 2510 checks and findings recorded?
+|11.2
+
+|11.3-1
+|Is an internal audit performed, with criteria, findings, and dispositions recorded?
+|11.3
+
+|11.4-1
+|Do conformance claims state the class, scope, and assessment basis?
+|11.4
+|===
+
+=== Clause 12 — Improvement
+
+[cols="1,4,1",options="header"]
+|===
+|#|Question|Ref
+
+|12.1-1
+|Are nonconformities corrected, causes addressed, and sweeps performed?
+|12.1
+
+|12.2-1
+|Is an improvement log kept, with effects verified at review?
+|12.2
+|===
+
+=== Scoring guidance
+
+* *C on all lines of a class* → the class may be claimed (Annex E).
+
+* *P on any line* → claim only with a recorded remediation plan and
+date; auditors treat stale P entries as N.
+
+* *N on any line of a claimed class* → the claim is withdrawn or
+narrowed until the finding is dispositioned; publishing a claim with a
+known N is the fastest way to lose the trust the register exists to
+earn.
+
+=== Assessment record template
+
+The completed assessment is itself a controlled record:
+
+[source,yaml]
+----
+assessment:
+  register: <dataset-id>
+  date: <YYYY-MM-DD>
+  assessor: <name, role>
+  classes_assessed: [governed]      # per the adoption worksheet, Annex E
+  lines_total: 46
+  conforming: 44
+  partial: 2
+  nonconforming: 0
+  partial_findings:
+    - line: "8.2-1"
+      finding: >-
+        Conversion system field recorded for romanizations, but not
+        yet validated automatically at publication.
+      action: add localization field validation to CI
+      target_date: <date>
+  nonconforming_findings: []
+  claim:
+    statement: >-
+      This register claims conformity to EFS 2513 requirements class
+      "governed" on the basis of this assessment.
+    valid_until: <next review date>
+----
+
+Keep every completed assessment; the sequence of assessments is the
+register's conformity history, and improvement decisions (clause 12)
+cite it.

@@ -1,0 +1,18 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO30042,ISO 30042]]], _Management of terminology resources — TermBase eXchange (TBX)_
+
+* [[[ISO9001,ISO 9001]]], _Quality management systems — Requirements_
+
+* [[[ISO9004,ISO 9004]]], _Quality management — Quality of an organization — Guidance to achieve sustained success_
+
+* [[[ISO25964-1,ISO 25964-1]]], _Information and documentation — Thesauri and interoperability with other vocabularies — Part 1: Thesauri for information retrieval_
+
+* [[[FERIN,FERIN]]], _Framework for Extensible Registration of INformation_, https://www.ferin.org/
+
+* [[[GLOSSARIST,Glossarist concept model]]], _Glossarist concept model, dataset schema v3_, https://github.com/glossarist/concept-model
+
+* [[[CONCEPTBROWSER,concept-browser]]], _Concept-browser publication toolchain_, https://github.com/glossarist/concept-browser
+
+* [[[ENOREGISTER,Enosema concept register]]], _ES Relation Vocabulary, published register_, https://www.enosema.org/concept-register/

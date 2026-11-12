@@ -1,0 +1,210 @@
+[[localization-ops]]
+== Localization operations
+
+Guidance for EFS 2513, clause 8, with EFS 2504.
+
+=== The localization workflow
+
+A localization moves through five states; keep the state visible in the
+proposal or issue that carries it:
+
+. *Requested*: a localization is required (by policy, or by a consumer
+need recorded against the concept).
+
+. *Drafted*: a translator or domain expert produces the draft
+designation(s) and definition.
+
+. *Assessed*: the equivalence degree is assigned (<<equivalence-worksheet>>).
+
+. *Reviewed*: a reviewer checks the terminology method, not just the
+language: designation type, normative status, definition intension.
+
+. *Accepted*: the control body or its delegate accepts; acceptance of
+any degree other than `full` is a recorded decision with reasons
+(EFS 2513, 8.3).
+
+=== Assignment of work
+
+Localization work splits into two different competences, and proposals
+should say which is being requested:
+
+* *Translation-drafting* (language competence): producing candidate
+designations and definitions in the target language; and
+
+* *Equivalence assessment* (terminology competence): deciding the
+degree, writing the equivalence note, and checking concept-system
+fit (the localized concept's position in the target-language concept
+system may differ).
+
+Assigning both to one person is fine when one person has both
+competences; assigning translation to a tool without an equivalence
+assessment step is not.
+
+=== Record practice
+
+Per EFS 2504 and EFS 2516, each localization record carries:
+
+* language as ISO 639-3 (`eng`, `fra`, `cmn`, `yue`, …);
+
+* script as ISO 15924 where applicable (multiscript languages,
+romanizations);
+
+* the writing system conversion system as an ISO 24229 identifier for
+any converted form; and
+
+* the equivalence degree (`full`, `partial`, `none`, `directional`)
+and — for anything other than `full` — the equivalence note.
+
+[[equivalence-worksheet]]
+=== Equivalence assessment worksheet
+
+Work the assessment in this order and record the outcome at each step:
+
+. *Intension comparison*: state the characteristics of the source
+concept and of the candidate target concept. Shared characteristics →
+candidate `full`; overlapping but differing → candidate `partial`;
+no real correspondence → `none`.
+
+. *Concept-system check*: does the candidate target concept occupy the
+same position in the target-language concept system (same superordinate,
+same criterion)? If the position differs, the degree drops to at least
+`partial`, and the note says which position differs.
+
+. *Directionality check*: does the correspondence hold in reverse? If
+the target term means more (or less) than the source term when read
+back into the source language, the degree is `directional`, and the
+note states the working direction.
+
+. *Conversion check*: for romanized or transliterated forms, name the
+ISO 24229 conversion system used; two romanizations of one term are
+different localizations.
+
+. *Note drafting*: one to three sentences, stating what differs and
+for whom. A note that would not change a translator's behaviour is too
+vague.
+
+[example]
+Working assessment record:
+
+----
+concept: privacy (eng)
+candidate: vie privée (fra)
+degree: partial
+note: >-
+  French "vie privée" covers the legal-institutional aspects of privacy
+  more strongly than the English concept, which also spans personal
+  boundaries; drafting in French legal texts should prefer the narrower
+  legal term where the context is regulatory.
+----
+
+=== Cadence
+
+Two standing triggers keep localizations from rotting:
+
+* on acceptance of any change to a source concept's intension, open
+review tasks for all localizations whose degree is `partial`,
+`none`, or `directional` (EFS 2513, 8.4); and
+
+* at the periodic register review (clause 11), sample a few
+`full`-degree localizations and re-verify them: degrees drift as
+languages drift.
+
+=== A worked localization set
+
+One source concept, two localizations, three different degrees — the
+set demonstrates every field in play.
+
+*Source concept record* (`concepts/privacy.yaml`, managed document
+abridged):
+
+[source,yaml]
+----
+id: privacy
+data:
+  identifier: privacy
+  uri: urn:example:concept:privacy
+  localized_concepts:
+    eng: privacy-eng
+    fra: privacy-fra
+    de: privacy-de
+status: valid
+----
+
+*English localization* (the source of authority for the intension):
+
+[source,yaml]
+----
+---
+id: privacy-eng
+termid: privacy
+data:
+  language_code: eng
+  terms:
+  - type: expression
+    designation: privacy
+    normative_status: preferred
+  definition:
+  - content: "The condition of having control over the collection,
+    retention, and disclosure of information about an individual."
+status: valid
+----
+
+*French localization* — partial degree:
+
+[source,yaml]
+----
+---
+id: privacy-fra
+termid: privacy
+data:
+  language_code: fra
+  terms:
+  - type: expression
+    designation: vie privée
+    normative_status: preferred
+  definition:
+  - content: "Aspect de la vie d'une personne soustrait à l'attention
+    publique et à l'ingérence d'autrui."
+status: valid
+equivalence_degree: partial
+equivalence_note: >-
+  French "vie privée" covers the legal-institutional aspects of privacy
+  more strongly than the English concept, which also spans personal
+  boundaries; drafting in French legal texts should prefer the narrower
+  legal term where the context is regulatory.
+----
+
+*German localization* — full degree:
+
+[source,yaml]
+----
+---
+id: privacy-de
+termid: privacy
+data:
+  language_code: de
+  terms:
+  - type: expression
+    designation: informationelle Selbstbestimmung
+    normative_status: admitted
+  definition:
+  - content: "Die Befugnis des Einzelnen, über die Erhebung, Speicherung
+    und Verwendung seiner personenbezogenen Daten grundsätzlich selbst
+    zu bestimmen."
+status: valid
+equivalence_degree: full
+----
+
+Reviewer notes on the set:
+
+* the French degree is `partial` and carries the mandatory note; its
+acceptance was a recorded decision with the reasoning cited;
+
+* the German designation is `admitted`, not `preferred`: the German
+legal term is established but the register's review judged the plain-
+language German preference still unsettled — designation status and
+equivalence degree are independent axes;
+
+* a romanized German form (if one were added) would be a fourth
+record, with script `Latn` and the ISO 24229 conversion system named;
+it would not be a second German localization of the same content.
