@@ -1,0 +1,98 @@
+[[improvement-practice]]
+== Improvement practice
+
+Guidance for EFS 2513, clause 12.
+
+=== Nonconformity handling
+
+When validation, review, audit, or a consumer surfaces a
+nonconformity, work it in five recorded steps:
+
+. *Record*: file it with the finding, its source (validation rule,
+audit line, consumer report), and severity.
+
+. *Correct*: fix the affected records; for published records, the fix
+is itself a recorded change through clause 7's procedures (consumer
+reports on identifiers and references are always treated as urgent).
+
+. *Trace the cause*: records, process, or governance? A recurring YAML
+quoting defect is a process defect (add the lint); a decision repeatedly
+reversed is a governance defect (clarify the charter).
+
+. *Sweep*: check whether the same defect exists in sibling records —
+validation sweeps are cheap; manual sweeps target the family of the
+defect.
+
+. *Verify*: at the next review, confirm the nonconformity has not
+returned.
+
+=== Improvement decisions
+
+Improvements are control-body decisions like any other, recorded with
+Annex B's form. The standing inputs:
+
+* monitoring metrics with triggered actions (clause 11);
+
+* review and audit findings;
+
+* consumer requirement changes (clause 4);
+
+* vocabulary and schema evolution — new versions of EFS 2510 and
+EFS 2516, and evolution of registered vocabularies the register uses
+(such as new ISO 24229 conversion systems entering the localization
+fields); and
+
+* toolchain upgrades, which are recorded decisions too: pin versions,
+record why, and re-run the full validation before and after.
+
+=== The improvement log
+
+Keep a one-page improvement log: date, source finding, decision
+reference, effect, verification date. At the next review, the log is
+the checklist: each improvement is verified to have had its effect, and
+unverified improvements are carried forward explicitly rather than
+silently dropped.
+
+=== Continual improvement, realistically
+
+A register improves when three loops run at once: the *record loop*
+(defects found → corrected → swept), the *process loop* (causes →
+charter, checklists, automation), and the *content loop* (consumers →
+scope → criteria). This guide's structure follows those loops on
+purpose; if a register only ever exercises the record loop, it is
+treading water.
+
+=== Improvement log — worked entries
+
+The improvement log of clause 12, filled with two representative
+entries:
+
+[source,yaml]
+----
+log:
+- date: 2026-11-11
+  source: build failure in publication run (YAML colon in definition)
+  decision: DR-2026-017
+  action: >-
+    Add the scalar quoting rule to EFS 2516 (clause 4.4); add quoting
+    lint expectation to the review checklist of EFG 2519, clause 7.
+  effect: >-
+    Run fails at lint with file and line before any manual review time
+    is spent.
+  verified: 2026-11-12 (next run green, lint caught a recurrence)
+
+- date: 2026-11-01
+  source: registry could not categorize the register's documents
+  decision: DR-2026-012
+  action: >-
+    Introduce the `guide` doctype end to end: vocabulary spec, record
+    front matter, registry category mapping, and site publication.
+  effect: >-
+    Guides publish in their own registry category; directives and
+    standards unaffected.
+  verified: 2026-11-11 (deploy verified live)
+----
+
+The verified field is the discipline: an improvement without a
+verification date is a promise, and the review of clause 11 treats it
+as an open item.

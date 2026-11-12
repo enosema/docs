@@ -1,0 +1,105 @@
+[[decision-record]]
+[appendix]
+== Decision record template
+
+One decision record per control-body decision. Decision records are
+numbered, immutable once closed, and cross-referenced from the pull
+request that implements the decision.
+
+=== Template
+
+[source,yaml]
+----
+id: DR-2026-001                       # sequential, never reused
+date: <YYYY-MM-DD>
+decision_channel: written-ballot      # written-ballot | meeting | delegated-review
+window: {opened: <date>, closed: <date>}   # for ballots
+proposal: <link to the proposal issue / pull request>
+
+question: >-
+  <The exact question put to the control body, in one sentence.>
+
+outcome: accepted                     # accepted | returned | rejected | withdrawn
+
+rationale: >-
+  <Why this outcome, on the technical and procedural merits. This is
+  the field that future volunteers will read; write it for them.>
+
+votes:
+- member: <name>
+  vote: yes                           # yes | no | abstain
+  comment: (opt; mandatory for "no")
+
+delegation: (opt, for delegated-review decisions) >-
+  <The charter clause under which review consensus was delegated.>
+
+effects:
+  records:
+    - <identifier(s) created or changed>
+  identifiers_issued: <list or "none">
+  editions_affected: <list or "next scheduled run">
+  related_decisions: (opt) [<DR-YYYY-NNN>]
+
+appeal:                                # filled if appealed
+  status: none                         # none | acknowledged | heard | upheld | rejected
+  record: (opt) <link to the appeal record>
+----
+
+=== Worked example
+
+[source,yaml]
+----
+id: DR-2026-014
+date: 2026-11-12
+decision_channel: written-ballot
+window: {opened: 2026-11-02, closed: 2026-11-09}
+proposal: https://github.com/example/register/issues/87
+
+question: >-
+  Should the register accept "ranks_above"/"ranks_below" as relation
+  types in the adopted vocabulary, per proposal #87?
+
+outcome: accepted
+
+rationale: >-
+  The pair completes the contiguity family per ISO 704:2022 Table 1 and
+  is already used informally by two consuming systems. The review found
+  the definitions faithful to the source. The identifier "outranks"
+  was preferred over "is_senior_to" for brevity; the designation
+  improvement path remains open since identifiers are permanent.
+
+votes:
+- member: A. Reviewer
+  vote: yes
+- member: B. Reviewer
+  vote: yes
+- member: C. Reviewer
+  vote: yes
+
+effects:
+  records:
+    - ranks_above
+    - ranks_below
+  identifiers_issued: ["urn:example:relation-type:ranks_above",
+                       "urn:example:relation-type:ranks_below"]
+  editions_affected: [next scheduled run]
+  related_decisions: [DR-2026-009]
+
+appeal:
+  status: none
+----
+
+=== Practice notes
+
+* Write the rationale last, and write it for a reader who was not in
+the discussion. The vote tally is the easiest field and the least
+useful; the rationale is the opposite.
+
+* When a decision delegates acceptance to review consensus, the
+record must cite the charter clause that allows the delegation — an
+unanchored delegation is a nonconformity at audit (EFG 2519, 11.3).
+
+* Superseding a decision is a new record with
+`related_decisions: [<contested DR>]` and `outcome` describing the
+new state; the contested record is annotated in its `appeal.record`
+field, never edited.

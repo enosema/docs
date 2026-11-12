@@ -1,0 +1,285 @@
+[[worked-example]]
+[appendix]
+== Worked example — the ES Relation Vocabulary
+
+This annex walks one real register end to end: the ES Relation
+Vocabulary, the controlled vocabulary of concept relation types defined
+in EFS 2510, clause 6, published by ES at the Enosema concept register.
+Everything below is taken from the register as it operates.
+
+=== Purpose and audience (clause 4)
+
+*Purpose sentence*: "`The register provides the authoritative set of
+concept relation types used in ES concept systems and exchanged between
+terminology management systems.`"
+
+*Register type*: vocabulary register (clause 4), with a
+standards-derivative aspect: the items are normative content of
+EFS 2510, clause 6, registered as items in their own right.
+
+*Audiences*:
+
+[cols="1,1,1",options="header"]
+|===
+|Audience
+|Decision supported
+|Format needed
+
+|Terminology management systems
+|Validate relation type identifiers in exchanged records
+|TTL, JSON-LD, CSV bulk exports
+
+|Standards authors
+|Cite relation types when drafting ES documents
+|Browsable site, identifiers
+
+|SKOS consumers
+|Project vocabularies using the mapping types
+|TTL
+|===
+
+*Boundaries*: the register holds the relation type vocabulary; it does
+not hold concept datasets, nor designation-level relations (those live
+in the datasets that use the vocabulary). Adoption of concepts from
+other bodies is out of scope; new relation types arrive as proposals
+through EFD 101 processes.
+
+=== Governance (clause 5)
+
+*Control body*: the Terminology Technical Committee acting under a
+charter whose essentials are:
+
+[quote]
+____
+Proposals are submitted as issues in the register repository. The
+Technical Committee decides by consensus recorded in the proposal
+thread; where consensus is unclear, a written ballot of seven days is
+opened and passes by two-thirds of votes cast excluding abstentions.
+Decision records are written by the register manager within five
+working days of each decision and are numbered DR-YYYY-NNN. Appeals
+are addressed to the Board of Directors per EFD 101, clause 7.
+____
+
+*Roles*: register manager (runs publication runs, writes decision
+records, maintains register metadata); reviewers (Terminology TC
+members assigned per proposal); submitters (TC members; external
+parties per EFD 101 external-member rules).
+
+*Why governance matters here, concretely*: relation type identifiers
+are consumed by validating systems. A rename would break every
+consumer. The control body therefore applies the never-rename rule as
+a standing decision — recorded as DR-2026-002 — which is exactly the
+kind of decision a register exists to make and keep visible.
+
+=== Planning (clause 6)
+
+*Identifier rule*:
+
+[cols="1,1"]
+|===
+|Item
+|Form
+
+|Dataset URN
+|`urn:enosema:relation-vocabulary:<year>`
+
+|Relation type URN
+|`urn:enosema:relation-type:<identifier>`
+
+|Relation type identifier
+|snake_case verb or verb-pair form per EFS 2510, clause 6
+|===
+
+*Editions*: the dataset id carries the year
+(`es-relation-vocabulary-2026`); a future revision with substantive
+changes publishes a new edition id; item identifiers never change.
+
+*Criteria*: the register subdivides its types by *family* (hierarchical,
+equivalence, associative kinds, lexical, lifecycle, register,
+versioning), recorded in the generator's canonical table and visible as
+SKOS collections.
+
+=== The dataset (clause 7)
+
+Repository layout:
+
+----
+concept-register/
+├── datasets/
+│   └── es-relation-vocabulary-2026/
+│       ├── register.yaml
+│       ├── about-eng.md
+│       └── concepts/            # 109 concept records, one file each
+│           ├── broader_generic.yaml
+│           ├── supersedes.yaml
+│           └── …
+├── site-config.yml
+├── skos/relation-type.ttl       # SKOS projection (generated)
+├── scripts/generate.py          # canonical table → records + SKOS
+└── public/data/es-relation-vocabulary-2026/.gitkeep
+----
+
+*register.yaml* (verbatim):
+
+[source,yaml]
+----
+---
+schema_type: glossarist
+schema_version: '3'
+id: es-relation-vocabulary-2026
+ref: ES Relation Vocabulary (2026)
+year: 2026
+urn: urn:enosema:relation-vocabulary:2026
+status: current
+owner: Enosema Foundation
+source_repo: https://github.com/enosema/concept-register
+tags:
+- enosema
+- relation-types
+- concept-relations
+- EFS-2510
+- SKOS
+languages:
+- eng
+language_order:
+- eng
+----
+
+*One concept record* (`concepts/broader_generic.yaml`, verbatim):
+
+[source,yaml]
+----
+---
+id: broader_generic
+data:
+  identifier: broader_generic
+  uri: urn:enosema:relation-type:broader_generic
+status: valid
+date_accepted: '2026-11-11T00:00:00+00:00'
+sources:
+- type: authoritative
+  origin:
+    ref:
+      source: EFS 2510:2026
+      clause: 6
+    link: https://www.enosema.org/standards/docs/efs-2510/2026/
+related:
+- type: related_concept
+  content:
+    eng: "inverse relation type"
+  ref:
+    source: ES
+    id: narrower_generic
+---
+id: broader_generic-eng
+termid: broader_generic
+data:
+  language_code: eng
+  terms:
+  - type: expression
+    designation: broader_generic
+    normative_status: preferred
+  definition:
+  - content: "The current concept is a kind of the related concept (generic/specific)."
+  notes:
+  - content: "Inverse relation type: `narrower_generic`. Relation family: hierarchical-generic. Source: ISO 25964-1 (BTG/NTG); EFS 2510:2026, 6.2."
+status: valid
+----
+
+Note the self-referential discipline: the register's own items use the
+register's vocabulary (`related_concept` for the inverse-of pointer,
+typed and directed), and every record cites its normative source.
+
+*Generation*: all 109 records and the SKOS projection regenerate from
+one canonical table:
+
+[source,sh]
+----
+python3 scripts/generate.py
+----
+
+The generator is in the repository on purpose (EFS 2513, 10.3): the
+dataset is reproducible from recorded inputs.
+
+=== Publication (clause 7, runbook in practice)
+
+*site-config.yml* (essentials):
+
+[source,yaml]
+----
+id: enosema-concept-register
+domain: www.enosema.org
+uri_base: https://www.enosema.org
+base_path: /concept-register
+title: Enosema Concept Register
+datasets:
+  - id: es-relation-vocabulary-2026
+    title: ES Relation Vocabulary (2026)
+    local_path: datasets/es-relation-vocabulary-2026
+bulk_exports: [ttl, jsonld, csv]
+----
+
+*The publication run*, as CI executes it:
+
+. *Validate and build*: `npx @glossarist/concept-browser build` —
+ingests the dataset, validates records, processes 109 concepts, builds
+the site.
+
+. *Check*: exports exist under `public/data/<dataset-id>/`; row counts
+match concept counts; the TTL parses.
+
+. *Publish*: the register build is mounted at
+`https://www.enosema.org/concept-register/` by the main site pipeline,
+alongside the register's own build-check workflow in its repository.
+
+*What a failure looks like*: a definition quoting a standard without
+YAML quoting (`ISO 704:2022`) breaks the parser — the run fails, the
+log names the file and line, nothing publishes, and the fix is itself
+a recorded change. This failure has occurred in practice; the quoting
+rule of EFS 2516, 4.4 exists because of it.
+
+=== SKOS projection (EFS 2516, clause 6)
+
+The projection keeps what SKOS can carry and annotates the rest:
+
+[source,turtle]
+----
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix eno: <urn:enosema:relation-type:> .
+
+<urn:enosema:relation-vocabulary:2026> a skos:ConceptScheme ;
+    dcterms:title "ES Relation Vocabulary"@en ;
+    dcterms:creator "Enosema Foundation" ;
+    skos:hasTopConcept eno:broader_generic, eno:broader_partitive,
+        eno:equivalent, eno:deprecates, eno:has_version .
+
+eno:broader_generic a skos:Concept ;
+    skos:prefLabel "broader_generic"@en ;
+    skos:definition "The current concept is a kind of the related
+        concept (generic/specific)."@en ;
+    skos:inScheme <urn:enosema:relation-vocabulary:2026> ;
+    owl:inverseOf eno:narrower_generic ;
+    dcterms:source "ISO 25964-1 (BTG/NTG); EFS 2510:2026, 6.2" .
+----
+
+The scheme, families as collections, and per-type inverse statements
+are generated; the full records remain the record of authority
+(round-trip prohibition, EFS 2516, 6.3).
+
+=== Improvement in practice (clause 12)
+
+Two real improvement decisions from this register's short life, as
+decision records would record them:
+
+* The registry initially could not categorize the items: the concept
+records carried a doctype the aggregation mapping did not know. The
+fix spanned the vocabulary spec, the record format, and the registry
+configuration — one improvement decision, three coordinated changes,
+one verification run.
+
+* The quoting defect (clause 7 of this annex) produced a build failure
+that stopped a publication run; the sweep added the quoting rule to
+the interchange spec and the lint expectation to review checklists.
+Record loop and process loop, in one entry.

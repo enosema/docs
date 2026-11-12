@@ -1,0 +1,64 @@
+= Concept registers — Operation guide
+:title-intro-en: Terminology management
+:title-main-en: Concept registers — Operation guide
+:docnumber: 2519
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-11-12
+:language: en
+:doctype: guide
+:technical-committee: Terminology
+:mn-document-class: enosema
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:imagesdir: images
+:fullname: Reese W. Plews
+:surname: Plews
+:givenname: Reese W.
+:affiliation: Plews Consulting
+:fullname_2: Ronald Tse
+:surname_2: Tse
+:givenname_2: Ronald
+:affiliation_2: Ribose
+:docidentifier: EFG 2519:2026
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-normrefs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-context.adoc[]
+
+include::sections/05-governance.adoc[]
+
+include::sections/06-planning.adoc[]
+
+include::sections/07-operations.adoc[]
+
+include::sections/08-localization.adoc[]
+
+include::sections/09-relations.adoc[]
+
+include::sections/10-tooling.adoc[]
+
+include::sections/11-evaluation.adoc[]
+
+include::sections/12-improvement.adoc[]
+
+include::sections/aa-proposal-form.adoc[]
+
+include::sections/ab-decision-record.adoc[]
+
+include::sections/ac-self-assessment.adoc[]
+
+include::sections/ad-worked-example.adoc[]
+
+include::sections/ae-adoption-worksheet.adoc[]
+
+include::sections/az-bibliography.adoc[]

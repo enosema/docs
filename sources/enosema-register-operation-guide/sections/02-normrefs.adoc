@@ -1,0 +1,30 @@
+[bibliography]
+== Normative References
+
+* [[[EFS2504,EFS 2504:2025]]], _Terminology management — Multilingual terminology_
+
+* [[[EFS2510,EFS 2510:2026]]], _Terminology management — Concept systems and concept relations_
+
+* [[[EFS2513,EFS 2513:2026]]], _Terminology management — Concept management systems — Requirements_
+
+* [[[EFS2516,EFS 2516:2026]]], _Terminology management — Machine-readable terminology interchange_
+
+* [[[EFD101,EFD 101:2026]]], _Enosema Directive: Standardization and publication_
+
+* [[[EFD102,EFD 102:2026]]], _Enosema Directive: Standard document requirements_
+
+* [[[ISO704,ISO 704]]], _Terminology work and terminology support in signs and languages — Principles and methods_
+
+* [[[ISO1087-1,ISO 1087-1]]], _Terminology work and terminology support in signs and languages — Vocabulary — Part 1: Theory and application_
+
+* [[[ISO19135-1,ISO 19135-1]]], _Geographic information — Procedures for item registration — Part 1: Fundamentals_
+
+* [[[ISO10241-1,ISO 10241-1]]], _Terminological entries in standards — Part 1: General requirements and examples of presentation_
+
+* [[[ISO639-3,ISO 639-3]]], _Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages_
+
+* [[[ISO15924,ISO 15924]]], _Information and documentation — Codes for the representation of names of scripts_
+
+* [[[ISO24229,ISO 24229]]], _Information and documentation — Register for writing system conversion systems_
+
+* [[[SKOS,W3C SKOS]]], _SKOS Simple Knowledge Organization System Reference_, W3C Recommendation, https://www.w3.org/TR/skos-reference/

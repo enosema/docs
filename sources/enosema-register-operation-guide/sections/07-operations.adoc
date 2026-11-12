@@ -1,0 +1,356 @@
+[[operations]]
+== Concept operations
+
+Guidance for EFS 2513, clause 7.
+
+=== Proposal intake
+
+When a proposal arrives through the submission channel (for this
+guide's assumed setup: an issue in the register repository), the
+register manager performs intake — a mechanical check, not a review:
+
+. *Completeness*: does the proposal carry all fields of the proposal
+form (Annex A)? Incomplete proposals are returned with the missing
+fields named.
+
+. *Triage*: is this a new concept, a change, or a question? Questions
+are answered or turned into proposals by the concept owner.
+
+. *Assignment*: one reviewer is assigned; the proposer is told who and
+the expected review window.
+
+. *Label*: the proposal issue is labelled with the affected concept
+system(s) and the operation type (create, revise, split, merge,
+retire, localize).
+
+Intake should happen within a few working days; the clock on review
+starts after it.
+
+=== Review practice
+
+Reviews check the four dimensions of any proposal. Checklists keep
+reviews consistent between reviewers; the four checklists below are
+meant to be pasted into the review comment and ticked.
+
+==== Definition review (per ISO 704, ISO 10241-1)
+
+[cols="1,2",options="header"]
+|===
+|Check
+|What to look for
+
+|Intension
+|The definition states the characteristics that delimit the concept,
+not an extension or a purpose
+
+|Genus
+|It begins with the superordinate concept, not with an article or the
+term itself
+
+|No requirements
+|No shall/should/may; definitions do not prescribe
+
+|Delimitation
+|Coordinate concepts within the subdivision remain distinguishable
+after the definition
+
+|Circularity
+|No definition by synonym within the same register
+|===
+
+==== Placement review
+
+[cols="1,2",options="header"]
+|===
+|Check
+|What to look for
+
+|Criterion
+|The proposal names a criterion of subdivision, checked against the
+criteria register (clause 6)
+
+|Coordinate set
+|The proposed concept's coordinate concepts are listed; their union
+behaves sensibly (MECE check per EFS 2510, 4.3)
+
+|Dimensionality
+|Parallel criteria are kept as parallel subdivisions, not merged
+|===
+
+==== Relation review
+
+[cols="1,2",options="header"]
+|===
+|Check
+|What to look for
+
+|Vocabulary
+|Relation type identifiers exist in the adopted vocabulary (EFS 2510,
+clause 6)
+
+|Direction
+|The direction matches the type's semantics; inverse pairs are
+consistent
+
+|N-ary rule
+|Joint decompositions use n-ary relations per the binary-versus-n-ary
+decision rule (EFS 2510, 7.2)
+
+|Lifecycle
+|Lifecycle relations link register items where both sides exist
+|===
+
+==== Record review
+
+[cols="1,2",options="header"]
+|===
+|Check
+|What to look for
+
+|Record format
+|Concept file conforms to EFS 2516, clause 4; parses; fields present
+
+|Identifiers
+|Identifier scheme followed; URN correct; localized-concept map
+consistent
+
+|Sources
+|Claims are supported by cited sources
+|===
+
+=== Decision records and acceptance
+
+The control body decides on the review outcome. Three outcomes are
+normal:
+
+* *Accepted*: the proposal is merged; a decision record (Annex B) is
+written; identifiers are issued at merge time;
+
+* *Returned*: specific, actionable defects are listed; the proposal
+returns to the submitter without a decision;
+
+* *Rejected*: the grounds are recorded in the decision record;
+rejection does not prevent a differently-framed future proposal.
+
+For routine, uncontroversial proposals, the control body may delegate
+acceptance to review consensus; the charter should say so explicitly,
+and the decision record should record the delegation.
+
+=== Change operations
+
+Each change operation of EFS 2513 (7.5) has a concrete record pattern.
+The patterns below use the vocabulary of EFS 2510, clause 6.
+
+==== Extending
+
+Add the subordinate concept; record the criterion; check that the new
+concept's coordinate set updates the completeness picture of any n-ary
+relation over the parent (a previously `complete` rake may become
+`partial` — flag it in the proposal).
+
+==== Splitting
+
+. Create the successor concepts.
+
+. On the predecessor record: set status to `superseded`; add the
+lifecycle relation `supersedes`/`superseded_by` to each successor.
+
+. Move or re-express relations of the predecessor: relations whose
+semantics transfer go to the appropriate successor, and the move is
+stated in the proposal.
+
+. Keep the predecessor record published; identifiers do not break.
+
+==== Merging
+
+. Create the single successor.
+
+. Link it to each predecessor with `supersedes`/`superseded_by`.
+
+. Record in the successor's notes the mapping from predecessor
+designations; translation memories and consuming systems rely on this
+mapping.
+
+==== Instantiating
+
+Add the individual concept with the `instance_of`/`has_instance` pair;
+individual concepts rarely need new definitions, but they need a
+designation and a source.
+
+==== Retiring
+
+Set the record's status; add the retirement relation to the successor
+if one exists; leave everything else in place. Retirement is a status
+change, not a deletion — there is no deletion operation in a conforming
+register.
+
+=== Publication runbook
+
+A publication run (EFS 2516 formats) follows five steps; automate all
+of them (clause 10):
+
+. *Validate*: run the dataset validator — record format, identifier
+scheme, relation constraints (the ac/lc/na constraints of EFS 2510,
+clause 9), localization fields.
+
+. *Build*: run the publication toolchain to produce the site and the
+bulk exports (CSV, TTL, JSON-LD) per EFS 2516, clause 7.
+
+. *Check*: verify export row counts against concept counts; verify that
+no export dropped concepts or localizations; verify links resolve.
+
+. *Package*: produce the GCR package for the edition.
+
+. *Publish*: release site and exports; record the edition and the run
+in the publication log.
+
+[cols="1,1",options="header"]
+|===
+|Check at every run
+|Expected result
+
+|Validation errors
+|Zero; any error fails the run
+
+|Export concept count
+|Equals dataset concept count, per format
+
+|TTL parses
+|As RDF, no parse errors
+
+|Identifiers resolve
+|Every `data.uri` resolves on the published site
+|===
+
+A failed run publishes nothing; the register's published state only
+moves forward on a fully green run.
+
+=== A worked review
+
+What a review actually looks like when pasted into a proposal thread.
+The reviewer applies the four checklists of <<operations>> and answers
+in one comment:
+
+[quote]
+____
+Reviewed per EFG 2519 clause 7.
+
+*Definition*: genus present ("`controlled vocabulary`" — good); no
+modal verbs; delimits against `term-status` and `system-status`, which
+share the family. One defect: the definition says "`lifecycle status of
+a code`" but the item class also covers systems; propose "`lifecycle
+status of a register item`".
+
+*Placement*: criterion `lifecycle-stage` exists in the criteria
+register and already generates `code-status`/`system-status` — this
+proposal joins it. Coordinate set fine.
+
+*Relations*: `supersedes`/`superseded_by` pair consistent; both
+referenced items exist (validated); no rakes affected.
+
+*Record*: file parses; URI matches the scheme; localized-concept map
+consistent; source cited to the SCHEMA.adoc of the source data.
+
+One required change (definition scope), otherwise conforming.
+Returned to the submitter for the definition fix; recommend acceptance
+after the change.
+____
+
+The decision record then references this review by link, and the
+publication run picks up the merged record.
+
+=== Ballot announcement template
+
+[source,text]
+----
+Ballot: Proposal #87 — accept ranks_above / ranks_below
+Opens:  2026-11-02 (any time)
+Closes: 2026-11-09 23:59 UTC
+Votes:  yes / no / abstain, as reactions on this issue
+Passes: two-thirds of yes+no, abstentions not counted
+Question: Should the register accept "ranks_above"/"ranks_below"
+          as relation types in the adopted vocabulary?
+Review summary: <link to the review comment>
+Decision record to follow: DR-2026-014
+----
+
+=== Publication log
+
+One line per publication run, kept in the register repository:
+
+[source,yaml]
+----
+- run: 2026-11-11T10:15Z
+  trigger: merge of PR #12 (decision DR-2026-014)
+  validation: 0 errors
+  concepts: 109
+  exports: [csv 110 lines, ttl, jsonld]
+  edition: es-relation-vocabulary-2026
+  result: published
+----
+
+=== Intake service levels
+
+State the intake service levels in the charter or repository README,
+so submitters know what to expect and the register manager knows what
+is owed:
+
+[cols="1,2,1",options="header"]
+|===
+|Step
+|Expected window
+|Clock starts
+
+|Intake (completeness, triage, assignment)
+|3 working days
+|Proposal opened
+
+|Technical review
+|15 working days
+|Intake complete
+
+|Control-body decision (ballot)
+|10 working days ballot + 5 for the record
+|Review complete
+
+|Publication run after acceptance
+|Next scheduled run (or immediate for urgent consumer-reported fixes)
+|Decision record written
+|===
+
+The windows are commitments to consumers as much as to submitters:
+intake and decision times are monitoring metrics of clause 11, and
+service levels that are stated but repeatedly missed are exactly the
+nonconformity the internal audit looks for.
+
+=== Triage table
+
+The intake triage decision, as a table:
+
+[cols="1,2,2",options="header"]
+|===
+|If the submission is…
+|It is…
+|Handled as
+
+|A complete proposal form
+|A proposal
+|Review path (clause 7)
+
+|A question about a concept
+|A query
+|Answered by owner; may become a proposal
+
+|A defect report on a published record
+|A consumer report
+|Urgent track (clause 12); recorded correction if confirmed
+
+|A request to rename an identifier
+|Declined by rule
+|Explained with the never-rename decision; a new preferred
+designation may be proposed instead
+
+|A proposal with missing fields
+|Incomplete
+|Returned with the missing fields named (clause 7, intake)
+|===

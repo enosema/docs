@@ -1,0 +1,151 @@
+[[proposal-form]]
+[appendix]
+== Concept proposal form
+
+This form is the intake record for every operation on the register
+(create, revise, split, merge, instantiate, retire, localize). It is
+designed to be pasted into an issue in the register repository; fields
+marked (opt) may be left empty with a reason.
+
+=== Operation header
+
+[source,yaml]
+----
+operation: create            # create | revise | split | merge | instantiate | retire | localize
+concept_id: (opt — for non-create operations, the affected identifier)
+dataset: <dataset-id>
+submitter: <name / organization>
+date: <YYYY-MM-DD>
+----
+
+=== New concept (operation: create)
+
+[source,yaml]
+----
+proposed_identifier: <per the identifier scheme>
+urn: <if issued at proposal time; otherwise left for the register manager>
+
+designations:
+- designation: <term>
+  type: expression            # expression | abbreviation | symbol | formula | graphical
+  normative_status: preferred # preferred | admitted | deprecated
+- designation: (opt) <abbreviation or other form>
+  type: abbreviation
+  normative_status: admitted
+
+superordinate_concept: <identifier of the genus concept>
+criterion_of_subdivision: <wording, checked against the criteria register>
+
+definition: >-
+  <The definition. Genus first; no articles; no shall/should/may;
+  states the delimiting characteristics.>
+
+notes: (opt)
+
+examples: (opt)
+
+sources:
+- ref: <document or publication>
+  clause: (opt)
+  link: (opt)
+
+relations:
+- type: <relation type per EFS 2510, clause 6>
+  related_concept: <identifier>
+  content: (opt — explanation of this specific assertion)
+----
+
+=== Revision (operation: revise)
+
+[source,yaml]
+----
+reason_for_change: >-
+  <What is wrong with the current record and why the change is needed.>
+fields_changed:
+- field: definition            # designation | definition | relations | sources | status
+  current: >-
+    <verbatim current content>
+  proposed: >-
+    <verbatim proposed content>
+impact_on_consumers: >-
+  <What changes for systems citing this concept. Intension change?
+  Localization review needed? SKOS projection affected?>
+----
+
+=== Split (operation: split)
+
+[source,yaml]
+----
+predecessor: <identifier>
+successors:
+- proposed_identifier: <id-1>
+  designation: <term-1>
+  definition_summary: >-
+    <One sentence: which part of the predecessor's intension it takes.>
+- proposed_identifier: <id-2>
+  designation: <term-2>
+  definition_summary: >-
+    <One sentence.>
+relation_migration:
+- old_relation: { type: <type>, related: <id> }
+  goes_to: <id-1>              # which successor inherits it, and why
+----
+
+=== Merge (operation: merge)
+
+[source,yaml]
+----
+predecessors:
+- <identifier-1>
+- <identifier-2>
+successor:
+  proposed_identifier: <id>
+  designation: <term>
+  definition: >-
+    <The merged intension.>
+predecessor_designation_mapping:
+- predecessor: <identifier-1>
+  treatment: preferred | admitted | deprecated
+----
+
+=== Localization (operation: localize)
+
+[source,yaml]
+----
+source_concept: <identifier>
+language: <ISO 639-3>          # e.g. fra, cmn
+script: (opt) <ISO 15924>      # mandatory for multiscript or romanized forms
+conversion_system: (opt) <ISO 24229 identifier>   # mandatory for converted forms
+designations:
+- designation: <localized term>
+  type: expression
+  normative_status: preferred
+definition: >-
+  <Localized definition.>
+equivalence_degree: full       # full | partial | none | directional
+equivalence_note: (mandatory unless full) >-
+  <What differs and for whom; see EFG 2519, 8.3.>
+----
+
+=== Retirement (operation: retire)
+
+[source,yaml]
+----
+concept: <identifier>
+successor: (opt) <identifier>
+ground: >-
+  <Why the concept should be retired: obsolescence, replacement,
+  error in intension, scope change.>
+----
+
+=== Submission notes
+
+. One operation per form. Two operations touching the same concept in
+one submission is two proposals.
+
+. Attach or link the concept record draft in the proposal, so review
+comments can point at lines.
+
+. If a proposal affects an n-ary relation (adds or removes a rake
+member, or flips completeness), say so explicitly at the top of the
+form: this changes the review path (EFG 2519, 7.3).
