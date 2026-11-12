@@ -175,3 +175,45 @@ The analysis operates on the EFS 2516 record format only: any termbase
 that exports the interchange records of EFS 2516 can be measured with
 the identical script, making the ISO corpus figures of this annex a
 benchmark that ES registers can be compared against directly.
+
+=== IEV corpus statistics
+
+Corpus: the International Electrotechnical Vocabulary (IEC 60050),
+22 229 concepts; sample: 2 000 concepts (fixed seed), yielding
+approximately 23 000 language entries.
+
+[cols="1,2",options="header"]
+|===
+|Statistic
+|Value
+
+|Languages per concept
+|median 11; mode 11; range 2–19
+
+|Definitions (eng)
+|100 % of entries; median 18 words; p90 36
+
+|Definitions (fra)
+|100 % of entries; median 19 words; p90 37
+
+|Definitions (deu, spa, zho, ara, ita, pol)
+|0 % — term-only localizations
+
+|Definitions (rus)
+|7 % — partial
+
+|Notes (eng, fra)
+|32 %
+
+|Examples (eng, fra)
+|under 1 %
+
+|Grammar (deu / fra / pol)
+|97 % / 98 % / 30 %
+|===
+
+The IEV operates the term-only localization model (<<corpus>>, "The
+two localization models"); its definition-length figures sit close to
+the ISO corpus (median 16 eng), so the definition-quality anchors of
+Annex <<rubric-cards>> hold for both corpora, while localization
+completeness (cc4) is judged against the declared model.
