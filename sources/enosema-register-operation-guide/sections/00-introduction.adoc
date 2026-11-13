@@ -5,11 +5,12 @@
 EFS 2513 specifies what a conforming concept management system does. It
 says that a register shall have a control body, that changes shall go
 through proposal and review, that records shall be machine-readable,
-that localizations shall carry equivalence degrees. It does not say how
-an organization actually sets any of that up on a Monday morning.
+that localizations shall carry equivalence degrees. It does not state
+how an organization establishes and operates those arrangements in
+daily practice.
 
 This guide fills that gap. It is to EFS 2513 what ISO 9004 is to
-ISO 9001: guidance for organizations that want to implement, operate,
+ISO 9001: guidance for organizations that intend to implement, operate,
 and steadily improve a concept register, written from practice rather
 than from principle. Every clause of this guide corresponds to a clause
 of EFS 2513, and its annexes contain the working artifacts an
@@ -21,12 +22,12 @@ a complete worked example from a register that ES itself operates.
 Reading paths by situation:
 
 * *Starting a register*: read clauses 4 to 7 in order, then Annex D
-(the worked example), then use Annex A (proposal form) and Annex B
-(decision record) as your first working documents.
+(the worked example), and adopt Annex A (proposal form) and Annex B
+(decision record) as the first working documents of the register.
 
-* *Achieving conformity with EFS 2513*: use Annex C (the
-self-assessment checklist) against your current practice; each line
-cites the EFS 2513 requirement it examines. Clause 11 explains how to
+* *Achieving conformity with EFS 2513*: apply Annex C (the
+self-assessment checklist) to current practice; each line cites the
+EFS 2513 requirement that it examines. Clause 11 explains how to
 run the assessment and what to record.
 
 * *Improving an existing register*: run the assessment first, then

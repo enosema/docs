@@ -26,8 +26,8 @@ the last resort, not the default.
 
 For cross-organizational links, use the mapping family
 (`exact_match` … `related_match`) and name the other vocabulary in the
-relation record; never use `equivalent` across vocabularies you do not
-control.
+relation record; `equivalent` is never asserted across vocabularies that the register
+does not control.
 
 === Implementing the constraints
 

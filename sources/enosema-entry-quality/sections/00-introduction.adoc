@@ -2,14 +2,14 @@
 
 === The question this document answers
 
-"`What is a good term definition style?`" is asked by every terminologist,
-standards editor, and term reviewer at some point — usually while staring
-at a proposed entry that feels wrong but cannot be marked wrong by any
-rule anyone can cite. The established standards answer parts of the
-question: ISO 704 gives the theory of concepts and definitions, ISO 10241-1
-gives the entry structure for standards, and the ISO/IEC Directives,
-Part 2, give the drafting rules that ISO and IEC documents apply. But
-none of them hands a reviewer a scorecard.
+Terminologists, standards editors and term reviewers regularly
+encounter a proposed entry that appears defective although no rule that
+anyone can cite marks it as defective. The established standards answer
+parts of the question that such a review raises: ISO 704 gives the
+theory of concepts and definitions, ISO 10241-1 gives the entry
+structure for standards, and the ISO/IEC Directives, Part 2, give the
+drafting rules that ISO and IEC documents apply. None of them provides
+the reviewer with a scoring instrument.
 
 This document does. It defines what quality means for a concept entry —
 its designation, its definition, its completeness, its clarity, and its
@@ -65,6 +65,7 @@ quality is improving (EFS 2513, clause 11).
 * *Publication gating*: a register may set a minimum grade for
 publication; the score sheet is the record that the gate was applied.
 
-Scoring does not replace expert judgement. The anchors encode judgement
-that experts already agree on; where a criterion genuinely cannot be
-decided mechanically, the rubric says so and the reviewer decides.
+Scoring does not replace expert judgement. The anchors encode the
+judgement on which experts already agree; where a criterion cannot be
+decided mechanically, the rubric states that limitation, and the
+reviewer decides.

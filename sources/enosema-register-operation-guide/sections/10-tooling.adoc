@@ -1,7 +1,7 @@
 [[tooling]]
 == Tooling, automation and repository practice
 
-Guidance for EFS 2513, clause 10.
+This clause gives guidance for the requirements of EFS 2513, clause 10.
 
 === The reference toolchain
 

@@ -3,7 +3,7 @@
 
 === Roles
 
-The scoring model is applied by two kinds of reviewer:
+Two kinds of reviewer apply the scoring model:
 
 * *term convenor*: owns a register or a document's terminology;
 decides grade outcomes, arbitrates criterion disagreements, and owns

@@ -3,8 +3,8 @@
 
 === General
 
-The definition is the entry. Everything else — designations, sources,
-relations — attaches to the claim the definition makes. This clause
+The definition carries the entry. Every other element — designations,
+sources, relations — attaches to the claim that the definition makes. This clause
 states the rules of definition writing as practiced by ISO 704 and
 enforced by DIR2, 16.5.1, and groups them into requirements.
 
