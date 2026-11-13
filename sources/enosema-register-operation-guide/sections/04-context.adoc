@@ -1,7 +1,7 @@
 [[context]]
 == Operating context and register scope
 
-Guidance for EFS 2513, clause 4.
+This clause gives guidance for the requirements of EFS 2513, clause 4.
 
 === Choosing what the register is for
 

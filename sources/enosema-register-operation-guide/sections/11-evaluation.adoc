@@ -1,7 +1,7 @@
 [[evaluation-practice]]
 == Evaluation in practice
 
-Guidance for EFS 2513, clause 11.
+This clause gives guidance for the requirements of EFS 2513, clause 11.
 
 === Monitoring
 
@@ -30,8 +30,9 @@ Measure a small number of things that drive action:
 |Any issue touching identifiers or references
 |===
 
-Do not build dashboards before decisions exist for the numbers; a
-metric without an action trigger is decoration.
+A dashboard is built only for numbers that have action triggers: a
+metric without a trigger produces no improvement and is omitted from
+monitoring.
 
 === The periodic review
 
@@ -58,7 +59,7 @@ lost, no semantics altered (EFS 2516, 6.2).
 worksheet, boundaries — still true?
 
 The output is a review record: findings, disposition of each, and the
-improvement actions raised into clause 12's process.
+improvement actions raised into the process of clause 12.
 
 === Internal audit
 

@@ -1,7 +1,7 @@
 [[governance]]
 == Governance in practice
 
-Guidance for EFS 2513, clause 5.
+This clause gives guidance for the requirements of EFS 2513, clause 5.
 
 === Establishing the control body
 
@@ -83,9 +83,11 @@ issues — never the reverse.
 
 === Decision records
 
-Write one decision record per decision (Annex B). The record's value is
-in the *why*: a register's decision log is the reason new volunteers
-can understand the register without archaeology.
+The control body records one decision record for each decision
+(Annex B). The rationale field of the decision record is its most
+valuable content: a decision log that states grounds allows a new
+contributor to understand the register without reading its meeting
+history.
 
 Minimum fields: identifier, date, proposal link, decision
 (accepted / returned / rejected / withdrawn), rationale, votes, effects

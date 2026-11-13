@@ -1,210 +1,164 @@
 [[localization-ops]]
 == Localization operations
 
-Guidance for EFS 2513, clause 8, with EFS 2504.
+This clause gives guidance for the requirements of EFS 2513, clause 8,
+and applies the two localization models of EFS 2522 (clause 5) to
+register operation, with EFS 2504.
 
-=== The localization workflow
+=== Declaring the localization model
 
-A localization moves through five states; keep the state visible in the
-proposal or issue that carries it:
+A register operates one of two localization models, and the model is
+declared in the register charter:
 
-. *Requested*: a localization is required (by policy, or by a consumer
-need recorded against the concept).
+* *the definition-bearing model*: each declared localization carries
+its own definition, and equivalence degrees are recorded per EFS 2504
+and EFS 2522; and
+
+* *the term-only model*: the authoritative-language definition serves
+all localizations, and each localization carries its designations,
+grammar, normative status and — for converted forms — its ISO 24229
+writing system conversion system, without a localized definition.
+
+The declared model decides what completeness means for the register
+(EFS 2522, requirement C-5): under the definition-bearing model, a
+localization without a definition is incomplete; under the term-only
+model, it is the declared form. The model is changed only by a
+decision of the control body, because the change alters the review
+workload and the consumer contract of every localization.
+
+=== The definition-bearing workflow
+
+Under the definition-bearing model, a localization moves through five
+states, and the state is visible in the proposal or issue that carries
+it:
+
+. *Requested*: a localization is required, by policy or by a recorded
+consumer need.
 
 . *Drafted*: a translator or domain expert produces the draft
-designation(s) and definition.
+designations and definition.
 
-. *Assessed*: the equivalence degree is assigned (<<equivalence-worksheet>>).
+. *Assessed*: the equivalence degree is assigned
+(<<equivalence-worksheet>>).
 
-. *Reviewed*: a reviewer checks the terminology method, not just the
-language: designation type, normative status, definition intension.
+. *Reviewed*: a reviewer checks the terminology method as well as the
+language — designation type, normative status, and definition
+intension.
 
-. *Accepted*: the control body or its delegate accepts; acceptance of
-any degree other than `full` is a recorded decision with reasons
-(EFS 2513, 8.3).
+. *Accepted*: the control body, or its delegate, accepts the
+localization. Acceptance of any degree other than `full` is a recorded
+decision with reasons (EFS 2513, 8.3).
+
+=== The term-only workflow
+
+Under the term-only model, the workflow concentrates on designations
+and on the authoritative definition:
+
+. *Designation production*: a language expert produces the localized
+designation set, with term types, normative status and grammar
+information per the language model of the register.
+
+. *Conversion control*: where a localized form is a romanization or
+transliteration, the record carries the target script (ISO 15924) and
+the ISO 24229 conversion system that governs the conversion
+(EFS 2504; EFS 2522, Group C).
+
+. *Review*: a reviewer checks the designations against the
+authoritative definition of the concept, in the authoritative
+language; the reviewer confirms that each localized designation can
+carry the intension of the concept in its language.
+
+. *Acceptance*: the localization is accepted as an equivalent
+designation set, and the entry records the authoritative definition as
+the definition of record for all languages.
+
+The term-only model does not remove the equivalence question. A
+language expert who finds that no designation can carry the
+authoritative intension raises the gap as a recorded finding, per the
+resolution steps of the register charter.
 
 === Assignment of work
 
-Localization work splits into two different competences, and proposals
-should say which is being requested:
+Localization work splits into two competences, and proposals state
+which competence a task requires:
 
-* *Translation-drafting* (language competence): producing candidate
-designations and definitions in the target language; and
+* *translation drafting* (language competence): producing candidate
+designations and, under the definition-bearing model, candidate
+definitions; and
 
-* *Equivalence assessment* (terminology competence): deciding the
-degree, writing the equivalence note, and checking concept-system
-fit (the localized concept's position in the target-language concept
-system may differ).
+* *equivalence assessment* (terminology competence): deciding the
+degree, writing the equivalence note, and checking the position of the
+concept in the target-language concept system.
 
-Assigning both to one person is fine when one person has both
-competences; assigning translation to a tool without an equivalence
-assessment step is not.
+Assigning both competences to one person is acceptable when one person
+holds both. A translation produced by a tool without an equivalence
+assessment step is not accepted under either model.
 
 === Record practice
 
-Per EFS 2504 and EFS 2516, each localization record carries:
-
-* language as ISO 639-3 (`eng`, `fra`, `cmn`, `yue`, …);
-
-* script as ISO 15924 where applicable (multiscript languages,
-romanizations);
-
-* the writing system conversion system as an ISO 24229 identifier for
-any converted form; and
-
-* the equivalence degree (`full`, `partial`, `none`, `directional`)
-and — for anything other than `full` — the equivalence note.
+Each localization record carries the fields of EFS 2504 and EFS 2516:
+the ISO 639-3 language code; the ISO 15924 script, wherever the
+language is multiscript or the form is a romanization or
+transliteration; the ISO 24229 writing system conversion system
+identifier for converted forms; and, under the definition-bearing
+model, the equivalence degree and note.
 
 [[equivalence-worksheet]]
 === Equivalence assessment worksheet
 
-Work the assessment in this order and record the outcome at each step:
+Under the definition-bearing model, the assessment is worked in the
+following order, and the outcome is recorded at each step:
 
 . *Intension comparison*: state the characteristics of the source
-concept and of the candidate target concept. Shared characteristics →
-candidate `full`; overlapping but differing → candidate `partial`;
-no real correspondence → `none`.
+concept and of the candidate target concept. Shared characteristics
+indicate a candidate `full` degree; overlapping but differing
+intensions indicate `partial`; no real correspondence indicates
+`none`.
 
-. *Concept-system check*: does the candidate target concept occupy the
-same position in the target-language concept system (same superordinate,
-same criterion)? If the position differs, the degree drops to at least
-`partial`, and the note says which position differs.
+. *Concept-system check*: the candidate target concept occupies the
+same position in the target-language concept system as the source
+concept occupies in its system — the same superordinate concept and
+the same criterion of subdivision. A different position reduces the
+degree to at least `partial`, and the note states which position
+differs.
 
-. *Directionality check*: does the correspondence hold in reverse? If
-the target term means more (or less) than the source term when read
-back into the source language, the degree is `directional`, and the
-note states the working direction.
+. *Directionality check*: the correspondence holds in reverse only if
+the target term denotes the same extension when read back into the
+source language. A target term that means more, or less, than the
+source term in reverse gives the degree `directional`, and the note
+states the working direction.
 
-. *Conversion check*: for romanized or transliterated forms, name the
-ISO 24229 conversion system used; two romanizations of one term are
-different localizations.
+. *Conversion check*: a romanized or transliterated form names the
+ISO 24229 conversion system that produced or governs it; two
+romanizations of one term are two distinct localizations.
 
-. *Note drafting*: one to three sentences, stating what differs and
-for whom. A note that would not change a translator's behaviour is too
-vague.
+. *Note drafting*: the equivalence note is one to three sentences that
+state what differs and for whom. A note that would not change the
+behaviour of a translator is too vague to record.
 
 [example]
-Working assessment record:
+The following assessment record shows the outcome fields:
 
 ----
 concept: privacy (eng)
 candidate: vie privée (fra)
 degree: partial
 note: >-
-  French "vie privée" covers the legal-institutional aspects of privacy
-  more strongly than the English concept, which also spans personal
-  boundaries; drafting in French legal texts should prefer the narrower
-  legal term where the context is regulatory.
+  French "vie privée" covers the legal-institutional aspects of
+  privacy more strongly than the English concept, which also spans
+  personal boundaries; drafting in French legal texts should prefer
+  the narrower legal term where the context is regulatory.
 ----
 
 === Cadence
 
-Two standing triggers keep localizations from rotting:
+Two standing triggers keep localizations current:
 
-* on acceptance of any change to a source concept's intension, open
-review tasks for all localizations whose degree is `partial`,
-`none`, or `directional` (EFS 2513, 8.4); and
+* a change to the authoritative definition triggers review of the
+localizations whose degree is `partial`, `none` or `directional`
+under the definition-bearing model, and of the designations of all
+localizations under the term-only model, because a changed intension
+can leave a designation unable to carry the concept; and
 
-* at the periodic register review (clause 11), sample a few
-`full`-degree localizations and re-verify them: degrees drift as
-languages drift.
-
-=== A worked localization set
-
-One source concept, two localizations, three different degrees — the
-set demonstrates every field in play.
-
-*Source concept record* (`concepts/privacy.yaml`, managed document
-abridged):
-
-[source,yaml]
-----
-id: privacy
-data:
-  identifier: privacy
-  uri: urn:example:concept:privacy
-  localized_concepts:
-    eng: privacy-eng
-    fra: privacy-fra
-    de: privacy-de
-status: valid
-----
-
-*English localization* (the source of authority for the intension):
-
-[source,yaml]
-----
----
-id: privacy-eng
-termid: privacy
-data:
-  language_code: eng
-  terms:
-  - type: expression
-    designation: privacy
-    normative_status: preferred
-  definition:
-  - content: "The condition of having control over the collection,
-    retention, and disclosure of information about an individual."
-status: valid
-----
-
-*French localization* — partial degree:
-
-[source,yaml]
-----
----
-id: privacy-fra
-termid: privacy
-data:
-  language_code: fra
-  terms:
-  - type: expression
-    designation: vie privée
-    normative_status: preferred
-  definition:
-  - content: "Aspect de la vie d'une personne soustrait à l'attention
-    publique et à l'ingérence d'autrui."
-status: valid
-equivalence_degree: partial
-equivalence_note: >-
-  French "vie privée" covers the legal-institutional aspects of privacy
-  more strongly than the English concept, which also spans personal
-  boundaries; drafting in French legal texts should prefer the narrower
-  legal term where the context is regulatory.
-----
-
-*German localization* — full degree:
-
-[source,yaml]
-----
----
-id: privacy-de
-termid: privacy
-data:
-  language_code: de
-  terms:
-  - type: expression
-    designation: informationelle Selbstbestimmung
-    normative_status: admitted
-  definition:
-  - content: "Die Befugnis des Einzelnen, über die Erhebung, Speicherung
-    und Verwendung seiner personenbezogenen Daten grundsätzlich selbst
-    zu bestimmen."
-status: valid
-equivalence_degree: full
-----
-
-Reviewer notes on the set:
-
-* the French degree is `partial` and carries the mandatory note; its
-acceptance was a recorded decision with the reasoning cited;
-
-* the German designation is `admitted`, not `preferred`: the German
-legal term is established but the register's review judged the plain-
-language German preference still unsettled — designation status and
-equivalence degree are independent axes;
-
-* a romanized German form (if one were added) would be a fourth
-record, with script `Latn` and the ISO 24229 conversion system named;
-it would not be a second German localization of the same content.
+* the periodic register review re-verifies a sample of `full`-degree
+localizations, because degrees drift as languages drift.

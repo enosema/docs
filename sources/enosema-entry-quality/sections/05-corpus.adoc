@@ -136,30 +136,32 @@ carry them as separate term entries
 
 === What the corpus teaches
 
-Five lessons set the shape of the requirement groups:
+Five lessons from the corpus set the shape of the requirement groups.
 
-. *The machine floor is high and should be locked in.* Source coverage
-(98,8 %) and grammar annotation (98,9 %) show that machine-enforced
-fields reach near-universality. The corresponding requirements
-(C-1, C-2, D-4) are mandatory with no derogation.
+. *The machine floor is high, and the requirements lock it in.* Source
+coverage (98,8 %) and grammar annotation (98,9 %) show that
+machine-enforced fields reach near-universality in practice. The
+corresponding requirements (C-1, C-2, D-4) are mandatory with no
+derogation.
 
-. *Silent absence is the dominant failure.* Empty definitions (1,2 %)
-and missing examples (97,1 % absence) never produce complaints; they
-produce silent misunderstanding. Completeness requirements therefore
-prefer explicit presence over implicit quality.
+. *Incomplete entries fail silently.* Empty definitions (1,2 %) and
+missing examples (97,1 % absence) do not produce complaints; they
+produce silent misunderstanding. The completeness requirements
+therefore require explicit presence over implicit quality.
 
-. *Legacy decay is real.* The empty-definition defects concentrate in
-documents from 1983–2012. A register that imports legacy corpora must
-re-validate rather than trust conversion (EFG 2519, clause 11).
+. *Defects concentrate in legacy documents.* The empty-definition
+defects concentrate in documents from 1983–2012. A register that
+imports legacy corpora re-validates them rather than trusting the
+conversion (EFG 2519, clause 11).
 
 . *The median definition is short.* Sixteen words is the international
 working norm; the rubric anchors definition length accordingly
-(<<scoring>>), and verbosity is scored down, not up.
+(<<scoring>>), and verbosity reduces the score.
 
-. *Discipline beats heroics.* The corpus's 80,3 % genus-first rate was
-not achieved by talent but by convention. The requirement groups below
-are written to be checkable in seconds, because rules that take
-minutes get skipped.
+. *Convention, not talent, produced the corpus discipline.* The
+80,3 % genus-first rate of the corpus follows from drafting convention,
+and the requirement groups are written to be checkable in seconds,
+because a rule that requires minutes of review is not applied.
 
 === Document-era profile
 

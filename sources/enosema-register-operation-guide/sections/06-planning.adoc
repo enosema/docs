@@ -1,12 +1,12 @@
 [[planning]]
 == Planning the register
 
-Guidance for EFS 2513, clause 6.
+This clause gives guidance for the requirements of EFS 2513, clause 6.
 
 === Identifier scheme design
 
-Decide the identifier scheme once, write it down as a rule, and never
-break it. Working rules that age well:
+The identifier scheme is decided once, written down as a rule, and
+never broken. Practice has shown the following rules to be durable:
 
 . *Separate the planes.* Item identifiers are permanent; editions and
 statuses are not part of the identifier. `relation-type/supersedes` is
@@ -44,20 +44,23 @@ URNs never need to change shape.
 
 === Edition and versioning policy
 
-Answer three questions in writing:
+The edition and versioning policy answers three questions in writing.
 
-* *What is an edition?* The usual answer: an edition is a published,
-immutable snapshot (register edition, <<term-register-edition>>). Item
-editions may differ from dataset editions; record both policies.
+* *What is an edition?* An edition is a published, immutable snapshot
+(a register edition, <<term-register-edition>>). Item editions may
+differ from dataset editions; both policies are recorded.
 
-* *What is a new version of an item?* The usual answer: a new version
-changes the intension (definition, relations, designation status) of
-the item; editorial corrections within one publication run are not a
-new version.
+* *What is a new version of an item?* A new version changes the
+intension — the definition, the relations or the designation status —
+of the item; editorial corrections within one publication run are not
+a new version.
 
-* *When do references break?* Never, by policy: identifiers resolve
-forever (EFS 2513, 7.6.4). Editions give consumers the *as-of* view;
-the current view resolves to the latest edition.
+* *When does a reference break?* A reference does not break. The
+policy of EFS 2513 (7.6.4) applies: identifiers are issued once and
+resolve for the operational life of the published records, either to
+the current record or to the retired record together with its
+successor information. Editions give consumers the as-of view; the
+current view resolves to the latest edition.
 
 === Planning criteria of subdivision
 

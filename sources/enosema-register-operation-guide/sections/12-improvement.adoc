@@ -1,7 +1,7 @@
 [[improvement-practice]]
 == Improvement practice
 
-Guidance for EFS 2513, clause 12.
+This clause gives guidance for the requirements of EFS 2513, clause 12.
 
 === Nonconformity handling
 
@@ -12,7 +12,7 @@ nonconformity, work it in five recorded steps:
 audit line, consumer report), and severity.
 
 . *Correct*: fix the affected records; for published records, the fix
-is itself a recorded change through clause 7's procedures (consumer
+is itself a recorded change through the procedures of clause 7 (consumer
 reports on identifiers and references are always treated as urgent).
 
 . *Trace the cause*: records, process, or governance? A recurring YAML
@@ -59,8 +59,8 @@ A register improves when three loops run at once: the *record loop*
 (defects found → corrected → swept), the *process loop* (causes →
 charter, checklists, automation), and the *content loop* (consumers →
 scope → criteria). This guide's structure follows those loops on
-purpose; if a register only ever exercises the record loop, it is
-treading water.
+purpose; a register that only ever exercises the record loop repeats the same
+class of corrections without reducing their cause.
 
 === Improvement log — worked entries
 

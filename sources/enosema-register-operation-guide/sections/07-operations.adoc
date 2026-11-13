@@ -1,7 +1,7 @@
 [[operations]]
 == Concept operations
 
-Guidance for EFS 2513, clause 7.
+This clause gives guidance for the requirements of EFS 2513, clause 7.
 
 === Proposal intake
 
