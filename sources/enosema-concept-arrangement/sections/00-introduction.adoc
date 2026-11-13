@@ -1,0 +1,156 @@
+[[introduction]]
+== Introduction
+
+=== The problem this document solves
+
+A concept system is only as good as its arrangement. Two termbases can
+hold the same concepts with the same definitions and still present
+fundamentally different knowledge: in one, every concept sits in a
+single defensible position, every subdivision separates its
+coordinates cleanly, and every relation carries the evidence that
+justifies it; in the other, concepts float in several systems without
+recorded reasons, subdivisions overlap so that consumers cannot tell
+where a boundary runs, and relations assert positions that no reviewer
+has qualified. The difference is not the vocabulary of terms. The
+difference is arrangement.
+
+The international framework answers parts of the problem. ISO 704
+gives the theory: concepts are bounded by intensions, systems are
+built by subdividing along a criterion, and the regrouping test checks
+whether a subdivision is sound. ISO 1087-1 defines the relation
+categories. EFS 2510 supplies the machine-readable vocabulary of
+relation types. None of them states, as operational requirements that
+a register can check, how membership is decided and recorded, which
+metadata a relationship is required to carry, or which tests a
+subdivision is required to pass before it ships.
+
+This document does that. It treats arrangement as a governed process
+with four operations, each with its own requirement group:
+
+* *membership* (Group A): the decision that a concept belongs to a
+concept system, at a stated position, in one system or in several;
+
+* *relationship establishment* (Group E): the selection, direction and
+recording of the relations that connect a concept to its
+superordinates, subordinates and associates;
+
+* *relationship qualification* (Group Q): the metadata — source,
+criterion, delimitation, count constraints, normative force, status —
+that turns an asserted relation into a defensible one; and
+
+* *mutual exclusivity and collective exhaustiveness* (Group M): the
+discipline that every subdivision of a superordinate concept separates
+its coordinates without overlap and accounts for its full extension.
+
+Group V (arrangement validation) binds the four operations to the
+checks and reviews that keep them true over time.
+
+=== Why mutual exclusivity is a requirement, not an aspiration
+
+Mutual exclusivity is often described as a property to hope for. This
+document treats it as a property to test for. A subdivision that
+overlaps — where one concept satisfies the delimiting characteristics
+of two coordinates at once — produces entries whose definitions
+contradict each other, produces consumers who cannot decide which
+designation to use, and produces relations that assert a position for a
+concept that a second relation contradicts. Group M states the tests
+that detect these failures while the arrangement is being built, and
+the remediation paths that apply when a test fails. The tests are
+stated so that most of them can run mechanically over a machine-
+readable register (EFS 2516, EFS 2513, clause 7), and so that the
+remainder are review tasks with written procedures.
+
+=== Concepts in several systems at once
+
+Real terminology does not stay inside one hierarchy. A concept such as
+"data quality" belongs in a management concept system, in a statistics
+concept system, and in a domain-specific system, and it occupies a
+different position in each. Multidimensional subdivision — one system
+per criterion of subdivision, combined by composition — is the
+correct instrument when the dimensions are known in advance. Cross-
+system membership with mapped positions is the correct instrument when
+separate communities maintain separate systems. This document states
+requirements for both instruments and the rule for choosing between
+them, so that a register records one truth per position instead of
+pretending that one hierarchy can serve all viewpoints.
+
+=== How to use this document
+
+A register operator who is building or auditing a concept system reads
+<<arrangement>> for the arrangement principles, <<membership>> for
+membership, <<establishing>> for establishing relations, <<qualifying>>
+for qualifying them, and <<mece>> for the exclusivity discipline; the
+annexes carry the working
+instruments — the placement decision procedure (Annex A), the MECE
+test suite (Annex B), the qualification vocabulary (Annex C), the
+worked examples (Annex D), and the cross-reference map to the other ES
+terminology documents (Annex E). Requirement identifiers (A, E, Q, M,
+V) are cited in the checklists of EFG 2519 and in the scoring model of
+EFS 2522 where arrangement quality feeds an entry grade.
+
+=== Relationship to the evidence base
+
+The requirements of this document are calibrated against the same
+evidence base as the rest of the ES Terminology series. The corpus
+study of international standard vocabulary — the ISO Online Browsing
+Platform terminology and the IEC International Electrotechnical
+Vocabulary, analysed in the ES quality review of international
+standard vocabulary — shows what large production systems actually
+maintain: hierarchies dominated by single criteria, positions
+asserted without recorded criteria, and the MECE discipline upheld
+in places and merely intended in others. The requirement groups of
+this document name those practices where they succeed and close them
+where they fail:
+
+* the single-criterion test (M-3) and the criterion record (Q-2)
+respond to the unrecorded and unnamed criteria that the corpora
+exhibit wherever subdividers left their decisions implicit;
+
+* the boundary convention rule (M-7) responds to the ranged
+subdivisions — sizes, ranges, durations — whose corpora-wide
+boundaries are conventionally applied in practice but stated almost
+nowhere;
+
+* the residual category rule (M-6) responds to the "`other`" and
+"`miscellaneous`" nodes that the corpora carry at every depth, and
+states the discipline that keeps them from accreting; and
+
+* the cross-system requirements (A-9 to A-13) respond to the reality
+that international vocabularies overlap across communities, and that
+correspondence between positions is a fact to record, not a
+coincidence to ignore.
+
+The quality review report of the ES Terminology series carries the
+full statistics and the traceability from each finding to the
+requirements it informs. The registers that conform to EFS 2513 and
+arrange under this document are, among other things, the next
+corpus: the validation records of Group V are the evidence by which
+arrangement quality becomes observable and improvable over time.
+
+=== How the requirement groups hold together
+
+The five groups divide the work of arrangement along its real seams,
+and the seams matter to conformity. A register can hold strong
+records (Group E, Group Q) and still ship an overlapping rake
+(Group M failure); another can test exclusivity diligently and still
+lose the property because membership moves without review (Group A
+and Group V failure). Conformance to this document is conformance to
+all five groups, and the groups cite each other where the
+dependency runs:
+
+* Group A produces the assertions that Group E forms and Group Q
+qualifies; a placement decided outside Group A has no Group Q
+metadata, because nothing determined its criterion or its source;
+
+* Group M tests what Group A and Group E build, and its remediation
+paths route back through Group A procedures and Group Q records; and
+
+* Group V observes the whole: its mechanical checks run the
+structural rules of Groups A, E and Q, its reviews run the judgement
+tests of Group M, and its records are the evidence that the first
+four groups hold.
+
+The identifiers are stable across editions, and the dependencies are
+part of the contract: a checklist or a tool that cites M-3 is citing
+a test whose inputs are produced by Q-2 records, and a conforming
+register supplies both.

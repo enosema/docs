@@ -1,0 +1,59 @@
+= Concept arrangement in concept systems
+:title-intro-en: Terminology management
+:title-main-en: Concept arrangement in concept systems
+:title-part-en: System membership, relationship establishment and qualification, and mutual exclusivity of subdivision
+:docnumber: 2525
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-11-13
+:language: en
+:doctype: standard
+:technical-committee: Terminology
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:imagesdir: images
+:fullname: Reese W. Plews
+:surname: Plews
+:givenname: Reese W.
+:affiliation: Plews Consulting
+:fullname_2: Ronald Tse
+:surname_2: Tse
+:givenname_2: Ronald
+:affiliation_2: Ribose
+:docidentifier: EFS 2525:2026
+:mn-document-class: enosema
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-normrefs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-arrangement.adoc[]
+
+include::sections/05-membership.adoc[]
+
+include::sections/06-establishing.adoc[]
+
+include::sections/07-qualifying.adoc[]
+
+include::sections/08-mece.adoc[]
+
+include::sections/09-validation.adoc[]
+
+include::sections/aa-placement.adoc[]
+
+include::sections/ab-mece-tests.adoc[]
+
+include::sections/ac-qualification-vocabulary.adoc[]
+
+include::sections/ad-examples.adoc[]
+
+include::sections/ae-crossref.adoc[]
+
+include::sections/az-bibliography.adoc[]

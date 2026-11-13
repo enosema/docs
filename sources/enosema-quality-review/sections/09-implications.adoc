@@ -1,0 +1,119 @@
+[[implications]]
+== Implications for the ES Terminology series
+
+This clause states what the findings mean for the normative
+documents of the series. The statements are informative
+conclusions; the normative texts carry the requirements.
+
+=== For EFS 2522 (concept entry quality)
+
+* *The length anchors hold.* The corpus medians — 16 words (ISO),
+18 and 19 (IEV eng/fra) — sit inside the scoring anchors that EFS
+2522 sets for definition length. No recalibration is indicated;
+the report refreshes the anchor evidence.
+
+* *The substitution test is justified.* A 3,5 % circularity rate in
+the largest vocabulary production system, falling but persistent,
+is the case for keeping the substitution test as a mandatory-fix
+criterion rather than a scored nicety.
+
+* *The example criterion is aspirational and should stay so.* At
+2,9 % and 0,1 %, current international practice does not produce
+examples. EFS 2522 scores examples as a completeness criterion; the
+score weight is correct precisely because the corpus shows the gap
+— a conforming termbase is meant to out-produce the corpus here,
+and the scoring gives it credit for doing so.
+
+* *The article-head criterion stays.* The era-flat rate marks a
+habit; a habit responds to review, and the clarity criteria of
+EFS 2522 review it.
+
+* *Grammar fields need an evidence source.* Both corpora are
+silent on grammar in their extracted record formats. EFS 2522
+requires grammar information; the requirement rests on ISO
+12620-class practice rather than on these corpora, and the next
+review cycle should seek a corpus that carries grammar fields
+before adjusting any anchor.
+
+=== For EFS 2525 (concept arrangement)
+
+* *Criteria are the gap.* The corpora exhibit rakes whose criteria
+are implicit; the requirement to record the criterion of
+subdivision on every membership relation (EFS 2525, A-2, Q-2) is
+the response to the largest arrangement-level silence the corpora
+show.
+
+* *Residual discipline is needed at scale.* The "`other`"-class
+node appears across the corpora at every depth. The residual
+category rule of EFS 2525 (M-6) — declare, record as limitation,
+prefer positive criteria — is the discipline the corpus practice
+lacks.
+
+* *Cross-system reality.* The IEV's tiered language coverage and
+the ISO corpus's overlapping document vocabularies show that
+concepts live in several systems. The EFS 2525 cross-system
+requirements (A-9 to A-13) formalize what the corpora do
+informally.
+
+=== For EFG 2519 (register operation guide)
+
+* *The benchmarks are set.* A conforming register compares its
+defect rates against the era profiles: empty definitions below the
+modern-era 0,2 %, circularity below 2,6 %, and example provision
+above the corpus rate are the measurable targets the guide's
+monitoring practice consumes.
+
+* *The declared-model doctrine is confirmed.* The IEV operates both
+localization models in one vocabulary and demonstrates the failure
+mode of each; the guide's requirement to declare one model per
+register and review for its failure mode is the operational
+lesson of clause <<comparison>>.
+
+=== For the series as a whole
+
+Three conclusions close the review:
+
+* *Enforcement beats exhortation.* Every corpus behaviour that a
+process gates (sources, term type, definition presence in the
+modern era) is at or near uniform; every behaviour left to author
+initiative (examples, notes) lapses. The ES series gates
+publication (EFS 2513, clause 10) and scores entries (EFS 2522,
+clause 11) because gating and scoring move the rates that manuals
+cannot.
+
+* *Machine-readable records make quality measurable.* This review
+exists because two vocabularies publish structured records. Every
+requirement of the series that pushes registers toward published
+machine-readable records is also a requirement that makes the
+next edition of this review deeper — the registry becomes the
+corpus.
+
+* *The review is a cycle.* The census names four patterns this
+cycle could not measure; the corpora age; the series changes
+practice and the practice changes the corpora. The next review
+cycle repeats the method of clause <<methodology>> over refreshed
+extractions and over ES's own registers, and the reproduction
+instructions of Annex E are written for exactly that reuse.
+
+=== Stewardship of the evidence base
+
+The corpora that made this review possible are maintained by others,
+and the ES series holds them as an entrusted instrument:
+
+* *the extractions are cited by state.* Every edition of this
+review names its corpus states — extraction dates, record counts —
+so that the communities maintaining the platforms can see exactly
+what was measured and correct the record where the extraction
+misreads their published content;
+
+* *the analysis gives back.* The detection rules of Annex C and the
+reproduction protocol of Annex E are offered to the corpus
+communities: a committee that adopts the rules can measure its own
+vocabulary with the instrument this review used, and compare
+against the published baselines on equal terms; and
+
+* *the next cycle is scheduled with the series.* The review
+repeats when the corpora change materially or when the series
+publishes requirements whose calibration needs new evidence,
+whichever comes first; the coverage gaps of this cycle are the
+agenda of the next.

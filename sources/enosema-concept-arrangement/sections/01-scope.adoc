@@ -1,0 +1,53 @@
+[[scope]]
+== Scope
+
+This document specifies requirements for the arrangement of concepts
+in concept systems. It covers:
+
+* the principles of concept arrangement by subdivision, including
+criteria of subdivision, dimensions, and the construction of
+hierarchies from generic and partitive relations;
+
+* system membership: the decision procedure by which a concept
+becomes a member of a concept system, the record that the decision
+produces, membership in one system, and membership in several systems
+at once, whether by multidimensional composition or by cross-system
+placement;
+
+* the establishment of the relationships that position a concept in a
+system: the selection of relation types from the ES relation
+vocabulary (EFS 2510), the direction and locus of each assertion, and
+the record of each assertion;
+
+* the qualification of established relationships: the source, criterion,
+delimitation, presence and count constraints, normative force, and
+lifecycle status that a relationship carries; and
+
+* mutual exclusivity of subdivision and collective exhaustiveness: the
+tests that verify that every subdivision separates its coordinate
+concepts and accounts for the full extension of the superordinate
+concept, together with the remediation paths that apply when a test
+fails.
+
+This document applies to concept systems maintained in registers that
+conform to EFS 2513 and that record concepts, localizations and
+relations in machine-readable form per EFS 2516.
+
+This document does not specify:
+
+* the theory of concepts and of concept formation, which ISO 704
+covers;
+
+* the structure of the concept entry itself, which EFS 2522 covers;
+
+* the semantics of individual relation types, which EFS 2510 covers;
+or
+
+* the operating practice of a register — proposal forms, decision
+records, review cadence — which EFG 2519 covers.
+
+In this document, the verb *shall* expresses a requirement on a
+conforming register or on the operator of such a register, the verb
+*should* expresses recommended practice from which deviation is
+permitted when the deviation and its reason are recorded, and the verb
+*may* expresses permission.

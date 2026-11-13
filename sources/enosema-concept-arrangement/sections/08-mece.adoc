@@ -1,0 +1,317 @@
+[[mece]]
+== Mutual exclusivity of subdivision (Group M)
+
+=== The MECE property
+
+A subdivision satisfies the MECE property when it satisfies both of
+its parts:
+
+* *mutual exclusivity*: no concept satisfies the intension of more
+than one coordinate concept of the rake; and
+
+* *collective exhaustiveness*: the union of the extensions of the
+coordinate concepts covers the extension of the superordinate
+concept.
+
+The first part separates; the second accounts. A rake that fails the
+first part makes the system ambiguous — a consumer cannot tell which
+designation applies to an object that falls in the overlap. A rake
+that fails the second part makes the system incomplete — objects
+exist that the system cannot describe. Group M states the tests for
+both parts, the evidence each test admits, and the remediation that
+applies when a test fails. Annex B gives the test suite in checklist
+form.
+
+=== Tests for mutual exclusivity
+
+M-1:: The intensional disjointness test: for each pair of coordinate
+concepts in a rake, the intensions shall be disjoint — no
+characteristic set that satisfies both intensions exists. The test is
+performed by constructing candidate characteristic sets that satisfy
+both intensions; the absence of a construction, demonstrated in the
+review record, satisfies the test.
+
+M-2:: The extensional disjointness test: for each pair of coordinate
+concepts, the register shall account for at least one object or
+boundary statement that separates the extensions, whether by a
+delimiting characteristic pair, by a measured boundary, or by a
+stated convention that assigns every boundary object to exactly one
+coordinate.
+
+M-3:: The single-criterion test: each rake shall be produced by one
+criterion of subdivision (E-6). The test names the criterion and
+verifies that every coordinate concept is differentiated from its
+coordinates by that criterion alone; where differentiating a pair
+requires a second criterion, the rake fails the test.
+
+M-4:: The coordinate designation test: where the criterion of
+subdivision is expressed in the designations of the coordinate
+concepts, the expression shall be uniform across the rake (EFS 2522,
+Group S). A rake whose designations express the criterion
+inconsistently signals an arrangement defect even where the intensions
+are disjoint.
+
+=== Tests for collective exhaustiveness
+
+M-5:: The coverage test: for every rake, the register shall record the
+statement of coverage — the claim that every object satisfying the
+superordinate intension satisfies at least one coordinate intension —
+with the evidence: a derivation, a cited source, or the presence of a
+residual category.
+
+M-6:: The residual category rule: where coverage cannot be
+demonstrated by derivation or source, the rake shall include a
+residual category whose definition states that it holds what the
+other coordinates do not hold. A residual category is a last resort:
+its presence in a rake is recorded as a known limitation in the
+system description, and it shall not be used where a positive
+criterion is available.
+
+M-7:: The boundary convention rule: where the extension of the
+superordinate concept is continuous and the rake cuts it — sizes,
+ranges, durations — the rake shall carry the boundary convention that
+assigns every boundary value to exactly one coordinate. A rake that
+leaves a boundary value assignable to two coordinates fails
+exclusivity; a rake that leaves a boundary value assignable to none
+fails exhaustiveness.
+
+=== Failure detection and remediation
+
+M-8:: The register shall run the mechanical subset of the MECE tests
+— the tests of Annex B that run over relation records without expert
+judgement — as part of publication validation (EFS 2513, clause 10).
+A rake that fails a mechanical test shall not be published until the
+failure is remediated or a waiver is recorded by the control body.
+
+M-9:: The remediation paths for a failing rake are, in order of
+preference:
+
+* *re-criterion*: restate the criterion of subdivision so that the
+coordinates become disjoint, retaining the intended coverage;
+
+* *re-dimension*: split the rake into rakes along declared dimensions,
+restructure as a multidimensional subdivision (A-10), and retest each
+rake;
+
+* *re-boundary*: adopt or restate the boundary convention (M-7) that
+removes the overlap or the gap;
+
+* *re-scope*: narrow the superordinate intension so that the failing
+objects leave the subdivision, recording the scope change in the
+system description; and
+
+* *residual*: add a residual category (M-6), with the limitation
+recorded.
+
+M-10:: A remediation that changes intensions or scopes touches the
+definitions of published concepts and follows the change management
+requirements of EFS 2513, clause 7, before publication.
+
+=== Classes of overlap
+
+Reviewers diagnose exclusivity failures faster when they recognize
+the class of overlap. Five classes recur, each with its own signature
+and its own remediation:
+
+* *criterion mixing.* Two coordinates differ along one criterion and
+share a second criterion unequally — the coordinates of a mixed rake.
+Signature: the regrouping test cannot state each coordinate as
+"`superordinate + criterion-value`" alone. Remediation: re-dimension
+(M-9, A-10).
+
+* *boundary ambiguity.* The coordinates partition a continuous
+extension and a value sits on the seam. Signature: the extension walk
+finds an object that both coordinates claim. Remediation: re-boundary
+(M-7, M-9).
+
+* *intension entanglement.* One coordinate's intension presupposes a
+characteristic that the other coordinate excludes, but a third
+characteristic smuggles the exclusion back in — the coordinates are
+not independently defined. Signature: the disjointness argument for
+the pair relies on a characteristic that belongs to neither
+delimiting set. Remediation: re-criterion or re-author the defective
+definition under EFS 2522, clause 7.
+
+* *residual leakage.* A residual category has grown a positive
+intension — "`other X`" now names a recognizable class — and the
+class competes with a positive coordinate. Signature: objects are
+consistently assigned to the residual although a positive coordinate
+exists for them. Remediation: promote the leaked class to a positive
+coordinate by derivation, or re-state the residual as an explicit
+catch-all with no positive definition.
+
+* *scope drift.* The coordinates are disjoint within the original
+scope, but the system has grown and the superordinate's extension has
+widened past what the rake covers. Signature: coverage fails on
+objects the system did not originally intend to describe.
+Remediation: re-scope (M-9) — narrow the superordinate intension or
+extend the rake by derivation.
+
+The classes are diagnostic aids, not tests: the tests of Annex B
+decide, and the class names the remediation path.
+
+=== Overlap diagnosis procedure
+
+When a rake fails a MECE test, the reviewer works the diagnosis in
+this order:
+
+. *Reproduce the failure as an object statement.* State the failing
+object — real or constructed — and the two coordinates that claim it.
+A failure that cannot be stated as an object statement is a test
+artifact, not an arrangement defect.
+
+. *Identify the characteristics in conflict.* Name the
+characteristics that pull the object toward each coordinate. The
+conflict set is usually short: one or two characteristics carry the
+overlap.
+
+. *Classify the overlap.* Match the conflict to the five classes. The
+class proposes the remediation path.
+
+. *Choose the remediation.* Apply the order of preference of M-9
+against the class: re-criterion, re-dimension, re-boundary, re-scope,
+residual. The first path that resolves the failure without damaging
+sibling rakes is taken; damage to siblings is checked by re-running
+the suite (M-12).
+
+. *Record the diagnosis.* The finding records the object statement,
+the conflict characteristics, the class, the chosen path, and the
+re-test outcome. The record is the evidence that the published rake
+once failed and was fixed — which matters to consumers who adopted
+the pre-fix arrangement.
+
+=== MECE and definitions
+
+The MECE tests consume definitions. A rake that passes its tests
+under defective definitions passes falsely: disjointness argued from
+an incomplete intension, coverage claimed over an extension the
+definitions never bound. The dependency runs in one direction: entry
+quality (EFS 2522) is a precondition of arrangement quality, not a
+consequence. The register reviews the definitions of a failing rake
+under EFS 2522, Groups N and C, before remediation is chosen, because
+a remediation designed around a defective definition is a remediation
+that the next definition revision will invalidate. Conversely, a rake
+that passes under sound definitions can still fail later when a
+definition is revised: the revision triggers re-test under V-4.
+
+=== MECE in multidimensional systems
+
+In a multidimensional concept system (A-10), the MECE property holds
+through composition, and the tests apply at the dimensional rakes:
+
+* *dimensional exclusivity.* Each dimensional rake passes T1 to T5 on
+its own criterion, exactly as a single-system rake does. The composed
+positions inherit exclusivity from their dimensions: a composed
+position is unique because each of its coordinate values is unique
+within its dimension.
+
+* *composition coverage.* The composed system covers the superordinate
+extension where every dimension covers: an object that each dimension
+classifies has exactly one composed position. The system description
+states excluded combinations — pairs of coordinate values that the
+domain does not admit — and the coverage claim runs subject to that
+statement (M-5).
+
+* *dimension independence.* Exclusivity across dimensions is not
+required and does not make sense: two dimensions may produce
+coordinates that share characteristics, because they classify
+different things about the same object. The single-criterion test
+(T2) applies within a dimension and says nothing across dimensions.
+A reviewer who finds "overlap" between coordinates of different
+dimensions has compared along the wrong axis; the finding is the
+missing statement of which dimension the rake belongs to, and the fix
+is the criterion record (Q-2), not a re-arrangement.
+
+* *conversion to composed form.* A flattened rake that fails T3 is
+re-dimensioned (M-9): the dimensions are named, the coordinates are
+regrouped per dimension, the dimensional rakes are tested, and the
+composed positions replace the flat ones. The conversion changes
+records and follows M-10.
+
+=== MECE across the arrangement
+
+M-11:: The MECE property is a property of each subdivision, not of the
+whole system at once. A system is MECE when every one of its rakes
+passes the tests. The register shall be able to enumerate its rakes —
+from the relation records, per A-15 — and to state for each rake
+which tests it has passed and when.
+
+M-12:: Rakes at different depths are independent for the MECE tests:
+a rake passes or fails on its own criterion, not on the criterion of
+its parent rake. Where a parent rake fails and is remediated, the
+child rakes are retested, because re-criterion and re-scope change
+the extensions that the children subdivide.
+
+M-13:: The coordinate concepts of a rake may themselves be
+subdivided along different criteria than each other: a rake formed by
+size may contain one coordinate subdivided further by colour and
+another by material. Subdivision criteria need not be uniform across
+sibling subtrees; uniformity of criterion is required within a rake
+only (E-6).
+
+=== Requirement group M
+
+. Mutual exclusivity requirements (Group M)
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|M-1
+|Coordinate intensions are disjoint by construction argument.
+|ISO 704, ISO 1087-1
+
+|M-2
+|Extensions are separated by characteristics, boundaries or stated
+convention.
+|ISO 704
+
+|M-3
+|One criterion per rake, named and verified.
+|E-6, ISO 704
+
+|M-4
+|Criterion expression in designations is uniform across the rake.
+|EFS 2522
+
+|M-5
+|Coverage is stated with evidence: derivation, source or residual.
+|ISO 704
+
+|M-6
+|Residual categories are last resorts and are recorded as
+limitations.
+|ISO 25964-1
+
+|M-7
+|Continuous extensions carry boundary conventions.
+|ISO 704
+
+|M-8
+|Mechanical MECE tests run at publication validation.
+|EFS 2513
+
+|M-9
+|Remediation follows the ordered paths: re-criterion, re-dimension,
+re-boundary, re-scope, residual.
+|this document
+
+|M-10
+|Remediations touching intensions go through change management.
+|EFS 2513
+
+|M-11
+|MECE is per rake; rakes are enumerable from published records.
+|A-15, EFS 2516
+
+|M-12
+|Child rakes are retested after parent remediation.
+|ISO 704
+
+|M-13
+|Criterion uniformity is required within a rake, not across sibling
+subtrees.
+|ISO 704
+|===

@@ -1,0 +1,355 @@
+[[membership]]
+== System membership (Group A)
+
+=== General
+
+A concept position exists only as a recorded assertion. The position
+states that a concept is subordinate to a stated superordinate concept
+under a stated criterion of subdivision; the assertion lives in the
+register as a relation record (EFS 2516, EFS 2510). Group A governs
+the making of that assertion: who decides it, on what evidence, in
+which system, and in how many systems.
+
+=== Membership decision
+
+A-1:: System membership shall be asserted only by a hierarchical
+relation of the relation vocabulary (EFS 2510): a generic relation or
+a partitive relation. An associative relation, a mapping relation, or
+a lifecycle relation shall not carry system membership.
+
+A-2:: A membership assertion shall state the concept, the
+superordinate concept, the relation type, and the criterion of
+subdivision under which the concept is coordinate with the
+superordinate's other subordinate concepts.
+
+A-3:: A membership assertion shall be decided against the intensions
+of the concepts: the subordinate concept shall presuppose the
+intension of the superordinate concept, and shall add at least one
+delimiting characteristic that distinguishes it from each of its
+coordinate concepts (ISO 704).
+
+A-4:: The membership decision shall be reviewed and accepted by the
+control body or its delegate under the change management requirements
+of EFS 2513, clause 7, before the position becomes public.
+
+A-5:: Where a membership decision is contested — two proposed
+positions both plausibly fit — the register shall record the
+contested positions and the decision, with reasons, in the proposal
+record (EFG 2519, Annex B); the position that ships is the accepted
+one, and the alternative remains discoverable in the record.
+
+=== Membership in one system
+
+A-6:: Within one concept system, a concept shall occupy exactly one
+position: exactly one hierarchical relation shall place the concept
+under a superordinate concept of that system, except for the root
+concepts of the system, which carry none.
+
+A-7:: Where two positions in one system appear equally correct, the
+system shall not carry both; the operator applies the placement
+decision procedure (Annex A) to select one, and records the rejected
+candidate position in the membership record.
+
+A-8:: A concept with no adequate superordinate concept in a system
+shall not be forced into an inadequate one; the register holds the
+concept as unplaced in that system, with a recorded placement need
+under the requirements management of EFS 2513, clause 6, until either
+a superordinate concept is added or a subdivision is restructured.
+
+=== Membership in several systems
+
+A-9:: A concept may hold membership in several concept systems. Each
+membership is a separate assertion, complete in itself: it states its
+own superordinate concept, its own relation type, and its own
+criterion of subdivision in the system that receives it.
+
+A-10:: Where the several systems are facets of one arrangement — the
+dimensions are known and maintained together — the register shall
+represent the arrangement as a multidimensional concept system: each
+dimension subdivides by its own criterion, and the positions of the
+system are the compositions of the dimensional coordinates.
+
+A-11:: Where the several systems are maintained independently —
+different scopes, different control bodies, different vocabularies —
+the register shall represent the arrangement as cross-system
+membership, and shall connect the positions with mapping relations
+per EFS 2510 if a stated correspondence between the positions exists.
+
+A-12:: A register shall not represent one arrangement as both a
+multidimensional composition and a set of independent systems: where
+the dimensions are co-maintained, clause A-10 applies; where they are
+not, clause A-11 applies. The choice is recorded in the system
+description (EFS 2513, clause 5).
+
+A-13:: Cross-system membership shall not be used to place one concept
+twice within one system. Two positions that differ only in path —
+where one is reachable from the other through the system — belong to
+one system for the purposes of clause A-6.
+
+=== Membership movement
+
+Concepts move. A definition is tightened, a rake is re-criteried, a
+system is restructured — and the position of a concept changes. The
+movement is as significant to consumers as the position itself,
+because the vacated position may be cited in their systems and the
+taken position may contradict their assumptions. Group A governs
+movement with three requirements.
+
+*The move is a pair.* A position change is recorded as the vacated
+position and the taken position (A-16): the vacated relation is
+deprecated with a replacement pointer (Q-10), and the new relation is
+asserted through the full placement procedure (Annex A). Consumers
+who followed the vacated position can trace where the concept went.
+
+*The reason is recorded.* A move without a recorded reason is a move
+that will be reverted by the next well-meaning reviewer. The move
+records what changed in the world that made the old position wrong:
+the definition change, the re-criterion decision, the scope change.
+
+*The dependents are reviewed.* A move changes the rakes of two
+superordinate concepts: the rake that loses a coordinate and the rake
+that gains one. Both rakes are re-tested under the MECE suite (T1 to
+T6) before publication, because a rake that lost its only
+distinguishing coordinate can quietly fail coverage, and a rake that
+gained a coordinate can quietly fail exclusivity.
+
+=== Roots, placeholders and orphans
+
+Three boundary cases of membership recur, and the register states
+their treatment:
+
+* *root concepts* carry no incoming hierarchical relation (A-6). A
+system states its roots in the system description; a system with
+several roots states the relation among the roots — usually a
+multidimensional composition rather than a hierarchy (A-10).
+
+* *placeholder superordinates* are concepts introduced to give a rake
+a home where no natural superordinate concept exists — the "`miscel-
+laneous`" node. A placeholder is declared as such in the system
+description, carries the residual treatment of M-6, and is a
+liability: the register reviews placeholders at every arrangement
+review with the question of whether a real criterion now exists to
+replace them.
+
+* *orphans* are concepts whose membership relation was deprecated
+without a replacement. The register detects orphans mechanically (T1)
+and holds them out of the arrangement view until re-placed or retired
+through change management. An orphan is never published as a member
+of the system, because a member without a position is an arrangement
+assertion the register cannot defend.
+
+=== Membership and localization
+
+Membership attaches to concepts, not to language entries: a concept
+is placed once, and every localization of the concept inherits the
+position (A-9, E-14). The inheritance has two consequences that
+registers get wrong:
+
+* *language-specific systems are separate systems.* Where a
+language community maintains its own concept system — its own
+subdivisions, its own criteria — the system is a distinct concept
+system, not a localization of another one, and the correspondence
+between the systems is stated with mapping relations (A-11), following
+the multilingual requirements of EFS 2504. The register does not
+present a language-specific system as the translation of the
+authoritative system when the arrangements differ.
+
+* *localization review re-checks position fit.* When a localization
+is accepted (EFS 2504; EFG 2519, clause 8), the reviewer confirms
+that the localized designation can carry the intension *in its
+position* — the concept-system check of the equivalence worksheet. A
+designation that fits the intension but not the position signals that
+the target-language concept system differs, and the finding is
+recorded on the mapping, not on the localization.
+
+=== Membership in multidimensional systems
+
+A multidimensional concept system (A-10) composes the positions of
+the system from dimensional coordinates. Membership in such a system
+differs from membership in a simple hierarchy in three respects, and
+the register records the difference:
+
+* *membership is by composition.* A position in a composed system is
+identified by its coordinate values — one per dimension. The concept
+holds one membership record per dimension, each carrying the
+dimensional rake, and the composed position is derived from the set
+of dimensional memberships. A consumer reads the composed position
+without the register asserting it separately, which keeps the
+composition from being duplicated in records.
+
+* *completeness is per dimension.* The MECE tests run per
+dimensional rake (M-11): each dimension partitions on its own
+criterion. Coverage of the composed system is the product of the
+dimensional coverages where the dimensions are independent; where
+two dimensions interact — a combination that the system excludes —
+the system states the excluded combinations in the system
+description, and the statement is part of the coverage claim (M-5).
+
+* *absence of a coordinate value is a recordable state.* A concept
+that is undetermined along one dimension — the currency of a data
+set is not yet known — holds no membership record for that dimension,
+and the composed position is partial. The register distinguishes a
+partial position from a missing record mechanically (T1 flags
+concepts that lack a dimensional membership where the dimension
+applies to the concept's scope).
+
+The multidimensional choice is structural: converting a flattened
+mixed rake into a composed system (the re-dimension path of M-9) is a
+change-management event per M-10, because it changes the records that
+consumers read.
+
+=== Placement anti-patterns
+
+The placement procedure fails in recognizable ways, and naming the
+failures makes them visible in review. Five anti-patterns recur in
+registers:
+
+* *the convenient shelf.* A concept is placed where space exists
+rather than where the intension leads — the new concept joins the
+most recently edited rake because the proposer knew that rake. The
+signature is a placement whose tie-breaker is absent: only one
+candidate was examined. The remedy is procedural (V-5 re-derives
+positions) and cultural: proposals carry the candidate enumeration,
+and a single-candidate enumeration is a review finding.
+
+* *the historical sediment.* A concept stays under a superordinate it
+outgrew because it has always been there. The signature is a
+membership whose source predates every revision of the definition it
+places. The remedy is the event trigger of V-4: definition revisions
+queue the affected memberships for review, and stale placements
+surface on schedule.
+
+* *the mirror placement.* A concept is duplicated into a second
+system wholesale — same rake, same criterion, same definition —
+because a community wanted "its own copy". The signature is two
+systems whose mapping relations are all `equivalence` while their
+criteria differ in name only. The remedy is A-11 discipline: one
+maintained arrangement, the second system relating by mapping; or a
+genuinely distinct system whose differences are stated.
+
+* *the orphaned branch.* A subtree's root is re-placed and its
+descendants are not re-tested. The signature is a rake that passes
+T1 while failing T6 — structurally present, no longer covered. The
+remedy is M-12 discipline: parent remediation triggers child retest,
+and the validation record shows the retest.
+
+* *the loaded placeholder.* A placeholder superordinate accumulates
+coordinates until it is a real taxonomy nobody declared. The
+signature is a placeholder whose rake exceeds the breadth guideline
+(T13) or whose residual definition has grown positive content. The
+remedy is the placeholder review of clause <<membership>>, and the
+honest options are to found a real dimension or to split the
+placeholder by re-criterion.
+
+The anti-patterns inform review; they do not replace the tests. A
+register can carry every anti-pattern signature and still pass its
+MECE suite, and a placement that matches none of the signatures can
+still fail T3. The tests decide; the patterns speed the look.
+
+=== Membership record
+
+A-14:: Each membership assertion shall be recorded as a relation
+record per EFS 2516 carrying, as a minimum: the relation type, the
+subject and object concepts, the criterion of subdivision, the
+qualifying metadata of clause <<qualifying>>, and the lifecycle status
+of the assertion.
+
+A-15:: The membership record shall be machine-readable in the
+published register (EFS 2513, clause 10): a consumer shall be able to
+reconstruct the system — positions, rakes and criteria — from the
+published relation records without inspecting prose.
+
+A-16:: A change to a membership assertion — a move of position, a
+change of criterion, a change of relation type — shall follow the
+proposal and review requirements of EFS 2513, clause 7, and shall
+record the position that is vacated as well as the position that is
+taken.
+
+=== Requirement group A
+
+. Membership requirements (Group A)
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|A-1
+|System membership is asserted only by generic or partitive relations
+of the ES relation vocabulary.
+|EFS 2510
+
+|A-2
+|Every membership assertion states concept, superordinate, relation
+type and criterion of subdivision.
+|ISO 704
+
+|A-3
+|The subordinate intension presupposes the superordinate intension and
+adds delimiting characteristics against every coordinate.
+|ISO 704, ISO 1087-1
+
+|A-4
+|Membership decisions are accepted through the change management
+procedure before publication.
+|EFS 2513, EFG 2519
+
+|A-5
+|Contested placements are recorded with reasons; the alternative
+position remains discoverable.
+|EFG 2519
+
+|A-6
+|One concept occupies exactly one position in one system, except for
+roots.
+|ISO 704
+
+|A-7
+|Equally plausible positions are resolved by the placement procedure;
+the rejected candidate is recorded.
+|Annex A
+
+|A-8
+|Concepts without an adequate superordinate are held unplaced with a
+recorded placement need, not forced into place.
+|EFS 2513
+
+|A-9
+|Multi-system membership is a set of complete, independent assertions.
+|ISO 704
+
+|A-10
+|Co-maintained dimensions are represented as a multidimensional
+concept system.
+|ISO 704
+
+|A-11
+|Independently maintained systems use cross-system membership with
+mapping relations where correspondence exists.
+|EFS 2510
+
+|A-12
+|The composition-versus-independence choice is made once and recorded
+in the system description.
+|EFS 2513
+
+|A-13
+|Cross-system membership does not place a concept twice in one
+system.
+|ISO 704
+
+|A-14
+|Membership assertions are EFS 2516 relation records with criterion
+and qualification metadata.
+|EFS 2516, EFS 2510
+
+|A-15
+|Published relation records reconstruct the system without prose.
+|EFS 2513, EFS 2516
+
+|A-16
+|Membership changes record the vacated position and the taken
+position.
+|EFS 2513
+|===

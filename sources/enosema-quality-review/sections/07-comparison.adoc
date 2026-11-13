@@ -1,0 +1,205 @@
+[[comparison]]
+== Comparison of the two corpora
+
+=== The systems compared
+
+The two corpora embody two answers to the same question — how an
+international vocabulary should be built and kept — and their
+comparison is the most consequential part of this review:
+
+[cols="2,3,3",options="header"]
+|===
+|Dimension
+|ISO OBP corpus
+|IEV corpus
+
+|production model
+|document production: committees write terms and definitions clauses
+|vocabulary maintenance: one committee maintains one vocabulary
+
+|authoritative languages
+|English (per document)
+|English and French, as parallel authorities
+
+|localization model
+|definition-bearing per document; translation at adoption
+|definition-bearing (eng, fra) plus term-only (17 languages)
+
+|unit of authority
+|the document
+|the concept record
+
+|uniformity mechanisms
+|the drafting rules (ISO/IEC Directives Part 2)
+|the maintenance process of TC 1
+|===
+
+=== Where the systems agree
+
+Four agreements stand out, and each strengthens the calibration of
+the ES requirements:
+
+* *the definition length norm.* ISO median 16 words; IEV English
+median 18, French 19. Two independent systems converge on the same
+working length. The length guidance of EFS 2522 — genus first, one
+to two delimiting characteristics, no padding — describes a norm
+that the international system already lives.
+
+* *definitions describe.* Requirements language inside definitions
+is 0,35 % (ISO) and effectively zero (IEV). Both systems keep the
+boundary between prescribing and defining. The rule that a
+definition states what the concept is, not what shall be done with
+it, is followed almost perfectly at scale.
+
+* *term type is uniform.* Both corpora record term type at 100 %
+with `expression` as the working default. Type annotation is a
+solved problem where the record format carries it.
+
+* *presence of the defining element is achievable.* The IEV holds
+100 % definition presence in its authoritative languages across all
+eras; the ISO modern era approaches it at 99,8 %. Universal
+definition presence is not an aspiration beyond the practice of
+international bodies; it is their demonstrated modern state.
+
+=== Where the systems differ
+
+* *examples.* ISO 2,9 %; IEV 0,1 %. Neither system produces
+examples, and the vocabulary-maintenance system produces fewer than
+the document-production system. The example deficit is systemic —
+it is the single largest gap between current international practice
+and the ES entry-quality requirements, which treat examples as a
+scored element.
+
+* *notes.* ISO 34,2 % of entries; IEV 5,4 %. The document culture
+annotates; the vocabulary culture concentrates annotation in the
+authoritative languages. Notes travel poorly across a term-only
+localization layer, because a note written against a definition has
+no place in a designation record — the structural reason for the
+gap.
+
+* *status richness.* ISO records admitted and deprecated statuses in
+the source documents; the IEV extraction carries a single uniform
+`preferred`. The lifecycle information that lets a consumer know
+which designation to avoid is present in one system and absent in
+the other.
+
+* *structural discipline.* Circularity is measurable only in the
+ISO corpus (3,5 %, falling by era); the IEV authoritative
+definitions were not separately scored for circularity in this
+review cycle, and the review notes the gap in its own coverage
+(clause <<reproduction>>).
+
+=== The two localization models
+
+The IEV corpus is the empirical demonstration of the two
+localization models that the ES series names:
+
+* *the definition-bearing model*: each localization carries its own
+definition; equivalence is recorded; review covers terminology
+method as well as language. The IEV's English–French pair is a
+functioning instance at scale — two parallel authorities, each
+complete.
+
+* *the term-only model*: the authoritative definitions serve all
+localizations; each localization carries designations, status and
+conversion data. The IEV's seventeen other languages are a
+functioning instance at scale — median 12 languages per concept
+without a single localized definition.
+
+The comparison yields the practical finding that EFG 2519 builds on:
+*both models work at international scale*, and the choice between
+them is a governance choice — how much definition authoring a
+language community can sustain — not a correctness choice. The
+failure modes differ: the definition-bearing model fails through
+drift between localized definitions and their sources (the
+equivalence problem), and the term-only model fails through
+designation fit (the position problem). The register declares its
+model and reviews for its model's failure mode.
+
+=== A decision table for registers
+
+The comparison converts into the choice that a register operator
+faces, with the corpus evidence for each branch:
+
+[cols="2,3,4",options="header",width="100%"]
+. Localization model selection by register situation
+|===
+|Register situation
+|Model indicated
+|Corpus evidence
+
+|One maintenance committee, definitions authoritative in one or two
+languages, translation capacity limited
+|term-only
+|IEV non-authoritative languages: 17 languages sustained at median
+12 per concept without any localized definitions
+
+|Two or more language communities able to author definitions
+independently
+|definition-bearing, per language
+|IEV eng–fra pair: 100 % presence in both, parallel length norms,
+no drift signal in the sample
+
+|Localization community with terminology competence and a reviewed
+equivalence process
+|definition-bearing, with recorded equivalence
+|the EFS 2504 apparatus; no corpus instance at scale beyond two
+languages — the standing gap of this clause
+
+|Mixed capacity across languages
+|declared model per register, never mixed silently
+|the Russian residue: partial definition authoring under a
+term-only declaration is detectable but ungoverned
+|===
+
+The table's last row is the finding that generalizes: partial
+adoption of the other model happens whether or not it is declared —
+the corpus carries 21 live instances — and the governance question
+is whether the register knows. The ES requirement that a register
+declare its localization model exists because the alternative is
+not "no model" but "an undeclared one".
+
+=== What each corpus contributes to the ES calibration
+
+[cols="2,4,2",options="header",width="90%"]
+. Calibration inputs and their consumers
+|===
+|Calibration input
+|Contribution
+|Consumed by
+
+|definition length norm
+|the convergence band 16 to 19 words
+|EFS 2522 length anchors
+
+|presence floor
+|modern-era presence rates as the achievable floor
+|EFG 2519 monitoring benchmarks
+
+|element deficits
+|the examples and notes gaps as scored criteria
+|EFS 2522 completeness criteria
+
+|model doctrine
+|both models functioning at scale with distinct failure modes
+|EFG 2519 clause 8, EFS 2504
+
+|lifecycle evidence
+|status richness in one corpus, uniformity in the other
+|EFS 2513 lifecycle requirements
+
+|uniformity mechanisms
+|process gates move rates that manuals do not
+|EFS 2513 clause 10, EFS 2522 clause 11
+|===
+
+=== What a third system would add
+
+The comparison is complete for two systems, and the review states
+what it cannot show: a corpus that operates the definition-bearing
+model across more than two languages — the practice that EFS 2504
+requires equivalence recording for — was not available to this
+review cycle. The IEV demonstrates the model at two languages; the
+ES series requires the equivalence apparatus precisely where the
+model scales past the languages that a maintenance committee can
+double-author. The gap is a standing item for the next review.

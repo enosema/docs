@@ -1,0 +1,57 @@
+= Quality review of international standard vocabulary
+:title-intro-en: Terminology management
+:title-main-en: Quality review of international standard vocabulary
+:title-part-en: ISO terms and the IEC International Electrotechnical Vocabulary
+:docnumber: 2528
+:edition: 1
+:copyright-year: 2026
+:revdate: 2026-11-13
+:language: en
+:doctype: report
+:technical-committee: Terminology
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:imagesdir: images
+:fullname: Reese W. Plews
+:surname: Plews
+:givenname: Reese W.
+:affiliation: Plews Consulting
+:fullname_2: Ronald Tse
+:surname_2: Tse
+:givenname_2: Ronald
+:affiliation_2: Ribose
+:docidentifier: EFR 2528:2026
+:mn-document-class: enosema
+:data-uri-image:
+:local-cache-only:
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-terms.adoc[]
+
+include::sections/03-corpora.adoc[]
+
+include::sections/04-methodology.adoc[]
+
+include::sections/05-iso-findings.adoc[]
+
+include::sections/06-iev-findings.adoc[]
+
+include::sections/07-comparison.adoc[]
+
+include::sections/08-anti-patterns.adoc[]
+
+include::sections/09-implications.adoc[]
+
+include::sections/aa-iso-tables.adoc[]
+
+include::sections/ab-iev-tables.adoc[]
+
+include::sections/ac-detection-rules.adoc[]
+
+include::sections/ad-reproduction.adoc[]
+
+include::sections/az-bibliography.adoc[]

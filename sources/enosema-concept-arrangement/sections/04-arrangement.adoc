@@ -1,0 +1,202 @@
+[[arrangement]]
+== Concept arrangement
+
+=== Principles of arrangement
+
+Concept arrangement gives a body of concepts its shape. The shape is
+not decoration: the position of a concept carries information that the
+definition alone does not carry, because the position states which
+superordinate concept the concept refines, which criterion of
+subdivision separates it from its coordinates, and which concepts
+stand beside it as coordinates. A consumer who reads a definition
+learns the intension of one concept; a consumer who reads a position
+learns how the domain is organized.
+
+Arrangement rests on four principles, which the requirements of
+clauses <<membership>> to <<validation>> apply.
+
+* *Intension governs position.* A concept belongs where its intension
+fits: under the superordinate concept whose intension it presupposes,
+and beside the coordinates from which its delimiting characteristics
+distinguish it (ISO 704). Position is decided by characteristics, not
+by designations, document history, or convenience.
+
+* *One criterion per subdivision.* Each subdivision of a
+superordinate concept applies a single criterion of subdivision to
+produce its rake of coordinate concepts (ISO 704). Subdividing along
+two criteria at once produces coordinates that overlap in extension
+and that cannot be separated by definition.
+
+* *Dimensions are declared.* Where several criteria genuinely apply,
+each criterion is a dimension: it is named, it is stated as the
+criterion of subdivision for its own subdivision, and the coordinate
+concepts of the different dimensions are composed into positions of a
+multidimensional concept system rather than flattened into one rake.
+
+* *Systems are many.* One concept can occupy one position in each of
+several systems. The systems are distinct artifacts with distinct
+scopes, and the membership of a concept in each is recorded separately
+(<<membership>>).
+
+=== The shape of an arrangement
+
+The requirements of this document are neutral about representation:
+they apply to hierarchies of generic and partitive relations, to
+multidimensional systems, and to thesaurus-like arrangements in which
+broader and narrower relations are complemented by associative ones
+(ISO 25964-1). Three shapes recur, and the register states which shape
+each system has:
+
+* *a generic hierarchy*, in which every non-root position is reached
+from its superordinate concept by a generic relation and every rake
+subdivides along one declared criterion;
+
+* *a partitive hierarchy*, in which every non-root position is
+reached from its superordinate concept by a partitive relation and
+the presence and count constraints of the partitive relations are
+recorded (clause <<qualifying>>); and
+
+* *a mixed system*, in which generic and partitive subdivisions
+alternate and associative relations connect positions across the
+system without carrying arrangement weight.
+
+Associative relations do not place concepts. A position is reached
+only through hierarchical relations; associative relations annotate
+the arrangement (EFS 2510).
+
+=== Depth and breadth
+
+Depth and breadth of an arrangement are quality trade-offs, not
+targets. A deep system with many single-child subdivisions hides its
+structure; a wide rake with dozens of coordinates buries its criterion.
+The register should observe the following practice, and records any
+deviation with its reason:
+
+* a subdivision with a single coordinate concept is collapsed: the
+coordinate and the superordinate are merged, or a second criterion
+produces further coordinates;
+
+* a rake with more than about twelve coordinate concepts is examined
+for a second dimension: where the rake is really the composition of
+two criteria, the system is restructured as a multidimensional
+subdivision; and
+
+* the depth of a generic hierarchy follows the depth of the intension
+hierarchy: each level adds at least one delimiting characteristic, and
+a level that adds none is removed.
+
+These are recommended practices. Group M tests, not depth or breadth
+limits, decide whether an arrangement is correct.
+
+=== Arrangement mechanics
+
+The principles become concrete through three mechanics that reviewers
+apply to every arrangement decision.
+
+*The intension-to-position derivation.* The intension of a concept
+determines its position: the concept sits under the concept whose
+intension it presupposes, and beside the concepts from which its
+delimiting characteristics distinguish it. The derivation is
+repeatable — two reviewers applying the derivation to the same
+intension reach the same position, or the difference between them is
+itself a finding (a defective definition, a mixed rake, a missing
+intermediate concept). The validation requirements of
+clause <<validation>> make the repeatable derivation the instrument
+of review: positions are audited by re-deriving them.
+
+*The regrouping test.* The test of ISO 704 for a subdivision is
+applied at construction: the characteristics used to differentiate
+the coordinate concepts are regrouped under the criterion of
+subdivision; a rake passes when every coordinate can be stated as
+"`superordinate + criterion-value`" and nothing else. A coordinate
+whose intension needs a second characteristic family to separate it
+from its neighbour is the symptom of a mixed rake (E-6), and the
+regrouping attempt exposes it before publication.
+
+*The extension walk.* For each rake, the reviewer walks the extension
+of the superordinate concept with one question: for an arbitrary
+object of that extension, which coordinate takes it? The walk
+exercises exclusivity (the object has exactly one answer) and
+coverage (an answer exists). Where the answer is "it depends" —
+a boundary case, a hybrid, a context-dependent case — the rake is
+incomplete without a convention (M-7) or a residual (M-6), and the
+walk names the case precisely. The extension walk is a review
+technique (Annex B, T4); it is also the fastest way to explain an
+arrangement defect to its author, because it states the failure in
+terms of objects instead of terms of logic.
+
+=== Systems and their scopes
+
+A concept system exists for a scope: the set of concepts the system
+undertakes to arrange. The scope is declared in the system description
+(EFS 2513, clause 5) and does three pieces of work in arrangement:
+
+* *it bounds membership*: a concept outside the scope is not placed in
+the system even where a position can be constructed for it (A-8
+holds a concept unplaced rather than placing it badly; the scope
+settles whether the system is the right home at all);
+
+* *it anchors coverage*: the coverage statement of a rake (M-5) runs
+over the scope — a rake covers the extension of its superordinate
+concept as far as the system scope extends; and
+
+* *it disciplines cross-system choice*: where two systems can both
+host a concept, the scope statement, not convenience, decides which
+membership is primary, and the other system relates through mapping
+(A-11) rather than duplication.
+
+A system without a declared scope cannot pass the coverage tests,
+because there is no boundary over which coverage can be claimed. The
+register validates scope presence at publication (V-1).
+
+=== The arrangement as evidence
+
+A published arrangement is evidence about the domain: it states, in
+machine-readable form, which concepts the community distinguishes and
+how the distinctions relate. The evidentiary character raises the
+stakes of the requirements in this document. A registry that
+publishes a rake with an overlap is not merely untidy; it asserts to
+every consumer that two incompatibles are both true of some objects.
+The validation requirements of clause <<validation>> exist because
+the arrangement publishes assertions, and assertions need the same
+gate as definitions.
+
+=== The criterion of subdivision in practice
+
+The criterion of subdivision is the unit of honesty in an
+arrangement. Every requirement that names a criterion — A-2, E-6,
+M-3, Q-2 — is a requirement that the arrangement state its reason:
+why these coordinates and not others. In practice the criterion does
+three jobs at once, and a criterion statement is adequate only when
+it serves all three:
+
+* *it explains the rake*: a reader of the criterion sees why the
+coordinates differ from one another — "`currency`" explains
+current, historical and forecast; and
+
+* *it bounds the rake*: a reader can tell what does not belong — a
+concept whose distinguishing characteristic is not a form of the
+criterion is evidence of a misplaced concept, not of a missing
+coordinate; and
+
+* *it survives subdivision*: a child rake states how it refines the
+parent criterion — size subdivides by range, colour by hue — and the
+chain of criteria is the system's account of itself.
+
+A criterion that does only the first job is a label. The registers
+that the corpora exhibit most often stop at the label; the
+requirements of this document are calibrated to move practice from
+the label to the instrument.
+
+=== What arrangement is not
+
+Arrangement is not classification for retrieval. A register may tag
+concepts with facets, subject codes or collection markers for search
+and navigation; those tags are not system membership, do not carry
+relation semantics, and are not governed by this document. The
+register keeps the two mechanisms distinguishable in its records:
+membership is a relation assertion with full Group A and Group Q
+metadata, and a retrieval tag is a data category outside the relation
+set. A system that treats retrieval tags as membership silently loses
+the tests of Group M, because nothing forces the tags to satisfy
+exclusivity.

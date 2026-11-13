@@ -1,0 +1,188 @@
+[[anti-patterns]]
+== Anti-pattern census
+
+=== The census method
+
+EFS 2522, Annex E, names twelve anti-patterns of concept entry
+authoring. The census counts their occurrence in the ISO sample
+where the detection rules of clause <<detection-rules>> can measure
+them from the records. Three anti-patterns require context that the
+records do not carry and are marked not measurable in this cycle;
+the census therefore reports nine of the twelve.
+
+The census reports rates in the ISO sample and, where the IEV
+record format exposes the pattern, in the IEV entries. A rate of a
+pattern in the records as extracted measures the pattern in the
+extraction; clause <<methodology>> states the extraction limitation
+once and this clause does not repeat it.
+
+=== The census
+
+[cols="2,2,2,4",options="header",width="100%"]
+|===
+|ID
+|Anti-pattern
+|Rate
+|Corpus behaviour
+
+|AP-01
+|empty definition
+|1,2 %
+|concentrated in the legacy era (7,7 %) and nearly absent in the
+modern era (0,2 %)
+
+|AP-02
+|definitional circularity
+|3,5 %
+|falls from 4,8 % (transitional) to 2,6 % (modern); the
+short-definition bucket carries a disproportionate share
+
+|AP-03
+|requirements language in definition
+|0,35 %
+|the rarest measured pattern; the prescribe-versus-define boundary
+holds corpus-wide
+
+|AP-04
+|article-headed definition
+|4,3 %
+|flat across eras; a drafting habit, not a regime effect
+
+|AP-05
+|missing examples
+|97,1 %
+|the complement of the examples rate; the largest measured gap
+between practice and the ES requirements
+
+|AP-06
+|missing sources
+|0,0 %
+|universal provenance; the strongest uniform behaviour found
+
+|AP-07
+|missing grammar information
+|100,0 % as extracted
+|not measurable against practice: the extraction and the IEV
+record format carry no grammar fields
+
+|AP-08
+|missing notes
+|65,8 %
+|notes are a minority behaviour in the ISO corpus and thinner in
+the IEV (94,6 % of entries without)
+
+|AP-09
+|unsupported preferred status
+|not measurable
+|requires the full document context of each entry; deferred
+
+|AP-10
+|inconsistent coordinate designation form
+|not measurable this cycle
+|requires arrangement-level designation comparison across rakes;
+deferred to the arrangement review tooling
+
+|AP-11
+|definition longer than the genus requires
+|8,4 % over 32 words
+|measured as the length tail rather than judged excess; the tail
+concentrates in systems documents
+
+|AP-12
+|unmarked modifications of adopted definitions
+|not measurable this cycle
+|requires SOURCE-field comparison with the adopted documents;
+deferred
+|===
+
+=== What the census shows
+
+Three conclusions follow from the census as a whole:
+
+* *The rare patterns are the ruled ones.* The patterns that the
+drafting rules enforce hardest — sources, prescribed language in
+definitions — are at or near zero. The patterns that depend on
+author initiative — examples, notes — are far from their ES
+targets. Enforced behaviour holds; discretionary behaviour lapses.
+
+* *The era gradient is the enforcement gradient.* Every pattern
+with a strong era signal (AP-01, AP-02) tracks a rule that
+tightened; every pattern without one (AP-04) tracks a habit no rule
+addresses. The census is evidence for the review's wider
+proposition: quality follows what the process gates, not what the
+manuals recommend.
+
+* *The unmeasured third is a tooling agenda.* AP-07, AP-09, AP-10
+and AP-12 need arrangement-level or document-context tooling that
+the current review lacks. They are the worklist for the next
+cycle, and their absence from the census is stated so that the
+census cannot be read as all-clear.
+
+=== The IEV entries against the census
+
+The IEV record format exposes three census patterns:
+
+* *AP-01 (empty definition)*: by design — the term-only entries are
+not defects; the declared model decides (clause <<comparison>>).
+
+* *AP-05 (missing examples)*: 99,9 % — deeper than the ISO corpus,
+for the structural reason that the term-only layer carries no
+definition for an example to attach to.
+
+* *AP-08 (missing notes)*: 94,6 % — notes concentrate in the
+authoritative entries; the term-only layer is nearly bare.
+
+The IEV column of the census therefore reads differently from the
+ISO column: the same numbers mean different things under different
+declared models, and the census distinguishes them rather than
+adding them.
+
+=== Reading the census as a register operator
+
+The census rates are not targets to be met individually; they are
+the profile of the system whose gates the ES series redesigns. A
+register operator reads the census for three uses:
+
+* *as the baseline*. The rates state what unmanaged practice
+produces at scale: one entry in twenty-nine circular, one in
+twenty-nine empty (legacy-weighted), examples on one entry in
+thirty-five. A register's own rates are meaningful only against
+this baseline — a 3 % circularity rate is excellent against the
+transitional era and weak against the modern one, and the baseline
+choice is a governance statement.
+
+* *as the checklist input*. The nine measured patterns map onto the
+review checklist of EFS 2522 Annex A in the same order, so a
+reviewer can work the checklist knowing how often the corpus fails
+at each line — the patterns the corpus fails often deserve the
+reviewer's first attention, and the patterns the corpus never
+fails (sources) deserve little.
+
+* *as the scoring context*. The EFS 2522 scoring model weights the
+dimensions; the census rates show where the corpus mass sits
+relative to those weights. The completeness dimension carries 20 %
+of the score while the corpus fails it on 97 % of entries — the
+weighting is a statement about where a conforming termbase should
+differentiate itself from the corpus, and the census is the
+quantified statement of that differentiation.
+
+=== Defect interaction
+
+The measured patterns are not independent, and two interactions
+matter for interpretation:
+
+* *short definitions and circularity co-occur.* The 1-to-5-word
+bucket holds 4,6 % of the definitions but a disproportionate
+share of the circular entries: a definition that short rarely has
+room for a full delimiting differentia, and the designation's own
+words fill it. The interaction says the substitution test matters
+most where definitions are tightest — the opposite of the
+intuition that short definitions are safe because simple.
+
+* *notes substitute for examples imperfectly.* Entries with notes
+carry explanations; entries with examples carry instances. The
+corpus's heavy-annotator documents raise notes without moving
+examples, which shows the two elements draw on different authoring
+efforts and are not interchangeable. A register cannot close the
+example gap by annotating more, and the scoring model treats them
+separately for exactly this reason.

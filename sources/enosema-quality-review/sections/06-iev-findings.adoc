@@ -1,0 +1,416 @@
+[[iev-findings]]
+== Findings: the IEV corpus
+
+=== Headline statistics
+
+The sample of 2 000 concept records carries 23 936 localized concept
+entries — a mean of 12,0 language entries per concept:
+
+[cols="3,2,3",options="header"]
+|===
+|Measure
+|Rate
+|Reading
+
+|concepts with an English entry
+|100,0 %
+|English is universal
+
+|concepts with a French entry
+|100,0 %
+|French is universal
+
+|English definitions present
+|100,0 %
+|the authoritative language always defines
+
+|French definitions present
+|100,0 %
+|as does the co-authoritative language
+
+|non-authoritative definitions
+|0,9 % of non-eng/fra entries
+|other languages carry designations, not definitions
+
+|notes presence
+|5,4 % of entries
+|notes concentrate in the authoritative entries
+
+|examples presence
+|0,1 % of entries
+|examples are effectively absent
+
+|normative status recorded
+|100,0 % (`preferred`)
+|uniform status annotation
+
+|grammar information
+|0,0 %
+|absent in the current record format
+|===
+
+The IEV is a definition-bearing system in exactly two languages and
+a term-only system in every other language. That is not a defect;
+it is a declared architecture (clause <<comparison>>), and its
+uniformity is the finding: 2 000 of 2 000 sampled concepts carry
+English and French entries, and the entries that lack definitions
+lack them by design.
+
+=== Languages per concept
+
+[cols="2,2,4",options="header",width="80%"]
+|===
+|Statistic
+|Value
+|Notes
+
+|median languages per concept
+|12
+|the working depth of the vocabulary
+
+|mean languages per concept
+|12,0
+|symmetric around the median
+
+|maximum in sample
+|19
+|the most translated concepts in the sample
+|===
+
+The full distribution appears in Annex B. The distribution is
+tight: 2 043 of the sampled concepts (the mode region, 10 to 14
+languages) form the working core, with thin tails at 7 to 9 and at
+15 to 19 languages. A multilingual vocabulary that holds twelve
+languages per concept at a median is operating at a depth that
+few terminologies reach, and the regularity of the distribution
+indicates systematic rather than opportunistic translation.
+
+=== Language coverage
+
+The sampled entries distribute across 21 language codes. The table
+below states the full coverage; Annex B carries the per-language
+definition analysis.
+
+[cols="1,3,1",options="header",width="70%"]
+|===
+|Code
+|Language
+|Entries
+
+|eng
+|English
+|2 000
+
+|fra
+|French
+|2 000
+
+|pol
+|Polish
+|1 998
+
+|por
+|Portuguese
+|1 998
+
+|jpn
+|Japanese
+|1 991
+
+|deu
+|German
+|1 920
+
+|kor
+|Korean
+|1 912
+
+|ara
+|Arabic
+|1 810
+
+|ita
+|Italian
+|1 766
+
+|spa
+|Spanish
+|1 714
+
+|swe
+|Swedish
+|1 238
+
+|zho
+|Chinese
+|1 137
+
+|fin
+|Finnish
+|834
+
+|srp
+|Serbian
+|619
+
+|slv
+|Slovenian
+|250
+
+|mon
+|Mongolian
+|198
+
+|rus
+|Russian
+|190
+
+|nob
+|Norwegian Bokmål
+|158
+
+|nno
+|Norwegian Nynorsk
+|158
+
+|ces
+|Czech
+|25
+
+|nld
+|Dutch
+|20
+|===
+
+Three findings emerge from the coverage table:
+
+* *a two-tier structure.* Eleven languages cover at least 85 % of
+concepts; the remainder trail. The vocabulary grew by tiers, and
+the tiers are visible in the coverage.
+
+* *near-universal tiers are real.* Polish, Portuguese, Japanese,
+German and Korean each cover over 95 % of concepts —
+designation coverage, under the term-only model, across a
+quarter-million-entry surface when projected over the full corpus.
+
+* *the thin tail is a register of recency and need.* Czech at 25 and
+Dutch at 20 entries are partial adoptions, not declining ones;
+their presence at all marks languages being added.
+
+=== The two localization models in one corpus
+
+The IEV operates both localization models that EFS 2522 and EFG 2519
+name, inside one vocabulary:
+
+* *the definition-bearing model* for English and French: every entry
+carries a definition, and the two sets of definitions are
+independently authored — French is not a translation layer but a
+parallel authority;
+
+* *the term-only model* for all other languages: each language
+carries its designations against the authoritative definitions,
+with review concentrated on whether the designation can carry the
+intension in that language.
+
+The exception proves the model: Russian carries 21 definitions
+among its 190 entries (11,1 %, median 15 words) — a language that
+at some point received partial definition authoring and stopped.
+The residue is detectable precisely because the declared model is
+term-only for Russian: any definition present in a term-only
+language is an anomaly, and the corpus carries 21 of them.
+
+=== The tier structure of language coverage
+
+Grouping the coverage table by tier shows the vocabulary's
+expansion history written in its current state:
+
+[cols="2,3,2,4",options="header",width="100%"]
+|===
+|Tier
+|Languages
+|Coverage
+|Reading
+
+|authoritative
+|eng, fra
+|100,0 %
+|the definition-bearing pair; the vocabulary's reference point
+
+|deep tier
+|pol, por, jpn, deu, kor
+|95,6 % to 99,9 %
+|near-complete designation coverage; the working multilingual core
+
+|broad tier
+|ara, ita, spa, swe, zho, fin
+|41,7 % to 90,5 %
+|substantial coverage with gaps; adoption varies by part
+
+|partial tier
+|srp, slv, mon, rus, nob, nno, ces, nld
+|1,0 % to 31,0 %
+|recent or limited adoption; growth area
+|===
+
+The tiers are not static: the partial tier's presence at all
+distinguishes a living vocabulary from a frozen export. The
+coverage gaps within the broad tier are uneven across subject
+parts — the electrotechnical core parts are covered more deeply
+than the peripheral ones — which is the pattern a
+need-driven translation programme leaves, and the pattern that
+EFG 2519's placement-need records make explicit when a register
+operates deliberately.
+
+=== The authoritative pair in detail
+
+The English–French pair is the corpus's definition-bearing heart,
+and its statistics describe the model at its best:
+
+* *presence*: 2 000 of 2 000 concepts carry each — zero gaps in the
+sample, at every era, in every subject part;
+
+* *length*: English median 18 words, French median 19 — one word
+apart, and both one to three words above the ISO corpus median,
+which is the convergence finding of clause <<comparison>>;
+
+* *notes*: the overwhelming majority of the corpus's 1 285 notes
+attach to the authoritative entries; the note layer serves the
+definitions, and the definitions live in two languages only; and
+
+* *independence*: the French definitions are authored against the
+French usage of electrotechnical vocabulary, not derived by
+translation default — the corpus gives no mechanical translation
+signal, and the near-equal length distributions are consistent
+with parallel authoring under a common norm.
+
+For a register choosing the definition-bearing model, the pair is
+the evidence that the model scales to two languages without
+drift — provided the parallel authority is genuinely parallel. The
+model's cost is visible in the pair's exclusivity: no third
+language sustains definition authoring in the record set, which is
+the boundary that EFG 2519's model-declaration doctrine expects a
+register to know about itself.
+
+=== A term-only entry set, anatomized
+
+One concept record shows the term-only layer in its ordinary form:
+
+----
+# concept 102-01-01, language entries beyond the authoritative pair
+pol:
+  terms:
+    - type: expression
+      normative_status: preferred
+      designation: równość
+  language_code: pol
+  entry_status: Standard
+  date_accepted: '2009-11-01'
+jpn:
+  terms:
+    - type: expression
+      normative_status: preferred
+      designation: 等しいこと, 等式
+  language_code: jpn
+  date_accepted: '2011-05-01'
+----
+
+Each entry carries exactly what the term-only model requires: the
+designation set with type and status, the language code, the
+acceptance date. What it does not carry — a definition, notes, an
+equivalence note — is what the model assigns to the authoritative
+layer. The review's measures respect the division: presence rates
+for the entry elements are computed with the model in view, and the
+absence of a definition in `pol` is not scored as an empty
+definition but read as the declared form.
+
+The anatomy also shows the model's audit surface: each term-only
+entry names its reviewer's question — *can this designation carry
+the intension of the authoritative definition in this language?* —
+and carries no field for the answer beyond the designation itself.
+The equivalence worksheet of EFG 2519 is the instrument that makes
+the answer explicit when the question is raised, and the corpus
+shows the question raised rarely: the designations are old,
+accepted, and stable.
+
+=== Definition length in the authoritative languages
+
+[cols="2,2,2",options="header",width="70%"]
+|===
+|Language
+|Median definition length
+|Coverage
+
+|English
+|18 words
+|2 000 of 2 000 entries
+
+|French
+|19 words
+|2 000 of 2 000 entries
+|===
+
+The authoritative definitions sit one word above the ISO corpus
+median (16 words). The near-equality of independent systems is a
+strong calibration signal for the length guidance of EFS 2522: two
+organizations, authoring independently, converge on the same
+working norm of roughly 16 to 19 words.
+
+=== Era profile
+
+The IEV concepts distribute across the era bands by their English
+acceptance dates:
+
+[cols="2,2,3",options="header",width="70%"]
+|===
+|Era
+|Concepts
+|Reading
+
+|pre-1998
+|575
+|the mature core, predating the modern drafting regime
+
+|1998–2014
+|711
+|the transitional growth band
+
+|2015 and later
+|714
+|the modern maintenance band
+|===
+
+Unlike the ISO corpus, the IEV shows no era gradient in definition
+presence — English and French definitions are universal at every
+era. The maintenance model, in which one committee owns the
+authoritative entries continuously, produces what the ISO
+document-production model can only approach: uniform presence of
+the defining elements. The era gradient that the ISO corpus shows
+for presence is a gradient of the production system, not of
+multilingual maintenance.
+
+=== What the IEV corpus lacks
+
+The uniform strengths have a uniform cost, visible in what the
+entries lack:
+
+* *examples are absent* (0,1 %) — the term-only model concentrates
+effort on designations, and no layer of the vocabulary produces
+examples;
+
+* *notes are thin* (5,4 % of entries) — concentrated in the
+authoritative languages, where they serve the definitions; the
+designations of the term-only languages carry almost no notes;
+
+* *grammar information is absent* — the current record format does
+not carry it; and
+
+* *normative status is uniformly `preferred`* — one value across
+23 936 entries, which is uniformity of a form that carries no
+information: the admission, deprecation and replacement lifecycle
+that ISO practice records is not exercised in the corpus as
+extracted.
+
+These lacks are the mirror of the ISO findings: where the
+production system under-produces (examples), the maintenance system
+under-produces more; where the production system is uniform
+(sources, status), the maintenance system matches or exceeds it.

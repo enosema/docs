@@ -1,0 +1,219 @@
+[[worked-examples]]
+[appendix]
+== Worked examples
+
+These examples apply the requirements of this document to four
+arrangements that recur in terminology work. The concepts are drawn
+from ordinary data-management vocabulary; the lessons are general.
+
+=== Example 1: a clean single-criterion rake
+
+A register maintains a system of data-resource concepts. The
+superordinate concept is `data set`. The register subdivides by the
+dimension `currency` (the degree to which the data reflect the current
+state of the phenomena):
+
+* `current data set` — a data set whose values reflect the current
+state;
+
+* `historical data set` — a data set whose values reflect states of
+the past; and
+
+* `forecast data set` — a data set whose values represent expected
+future states.
+
+The rake passes T1 (three concepts, one rake, criterion recorded),
+T2 (one criterion: currency), and T3 (the intensions are disjoint by
+the temporal reference of the values: present, past, expected future).
+Coverage (T6) is derivable: every data set holds values of some
+temporal reference, and the three values partition the possibilities
+under the system's boundary convention that a data set mixing
+references is out of scope. The example shows the minimum passing
+arrangement: one criterion, disjoint intensions, derived coverage.
+
+The relation records of the rake carry the arrangement:
+
+----
+relation:
+  type: generic
+  subject: data-set:current-data-set
+  object: data-set
+  system: data-resource-system
+  qualification:
+    criterion: currency
+    normative_force: essential
+    source: EFS-DM-0012, decision 2026-04-07
+    status: confirmed
+----
+
+with `historical-data-set` and `forecast-data-set` asserted
+identically under the same criterion. T9 passes: one incoming
+hierarchical relation per concept. T15 passes: every relation carries
+the full qualification.
+
+=== Example 2: a mixed rake and its re-dimensioning
+
+The same register proposes to subdivide `data set` by content type
+and by currency at once:
+
+* `current observation data set`;
+
+* `current aggregate data set`;
+
+* `historical observation data set`; and
+
+* `historical aggregate data set`.
+
+The rake fails T3: separating `current aggregate data set` from
+`historical observation data set` requires two criteria. The failure
+is the arrangement defect that E-6 prohibits. Remediation follows the
+re-dimension path of M-9: the register declares the dimensions
+`currency` and `content type`, subdivides separately along each, and
+composes the positions — a multidimensional concept system per A-10.
+The composed positions are `observation, current`, `observation,
+historical`, `aggregate, current`, `aggregate, historical`. Each
+dimensional rake passes T3 on its own criterion, and the composition
+is tested as a whole under T1.
+
+=== Example 3: cross-system membership
+
+A statistics system and a management system both place `data
+quality`. In the statistics system, `data quality` sits under
+`statistical metadata` through a generic relation; in the management
+system, it sits under `management characteristic` through a generic
+relation. The memberships are two complete assertions (A-9), each with its own
+criterion and source (Q-1, Q-2). The register asserts a mapping
+relation `equivalence` between the two positions (E-10, A-11), with
+source citations on both sides and the degree recorded (Q-8). T10
+passes: the membership pairs and the mapping agree. T14 passes: the
+mapping degrees agree in both systems. The example shows that one
+concept can hold two truths, one per system, connected by an explicit
+correspondence — and that neither system inherits the other's
+position.
+
+The cross-system records:
+
+----
+# statistics system
+relation:
+  type: generic
+  subject: data-quality
+  object: statistical-metadata
+  system: statistics-system
+  qualification:
+    criterion: statistical-process-characteristics
+    normative_force: essential
+    source: EFS-STAT-0004, review 2026-02-19
+    status: confirmed
+
+# management system
+relation:
+  type: generic
+  subject: data-quality
+  object: management-characteristic
+  system: management-system
+  qualification:
+    criterion: management-object-characteristics
+    normative_force: essential
+    source: EFS-MGT-0009, decision 2026-05-21
+    status: confirmed
+
+# mapping between the positions
+relation:
+  type: mapping
+  subject: data-quality@statistics-system
+  object: data-quality@management-system
+  qualification:
+    degree: equivalence
+    source: EFS-STAT-0004 / EFS-MGT-0009, joint review 2026-09-03
+    status: confirmed
+----
+
+=== Example 4: a boundary failure and its convention
+
+A register subdivides `delivery time` (the duration from order to
+delivery) into `immediate delivery`, `short-term delivery` and
+`long-term delivery`, with ranges "under one day", "one to seven
+days", "more than seven days". T5 fails: a delivery of exactly one
+day is assignable to two coordinates — the open boundary. Remediation
+follows the re-boundary path of M-9: the register adopts the
+convention that ranges are closed on the lower bound and open on the
+upper bound, records the convention in the rake (M-7), and re-tests.
+The definitions of the coordinates are amended per EFS 2522 to state
+the convention, and the change follows change management (M-10). The
+example shows that MECE failures are often boundary failures, and
+that the fix is a stated convention, not a redesigned system.
+
+=== Example 5: the residual that was avoided
+
+A register subdivides `identifier` by mechanism into `sequential
+identifier` and `random identifier`, then meets an identifier scheme
+that is neither sequential nor random in generation. The tempting fix
+is a third coordinate `other identifier`. The register resists
+(E-6, M-6): a residual category would trade a coverage failure for a
+permanent limitation. Instead the re-criterion path of M-9 applies:
+the criterion is restated as `generation mechanism` with coordinates
+`assigned identifier` and `derived identifier`, into which the
+existing scheme and the two original coordinates fall by derivation.
+The rake passes T3 and T6 without a residual. The example shows the
+order of preference in M-9 doing real work: the weaker remediation
+would have shipped a rake that every future new scheme would grow.
+
+=== Example 6: a multidimensional composition end to end
+
+The register restructures the mixed rake of Example 2 as a composed
+system. The system description declares two dimensions:
+
+* `currency` — the temporal reference of the values: `current`,
+`historical`, `forecast`; and
+
+* `content type` — the form of the data: `observation`, `aggregate`.
+
+Each dimension carries its own rake of coordinate concepts, each
+asserted under `data set` through a generic relation whose
+qualification names its criterion (Q-2):
+
+----
+# dimension: currency
+relation:
+  type: generic
+  subject: data-set:current-data-set
+  object: data-set
+  qualification:
+    criterion: currency
+    normative_force: essential
+    source: EFS-DM-0012, decision 2026-04-07
+    status: confirmed
+
+# dimension: content type
+relation:
+  type: generic
+  subject: data-set:observation-data-set
+  object: data-set
+  qualification:
+    criterion: content type
+    normative_force: essential
+    source: EFS-DM-0026, decision 2026-10-15
+    status: confirmed
+----
+
+The composed positions are the coordinate pairs:
+`observation/current`, `observation/historical`,
+`observation/forecast`, `aggregate/current`,
+`aggregate/historical`, `aggregate/forecast`. The system description
+declares the excluded combination `forecast/aggregate` — aggregates
+are computed from observed data and are never forecasts — which is
+the coverage statement of M-5 for the composition. The register
+introduces the composed concepts, each carrying its two dimensional
+memberships, and the MECE tests run per dimension (T1 to T3 pass on
+each; T6 passes with the exclusion statement). The conversion from
+the failed flat rake is recorded per M-10, with the flat rake's
+relations deprecated and the composition recorded as the replacement.
+
+A consumer of the system reads the composed position of any concept
+from its dimensional memberships without inspecting prose (A-15),
+and a reviewer re-derives any position by the placement procedure
+per dimension. The example closes the loop: the structure that fixed
+the overlap is the structure that the tests, the records and the
+review all speak in.
+

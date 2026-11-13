@@ -1,0 +1,324 @@
+[[iev-tables]]
+[appendix]
+== IEV corpus statistics tables
+
+This annex carries the full statistics of the IEV sample (2 000
+concept records, 23 936 language entries).
+
+[[b-languages-per-concept]]
+=== Languages per concept: full distribution
+
+[cols="2,2",options="header",width="50%"]
+|===
+|Languages
+|Concepts
+
+|2
+|2
+
+|7
+|12
+
+|8
+|1
+
+|9
+|99
+
+|10
+|323
+
+|11
+|560
+
+|12
+|364
+
+|13
+|275
+
+|14
+|140
+
+|15
+|69
+
+|16
+|58
+
+|17
+|71
+
+|18
+|8
+
+|19
+|18
+|===
+
+The mode region is 10 to 14 languages (1 662 concepts, 83,1 %).
+The thin lower tail (7 to 9 languages, 112 concepts) marks
+partially adopted concepts; the upper tail (15 to 19, 97 concepts)
+marks the most internationalized concepts.
+
+[[b-language-coverage]]
+=== Language coverage with definition status
+
+Per language: entries, definition-bearing entries, and the median
+length of the definitions present.
+
+[cols="1,2,2,2,2",options="header",width="100%"]
+|===
+|Code
+|Language
+|Entries
+|Definitions
+|Median words
+
+|eng
+|English
+|2 000
+|2 000 (100,0 %)
+|18
+
+|fra
+|French
+|2 000
+|2 000 (100,0 %)
+|19
+
+|pol
+|Polish
+|1 998
+|0
+|—
+
+|por
+|Portuguese
+|1 998
+|0
+|—
+
+|jpn
+|Japanese
+|1 991
+|0
+|—
+
+|deu
+|German
+|1 920
+|0
+|—
+
+|kor
+|Korean
+|1 912
+|0
+|—
+
+|ara
+|Arabic
+|1 810
+|0
+|—
+
+|ita
+|Italian
+|1 766
+|0
+|—
+
+|spa
+|Spanish
+|1 714
+|0
+|—
+
+|swe
+|Swedish
+|1 238
+|0
+|—
+
+|zho
+|Chinese
+|1 137
+|0
+|—
+
+|fin
+|Finnish
+|834
+|0
+|—
+
+|srp
+|Serbian
+|619
+|0
+|—
+
+|slv
+|Slovenian
+|250
+|0
+|—
+
+|mon
+|Mongolian
+|198
+|0
+|—
+
+|rus
+|Russian
+|190
+|21 (11,1 %)
+|15
+
+|nob
+|Norwegian Bokmål
+|158
+|0
+|—
+
+|nno
+|Norwegian Nynorsk
+|158
+|0
+|—
+
+|ces
+|Czech
+|25
+|0
+|—
+
+|nld
+|Dutch
+|20
+|0
+|—
+|===
+
+[[b-element-coverage]]
+=== Entry element coverage
+
+[cols="3,2,2",options="header",width="70%"]
+|===
+|Measure
+|Count
+|Rate of entries
+
+|entries
+|23 936
+|—
+
+|with notes
+|1 285
+|5,4 %
+
+|with examples
+|24
+|0,1 %
+
+|with normative status `preferred`
+|23 936
+|100,0 %
+
+|with grammar information
+|0
+|0,0 %
+
+|with script annotation
+|0
+|0,0 %
+|===
+
+[[b-acceptance-era]]
+=== Concept acceptance era
+
+[cols="2,2,3",options="header",width="70%"]
+|===
+|Era (English acceptance)
+|Concepts
+|Share
+
+|pre-1998
+|575
+|28,8 %
+
+|1998–2014
+|711
+|35,5 %
+
+|2015 and later
+|714
+|35,7 %
+|===
+
+The near-uniform distribution across the three bands marks a
+vocabulary under continuous maintenance rather than one built in a
+single conversion: a quarter of the sampled concepts predate the
+modern drafting regimes entirely, and a third arrived within the
+last decade of the extraction.
+
+[[b-russian-residue]]
+=== The Russian residue
+
+Russian is the only language whose entries carry definitions
+besides the authoritative pair: 21 of 190 entries (11,1 %), median
+15 words. Under the declared term-only model for Russian, these
+definitions are anomalies of the record set — most plausibly the
+residue of a partial definition-authoring effort. The review
+records them without removal: the corpus is reported as extracted,
+and the anomaly is a finding about the record set's history.
+
+[[b-tier-coverage]]
+=== Language tier coverage
+
+The tier analysis of clause <<iev-findings>>, with exact coverage
+per tier from the sample.
+
+[cols="2,3,2,2",options="header",width="90%"]
+. Language coverage by tier
+|===
+|Tier
+|Languages
+|Concepts covered (max)
+|Coverage range
+
+|authoritative
+|eng, fra
+|2 000
+|100,0 %
+
+|deep
+|pol, por, jpn, deu, kor
+|1 998
+|95,6 % to 99,9 %
+
+|broad
+|ara, ita, spa, swe, zho, fin
+|1 810
+|41,7 % to 90,5 %
+
+|partial
+|srp, slv, mon, rus, nob, nno, ces, nld
+|619
+|1,0 % to 31,0 %
+|===
+
+[[b-notes-distribution]]
+=== Notes distribution across models
+
+Every notes-bearing entry in the sample carries an authoritative
+language code: 642 English and 643 French entries, 1 285 in total,
+with zero notes in the term-only layer. The note element belongs to
+the definition-bearing model in this corpus, entirely: a note
+written against a definition has no carrier in a designation-only
+record, and the maintenance system produces none. The finding
+sharpens the model contrast of clause <<comparison>> — under the
+term-only model the annotation culture of the authoritative
+languages does not leak outward at all.

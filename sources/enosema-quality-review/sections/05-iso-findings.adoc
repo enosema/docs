@@ -1,0 +1,364 @@
+[[iso-findings]]
+== Findings: the ISO corpus
+
+=== Headline statistics
+
+The sample of 4 662 localized concept entries yields the following
+headline rates:
+
+[cols="3,2,3",options="header"]
+|===
+|Measure
+|Rate
+|Reading
+
+|definition presence
+|98,8 %
+|the system publishes definitions almost universally
+
+|empty definitions
+|1,2 %
+|concentrated in the legacy era (clause <<iso-era>>)
+
+|notes presence
+|34,2 %
+|one entry in three carries notes
+
+|examples presence
+|2,9 %
+|examples are the scarcest entry element
+
+|sources presence
+|100,0 %
+|every entry traces to its source document
+
+|term type recorded
+|100,0 % (`expression`)
+|uniform type annotation
+
+|grammar information
+|0,0 %
+|absent in this extraction (clause <<iso-grammar>>)
+|===
+
+The system that the OBP corpus represents is strong where the
+drafting rules have teeth: definitions are present, sources are
+recorded, term types are uniform. It is weak where the rules leave
+discretion: examples are rare, and the structural discipline
+measures below show the residue of discretionary practice.
+
+=== Definition length
+
+The 4 606 definition-bearing entries carry definitions with the
+following distribution:
+
+[cols="2,2,2",options="header",width="80%"]
+|===
+|Statistic
+|Value
+|Notes
+
+|median
+|16 words
+|the working norm of the system
+
+|mean
+|18,3 words
+|right-skewed by long definitions
+
+|10th percentile
+|8 words
+|very short definitions are rare
+
+|90th percentile
+|31 words
+|the practical upper working range
+|===
+
+The full histogram appears in Annex A. The shape of the distribution
+carries three findings:
+
+* *the working norm is tight.* Half of the definitions fall between
+roughly 11 and 22 words; the modal bucket is 11–16 words. The
+system has an implicit length norm despite no rule fixing a length,
+and the norm sits close to the 15-to-20-word guidance that
+terminology practice recommends.
+
+* *very short definitions persist.* 214 definitions (4,6 %) are five
+words or fewer, and 803 (17,4 %) are ten words or fewer. Short
+definitions are legitimate where the genus plus one delimiter
+suffices; the review's circularity analysis (below) shows that the
+shortest bucket carries a disproportionate share of the circular
+definitions.
+
+* *a long tail exists.* 385 definitions (8,4 %) exceed 32 words, and
+73 exceed 50. The long definitions are concentrated in documents
+that define complex systems; they are not defective by length
+alone, and the review treats length as context rather than as a
+defect.
+
+=== Structural discipline
+
+The structural measures test whether definitions follow the
+genus-differentia discipline:
+
+[cols="3,2,3",options="header"]
+|===
+|Measure
+|Rate
+|Reading
+
+|definitional circularity
+|3,5 %
+|the designation or its head appears in the definition
+
+|requirements language in definitions
+|0,35 %
+|definitions almost never prescribe
+
+|article-headed definitions
+|4,3 %
+|a small residue of prose-style openings
+|===
+
+The circularity rate is the headline structural finding. At 3,5 %
+of definition-bearing entries, roughly one definition in twenty-nine
+restates its own designation instead of replacing it — the defect
+that the substitution test of EFS 2522 exists to catch. Clause
+<<iso-era>> shows the rate falling by era: the discipline is being
+learned.
+
+The requirements-language rate is the system's quiet success:
+definitions describe, and the near-zero rate of shall, should and
+must inside definitions shows that the boundary between normative
+clauses and terminology clauses holds across the corpus.
+
+The article-head rate marks the residue of prose-style definitions —
+"`A device that...`" openings that bury the genus under the article.
+At 4,3 % the residue is small but persistent, and it does not fall
+by era (clause <<iso-era>>), which marks it as a drafting habit
+rather than a regime effect.
+
+=== Entry element coverage
+
+[cols="2,2,4",options="header"]
+|===
+|Element
+|Rate
+|Finding
+
+|notes
+|34,2 %
+|well established; the entry system supports notes at scale
+
+|examples
+|2,9 %
+|the weakest element; EFS 2522 treats example provision as a scored
+completeness criterion precisely because the system under-produces
+them
+
+|sources
+|100,0 %
+|universal; the platform enforces provenance, and this is the
+single strongest uniform behaviour in either corpus
+|===
+
+The contrast between notes at a third of entries and examples at
+under three per cent is itself a finding: the drafting culture
+produces explanatory notes far more readily than illustrative
+examples. Examples require the author to construct an instance,
+which costs more than annotating an existing definition — and the
+rate shows the cost is usually not paid.
+
+=== Era profile
+
+[cols="2,2,2,2,2",options="header",width="100%"]
+|===
+|Era
+|Entries
+|Definition present
+|Empty
+|Circular
+
+|legacy (1983–1997)
+|405
+|92,3 %
+|7,7 %
+|4,5 %
+
+|transitional (1998–2014)
+|1 667
+|98,9 %
+|1,1 %
+|4,8 %
+
+|modern (2015–2026)
+|2 590
+|99,8 %
+|0,2 %
+|2,6 %
+|===
+
+The era profile is the clearest evidence in the review that the
+drafting-rule regimes work:
+
+* *empty definitions collapse.* From 7,7 % in the legacy era to
+0,2 % in the modern era — a 38-fold reduction. The legacy residue is
+the population of terms published before definitions were enforced;
+the modern regime effectively eliminates the defect.
+
+* *circularity halves.* From 4,5–4,8 % in the legacy and
+transitional eras to 2,6 % in the modern era. The improvement is
+real but incomplete: even under the current regime, one definition
+in thirty-eight is circular.
+
+* *the article head persists.* The rate holds roughly steady across
+eras, confirming it as a habit rather than a regime effect.
+
+The modern-era residual defects — 0,2 % empty, 2,6 % circular — are
+the floor of the current system. They are the numbers that EFS 2522
+is calibrated to beat: a conforming termbase should hold empty
+definitions near zero and circularity below the modern-era rate.
+
+=== Notes and examples in detail
+
+The notes rate (34,2 %) rewards a closer look, because notes are
+the element the drafting culture produces most readily after the
+definition itself:
+
+* *notes cluster in the vocabulary standards.* The concentration
+table of Annex A shows vocabulary-bearing documents — the
+ISO/IEC 2382 series, the 24765 software vocabulary editions, the
+5598 and 5593 standards — carrying notes on most entries
+(68 of 68, 43 of 61, 24 of 24). These documents maintain notes as
+part of their editorial method.
+
+* *notes are rare in domain standards.* The long tail of documents
+carrying fewer than twenty entries shows note rates near zero: a
+document with twelve definitions typically annotates none of them.
+Notes are a practice of vocabulary-maintaining committees, not of
+general drafting.
+
+* *the corpus-wide rate is the mixture.* 34,2 % is what the mixture
+of a few heavy annotators and many non-annotators yields. The
+figure should be read as "the system carries a notes culture in
+part of its population", not as "a third of all committees
+annotate".
+
+The examples rate (2,9 %) decomposes the same way and worse: the
+135 sampled entries with examples concentrate almost entirely in
+the vocabulary standards. Outside those, the example is
+essentially extinct: the drafting rules carry examples as an
+optional element, and optional elements without gates go unused.
+
+=== Length by era
+
+[cols="2,2,2,2,2",options="header",width="90%"]
+. Definition length percentiles by era
+|===
+|Era
+|Median
+|Mean
+|10th percentile
+|90th percentile
+
+|legacy (1983–1997)
+|13
+|15,7
+|6
+|26
+
+|transitional (1998–2014)
+|16
+|17,9
+|8
+|30
+
+|modern (2015–2026)
+|17
+|19,3
+|9
+|32
+|===
+
+Definitions lengthened by roughly four words across the regimes.
+The direction is consistent with the modern rulebook's demand for
+complete delimiting characteristics — longer definitions are
+usually more complete definitions — and the percentiles show the
+whole distribution shifting rather than a tail growing: the
+practice norm itself moved. For the ES length anchors, the finding
+sets the reference band at the modern-era profile: median 17,
+working range 9 to 32.
+
+=== Circularity in detail
+
+The 161 circular entries (3,5 %) distribute across forms, and the
+forms carry different lessons:
+
+* *whole-designation restatement* — the definition begins with or
+contains the full designation, giving the substitution test
+nothing: the smallest class, and the classic defect;
+
+* *head-noun echo* — the definition contains the designation's head
+noun in its defining genus phrase, where the genus is stated and
+the differentia repeats the term: the largest class, and the one
+the broad rule R3 over-counts most, since legitimate genus
+mentions collide with the designation's head; and
+
+* *stem echo* — a derivational stem of the designation recurs
+where the concept genuinely differs: the boundary between
+unavoidable vocabulary overlap and true circularity, and the
+reason the review states the rule as an upper bound.
+
+The era fall (4,5–4,8 % to 2,6 %) is consistent across the forms;
+the discipline improved overall rather than one form disappearing.
+The modern-era residue concentrates in the head-noun echo class,
+which is the form that review — rather than authoring skill —
+catches: an author who states the genus honestly collides with the
+head noun by accident, and the substitution test at review is the
+net that catches the accident. The placement of the substitution
+test at review in EFS 2522 is calibrated to exactly this residue.
+
+=== Document concentration
+
+Vocabulary production is concentrated. The twenty largest source
+documents in the sample carry 489 entries — 10,5 % of the sample —
+and the concentration carries the defects unevenly: five of the
+twenty documents carry circular definitions, and the largest single
+carrier of circularity in the sample is a single modern-era
+systems-integration document. The full table appears in Annex A;
+the finding is structural: *the corpus is a small number of large
+vocabularies plus a long tail of small ones*, and quality practice
+in a handful of committees moves the corpus-wide rate.
+
+=== Grammar information
+
+The extraction carries no grammar information: part of speech,
+gender and inflection are absent from the records as extracted. The
+finding is bounded: the published platform renders grammar data for
+entries that carry it in the source documents, and the absence here
+measures the extraction's field coverage rather than the system's
+practice. EFS 2522 requires grammar information in conforming
+termbases; this corpus cannot benchmark it, and the IEV corpus
+(clause <<iev-findings>>) cannot either, for the same reason in its
+current record format.
+
+=== What the ISO corpus does not carry
+
+Three absences bound what the corpus can benchmark:
+
+* *no relation structure.* The extraction carries concept records
+without the cross-entry relations that the source documents express
+implicitly by entry order. Arrangement quality is not measurable in
+this corpus; the evidence for arrangement findings comes from the
+IEV structure and from the corpus's rake behaviour as published.
+
+* *no grammar fields.* Stated once in clause <<iso-findings>> and
+repeated here as a coverage bound: rule R8 measures absence, and
+the absence is the extraction's, not the practice's.
+
+* *no lifecycle history.* The records carry acceptance dates, not
+revision histories. The era profile is the review's only temporal
+instrument, and it measures cohorts, not trajectories; a future
+extraction that carries revision chains would let the review
+measure movement rather than cohorts.

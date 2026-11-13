@@ -1,0 +1,253 @@
+[[qualifying]]
+== Relationship qualification (Group Q)
+
+=== General
+
+An assertion states that a relation holds. A qualification states why
+it holds, how far it holds, and how confident the register is that it
+holds. The distinction matters because consumers act on relations: a
+partitive relation with a count constraint tells a data modeller that
+a fixed number of parts exist; a generic relation with a cited source
+tells a reviewer where the position came from; a status marks an
+assertion that review has or has not confirmed. Group Q states the
+metadata that every hierarchical relationship carries, the additional
+metadata that specific relation types require, and the vocabulary for
+stating it.
+
+=== Required qualification metadata
+
+Q-1:: Every hierarchical relationship shall carry a source: a citation
+of the document, proposal, decision record, or review action from
+which the position derives. Where the position derives from this
+register's own review, the source cites the decision record (EFG 2519,
+Annex B).
+
+Q-2:: Every hierarchical relationship shall carry the criterion of
+subdivision under which the subordinate concept is coordinate with its
+rake (A-2). The criterion is stated as a named dimension where the
+system declares dimensions, and as a free statement where it does not.
+
+Q-3:: Every hierarchical relationship shall carry a status from the
+lifecycle of EFS 2513, clause 8: `proposed`, `confirmed`, or
+`deprecated`. A relation becomes public only at status `confirmed`.
+
+Q-4:: A hierarchical relationship shall carry its normative force:
+*essential*, where the relation holds for every instance of the
+concepts under their definitions; *characteristic*, where the relation
+holds in the way the definitions characterize the concepts but is not
+necessary to every instance; or *contextual*, where the relation holds
+under conditions that the qualification states.
+
+=== Type-specific qualification
+
+Q-5:: A partitive relationship shall state the presence constraint
+(`obligatory` or `optional`) and, where the definitions fix it, the
+count constraint: a number, a range, or an open constraint
+(`one-or-more`, `zero-or-more`). The constraint follows the
+multiplicity of ISO 704 part-whole analysis and is recorded per EFS
+2516 relation fields.
+
+Q-6:: A partitive relationship shall state the delimitation of the
+part: the criterion that separates the part from the other parts of
+the same whole, so that the parts of the whole are themselves mutually
+exclusive under Group M.
+
+Q-7:: An associative relationship shall state the thematic connection
+that motivates it (E-9), using a connection term from the ES relation
+vocabulary where one exists and a stated phrase where none does.
+
+Q-8:: A mapping relationship shall state the degree of the
+correspondence using the mapping types of EFS 2510 and, for
+non-equivalent correspondences, a note that states what differs and
+for whom (EFS 2504, equivalence notes).
+
+=== Status and lifecycle of qualification
+
+Q-9:: The status of a relationship shall change only through the
+change management requirements of EFS 2513, clause 7: a proposal
+asserts the relation at `proposed`; review sets it to `confirmed`;
+deprecation retires it while keeping it visible.
+
+Q-10:: A deprecated relationship shall retain its full qualification.
+Deprecation removes the relation from the arrangement view; it does
+not remove the evidence that once justified the position, which
+remains load-bearing for the history of the system.
+
+Q-11:: Where a relationship's qualification becomes stale — the
+criterion is renamed, the source document is withdrawn, the count
+constraint is contradicted by a revision — the register shall raise a
+review task for the relationship under the cadence of EFS 2513,
+clause 11, and shall not silently inherit the stale qualification.
+
+=== Qualification records
+
+The qualification of a relationship is a set of fields on the relation
+record (EFS 2516). The following worked records show the shape for the
+three families that carry or annotate arrangement. The records are
+illustrative; field names follow the interchange record of EFS 2516.
+
+*A generic relation with full qualification:*
+
+----
+relation:
+  type: generic
+  subject: data-set:current-data-set
+  object: data-set
+  system: data-resource-system
+  qualification:
+    criterion: currency
+    normative_force: essential
+    source: EFS-DM-0012, decision 2026-04-07
+    status: confirmed
+----
+
+The record states where the concept sits, under what criterion, on
+what evidence, and at what weight. A consumer can test the position:
+the criterion names the rake, the source names the decision, and the
+force states that the relation is definitional.
+
+*A partitive relation with constraints and delimitation:*
+
+----
+relation:
+  type: partitive
+  subject: data-set:header-section
+  object: data-set
+  system: data-resource-system
+  qualification:
+    presence: obligatory
+    count: "1"
+    delimitation: metadata carried at the set level rather than the
+      record level
+    normative_force: essential
+    source: EFS-DM-0015, review 2026-06-12
+    status: confirmed
+----
+
+The record tells a data modeller that the part is mandatory and
+single-valued, and tells a reviewer what separates this part from the
+other parts of the whole — the input that test T4 consumes.
+
+*An associative relation with its connection stated:*
+
+----
+relation:
+  type: associative
+  subject: data-set:header-section
+  object: data-set:validation-rules
+  system: data-resource-system
+  qualification:
+    connection: is-prerequisite-for
+    note: header section carries the identifiers that the validation
+      rules reference
+    normative_force: characteristic
+    source: proposal EFS-DM-0021, accepted 2026-08-30
+    status: confirmed
+----
+
+The record annotates the arrangement without carrying placement
+weight (E-8), and the note states the connection specifically enough
+to test.
+
+=== Qualification quality
+
+Qualification is itself subject to quality expectations, and the
+register reviews it as such:
+
+* a source that names no document, decision or review is not a source
+(Q-1): "`agreed in discussion`" does not qualify a position, because
+no one can re-derive it;
+
+* a criterion that names no dimension and no characteristic is not a
+criterion (Q-2): "`general`" and "`other`" fail the test that T2 and
+T3 apply;
+
+* a note that states no testable content is not a qualification note
+(E-9, Q-8): the note fails when no reviewer action would differ if
+the note were absent; and
+
+* the score sheet practice of EFS 2522 applies to qualification
+records where a register scores entries: a position with defective
+qualification drags the consistency dimension of its entries.
+
+=== Qualification vocabulary
+
+Q-12:: Qualification metadata shall use the vocabulary of Annex C:
+presence constraints, count constraints, normative force values,
+status values, and connection terms. The register may extend the
+vocabulary by declaring additional terms in the system description
+(EFS 2513, clause 5); undeclared terms shall not appear in published
+records.
+
+Q-13:: Qualification metadata shall be recorded in machine-readable
+form per EFS 2516. A qualification that exists only in prose — a note
+in a document that the relation record does not carry — is
+unqualified for the purposes of this document.
+
+=== Requirement group Q
+
+. Relationship qualification requirements (Group Q)
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|Q-1
+|Every hierarchical relationship cites its source.
+|EFG 2519
+
+|Q-2
+|Every hierarchical relationship carries its criterion of
+subdivision.
+|A-2, ISO 704
+
+|Q-3
+|Every relationship carries a lifecycle status; public at `confirmed`
+only.
+|EFS 2513
+
+|Q-4
+|Normative force is stated as essential, characteristic or
+contextual.
+|ISO 704
+
+|Q-5
+|Partitive relations state presence and count constraints.
+|ISO 704, EFS 2516
+
+|Q-6
+|Partitive relations state the delimitation of the part.
+|ISO 704, Group M
+
+|Q-7
+|Associative relations state their thematic connection.
+|EFS 2510
+
+|Q-8
+|Mapping relations state their degree and a difference note where
+non-equivalent.
+|EFS 2510, EFS 2504
+
+|Q-9
+|Status changes go through change management.
+|EFS 2513
+
+|Q-10
+|Deprecated relations retain their full qualification.
+|EFS 2513
+
+|Q-11
+|Stale qualifications raise review tasks; nothing silently inherits.
+|EFS 2513
+
+|Q-12
+|Qualification uses the Annex C vocabulary plus declared extensions.
+|Annex C, EFS 2513
+
+|Q-13
+|Qualification is machine-readable; prose-only qualification is
+unqualified.
+|EFS 2516
+|===

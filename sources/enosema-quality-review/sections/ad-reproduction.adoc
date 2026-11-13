@@ -1,0 +1,126 @@
+[[reproduction]]
+[appendix]
+== Reproduction
+
+This annex states how every figure in this report regenerates from
+the corpora. The analysis is a set of scripts run over the extracted
+corpora; the seeds and the corpus states are the two things a
+reproduction holds fixed.
+
+=== Corpus states
+
+[cols="2,4,2",options="header",width="80%"]
+|===
+|Corpus
+|State
+|Scale
+
+|ISO OBP extraction
+|Glossarist-form concept records extracted from the ISO Online
+Browsing Platform
+|406 898 records
+
+|IEV maintenance records
+|Glossarist-form concept records of the IEC International
+Electrotechnical Vocabulary, as maintained by IEC TC 1
+|22 229 records
+|===
+
+The ISO extraction and the IEV record set are held in the ES
+research environment. The corpora are third-party content; the
+extraction and the analysis are internal to ES, and the report
+publishes statistics only.
+
+=== Sample seeds
+
+* ISO: `random.sample(records, 3000)` with `random.seed(2522)`,
+analysing all localized concept entries in the sampled records —
+4 662 entries in this corpus state.
+
+* IEV: `random.sample(sorted(records), 2000)` with
+`random.seed(2522)` — 2 000 concepts, 23 936 entries.
+
+The seed value 2522 is the document number of EFS 2522, whose first
+calibration cycle introduced the analysis. Future cycles may change
+seeds; the seed in force is stated with the edition of this report.
+
+=== Measures implementation
+
+Each rule of Annex C is a direct implementation over the parsed
+records:
+
+* definition presence and length: rules R1 and R2 over the
+definition field of each language entry;
+
+* circularity, requirements language, article head: rules R3 to R5
+over the definition text;
+
+* presence measures: rules R6 to R9 over the corresponding fields;
+and
+
+* era and language measures: rules R10 to R12 over the record
+metadata.
+
+The implementations are intentionally single-pass and dependency-
+free: a reviewer with the corpus directory, a YAML parser and the
+rules of Annex C reproduces every rate without the original tooling.
+
+[cols="2,3,2",options="header",width="80%"]
+. Analysis passes and their outputs
+|===
+|Pass
+|Input and rule set
+|Output
+
+|ISO entry pass
+|sampled records; rules R1 to R10
+|presence, length, defect and era rates per entry
+
+|ISO concentration pass
+|full sample, grouped by source key
+|per-document counts of <<a-concentration>> and <<a-notes-by-tier>>
+
+|IEV concept pass
+|sampled records; rules R1 to R9, R11, R12
+|per-language coverage, definition status and era rates
+
+|IEV element pass
+|sampled records; rules R6, R9
+|notes and status distributions of <<b-element-coverage>> and <<b-notes-distribution>>
+|===
+
+=== Regeneration protocol
+
+A regeneration for a future edition of this report proceeds:
+
+. refresh the extractions from the live platforms and record the
+extraction dates and record counts;
+
+. re-run the sampling with the seed in force and record the sample
+sizes;
+
+. re-apply the measures of Annex C, unchanged unless a rule change
+is documented in the edition;
+
+. compare the new rates with the rates of this edition, with the
+sampling error of <<a-sampling-error>> as the yardstick; and
+
+. state the rule changes, the corpus state changes and the rate
+changes in the new edition, so that every difference is attributable.
+
+=== Known coverage gaps for the next cycle
+
+The reproduction protocol carries the review's own improvement list:
+
+* circularity scoring for the IEV authoritative definitions
+(clause <<comparison>>, gap);
+
+* grammar-information measurement from a record format that carries
+grammar fields (both corpora lack it as extracted);
+
+* anti-patterns AP-09, AP-10 and AP-12 (clause <<anti-patterns>>),
+which need document-context and arrangement-level tooling; and
+
+* a definition-bearing multilingual corpus beyond two languages,
+for the equivalence-model evidence that clause <<comparison>>
+names as missing.

@@ -1,0 +1,268 @@
+[[mece-tests]]
+[appendix]
+== MECE test suite
+
+This annex states the MECE tests of clause <<mece>> in executable
+form: each test names its trigger, its inputs, its procedure, and its
+failure output. Tests marked *(mechanical)* run over the published
+relation records without expert judgement (M-8); tests marked *(review)*
+are procedures for reviewers and produce findings through the issue
+resolution of EFS 2513, clause 9.
+
+=== T1: rake enumeration *(mechanical)*
+
+*Requirement:* M-11.
+
+*Procedure:* group the hierarchical relations of the system by
+superordinate concept; each group is a rake; verify that every
+non-root concept appears in exactly one rake and that every rake
+carries a criterion value on each of its relations.
+
+*Failure output:* concepts in no rake, concepts in several rakes,
+relations without criterion.
+
+=== T2: single criterion *(mechanical where criteria are structured)*
+
+*Requirement:* M-3.
+
+*Procedure:* for each rake, read the criterion value of its
+relations; verify that the rake carries one criterion.
+
+*Failure output:* a rake with relations carrying different criteria.
+Where criteria are free statements, the test degrades to a review
+check (T3).
+
+=== T3: intensional disjointness *(review)*
+
+*Requirement:* M-1.
+
+*Procedure:* for each pair of coordinates in the rake, attempt to
+construct a characteristic set that satisfies both intensions. Record
+the construction that fails. The pair passes when the reviewer can
+state the reason no construction exists — a contradiction between
+characteristics, a boundary convention, or a delimiting pair.
+
+*Failure output:* the pair, the attempted constructions, and the
+finding that no separating argument was produced.
+
+=== T4: extensional disjointness *(review; mechanical where boundaries
+are structured)*
+
+*Requirement:* M-2.
+
+*Procedure:* for each pair of coordinates, read the separating
+evidence: the delimiting characteristic pair, the measured boundary,
+or the assignment convention. Verify that the evidence assigns every
+object to one coordinate.
+
+*Failure output:* pairs whose evidence is absent or does not
+partition.
+
+=== T5: boundary convention *(mechanical where ranges are
+structured)*
+
+*Requirement:* M-7.
+
+*Procedure:* for rakes of ranged concepts, read the boundary values
+of the coordinates; verify that adjacent ranges share no open value
+and skip no value.
+
+*Failure output:* overlapping boundaries, gapped boundaries.
+
+=== T6: coverage *(review)*
+
+*Requirement:* M-5.
+
+*Procedure:* read the coverage statement of the rake: the derivation,
+the source, or the residual marker. Verify that the statement exists
+and that its content is checkable — a derivation names the
+characteristics that partition, a source cites a document, a residual
+marker names the residual coordinate.
+
+*Failure output:* rakes without coverage statements.
+
+=== T7: residual flag *(mechanical)*
+
+*Requirement:* M-6.
+
+*Procedure:* detect residual categories in rakes; verify that each is
+declared as a limitation in the system description.
+
+*Failure output:* undeclared residual categories.
+
+=== T8: uniform criterion expression *(mechanical where designations
+are structured)*
+
+*Requirement:* M-4.
+
+*Procedure:* where the criterion is expressed in designations, verify
+that the coordinate designations express it in a uniform form, per
+the consistency criteria of EFS 2522, Group S.
+
+*Failure output:* coordinates whose designations express the
+criterion differently.
+
+=== T9: duplicate placement *(mechanical)*
+
+*Requirement:* A-6, E-7.
+
+*Procedure:* verify that each concept has at most one incoming
+hierarchical relation in the system, and that no direct and
+transitive placement of the same pair exists.
+
+*Failure output:* multiply placed concepts, redundant paths.
+
+=== T10: cross-system consistency *(mechanical)*
+
+*Requirement:* V-6, A-11.
+
+*Procedure:* for each cross-system membership, verify that the mapped
+positions correspond under the asserted mapping relations and that
+each mapping relation carries its degree.
+
+*Failure output:* memberships without mappings, mappings without
+degree.
+
+=== T11: cycle detection *(mechanical)*
+
+*Requirement:* A-6, E-7.
+
+*Procedure:* traverse the hierarchical relations of the system from
+each root; verify that the traversal is acyclic — no concept is its
+own ancestor through the asserted relations.
+
+*Failure output:* cycles, stated as the concept path that closes.
+
+=== T12: orphan detection *(mechanical)*
+
+*Requirement:* A-8.
+
+*Procedure:* identify concepts whose membership relations in the
+system are all deprecated and which carry no confirmed relation;
+verify that each such concept is either absent from the arrangement
+view or carries an open placement need.
+
+*Failure output:* orphans published in the arrangement view; orphans
+without placement needs.
+
+=== T13: depth profile *(mechanical)*
+
+*Requirement:* the depth and breadth practice of <<arrangement>>.
+
+*Procedure:* compute the depth of each root-to-leaf path and the size
+of each rake; flag single-child subdivisions and rakes exceeding the
+charter's breadth guideline.
+
+*Failure output:* single-child subdivisions, oversized rakes. The
+test is advisory: its output feeds the review agenda and the
+re-dimension decisions of M-9, and does not block publication.
+
+=== T14: mapping symmetry *(mechanical)*
+
+*Requirement:* A-11, E-10, Q-8.
+
+*Procedure:* for each cross-system membership pair, verify that the
+mapping relations asserted in the two systems agree in degree — a
+membership mapped as `equivalence` in one system and as `overlap` in
+the other is a defect — and that non-equivalent mappings carry
+difference notes.
+
+*Failure output:* asymmetric mappings, mappings without difference
+notes.
+
+=== T15: qualification completeness *(mechanical)*
+
+*Requirement:* Q-1 to Q-5, Q-12.
+
+*Procedure:* verify that every confirmed hierarchical relation
+carries source, criterion, normative force and, for partitive
+relations, presence and count constraints with values from the
+declared vocabulary (Annex C).
+
+*Failure output:* relations with missing or undeclared qualification
+values.
+
+=== Test matrix
+
+[cols="1,2,2,2",options="header"]
+|===
+|Test
+|Requirement
+|Mode
+|Failure output
+
+|T1
+|M-11
+|mechanical
+|unplaced or multiply placed concepts; missing criterion
+
+|T2
+|M-3
+|mechanical / review
+|mixed-criterion rakes
+
+|T3
+|M-1
+|review
+|pairs without separating argument
+
+|T4
+|M-2
+|review / mechanical
+|pairs without partitioning evidence
+
+|T5
+|M-7
+|mechanical / review
+|overlapping or gapped boundaries
+
+|T6
+|M-5
+|review
+|missing or unchecked coverage statements
+
+|T7
+|M-6
+|mechanical
+|undeclared residual categories
+
+|T8
+|M-4
+|mechanical / review
+|inconsistent criterion expression
+
+|T9
+|A-6, E-7
+|mechanical
+|duplicate placements, redundant paths
+
+|T10
+|V-6, A-11
+|mechanical
+|inconsistent cross-system mappings
+
+|T11
+|A-6, E-7
+|mechanical
+|cycles
+
+|T12
+|A-8
+|mechanical
+|published orphans; orphans without placement needs
+
+|T13
+|<<arrangement>>
+|mechanical, advisory
+|single-child subdivisions, oversized rakes
+
+|T14
+|A-11, Q-8
+|mechanical
+|asymmetric mappings; missing difference notes
+
+|T15
+|Q-1 to Q-5
+|mechanical
+|missing or undeclared qualification values
+|===

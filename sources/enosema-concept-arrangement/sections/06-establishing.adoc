@@ -1,0 +1,240 @@
+[[establishing]]
+== Relationship establishment (Group E)
+
+=== General
+
+Relationship establishment is the act of connecting two concepts with
+a relation. The act has three parts: selecting a relation type from a
+vocabulary, directing the relation between its ends, and recording the
+assertion. Group E governs the three parts for the relations that
+carry arrangement — hierarchical relations — and states the
+discipline for the relations that annotate arrangement — associative
+and mapping relations.
+
+=== Selection of relation type
+
+E-1:: Every relationship shall use a relation type defined in the ES
+relation vocabulary (EFS 2510) or in a vocabulary that the register
+declares as an extension of it under EFS 2513, clause 5. Relation
+types defined ad hoc in a proposal shall not be asserted.
+
+E-2:: The relation type shall be selected by the semantic test of
+EFS 2510 for that type: a generic relation is asserted where the
+object concept's intension subsumes the subject concept's intension; a
+partitive relation is asserted where the subject concept names a part
+of the object concept; an associative relation is asserted where a
+non-hierarchical thematic connection exists and neither hierarchical
+type applies.
+
+E-3:: Where two candidate relation types both fit, the register shall
+assert the more specific type where one exists, and shall record the
+reason where the choice is not determined by the vocabulary.
+
+=== Hierarchical relations
+
+E-4:: A generic relation shall be asserted only where the generic
+concept and the specific concept are concepts of the same kind: the
+specific concept is a narrowing of the generic concept, obtained by
+adding characteristics to the generic intension (ISO 704).
+
+E-5:: A partitive relation shall be asserted only where the part
+concept satisfies the part-whole test of ISO 704: the parts are
+separable in thought from the whole, the parts are essential to the
+whole, and each part is of a kind that the whole can contain.
+
+E-6:: A rake of coordinate concepts shall be produced by one
+criterion of subdivision. Where the coordinate concepts of one
+superordinate concept are produced by two criteria, the rake shall be
+split into two rakes along declared dimensions, per clause A-10, and
+the two rakes shall be tested separately under Group M.
+
+E-7:: A hierarchical relation shall not skip levels: where concepts
+B and C are asserted as superordinate concepts of A, and B is a
+superordinate concept of C, one of the two assertions shall be
+removed; the register shall not carry both the direct and the
+transitive placement.
+
+=== Associative relations
+
+E-8:: An associative relation shall be asserted where a thematic
+connection exists that no hierarchical relation expresses, between
+concepts at the same or different positions in the system (EFS 2510;
+ISO 1087-1). The association shall not substitute for a hierarchy:
+where the concepts stand in a generic or partitive relation, the
+hierarchical relation is required, and the associative relation is
+optional.
+
+E-9:: An associative relation shall be recorded with the thematic
+connection stated in its qualification (clause <<qualifying>>): the
+statement names the connection — cause, producer, product, instrument,
+opposition, or a domain-specific connection — so that a reviewer can
+test it.
+
+=== Mapping relations
+
+E-10:: A mapping relation between positions of different systems
+shall be asserted only where the positions denote related concepts
+whose correspondence the mapping type of EFS 2510 expresses:
+equivalence, narrowness, broadness, overlap or dissociation.
+
+E-11:: A mapping relation shall not carry arrangement weight: the
+presence of a mapping relation shall not imply membership in the
+other system. Membership follows clause <<membership>> only.
+
+=== Direction and locus
+
+E-12:: Relations shall be asserted in the direction that the relation
+type of EFS 2510 defines: from specific to generic, from part to
+whole, and from subject to object for associative and mapping types as
+the type defines. The register shall store the assertion once, in one
+direction, and shall derive the inverse view from the type definition
+rather than asserting the inverse.
+
+E-13:: A relation between two concepts shall be asserted in the
+system in which both concepts are members. A relation between concepts
+of different systems is a mapping relation per E-10, not a hierarchical
+relation.
+
+E-14:: A relation shall be asserted between concepts, not between
+designations and not between entries in particular languages. The
+language-specific view of a relation is derived through the
+localizations of its concepts (EFS 2504).
+
+=== Relations across editions and versions
+
+A register evolves, and its relations evolve with it. Group E binds
+relation evolution to the record so that consumers can follow:
+
+* *assertions survive edition changes.* A relation asserted in one
+edition carries into the next unchanged unless a change management
+decision modifies it. The relation record carries the dates of
+assertion and of last review (EFS 2516), and the arrangement view of
+an edition shows the relations as they stood at that edition.
+
+* *deprecation keeps the trace.* A relation that no longer holds is
+deprecated with its replacement stated where one exists (E-16, Q-10).
+A deprecated generic relation whose superordinate concept was
+restructured carries a pointer to the relation that superseded it, so
+that a consumer citing the old position can resolve the new one.
+
+* *assertion provenance is per assertion.* Two relations of the same
+type between the same pair of concepts in different systems are
+different assertions with different sources: the equivalence of
+positions across systems does not merge their evidence.
+
+=== Relations and localizations
+
+Relations connect concepts (E-14), and the localized entries of those
+concepts inherit the relations through concept identity (EFS 2504).
+Three localized cases need care:
+
+* *a relation that holds in one language view only.* Some thematic
+connections are language-bound: two concepts that oppose in one
+language do not oppose in another where the target concepts differ.
+Where the difference is real, the concepts are not identical, and the
+register records distinct concepts with a mapping relation — not one
+concept with a language-specific relation.
+
+* *a designation-level correspondence.* The relation between the
+designation of one language and the designation of another is not a
+concept relation; it is the equivalence question of EFS 2504, settled
+by the equivalence degree of the localization. The register does not
+assert concept relations from designation similarity.
+
+* *script and writing-system variation.* Converted forms of a
+designation (ISO 24229) carry no relation information at all; they
+are localizations of one designation of one concept. The arrangement
+is untouched by script conversion.
+
+=== Record of the assertion
+
+E-15:: Each established relationship shall be recorded per EFS 2516
+with: the relation type, the subject and object concept identifiers,
+the direction as stored, the register or system in which the relation
+is asserted, and the qualification metadata of clause <<qualifying>>.
+
+E-16:: A relationship shall be asserted once and only once per
+relation type and pair of concepts in one system. Duplicate
+assertions of the same type between the same concepts in the same
+system shall be merged; the merged record retains the union of the
+qualifying metadata.
+
+=== Requirement group E
+
+. Relationship establishment requirements (Group E)
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|E-1
+|Relation types come from the ES relation vocabulary or a declared
+extension.
+|EFS 2510, EFS 2513
+
+|E-2
+|The relation type passes its semantic test.
+|EFS 2510
+
+|E-3
+|The more specific type wins; non-obvious choices record a reason.
+|EFS 2510
+
+|E-4
+|Generic relations connect concepts of the same kind by intension
+narrowing.
+|ISO 704
+
+|E-5
+|Partitive relations pass the part-whole test.
+|ISO 704
+
+|E-6
+|One criterion per rake; mixed rakes split along dimensions.
+|ISO 704, A-10
+
+|E-7
+|No direct and transitive placement of the same pair.
+|ISO 704
+
+|E-8
+|Associative relations annotate; they do not replace hierarchy.
+|ISO 1087-1, EFS 2510
+
+|E-9
+|The thematic connection of an association is stated in the
+qualification.
+|EFS 2510
+
+|E-10
+|Mapping relations express correspondences between systems.
+|EFS 2510
+
+|E-11
+|Mapping relations never imply membership.
+|EFS 2510
+
+|E-12
+|One stored direction per assertion; the inverse view is derived.
+|EFS 2510
+
+|E-13
+|Hierarchical relations live inside one system; cross-system pairs
+use mapping relations.
+|EFS 2510
+
+|E-14
+|Relations connect concepts, not designations or language entries.
+|EFS 2504
+
+|E-15
+|Every assertion is a complete EFS 2516 record with qualification
+metadata.
+|EFS 2516
+
+|E-16
+|One assertion per type and pair per system; duplicates merge.
+|EFS 2513
+|===

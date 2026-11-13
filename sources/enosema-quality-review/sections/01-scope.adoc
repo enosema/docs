@@ -1,0 +1,40 @@
+[[scope]]
+== Scope
+
+This report reports the findings of a quality review of international
+standard vocabulary. It covers:
+
+* the composition of the two corpora studied: the ISO Online Browsing
+Platform terminology extraction and the IEC International
+Electrotechnical Vocabulary records maintained by IEC TC 1 (clause
+<<corpora>>);
+
+* the methodology of the review: the sampling design, the measures,
+and the operational detection rules from which every statistic
+derives (clauses <<methodology>> and <<detection-rules>>);
+
+* the findings for each corpus: presence and length statistics,
+structural discipline, entry element coverage, era profiles, and
+document and language concentration (clauses <<iso-findings>> and
+<<iev-findings>>);
+
+* the comparison of the two systems of maintenance and the two
+localization models they embody (clause <<comparison>>);
+
+* the census of anti-patterns — the recurring defect classes that the
+ES quality framework names (clause <<anti-patterns>>); and
+
+* the implications of the findings for the normative documents of the
+ES Terminology series (clause <<implications>>).
+
+This report is informative. It states findings and conclusions; it
+does not state requirements. The requirement documents that consume
+its findings — EFS 2513, EFS 2522, EFS 2525, and EFG 2519 — carry
+the normative text, and clause <<implications>> traces each finding
+to the requirements it informs.
+
+The review covers the corpora as they stood at extraction. The ISO
+Online Browsing Platform changes continuously; the IEV records
+change with TC 1 maintenance. The figures are dated by the extraction
+dates of clause <<corpora>> and are reproducible from the corpora by
+the instructions of Annex E.

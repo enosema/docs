@@ -1,0 +1,32 @@
+[[foreword]]
+== Foreword
+
+ES is the publishing imprint of the Enosema Foundation. ES documents
+are prepared by the technical committees of the Enosema Foundation
+under the ES Directives (EFD 101 to EFD 105) and are published under a
+Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+This document was prepared by Technical Committee Terminology.
+
+This first edition of EFS 2525 establishes the requirements for
+arranging concepts into concept systems: how a concept becomes a member
+of one or more concept systems, how the relations that position a
+concept in a system are established, how those relations are qualified
+with the metadata that reviewers and consumers need, and how the
+mutual exclusivity and collective exhaustiveness of every subdivision
+is established and maintained.
+
+This document is one of the Terminology series of ES. It builds on the
+relation vocabulary of EFS 2510, the concept management system
+requirements of EFS 2513, the interchange record of EFS 2516, and the
+entry quality requirements of EFS 2522. Where this document states a
+requirement about relation types, relation records, or entry records,
+the vocabulary and the record structure of those documents apply.
+
+The requirements of this document are grouped into five groups with
+stable identifiers: Group A (system membership), Group E (relationship
+establishment), Group Q (relationship qualification), Group M (mutual
+exclusivity and exhaustiveness), and Group V (arrangement validation).
+Requirement identifiers are stable: they do not change between
+editions, and cross-references in conformity assessments, checklists,
+and tooling cite the identifiers rather than clause numbers.

@@ -1,0 +1,361 @@
+[[iso-tables]]
+[appendix]
+== ISO corpus statistics tables
+
+This annex carries the full statistics of the ISO sample (4 662
+localized concept entries). Each table restates or extends a
+finding of clause <<iso-findings>>.
+
+[[a-definition-length-histogram]]
+=== Definition length histogram
+
+[cols="2,2,2",options="header",width="70%"]
+|===
+|Words
+|Entries
+|Share
+
+|1–5
+|214
+|4,6 %
+
+|6–10
+|803
+|17,2 %
+
+|11–16
+|1 415
+|30,3 %
+
+|17–22
+|1 005
+|21,6 %
+
+|23–32
+|784
+|16,8 %
+
+|33–50
+|312
+|6,7 %
+
+|51 and more
+|73
+|1,6 %
+|===
+
+[[a-presence-statistics]]
+=== Presence statistics
+
+[cols="3,2,2",options="header",width="80%"]
+|===
+|Measure
+|Count
+|Rate
+
+|entries
+|4 662
+|—
+
+|with definition
+|4 606
+|98,8 %
+
+|without definition
+|56
+|1,2 %
+
+|with notes
+|1 594
+|34,2 %
+
+|with examples
+|135
+|2,9 %
+
+|with sources
+|4 662
+|100,0 %
+
+|with circularity marker
+|161
+|3,5 % of defined entries
+
+|requirements language
+|16
+|0,35 % of defined entries
+
+|article-headed
+|198
+|4,3 % of defined entries
+|===
+
+[[a-era-profile]]
+=== Era profile
+
+[cols="2,1,1,1,1,1,1",options="header",width="100%"]
+|===
+|Era
+|Entries
+|Defined
+|Empty
+|Empty %
+|Circular n
+|Circular %
+
+|legacy (1983–1997)
+|405
+|374
+|31
+|7,7
+|17
+|4,5 %
+
+|transitional (1998–2014)
+|1 667
+|1 649
+|18
+|1,1
+|79
+|4,8 %
+
+|modern (2015–2026)
+|2 590
+|2 583
+|7
+|0,2
+|67
+|2,6 %
+|===
+
+[[a-term-type-distribution]]
+=== Term type distribution
+
+[cols="2,2,2",options="header",width="60%"]
+|===
+|Term type
+|Count
+|Share
+
+|expression
+|4 662
+|100,0 %
+|===
+
+[NOTE]
+The extraction carries a single term type value. Source documents
+distinguish abbreviations and symbols in their entry structure; the
+platform normalization folds them into the expression value in the
+extracted records.
+
+[[a-concentration]]
+=== Concentration: the twenty largest source documents
+
+Entries per source document, with the defect counts the review
+measures. The document identifier is the platform source key.
+
+[cols="3,1,1,1,1",options="header",width="100%"]
+|===
+|Source document
+|Entries
+|Empty
+|Circular
+|Notes
+
+|iso-iec.2382.2015
+|68
+|0
+|0
+|68
+
+|iso.10303-2.2024
+|61
+|0
+|5
+|43
+
+|iso-iec-ieee.24765.2017
+|35
+|0
+|1
+|9
+
+|iso.7348.1992
+|27
+|0
+|0
+|0
+
+|iso.5598.2020
+|27
+|0
+|0
+|6
+
+|iso-iec-ieee.24765.2010
+|24
+|0
+|2
+|3
+
+|iso.6707-1.2020
+|24
+|0
+|0
+|1
+
+|iso.472.2013
+|24
+|0
+|0
+|8
+
+|iso.5593.2023
+|24
+|1
+|0
+|24
+
+|iso.4135.2022
+|18
+|0
+|0
+|3
+
+|iso.17769-1.2012
+|15
+|0
+|0
+|9
+
+|iso.1382.2012
+|15
+|0
+|0
+|3
+
+|iso.4618.2014
+|15
+|0
+|0
+|0
+
+|iso-iec.19762.2016
+|15
+|0
+|0
+|9
+
+|iso.772.2011
+|14
+|0
+|0
+|0
+
+|iso.5598.2008
+|14
+|0
+|0
+|2
+
+|iso.9000.2015
+|12
+|0
+|0
+|8
+
+|iso.14040.2006
+|12
+|0
+|0
+|4
+
+|iso.22300.2018
+|12
+|0
+|0
+|6
+
+|iso.5127.2017
+|12
+|0
+|0
+|5
+|===
+
+The twenty documents carry 489 entries (10,5 % of the sample). The
+circular counts concentrate: `iso.10303-2.2024` alone carries five —
+the largest single-document circularity count in the sample — and
+the two vocabulary-integration standards (24765 editions) carry
+three between them.
+
+[[a-sampling-error]]
+=== Sampling error
+
+At n = 4 662, the 95 % confidence half-width for a rate p is
+approximately 1,96 × √(p(1−p)/n). For the headline rates:
+
+[cols="2,2,2",options="header",width="60%"]
+|===
+|Rate
+|Estimate
+|95 % half-width
+
+|definition presence
+|98,8 %
+|±0,10 pp
+
+|circularity
+|3,5 %
+|±0,53 pp
+
+|notes presence
+|34,2 %
+|±1,36 pp
+
+|examples presence
+|2,9 %
+|±0,48 pp
+|===
+
+The IEV rate half-widths at the concept level (n = 2 000) are
+approximately twice these values.
+
+[[a-notes-by-tier]]
+=== Notes and examples by document tier
+
+The concentration finding, decomposed: entries grouped by the size
+class of their source document, with the element rates per class.
+
+[cols="2,1,1,1,1",options="header",width="90%"]
+. Entry elements by source-document size class
+|===
+|Document size class
+|Entries
+|Notes %
+|Examples %
+|Sources %
+
+|large (24 entries and more)
+|431
+|62,4
+|7,7
+|100,0
+
+|medium (12 to 23 entries)
+|223
+|30,5
+|1,3
+|100,0
+
+|small (fewer than 12 entries)
+|4 008
+|31,0
+|2,5
+|100,0
+|===
+
+[NOTE]
+The small class aggregates hundreds of documents; its rates are
+document-mixture rates, not per-document rates. The large class is
+the vocabulary-standard tier of clause <<iso-findings>>.
