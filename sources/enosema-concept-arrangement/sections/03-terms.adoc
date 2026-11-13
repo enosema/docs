@@ -1,0 +1,249 @@
+[[terms]]
+== Terms, definitions and abbreviated terms
+
+=== Terms and definitions
+
+For the purposes of this document, the following terms and definitions
+apply.
+
+[[term-concept]]
+==== concept
+
+unit of knowledge created by a unique combination of characteristics
+
+[SOURCE: ISO 1087-1]
+
+[[term-characteristic]]
+==== characteristic
+
+abstraction of a property of an object or of a set of objects
+
+[SOURCE: ISO 1087-1]
+
+[[term-essential-characteristic]]
+==== essential characteristic
+
+characteristic of a concept that is required by the concept's
+intension
+
+[SOURCE: ISO 1087-1]
+
+[[term-delimiting-characteristic]]
+==== delimiting characteristic
+
+essential characteristic that distinguishes a concept from its
+coordinate concepts
+
+[SOURCE: ISO 1087-1]
+
+[[term-intension]]
+==== intension
+
+set of characteristics that makes up the concept
+
+[SOURCE: ISO 1087-1]
+
+[[term-extension]]
+==== extension
+
+set of objects to which the concept applies
+
+[SOURCE: ISO 1087-1]
+
+[[term-concept-system]]
+==== concept system
+
+set of concepts structured according to the relations among them
+
+[SOURCE: ISO 1087-1]
+
+[[term-concept-arrangement]]
+==== concept arrangement
+
+assignment of a set of concepts to positions in a concept system,
+together with the relations that hold the positions together
+
+[[term-criterion-of-subdivision]]
+==== criterion of subdivision
+
+criterion of categorization
+
+single essential characteristic applied to subdivide the extension of
+a superordinate concept into its coordinate subordinate concepts
+
+[SOURCE: ISO 704, modified — the established term "criterion of
+subdivision" is retained for this document]
+
+[[term-dimension]]
+==== dimension
+
+criterion of subdivision that is declared, named and applied
+consistently across the coordinate concepts of a subdivision
+
+[[term-multidimensional-concept-system]]
+==== multidimensional concept system
+
+concept system in which the coordinate subordinate concepts of a
+superordinate concept are produced by subdividing along several
+declared dimensions simultaneously and are composed into the positions
+of the system
+
+[SOURCE: ISO 704, modified — expressed as a requirement-bearing
+system shape]
+
+[[term-concept-position]]
+==== concept position
+
+location of a concept in a concept system, determined by the concept's
+superordinate concept and by the criterion of subdivision that
+separates it from its coordinate concepts
+
+[[term-system-membership]]
+==== system membership
+
+recorded assertion that a concept occupies a concept position in a
+stated concept system
+
+[[term-mutual-exclusivity]]
+==== mutual exclusivity
+
+property of a subdivision under which no concept satisfies the
+intension of more than one coordinate subordinate concept of the
+subdivision
+
+[[term-collective-exhaustiveness]]
+==== collective exhaustiveness
+
+property of a subdivision under which the extension of the
+superordinate concept is covered by the union of the extensions of its
+coordinate subordinate concepts
+
+[[term-residual-category]]
+==== residual category
+
+coordinate subordinate concept whose extension is defined as the part
+of the superordinate extension not covered by the other coordinate
+concepts
+
+[[term-relationship-establishment]]
+==== relationship establishment
+
+selection of a relation type from a relation vocabulary, direction of
+the relation between its stated ends, and recording of the assertion
+in the register
+
+[[term-relationship-qualification]]
+==== relationship qualification
+
+association of a recorded relationship with the metadata that states
+its evidence and scope: source, criterion, delimitation, presence and
+count constraints, normative force, and status
+
+[[term-normative-force]]
+==== normative force
+
+weight of a relationship assertion in the arrangement, expressed as
+essential, characteristic or contextual
+
+[[term-cross-system-membership]]
+==== cross-system membership
+
+system membership of one concept in two or more concept systems that
+are maintained independently, with the relation set of each system
+recorded separately
+
+[[term-rake]]
+==== rake
+
+complete set of coordinate subordinate concepts produced by one
+subdivision of a superordinate concept
+
+[[term-generic-relation]]
+==== generic relation
+
+relation between two concepts where the intension of one concept
+forms part of the intension of the other, and where the extension of
+the former includes the extension of the latter
+
+[SOURCE: ISO 1087-1]
+
+[[term-partitive-relation]]
+==== partitive relation
+
+relation between two concepts where one concept forms the whole and
+the other concept forms a part of that whole
+
+[SOURCE: ISO 1087-1]
+
+[[term-associative-relation]]
+==== associative relation
+
+pragmatic relation
+
+relation between two concepts having a non-hierarchical thematic
+connection by virtue of experience
+
+[SOURCE: ISO 1087-1]
+
+[[term-mapping-relation]]
+==== mapping relation
+
+relation between concepts or concept positions of different concept
+systems that states the degree of their correspondence
+
+[[term-superordinate-concept]]
+==== superordinate concept
+
+concept whose intension is presupposed by the intension of another
+concept and whose extension includes the extension of that other
+concept
+
+[SOURCE: ISO 1087-1]
+
+[[term-subordinate-concept]]
+==== subordinate concept
+
+concept whose intension presupposes the intension of another concept
+and whose extension is included in the extension of that other
+concept
+
+[SOURCE: ISO 1087-1]
+
+[[term-coordinate-concept]]
+==== coordinate concept
+
+concept that shares the superordinate concept of another concept and
+differs from it by the delimiting characteristics of one criterion of
+subdivision
+
+[SOURCE: ISO 1087-1, modified — bound to the single criterion of
+this document]
+
+[[term-generic-concept-system]]
+==== generic concept system
+
+concept system structured predominantly by generic relations
+
+[[term-partitive-concept-system]]
+==== partitive concept system
+
+concept system structured predominantly by partitive relations
+
+[[term-placeholder-superordinate]]
+==== placeholder superordinate
+
+superordinate concept introduced to hold a rake for which no natural
+superordinate concept exists, declared as such in the system
+description
+
+[[term-orphan]]
+==== orphan
+
+concept whose membership relations in a system are all deprecated
+without replacement
+
+=== Abbreviated terms
+
+MECE::
+mutual exclusivity, collective exhaustiveness — the paired property
+that a subdivision is required to satisfy under this document

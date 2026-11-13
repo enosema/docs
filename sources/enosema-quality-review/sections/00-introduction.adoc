@@ -1,0 +1,172 @@
+[[introduction]]
+== Introduction
+
+=== Why a quality review
+
+The ES Terminology series rests on a claim: that the requirements in
+its normative documents describe what good vocabulary practice is,
+not what one organization happens to prefer. A claim of that kind
+needs evidence. The strongest evidence available is the vocabulary
+that the international system itself produces — the hundreds of
+thousands of concept entries that ISO has published through its
+Online Browsing Platform and the tens of thousands of concepts that
+IEC TC 1 maintains as the International Electrotechnical Vocabulary.
+If the requirements of the ES series are well calibrated, a corpus
+conforming termbase measures well against the corpus; if the corpus
+systematically fails somewhere, the requirements are set to address that
+failure.
+
+This report is the evidence base made public. It analyses the two
+corpora with a fixed method (clause <<methodology>>), reports the
+statistics (clauses <<iso-findings>> and <<iev-findings>>), compares
+the two systems of maintenance (clause <<comparison>>), counts the
+defects that the ES series calls anti-patterns (clause
+<<anti-patterns>>), and states the implications of each finding for
+the normative documents of the series (clause <<implications>>).
+
+=== What the corpora are
+
+The two corpora represent two eras and two architectures of
+international vocabulary maintenance:
+
+* The *ISO OBP corpus* is the aggregate of terminology from hundreds
+of ISO documents, extracted from the published platform into
+Glossarist-form records. Its entries were authored across four
+decades, under successive editions of the ISO/IEC Directives and of
+ISO 10241, by hundreds of committees. It measures the system as a
+whole — including its oldest practices.
+
+* The *IEV corpus* is one vocabulary, maintained continuously since
+the early twentieth century and converted in its current phase into
+structured records by IEC TC 1. Every concept carries a multilingual
+entry set; English and French carry the authoritative definitions and
+the other languages carry designations. It measures the
+depth-maintenance model: one authoritative body, one vocabulary,
+many languages.
+
+The two corpora differ in shape, and the differences are findings.
+Where they agree, the agreement is the strongest signal this study
+can produce: two independent systems, two architectures, one
+behaviour.
+
+=== How to read this report
+
+Each clause states its findings first and interprets them second.
+Statistics appear in the body where they carry an argument and in
+Annex A (ISO) and Annex B (IEV) in full. Clause <<detection-rules>>
+states the operational definition of every measure — the exact rule
+by which each count was made — because a defect rate is only as
+honest as its detector. Clause <<reproduction>> gives the commands
+and seeds.
+
+This report makes no recommendations beyond clause <<implications>>;
+it is a study, not a guideline. The documents that convert its
+findings into requirements are cited throughout, and each finding
+carries the traceability note that states which requirements it
+informs.
+
+=== Relation to the ES series
+
+The report serves three documents directly:
+
+* *EFS 2522* (concept entry quality): its criteria, weights and
+anchors were set from the first ISO sample; this report refreshes the
+numbers, extends the evidence to the IEV corpus, and confirms or
+adjusts the calibration;
+
+* *EFS 2525* (concept arrangement): its arrangement requirements —
+criteria of subdivision, MECE discipline, cross-system membership —
+respond to the arrangement-level findings of clauses <<iso-findings>>
+and <<comparison>>; and
+
+* *EFG 2519* (register operation guide): its cadence and monitoring
+practice consumes the era and defect-rate profiles as the benchmark
+that a conforming register is measured against.
+
+The report is also a demonstration of method. The ES series asserts
+that registers be machine-readable because machine-readable records
+can be measured; this report is what measurement looks like, and the
+reproduction instructions of Annex E are the standing offer that the
+same measurement can be run over any conforming register — including
+the registers ES itself operates.
+
+=== Findings at a glance
+
+The headline rates of both corpora, side by side, with the clause
+where each finding is developed:
+
+[cols="3,2,2,2",options="header",width="90%"]
+|===
+|Measure
+|ISO corpus
+|IEV corpus
+|Finding
+
+|definition presence
+|98,8 %
+|100,0 % (eng, fra)
+|<<iso-findings>>, <<iev-findings>>
+
+|median definition length
+|16 words
+|18 / 19 words (eng / fra)
+|<<comparison>>
+
+|circularity
+|3,5 %
+|not measured this cycle
+|<<iso-findings>>
+
+|requirements language in definitions
+|0,35 %
+|not measured
+|<<comparison>>
+
+|notes presence
+|34,2 %
+|5,4 %
+|<<comparison>>
+
+|examples presence
+|2,9 %
+|0,1 %
+|<<anti-patterns>>
+
+|sources presence
+|100,0 %
+|not carried
+|<<iso-findings>>
+
+|term type uniformity
+|100,0 %
+|100,0 %
+|<<comparison>>
+
+|grammar information
+|absent as extracted
+|absent in record format
+|<<iso-findings>>
+
+|languages per concept
+|one authoritative language per document
+|median 12
+|<<iev-findings>>
+|===
+
+The table is the review in one view: strong uniformity where
+process gates exist, weak production where author initiative is the
+only force, and two maintenance architectures that converge on the
+same definition norm while diverging on everything they choose to
+annotate differently.
+
+=== How the report was produced
+
+The review was carried out by the Terminology Committee as part of
+the EFS 2522 calibration cycle. The analysis scripts are
+single-pass implementations of the rules of Annex C over the
+extracted corpora; the report text and the statistics were produced
+in the same cycle, and the figures in this edition were generated
+on 13 November 2026. The corpus states, the seeds and the protocol
+of Annex E make the edition reproducible; deviations introduced by
+future extractions are attributable to the corpus states, not to
+the method.

@@ -1,0 +1,173 @@
+[[placement-procedure]]
+[appendix]
+== Placement decision procedure
+
+This annex gives the working procedure that decides the position of a
+concept in a concept system. The procedure applies when a concept
+enters a system, when a placement is contested (A-5, A-7), and when a
+reviewer re-derives a position as the review instrument (V-5). Each
+step states the inputs it consumes and the record it produces.
+
+=== Step 1: State the intension
+
+Write the intension of the candidate concept: the set of
+characteristics that its definition supplies. Where the definition is
+absent or defective, the placement is premature; the entry returns to
+authoring under EFS 2522, and the placement decision waits for a
+definition that passes the completeness and clarity criteria of that
+document.
+
+=== Step 2: Enumerate candidate superordinates
+
+Enumerate the concepts of the system whose intensions the candidate
+intension presupposes: the candidates are the concepts under which the
+candidate adds characteristics without removing any. Mechanical
+tooling can propose candidates from the structured characteristics of
+the register where characteristics are recorded as data; otherwise
+the proposer enumerates from the system view.
+
+=== Step 3: Test each candidate
+
+For each candidate superordinate concept, perform three tests and
+record the outcome:
+
+* *the subsumption test*: every characteristic of the candidate
+superordinate intension appears in the candidate concept intension.
+Where one does not, the candidate is not a superordinate concept of
+the concept being placed.
+
+* *the differentiation test*: at least one delimiting characteristic
+of the candidate concept distinguishes it from every existing
+coordinate concept under the candidate superordinate. Where the
+candidate cannot be distinguished from a coordinate, the candidate and
+that coordinate are the same concept, and the placement resolves to
+entry deduplication, not placement.
+
+* *the criterion test*: the distinguishing characteristics all
+express the one criterion of subdivision of the rake. Where a
+characteristic expresses a different criterion, the candidate rake is
+not the right rake; the correct rake is one step through the other
+criterion (A-10), or the rake is mixed and fails M-3.
+
+=== Step 4: Select and record
+
+Select the position. Where exactly one candidate passes the three
+tests, that position is taken. Where several candidates pass, apply
+the tie-breakers in order and record the tie-break used:
+
+* *the immediate-superordinate rule*: prefer the candidate whose
+intension the candidate concept most directly narrows — the one that
+adds the fewest characteristics between itself and the concept being
+placed. Deeper ancestors remain reachable through the hierarchy.
+
+* *the system-scope rule*: prefer the candidate that lies within the
+declared scope of the system (EFS 2513, clause 5); an equally correct
+position outside the system scope is recorded as a cross-system
+membership candidate (A-11), not as a second position.
+
+* *the control-body rule*: where the tie survives, the control body
+decides and the decision record cites the candidates and the
+tie-breaker outcome (EFG 2519, Annex B).
+
+=== Step 5: Assert the membership
+
+Assert the membership relation with the full metadata of Group A and
+Group Q: relation type (E-4 or E-5), superordinate concept, criterion
+of subdivision, source, normative force, and status `proposed`. The
+position becomes public at `confirmed` (Q-3).
+
+=== Step 6: Test the affected rakes
+
+Run the MECE tests of Annex B on every rake the placement affects:
+the receiving rake gains a coordinate, and its exclusivity and
+coverage are re-tested (M-11, M-12). A failing rake is remediated per
+M-9 before publication.
+
+=== Placement worksheet
+
+The worksheet records one placement decision. The register keeps the
+worksheet as part of the proposal record.
+
+[cols="2,5",options="header"]
+|===
+|Field
+|Content
+
+|Concept
+|identifier and designation of the concept being placed
+
+|Intension
+|the characteristic set, as recorded in the entry
+
+|Candidates
+|the enumerated candidate superordinates
+
+|Subsumption
+|pass or fail per candidate
+
+|Differentiation
+|pass or fail per candidate, naming the delimiting characteristics
+
+|Criterion
+|the criterion of subdivision that the passing characteristics
+express
+
+|Selected position
+|superordinate concept and relation type
+
+|Tie-breaker
+|the rule applied where several candidates passed
+
+|Rejected candidates
+|the remaining candidates and why they lost
+
+|MECE outcome
+|rake tests run and their results
+
+|Decision record
+|link to the proposal and decision records
+|===
+
+=== Worked micro-example
+
+The procedure in six steps, applied to the placement of `forecast
+data set` (the data set of expected future values) in the data-resource
+system of Annex D:
+
+. *Intension*: "`data set whose values represent expected future
+states of the phenomena`" — the definition supplies the
+characteristics: data set (presupposed) and expected-future temporal
+reference (added).
+
+. *Candidates*: `data set` (root), `current data set`, `historical
+data set` (existing coordinates).
+
+. *Tests*: `data set` passes subsumption — the intension presupposes
+it. It passes differentiation — expected-future reference
+distinguishes the concept from current reference and past reference.
+It passes the criterion test — the distinguishing characteristic
+expresses `currency`, the declared dimension. `current data set`
+fails subsumption: its intension carries present-state reference,
+which the candidate does not presuppose. `historical data set` fails
+subsumption likewise.
+
+. *Selection*: one candidate passes; the position under `data set`
+along `currency` is taken. No tie-breaker is needed.
+
+. *Assertion*: a generic relation is asserted (E-4) with criterion
+`currency`, force `essential`, source citing the proposal, status
+`proposed`; it goes to review and ships at `confirmed` (Q-3).
+
+. *Rake test*: the receiving rake now holds three coordinates; T1, T2
+and T3 pass — the three temporal references are disjoint, and T6
+passes by derivation over the declared boundary convention. The
+worksheet records the two failed candidates and the subsumption
+results, which is the evidence a later reviewer reads when the rake
+is questioned.
+
+The worksheet outcome for this placement, filled from the steps
+above, is exactly the record that A-5 and V-5 consume when a reviewer
+re-derives the position months later: the derivation reproduces the
+tests, and the recorded outcomes let the reviewer confirm rather than
+re-argue.
+

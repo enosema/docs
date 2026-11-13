@@ -1,0 +1,22 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO10241-1,ISO 10241-1]]], _Terminological entries in standards — Part 1: General requirements and examples of presentation_
+
+* [[[ISO19135-1,ISO 19135-1]]], _Geographic information — Procedures for item registration — Part 1: Fundamentals_
+
+* [[[ISO24229,ISO 24229]]], _Information and documentation — Register for writing system conversion systems_
+
+* [[[ISO25964-2,ISO 25964-2]]], _Information and documentation — Thesauri and interoperability with other vocabularies — Part 2: Interoperability with other vocabularies_
+
+* [[[ISODIR2,ISO/IEC Directives, Part 2]]], _ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents_
+
+* [[[FERIN,FERIN]]], _Framework for Extensible Registration of INformation_, https://www.ferin.org/
+
+* [[[EFS2501,EFS 2501:2025]]], _Terminology management — Principles and methods_
+
+* [[[EFS2507,EFS 2507:2025]]], _Terminology management — Concept relationships_
+
+* [[[EFS2519,EFG 2519:2026]]], _Concept registers — Operation guide_
+
+* [[[EFS2522,EFS 2522:2026]]], _Concept entry quality — Guidelines, requirements and scoring_

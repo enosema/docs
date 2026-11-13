@@ -1,0 +1,168 @@
+[[detection-rules]]
+[appendix]
+== Detection rules
+
+This annex states the operational definition of every measure. Each
+rule is stated so that an implementer can reproduce the count
+exactly. The rules were applied uniformly to every entry of the
+samples.
+
+=== R1: definition presence
+
+An entry is definition-bearing when its definition field exists and,
+after extraction, carries a non-empty text value. A definition field
+that is present but empty, or a list field with no content items,
+makes the entry term-only.
+
+=== R2: definition length
+
+The definition text is the concatenation of the content items of the
+definition field, in order, joined with single spaces. The length is
+the count of whitespace-separated tokens. Markup tokens — stem
+expressions in AsciiMath or LaTeX notation, inline formatting —
+count as tokens; a symbolic definition therefore overstates its
+word length, and the finding of clause <<iso-findings>> treats
+length as context, not as a defect measure.
+
+=== R3: circularity
+
+An entry is circular when the lowercase form of the preferred
+designation (or, for multi-word designations, any word of the
+designation of length four or more) occurs within the lowercase
+definition text. The rule is deliberately broad: it counts
+"`terrain analysis: analysis of terrain`" and "
+"`drain: to drain`" alike. A stricter rule would demand the full
+designation; the reported rate is an upper bound on true
+circularity and a lower bound on agreement, and the same rule was
+applied to every era, which is what the era comparison consumes.
+
+=== R4: requirements language
+
+An entry carries requirements language when its definition text
+contains any of shall, should or must as a word, case-insensitive.
+The rule does not parse modality; quoted uses count. At the
+observed rates the distinction is immaterial to the finding.
+
+=== R5: article head
+
+An entry is article-headed when its definition text, after leading
+whitespace, begins with a, an or the followed by a space,
+case-insensitive.
+
+=== R6: notes and examples presence
+
+An entry carries notes when its notes field carries one or more
+non-empty items; the same rule applies to examples.
+
+=== R7: sources presence
+
+An entry carries sources when its source field carries one or more
+items. The rule does not validate the cited document.
+
+=== R8: grammar information
+
+An entry carries grammar information when its designation record
+carries a non-empty grammar field (part of speech, or gender or
+plurality). The rate measures the record set, not the practice that
+produced the source documents.
+
+=== R9: term type and normative status
+
+The term type is read from the designation record's type field; the
+normative status from the designation record's status field. The
+values are reported as found, without normalization beyond the
+extraction's own.
+
+=== R10: era assignment (ISO)
+
+The era of an entry is the era of its source document, assigned by
+the latest four-digit year appearing in the source document key.
+The assignment is coarse; clause <<methodology>> states the
+limitation.
+
+=== R11: era assignment (IEV)
+
+The era of a concept is assigned from the date accepted of its
+English entry.
+
+=== R12: languages per concept (IEV)
+
+The count is the number of language keys of the concept record that
+carry at least one designation. Empty language keys do not count.
+
+=== Worked examples of the rules
+
+The examples show the rules applied, so that an implementer can
+calibrate against the intended behaviour rather than the prose.
+
+*R2 applied:* the definition "`part of a computer that carries out
+arithmetic and logical operations and controls the execution of
+instructions`" yields 17 tokens. A definition containing a stem
+expression yields one token per stem symbol — the measure's known
+overstatement, stated in the rule.
+
+*R3 applied:* designation `drain valve`, definition "`valve for
+draining fluid from a vessel`". The head noun `valve` (length five)
+occurs in the definition; rule R3 marks the entry circular, although
+the definition states a proper genus-plus-differentia form. The rule
+trades precision for coverage, uniformly; the census and the era
+profile consume the uniform overcount.
+
+*R3 not applied:* designation `drain`, definition "`to remove fluid
+by drainage`" — the word `drain` does not occur (the definition
+carries `drainage`, a different token under exact matching), so the
+rule does not mark it; the stem echo class of clause <<iso-findings>>
+names this boundary case.
+
+*R5 applied:* definition "`A device that measures voltage`" begins
+with `A ` — article-headed. Definition "`Device for measuring
+voltage`" does not — the genus stands first, and the entry passes.
+
+*R6 applied:* a notes field of one non-empty item counts; an empty
+list does not; a list of one empty string does not.
+
+*R10 applied:* source key `iso.10303-2.2024` carries the latest year
+2024; the era is modern. Key `iso.7348.1992` carries 1992; the era
+is legacy.
+
+=== Rule change policy
+
+A rule change between editions invalidates the affected trend
+comparisons, and the review constrains changes accordingly:
+
+* a rule may be tightened or loosened only in a new edition, with
+the change stated in that edition and both rates reported for the
+first edition in which both are computable;
+
+* era comparisons within one edition use one rule set, without
+exception — the era findings consume uniformity, and a mixed rule
+set would manufacture or mask gradients; and
+
+* the rules of this annex are the baseline: any future change is
+stated as a diff against them, not as a replacement text.
+
+The policy exists because the review's authority rests on
+reproducibility; a rule that changes silently between editions
+would make every trend line negotiable.
+
+=== Rule sensitivity summary
+
+[cols="2,2,4",options="header",width="70%"]
+|===
+|Rule
+|Sensitivity
+|Direction of bias
+
+|R3 circularity
+|broad
+|overcounts true circularity; uniform across eras, which is what
+the era comparison consumes
+
+|R4 requirements language
+|no parsing
+|negligible at observed rates
+
+|R10 era
+|coarse
+|attenuates era differences; observed gradients are lower bounds
+|===

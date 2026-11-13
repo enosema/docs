@@ -1,0 +1,183 @@
+[[validation]]
+== Arrangement validation (Group V)
+
+=== General
+
+Validation keeps the arrangement true after the day it was built.
+Concepts move, criteria are renamed, systems merge, and each event can
+break a property that held when the relations were last reviewed.
+Group V states what is checked, by what means, how often, and what
+the checks produce.
+
+=== Mechanical validation
+
+V-1:: The register shall validate the mechanical properties of the
+arrangement as part of publication validation (EFS 2513, clause 10):
+
+* every non-root concept of each system has exactly one incoming
+hierarchical relation within the system (A-6);
+
+* every rake is enumerable from the relation records, and every rake
+carries its criterion of subdivision (A-15, Q-2);
+
+* every hierarchical relation carries source, criterion and status
+(Q-1 to Q-3);
+
+* no direct and transitive placement of the same pair exists (E-7);
+and
+
+* no duplicate assertion of one relation type between one pair of
+concepts in one system exists (E-16).
+
+V-2:: The register shall validate the mechanical subset of the MECE
+tests at the same gate (M-8): intensional-disjointness checks that
+run on structured characteristic data, boundary-convention presence
+checks for rakes of ranged concepts, and residual-category flagging.
+
+V-3:: A validation failure blocks publication of the affected system
+view until remediated or waived by the control body (M-8). Waivers
+are recorded with reasons and carry an expiry: a waived failure is
+re-tested at the next scheduled review (EFG 2519, clause 12).
+
+=== Review validation
+
+V-4:: The register shall review the non-mechanical properties of the
+arrangement on a schedule and on events:
+
+* on a scheduled arrangement review, at the cadence the charter sets
+(EFS 2513, clause 11), a sample of rakes is tested under the full MECE
+suite (Annex B) and a sample of relationships is re-qualified against
+its recorded source (Q-1); and
+
+* on events that can invalidate properties — a definition change, a
+system merge or split, a criterion rename, a system description
+change — the affected rakes and relationships are queued for review
+before the next publication (Q-11).
+
+V-5:: The review of an arrangement uses the placement decision
+procedure of Annex A as the review instrument: a reviewer re-derives
+the position of a concept from its intension and the rake criterion
+and compares the derivation with the recorded position. Divergence is
+a finding, and the finding follows the issue resolution of EFS 2513,
+clause 9.
+
+V-6:: A review shall test cross-system consistency where cross-system
+membership exists (A-11): the mapped positions shall correspond under
+the mapping relations asserted between the systems, and the mapping
+relations shall carry their degree and difference notes (Q-8).
+
+=== Sampling for review
+
+The scheduled review (V-4) does not re-derive every position in a
+large register, and it does not need to: the mechanical tests already
+cover what is mechanical, and the review effort concentrates where
+judgement carries the property. The register samples:
+
+* *by risk*: rakes with residual categories, rakes remediated within
+the period, rakes whose relations changed, and systems under active
+extension are sampled first;
+
+* *by age*: relationships whose last review predates the charter
+cadence are sampled proportionally to their age; and
+
+* *by coverage*: over a bounded number of review cycles, every rake of
+every system is visited at least once — the sampling is stratified to
+converge, so that no rake is exempt indefinitely.
+
+The sample size and the stratification are charter decisions (EFS
+2513, clause 4); the requirement is convergence plus risk-weighting,
+not a fixed percentage.
+
+=== Validation record format
+
+The record of a validation run (V-7) carries, at minimum:
+
+----
+validation:
+  run: 2026-11-05T09:00Z
+  systems: [data-resource-system, statistics-metadata-system]
+  mechanical:
+    tests: [T1, T2, T5, T7, T8, T9, T10]
+    rakes_checked: 214
+    failures: []
+  waivers:
+    - rake: delivery-time
+      test: T5
+      reason: boundary convention pending decision 2026-12-01
+      expires: 2026-12-01
+  review:
+    rakes_sampled: 12
+    findings: 2
+    finding_ids: [EFSD-0031, EFSD-0032]
+  publication:
+    blocked: false
+----
+
+The format is illustrative; the requirement is the content set. A
+record that omits the waivers or the findings is an incomplete record
+under EFS 2513, clause 10, and the register's publication artifact
+carries the validation summary so that consumers can see the state of
+the arrangement they are reading.
+
+=== Evidence of validation
+
+V-7:: Each validation run shall produce a record that states: the
+systems checked, the rakes tested, the tests applied, the failures
+found, the waivers granted, and the remediations applied. The record
+is a register record under EFS 2513, clause 10, and is discoverable
+with the register publication.
+
+V-8:: The arrangement quality of a register is observable from its
+validation records over time: the count of failing rakes, the count
+of waived failures, the count of re-qualified relationships, and the
+count of placement changes. EFG 2519, clause 12, consumes these
+figures in the improvement practice of a conforming concept
+management system.
+
+=== Requirement group V
+
+. Arrangement validation requirements (Group V)
+
+[cols="1,4,1",options="header"]
+|===
+|ID
+|Requirement
+|Sources
+
+|V-1
+|Mechanical arrangement properties are validated at publication.
+|EFS 2513, Group A, Group E, Group Q
+
+|V-2
+|The mechanical MECE subset runs at the same gate.
+|M-8
+
+|V-3
+|Failures block publication pending remediation or recorded,
+expiring waiver.
+|M-8, EFG 2519
+
+|V-4
+|Non-mechanical properties are reviewed on schedule and on
+events.
+|EFS 2513, Q-11
+
+|V-5
+|Review re-derives positions with the Annex A procedure; divergence
+is a finding.
+|Annex A, EFS 2513
+
+|V-6
+|Cross-system consistency is reviewed where cross-system membership
+exists.
+|A-11, Q-8
+
+|V-7
+|Every validation run produces a discoverable record.
+|EFS 2513
+
+|V-8
+|Arrangement quality is observable from validation records over
+time.
+|EFG 2519
+|===

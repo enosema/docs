@@ -1,0 +1,32 @@
+[bibliography]
+== Bibliography
+
+* [[[ISO704,ISO 704]]], _Terminology work and terminology support in signs and languages — Principles and methods_
+
+* [[[ISO1087-1,ISO 1087-1]]], _Terminology work and terminology support in signs and languages — Vocabulary — Part 1: Theory and application_
+
+* [[[ISO10241-1,ISO 10241-1]]], _Terminological entries in standards — Part 1: General requirements and examples of presentation_
+
+* [[[ISO12620,ISO 12620]]], _Terminology and other language and content resources — Specification of data categories and management of a Data Category Registry_
+
+* [[[ISO25964-1,ISO 25964-1]]], _Information and documentation — Thesauri and interoperability with other vocabularies — Part 1: Thesauri for information retrieval_
+
+* [[[IEV,IEV]]], _International Electrotechnical Vocabulary_, IEC TC 1, https://www.electropedia.org/
+
+* [[[ISOOBP,ISO OBP]]], _ISO Online Browsing Platform_, International Organization for Standardization, https://www.iso.org/obp/
+
+* [[[ISODIR2,ISO/IEC Directives, Part 2]]], _ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents_
+
+* [[[EFS2504,EFS 2504:2025]]], _Terminology management — Multilingual terminology_
+
+* [[[EFS2510,EFS 2510:2025]]], _Terminology management — Concept systems and concept relations_
+
+* [[[EFS2513,EFS 2513:2026]]], _Terminology management — Concept management systems — Requirements_
+
+* [[[EFS2516,EFS 2516:2026]]], _Terminology management — Concept data interchange_
+
+* [[[EFS2522,EFS 2522:2026]]], _Terminology management — Concept entry quality — Guidelines, requirements and scoring_
+
+* [[[EFS2525,EFS 2525:2026]]], _Terminology management — Concept arrangement in concept systems — System membership, relationship establishment and qualification, and mutual exclusivity of subdivision_
+
+* [[[EFG2519,EFG 2519:2026]]], _Concept registers — Operation guide_

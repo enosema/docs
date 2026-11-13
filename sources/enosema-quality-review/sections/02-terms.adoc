@@ -1,0 +1,76 @@
+[[terms-report]]
+== Terms and conventions
+
+=== Terms and definitions
+
+For the purposes of this report, the following terms and definitions
+apply. The report uses the terms of the ES Terminology series as
+defined in EFS 2510, EFS 2513 and EFS 2522; the entries below fix the
+measurement senses in which this report uses them.
+
+[[m-entry]]
+==== localized concept entry
+
+record of one concept in one language, comprising its designations
+and, where the entry carries them, its definition, notes, examples,
+and sources
+
+[NOTE: In the ISO corpus, a localized concept entry is one language
+block of one Glossarist concept record. In the IEV corpus, it is one
+language key of one concept file. The unit of analysis throughout is
+the localized concept entry unless a clause states otherwise.]
+
+[[m-defining-entry]]
+==== definition-bearing entry
+
+localized concept entry whose definition field carries a non-empty
+definition
+
+[[m-term-only-entry]]
+==== term-only entry
+
+localized concept entry that carries designations and no definition
+
+[[m-definition-length]]
+==== definition length
+
+count of whitespace-separated tokens in the concatenation of the
+definition text of a definition-bearing entry
+
+[NOTE: Stem expressions, markup and punctuation are counted as
+tokens. The measure overstates length for symbolic definitions and
+understates it for prose; clause <<detection-rules>> states the rule
+verbatim.]
+
+[[m-defect]]
+==== defect
+
+property of a localized concept entry that a detection rule of clause
+<<detection-rules>> evaluates as present
+
+[NOTE: Defects are measured, not judged: a defect is whatever the
+stated rule detects, and the rule is part of the finding. Rates are
+comparable only through the rules.]
+
+[[m-era]]
+==== document era
+
+assignment of a source document to one of three periods by its latest
+year of publication: legacy (before 1998), transitional (1998 to
+2014), and modern (2015 and later)
+
+[NOTE: The periods track the regime changes of the drafting rules:
+the pre-10241-1 practice, the Directives Part 2 consolidation, and
+the current regime.]
+
+=== Conventions
+
+* Percentages are rounded to one decimal place unless a clause states
+otherwise; sums may therefore differ from 100 by rounding.
+
+* The word *corpus* refers to the full extracted collection; the word
+*sample* refers to the analysed subset drawn from it (clause
+<<methodology>>).
+
+* Sample seeds are stated so that every figure regenerates exactly
+(Annex E).

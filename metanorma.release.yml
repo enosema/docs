@@ -6,3 +6,5 @@ documents:
     channels: [public/standards]
   - pattern: "efg-*"
     channels: [public/standards]
+  - pattern: "efr-*"
+    channels: [public/standards]

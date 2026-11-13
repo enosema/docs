@@ -1,0 +1,136 @@
+[[qualification-vocabulary]]
+[appendix]
+== Relationship qualification vocabulary
+
+This annex states the controlled vocabulary that qualification
+metadata uses (Q-12). The register declares extensions per EFS 2513,
+clause 5; undeclared values do not appear in published records.
+
+=== Presence constraint (partitive relations)
+
+[cols="2,5",options="header"]
+|===
+|Value
+|Meaning
+
+|`obligatory`
+|every instance of the whole has the part
+
+|`optional`
+|instances of the whole may lack the part
+|===
+
+=== Count constraint (partitive relations)
+
+[cols="2,5",options="header"]
+|===
+|Value
+|Meaning
+
+|`n`
+|exactly n parts
+
+|`n..m`
+|between n and m parts
+
+|`one-or-more`
+|at least one part
+
+|`zero-or-more`
+|zero or more parts
+
+|`unknown`
+|the definitions do not fix a count; the constraint is not asserted
+|===
+
+=== Normative force
+
+[cols="2,5",options="header"]
+|===
+|Value
+|Meaning
+
+|`essential`
+|the relation holds for every instance of the concepts under their
+definitions
+
+|`characteristic`
+|the relation holds as the definitions characterize the concepts but
+is not necessary for every instance
+
+|`contextual`
+|the relation holds under the conditions stated in the qualification
+note
+|===
+
+=== Lifecycle status
+
+[cols="2,5",options="header"]
+|===
+|Value
+|Meaning
+
+|`proposed`
+|asserted in a proposal; not public in the arrangement view
+
+|`confirmed`
+|accepted through review; public (Q-3)
+
+|`deprecated`
+|retired; removed from the arrangement view; qualification retained
+(Q-10)
+|===
+
+=== Associative connection terms
+
+The following connection terms annotate associative relations
+(E-9, Q-7). The set follows the associative relation practice of
+ISO 12620 data categories and the ES relation vocabulary (EFS 2510);
+the register declares further terms as extensions.
+
+`causes`:: the subject concept brings about the object concept.
+
+`is-produced-by`:: the subject concept results from the object
+concept.
+
+`produces`:: inverse of `is-produced-by`.
+
+`is-prerequisite-for`:: the object concept presupposes the subject
+concept.
+
+`is-instrument-for`:: the subject concept is used in realizing the
+object concept.
+
+`opposes`:: the concepts are contrastive in the domain.
+
+`interacts-with`:: the concepts stand in a thematic connection not
+covered by the terms above; the qualification note states the
+connection.
+
+=== Mapping degree
+
+The degree values of mapping relations are the mapping relation types
+of EFS 2510: `equivalence`, `narrower`, `broader`, `overlap`,
+`dissociation`. The difference note is required for every non-
+equivalent degree (Q-8).
+
+=== Criterion naming
+
+The criterion of subdivision is qualification metadata (Q-2), and its
+name is part of the published record. A criterion is named well when
+the name passes three checks:
+
+* *it names a characteristic family*: `currency`, `content type`,
+`generation mechanism` — not `type`, `category`, `other`;
+
+* *it names the dimension, not a value*: the rake's criterion is
+`currency`, and `current` is a coordinate value, not a criterion; and
+
+* *it is stable across the rake*: the same name appears on every
+relation of the rake (T2) and in the system description's dimension
+declaration (A-10).
+
+A criterion name that fails the checks is a finding under T2 and is
+fixed by renaming the criterion in the system description and on the
+relations, which is a change-management event when it alters what
+consumers see (EFS 2513, clause 7).

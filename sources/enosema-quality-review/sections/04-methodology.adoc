@@ -1,0 +1,138 @@
+[[methodology]]
+== Methodology
+
+=== Sampling design
+
+Both corpora are too large to analyse entry by entry in this review,
+and the review draws probability samples with fixed seeds:
+
+* *ISO corpus*: a simple random sample of 4 662 localized concept
+entries, drawn from the 406 898 extracted records with seed 2522. The
+sample size was set by the analysis capacity of the review cycle and
+yields rate estimates with a width of approximately ±1,4 percentage
+points at the 95 % level for rates near 50 %, and tighter for the
+extreme rates that dominate the findings.
+
+* *IEV corpus*: a simple random sample of 2 000 concept records,
+drawn from the 22 229 records with seed 2522, analysed exhaustively
+across all language entries of each sampled concept. The concept is
+the sampling unit and the language entry the analysis unit, which
+preserves the multilingual structure in the sample.
+
+Both seeds are recorded in Annex E. Re-running the analysis with the
+same seeds reproduces every figure in this report; re-running with
+different seeds shifts rates within the sampling error stated above.
+
+The sample sizes are sized to the decisions that the review supports.
+The ES requirements are calibrated to differences between eras,
+between corpora and between element rates — differences of five
+percentage points and more — and a sample that resolves one-point
+differences is more than the calibration needs. The ISO sample of
+4 662 entries resolves half-point differences at the headline rates
+(<<a-sampling-error>>), which bounds the sampling error well below the
+smallest difference any finding turns on; the IEV sample of 2 000
+concepts resolves one-point differences at the concept level and
+yielded language-level rates with ample depth, since every sampled
+concept contributes its full language set. Growing the samples
+would sharpen rates that no finding consumes; the sizes in force
+match evidence to decision.
+
+=== Measures
+
+The review measures each localized concept entry on the following
+variables. Clause <<detection-rules>> states each rule verbatim.
+
+[cols="2,4,2",options="header"]
+|===
+|Variable
+|Meaning
+|Applies to
+
+|definition presence
+|the entry carries a non-empty definition
+|both corpora
+
+|definition length
+|token count of the definition text
+|definition-bearing entries
+
+|circularity
+|the designation (or a distinctive part of it) appears in its own
+definition
+|definition-bearing entries
+
+|requirements language
+|the definition contains shall, should or must
+|definition-bearing entries
+
+|article head
+|the definition begins with the indefinite or definite article
+|definition-bearing entries
+
+|notes presence
+|the entry carries one or more notes
+|both corpora
+
+|examples presence
+|the entry carries one or more examples
+|both corpora
+
+|sources presence
+|the entry carries source citations
+|ISO corpus
+
+|grammar information
+|the designation carries part-of-speech and inflection data
+|both corpora
+
+|term type
+|the designation's ISO 12620 type
+|both corpora
+
+|normative status
+|the designation's status value
+|IEV corpus
+|===
+
+=== Derived profiles
+
+Three derived profiles organize the findings:
+
+* *the length distribution*: definition lengths bucketed at fixed
+cut points (1–5, 6–10, 11–16, 17–22, 23–32, 33–50, 51 and more
+words), with median, mean and the 10th and 90th percentiles;
+
+* *the era profile*: each variable aggregated by document era as
+defined in clause <<terms-report>>, which shows how practice moved
+with the drafting-rule regimes; and
+
+* *the concentration profile*: the share of entries and of defects
+carried by the largest source documents (ISO) and the share of
+entries carried by each language (IEV).
+
+=== Limitations
+
+The review states four limitations that bound its conclusions:
+
+* *extraction fidelity*. The corpora are machine-derived; the
+extraction inherits the defects of the source formats. The rates
+reported here are rates in the records as extracted, which for the
+ISO corpus may differ from the published documents in formatting
+detail.
+
+* *rule sensitivity*. Each defect rate is conditional on its
+detection rule; a stricter circularity rule lowers the rate, a
+looser one raises it. The rules are stated verbatim so that this
+sensitivity is visible rather than hidden.
+
+* *sample size*. The rates carry sampling error; the review quotes
+the error bounds where a finding rests on a small difference.
+
+* *era attribution*. The ISO era profile assigns each entry the era
+of its source document's latest year; a document revised across
+regimes is assigned one era. The attribution is coarse and the
+era findings are directional, not exact.
+
+None of the limitations weakens the findings that rest on large
+differences between corpora or between eras; they bound the
+precision, not the direction, of the results.

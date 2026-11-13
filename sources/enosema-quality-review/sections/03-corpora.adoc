@@ -1,0 +1,199 @@
+[[corpora]]
+== The corpora
+
+=== The ISO Online Browsing Platform corpus
+
+The ISO corpus is the terminology content of the ISO Online Browsing
+Platform (OBP), extracted into Glossarist-form concept records. The
+extraction comprises 406 898 machine-extracted records covering the
+published terminology of hundreds of ISO documents — international
+standards, technical specifications and technical reports that carry
+terms and definitions clauses — from 1983 to the date of extraction.
+
+The corpus as extracted has known characteristics that the review
+treats as part of its object of study rather than as noise:
+
+* the records are machine-derived from published documents, and the
+extraction fidelity varies with the age and format of the source;
+
+* the records carry the entry structure of the source documents:
+definitions, notes, examples, sources and term designations where the
+published document carries them; and
+
+* the records carry term-level metadata — term type and normative
+status — at the uniformity the platform maintains.
+
+The analysed sample is 4 662 localized concept entries drawn by the
+sampling design of clause <<methodology>>.
+
+=== The IEC International Electrotechnical Vocabulary corpus
+
+The IEV corpus is the International Electrotechnical Vocabulary as
+maintained by IEC Technical Committee 1 in Glossarist form: one
+record per concept, each carrying the concept's language entries. At
+extraction the corpus comprises 22 229 concept records. The analysed
+sample is 2 000 concept records drawn by the sampling design of
+clause <<methodology>>, carrying 23 936 localized concept entries.
+
+The corpus has the structure of a maintained multilingual vocabulary:
+
+* every concept carries an English entry and, except for a residual
+set, a French entry, each with a definition — the authoritative
+languages of the IEV;
+
+* the remaining languages carry designations without definitions: the
+term-only model of localization (clause <<comparison>>);
+
+* each concept carries an identification number of the form
+`<part>-<section>-<item>` that places it in a subject part of the
+vocabulary; and
+
+* each language entry carries acceptance and review dates that place
+the concept in time.
+
+=== Record anatomy
+
+Both corpora arrive in Glossarist form, and the review's measures
+run directly over the record fields. The anatomies below show the
+shapes; the field names are the ones the rules of Annex C read.
+
+*An ISO record (abridged):*
+
+----
+termid: iso-2382-01
+localized_concepts:
+  eng:
+    terms:
+      - type: expression
+        normative_status: preferred
+        designation: central processing unit
+    definition:
+      - content: "part of a computer that carries out arithmetic
+          and logical operations and controls the execution of
+          instructions"
+    notes:
+      - "In some contexts the term is taken to include the primary
+          storage."
+    examples: []
+    source: ISO/IEC 2382:2015, 2126478
+    language_code: eng
+    entry_status: Standard
+    date_accepted: '2018-05-01'
+----
+
+The fields the analysis reads: `terms` (type, normative_status,
+designation — rules R8, R9), `definition` (rules R1 to R5),
+`notes` and `examples` (rule R6), `source` (rule R7), and the
+document identity that carries the era assignment (rule R10).
+
+*An IEV record (abridged):*
+
+----
+termid: 102-01-01
+term: equality
+eng:
+  id: 102-01-01
+  terms:
+    - type: expression
+      normative_status: preferred
+      designation: equality
+  definition: "relation between two entities a and b having the
+    properties of reflexivity, symmetry and transitivity"
+  notes:
+    - "The equality of two entities a and b is denoted by a = b."
+  language_code: eng
+  entry_status: Standard
+  date_accepted: '2008-08-01'
+fra:
+  id: 102-01-01
+  terms:
+    - type: expression
+      normative_status: preferred
+      designation: égalité
+  definition: "relation entre deux entités a et b..."
+  language_code: fra
+  date_accepted: '2007-08-01'
+pol:
+  id: 102-01-01
+  terms:
+    - type: expression
+      normative_status: preferred
+      designation: równość
+  language_code: pol
+  date_accepted: '2009-11-01'
+----
+
+The IEV shape differs structurally from the ISO shape: language
+keys are top-level, the authoritative pair carries the definitions,
+and the remaining languages carry only the designation block. Rule
+R12 counts the language keys with designations; the entry-level
+measures run per language key.
+
+=== Extraction provenance and scale
+
+[cols="2,3,3",options="header"]
+|===
+|Property
+|ISO extraction
+|IEV records
+
+|record unit
+|one concept record with localized concept sub-records
+|one concept record with language keys
+
+|extraction origin
+|published platform content, per document
+|TC 1 maintenance database export
+
+|record count
+|406 898 concept records
+|22 229 concept records
+
+|language entries (full corpus, approx.)
+|406 898 English-language entries
+|approximately 267 000 language entries at 12 per concept
+
+|document spread
+|hundreds of source documents, 1983–2026
+|one vocabulary, parts by subject, continuous since early 1900s
+|===
+
+The scale ratio shapes the sampling design: the ISO corpus is
+sampled by entry across a document-dominated population; the IEV
+corpus is sampled by concept across a language-dominated one. The
+two designs measure the two different things the clause above
+names, and the designs are part of the findings' conditions.
+
+=== Third-party content statement
+
+The corpora are the published vocabulary of ISO and of IEC TC 1
+respectively. The ES research environment holds the extractions for
+analysis; this report publishes statistics, findings and rule
+definitions — not corpus content beyond the minimal abridged
+anatomy records above, which serve to document the format. Source
+documents and full records are not reproduced here, and the
+reproduction protocol of Annex E presumes access to the corpora
+under their respective terms.
+
+=== What each corpus can and cannot show
+
+The two corpora measure different things well, and the review uses
+each for what it measures:
+
+* The ISO corpus measures *the production system*: what the
+document drafting process yields when hundreds of committees write
+terminology under a common rulebook. Its findings are findings about
+authoring practice at scale.
+
+* The IEV corpus measures *the maintenance system*: what one
+continuously maintained vocabulary looks like when one body keeps
+definitions authoritative and distributes designations. Its findings
+are findings about localization architecture and about the
+long-run stability of an entry base.
+
+Neither corpus measures conformance to any ES document; the ES
+documents did not exist when the corpora were formed. The review
+measures the corpora against the measurement rules of clause
+<<detection-rules>> and states the implications for the ES
+requirements, which are calibrated against this evidence rather than
+derived from it.

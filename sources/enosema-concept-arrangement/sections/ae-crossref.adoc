@@ -1,0 +1,87 @@
+[[crossref]]
+[appendix]
+== Cross-reference to the ES terminology documents
+
+This annex states where each requirement group of this document meets
+the requirements of the other ES terminology documents. The map is
+informative; the normative texts are the cited clauses.
+
+. Cross-reference map to the ES terminology documents
+
+[cols="1,2,3",options="header"]
+|===
+|Group
+|Meets
+|Relationship
+
+|Group A
+|EFS 2513, clause 7 (change management); EFS 2510 (relation
+vocabulary)
+|Membership assertions are relation records; their acceptance is
+change management
+
+|Group A
+|EFS 2516 (interchange)
+|Membership records are EFS 2516 relation records
+
+|Group A
+|EFS 2504 (multilingual terminology)
+|Membership is per concept; localizations inherit position
+
+|Group E
+|EFS 2510 (concept relations)
+|Relation types, semantic tests and direction are defined there
+
+|Group E
+|ISO 704
+|Generic and partitive tests are the ISO theory of the two hierarchies
+
+|Group Q
+|EFS 2516 (interchange)
+|Qualification metadata is recorded in relation fields
+
+|Group Q
+|EFG 2519 (register operation guide)
+|Sources cite decision records; cadence is the guide's practice
+
+|Group Q
+|EFS 2504 (multilingual terminology)
+|Mapping difference notes follow the equivalence note practice
+
+|Group M
+|ISO 704
+|Subdivision theory, regrouping and criteria are the ISO foundation
+
+|Group M
+|ISO 25964-1 (thesauri)
+|Residual and node-label practice informs the residual rule
+
+|Group M
+|EFS 2522 (entry quality)
+|Group S consistency feeds the designation form test; entry scores
+consume arrangement findings
+
+|Group M
+|EFS 2513, clause 10 (publication)
+|The mechanical tests run at the publication gate
+
+|Group V
+|EFS 2513, clause 11 (monitoring) and clause 9 (issues)
+|Reviews produce findings; findings resolve through issues
+
+|Group V
+|EFG 2519, clause 12 (improvement)
+|Validation records feed improvement practice
+|===
+
+=== Identifiers in other documents
+
+The requirement identifiers of this document are stable and are cited
+elsewhere:
+
+* EFG 2519 cites Group A, Group E, Group Q, Group M and Group V in the
+self-assessment checklist of its Annex C; and
+
+* EFS 2522 cites Group M in the consistency dimension (Group S) of its
+scoring model, where an entry inherits a finding from a rake that
+fails the MECE tests.

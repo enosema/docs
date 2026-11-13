@@ -1,0 +1,34 @@
+[[foreword]]
+== Foreword
+
+ES is the publishing imprint of the Enosema Foundation. ES documents
+are prepared by the technical committees of the Enosema Foundation
+under the ES Directives (EFD 101 to EFD 105) and are published under a
+Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+This report was prepared by Technical Committee Terminology.
+
+This report is an informative document of the ES Terminology series
+in the document class *report* (EFD 102): it reports the findings of a
+study, states the methods of the study, and reaches conclusions. It
+does not contain requirements; the requirements that the findings
+inform are stated in the normative documents of the series — EFS 2513
+(concept management systems), EFS 2522 (concept entry quality), and
+EFS 2525 (concept arrangement in concept systems).
+
+The subject of the study is the vocabulary that the international
+standardization system actually produces and maintains. Two corpora
+were analysed:
+
+* the terminology published through the ISO Online Browsing Platform
+(OBP), extracted in machine-readable form and analysed through a
+sample of 4 662 localized concept entries drawn from 406 898 extracted
+records; and
+
+* the IEC International Electrotechnical Vocabulary (IEV) as
+maintained by IEC TC 1 in Glossarist form, analysed through a sample
+of 2 000 concept records carrying 23 936 language entries.
+
+All statistics in this report derive from those samples. Annex E
+states the reproduction instructions, including the sample seeds, so
+that every figure in this report can be regenerated from the corpora.
