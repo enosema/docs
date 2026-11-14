@@ -243,7 +243,7 @@ data:
     fra: privacy-fra
     de: privacy-de
 status: valid
-----
+
 id: privacy-eng
 termid: privacy
 data:
@@ -256,7 +256,7 @@ data:
   - content: condition of having control over the collection, retention
     and disclosure of information about an individual
 status: valid
-----
+
 id: privacy-fra
 termid: privacy
 data:
@@ -274,7 +274,7 @@ equivalence_note: >-
   French "vie privée" covers the legal-institutional aspects more
   strongly than the English concept; prefer the narrower legal term in
   regulatory contexts.
-----
+
 id: privacy-de
 termid: privacy
 data:
