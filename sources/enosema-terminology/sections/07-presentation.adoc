@@ -108,7 +108,8 @@ Example of a terminological entry in a standard document:
 management of terminology resources through the systematic collection,
 description, processing, and presentation of concepts and their designations
 
- *[SOURCE: ISO 704:2009]*
+[.source]
+ISO 704:2009
 ====
 
 ==== Digital presentation
